@@ -1,5 +1,5 @@
 // Isomorphic fee utilities for client and server usage
-// Source migrated from $server/services/counterpartyApiService.ts
+// Source migrated from $server/services/core/counterpartyApiService.ts
 
 import { SATS_PER_KB_MULTIPLIER } from "$constants";
 

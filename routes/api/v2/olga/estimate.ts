@@ -5,7 +5,7 @@ import { logger } from "$lib/utils/logger.ts";
 import { base64ToHex } from "$lib/utils/data/binary/baseUtils.ts";
 import { FileToAddressUtils } from "$lib/utils/bitcoin/encoding/fileToAddressUtils.ts";
 import { estimateMintingTransactionSize } from "$lib/utils/bitcoin/minting/transactionSizes.ts";
-import { normalizeFeeRate } from "$server/services/counterpartyApiService.ts";
+import { normalizeFeeRate } from "$server/services/core/counterpartyApiService.ts";
 import type { EstimateRequest, EstimateResponse } from "$types/api.d.ts";
 import type { ScriptType } from "$types/base.d.ts";
 

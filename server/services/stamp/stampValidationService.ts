@@ -1,4 +1,4 @@
-import { CounterpartyApiManager } from "$server/services/counterpartyApiService.ts";
+import { CounterpartyApiManager } from "$server/services/core/counterpartyApiService.ts";
 import { generateRandomNumber } from "$lib/utils/data/numbers/numberUtils.ts";
 import { isCpid } from "$lib/utils/typeGuards.ts";
 

@@ -7,7 +7,7 @@ import { serverConfig } from "$server/config/config.ts";
 import {
   CounterpartyApiManager,
   normalizeFeeRate,
-} from "$server/services/counterpartyApiService.ts";
+} from "$server/services/core/counterpartyApiService.ts";
 import { BitcoinTransactionBuilder } from "$server/services/transaction/bitcoinTransactionBuilder.ts";
 
 interface DispenseInput {

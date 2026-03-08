@@ -10,7 +10,7 @@ import {
   normalizeFeeRate,
   xcp_v2_nodes,
   type XcpBalanceOptions,
-} from "$server/services/counterpartyApiService.ts";
+} from "$server/services/core/counterpartyApiService.ts";
 import { SATS_PER_KB_MULTIPLIER } from "$constants";
 import {
   assertEquals,

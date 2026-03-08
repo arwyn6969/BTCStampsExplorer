@@ -1,5 +1,5 @@
 import { Handlers } from "$fresh/server.ts";
-import { CounterpartyApiManager } from "$server/services/counterpartyApiService.ts";
+import { CounterpartyApiManager } from "$server/services/core/counterpartyApiService.ts";
 import { ResponseUtil } from "$lib/utils/api/responses/responseUtil.ts";
 
 export const handler: Handlers = {

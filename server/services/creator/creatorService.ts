@@ -7,16 +7,17 @@ import { StampService } from "$server/services/stampService.ts";
 export class CreatorService {
   static async getCreatorNameByAddress(address: string): Promise<string | null> {
     try {
-      // 1. First check the creators table
-      const creatorName = await StampService.getCreatorNameByAddress(address);
-      if (creatorName) {
-        return creatorName;
-      }
-
-      // 2. If not found in creators table, check for PRI bitname domain
+      // 1. First check for PRI bitname domain (Blockchain/SRC101 priority)
+      // This ensures verified on-chain names override any legacy manual entries (e.g. "ARWYN")
       const primaryDomain = await SRC101Service.QueryService.getPrimaryDomainForAddress(address);
       if (primaryDomain) {
         return `${primaryDomain}.btc`;
+      }
+
+      // 2. If not found on chain, check the manual creators table (Fallback)
+      const creatorName = await StampService.getCreatorNameByAddress(address);
+      if (creatorName) {
+        return creatorName;
       }
 
       // 3. Fall back to null (which will display as ANONYMOUS)

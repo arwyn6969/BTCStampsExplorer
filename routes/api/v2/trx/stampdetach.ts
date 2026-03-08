@@ -5,7 +5,7 @@ import type { ComposeDetachOptions } from "$server/services/counterparty/xcpMana
 import {
   CounterpartyApiManager,
   normalizeFeeRate,
-} from "$server/services/counterpartyApiService.ts";
+} from "$server/services/core/counterpartyApiService.ts";
 import { GeneralBitcoinTransactionBuilder } from "$server/services/transaction/generalBitcoinTransactionBuilder.ts";
 
 export const handler: Handlers = {

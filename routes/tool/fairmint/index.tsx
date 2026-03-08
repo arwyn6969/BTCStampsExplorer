@@ -2,7 +2,7 @@
 import { Handlers, PageProps } from "$fresh/server.ts";
 import type { ToolFairmintPageProps } from "$types/ui.d.ts";
 import { Head } from "$fresh/runtime.ts";
-import { CounterpartyApiManager } from "$server/services/counterpartyApiService.ts";
+import { CounterpartyApiManager } from "$server/services/core/counterpartyApiService.ts";
 import { FairmintTool } from "$tool";
 
 /* ===== TYPES ===== */

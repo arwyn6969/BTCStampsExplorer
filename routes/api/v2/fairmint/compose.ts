@@ -5,7 +5,7 @@ import { GeneralBitcoinTransactionBuilder } from "$server/services/transaction/g
 import {
   CounterpartyApiManager,
   normalizeFeeRate,
-} from "$server/services/counterpartyApiService.ts";
+} from "$server/services/core/counterpartyApiService.ts";
 
 export const handler: Handlers = {
   async POST(req) {

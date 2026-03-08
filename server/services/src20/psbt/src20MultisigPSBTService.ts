@@ -58,7 +58,7 @@ import { serverConfig } from "$server/config/config.ts";
 import { SRC20CompressionService } from "$server/services/src20/compression/compressionService.ts";
 // Removed TransactionService import - using direct OptimalUTXOSelection instead
 import { convertUTXOsToBasic } from "$lib/utils/bitcoin/utxo/utxoTypeUtils.ts";
-import { CounterpartyApiManager } from "$server/services/counterpartyApiService.ts";
+import { CounterpartyApiManager } from "$server/services/core/counterpartyApiService.ts";
 import { CommonUTXOService } from "$server/services/utxo/commonUtxoService.ts";
 import { OptimalUTXOSelection } from "$server/services/utxo/optimalUtxoSelection.ts";
 import type { IPrepareSRC20TX } from "$server/types/services/src20.d.ts";

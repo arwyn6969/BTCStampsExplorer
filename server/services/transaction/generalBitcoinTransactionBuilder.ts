@@ -13,7 +13,7 @@ import { logger } from "$lib/utils/logger.ts";
 import { estimateMintingTransactionSize } from "$lib/utils/bitcoin/minting/transactionSizes.ts";
 import { extractOutputs } from "$lib/utils/bitcoin/minting/transactionUtils.ts";
 import { getScriptTypeInfo } from "$lib/utils/bitcoin/scripts/scriptTypeUtils.ts";
-import { CounterpartyApiManager } from "$server/services/counterpartyApiService.ts";
+import { CounterpartyApiManager } from "$server/services/core/counterpartyApiService.ts";
 import { CommonUTXOService } from "$server/services/utxo/commonUtxoService.ts";
 import { OptimalUTXOSelection } from "$server/services/utxo/optimalUtxoSelection.ts";
 import type { ScriptType, UTXO } from "$types/base.d.ts";

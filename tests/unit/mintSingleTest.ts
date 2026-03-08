@@ -3,7 +3,7 @@ import { stub } from "@std/testing/mock.ts";
 import { handler } from "$routes/api/v2/olga/mint.ts";
 import { mintAddressUTXOs } from "../fixtures/utxoFixtures.mint.ts";
 import { CommonUTXOService } from "$server/services/utxo/commonUtxoService.ts";
-import { CounterpartyApiManager } from "$server/services/counterpartyApiService.ts";
+import { CounterpartyApiManager } from "$server/services/core/counterpartyApiService.ts";
 import * as bitcoin from "bitcoinjs-lib";
 
 console.log(

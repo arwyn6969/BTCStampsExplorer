@@ -1159,7 +1159,7 @@ Deno.test("StampController.getStampHolders handles single holder 100% (tests pro
 
 Deno.test("StampController.getStampBalancesByAddress returns paginated response", async () => {
   const originalGetAllXcpBalancesByAddress =
-    (await import("$server/services/counterpartyApiService.ts"))
+    (await import("$server/services/core/counterpartyApiService.ts"))
       .CounterpartyApiManager
       .getAllXcpBalancesByAddress;
   const originalGetStampBalancesByAddress =
@@ -1170,7 +1170,7 @@ Deno.test("StampController.getStampBalancesByAddress returns paginated response"
       .getLastBlock;
 
   const { CounterpartyApiManager } = await import(
-    "$server/services/counterpartyApiService.ts"
+    "$server/services/core/counterpartyApiService.ts"
   );
   const { StampService } = await import("$server/services/stampService.ts");
   const { BlockService } = await import(
@@ -1251,7 +1251,7 @@ Deno.test("StampController.getStampBalancesByAddress returns paginated response"
 
 Deno.test("StampController.getStampBalancesByAddress handles pagination correctly", async () => {
   const originalGetAllXcpBalancesByAddress =
-    (await import("$server/services/counterpartyApiService.ts"))
+    (await import("$server/services/core/counterpartyApiService.ts"))
       .CounterpartyApiManager
       .getAllXcpBalancesByAddress;
   const originalGetStampBalancesByAddress =
@@ -1262,7 +1262,7 @@ Deno.test("StampController.getStampBalancesByAddress handles pagination correctl
       .getLastBlock;
 
   const { CounterpartyApiManager } = await import(
-    "$server/services/counterpartyApiService.ts"
+    "$server/services/core/counterpartyApiService.ts"
   );
   const { StampService } = await import("$server/services/stampService.ts");
   const { BlockService } = await import(
@@ -1331,7 +1331,7 @@ Deno.test("StampController.getStampBalancesByAddress handles pagination correctl
 
 Deno.test("StampController.getStampBalancesByAddress handles empty balances", async () => {
   const originalGetAllXcpBalancesByAddress =
-    (await import("$server/services/counterpartyApiService.ts"))
+    (await import("$server/services/core/counterpartyApiService.ts"))
       .CounterpartyApiManager
       .getAllXcpBalancesByAddress;
   const originalGetStampBalancesByAddress =
@@ -1342,7 +1342,7 @@ Deno.test("StampController.getStampBalancesByAddress handles empty balances", as
       .getLastBlock;
 
   const { CounterpartyApiManager } = await import(
-    "$server/services/counterpartyApiService.ts"
+    "$server/services/core/counterpartyApiService.ts"
   );
   const { StampService } = await import("$server/services/stampService.ts");
   const { BlockService } = await import(

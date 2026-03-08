@@ -8,7 +8,7 @@ import { body, containerBackground, containerGap } from "$layout";
 import { logger, LogNamespace } from "$lib/utils/logger.ts";
 import { StampGallery } from "$section";
 import { StampController } from "$server/controller/stampController.ts";
-import { CounterpartyDispenserService } from "$server/services/counterpartyApiService.ts";
+import { CounterpartyDispenserService } from "$server/services/core/counterpartyApiService.ts";
 import { RouteType } from "$server/services/infrastructure/cacheService.ts";
 import { DetailsTableBase, HoldersTable } from "$table";
 import type { StampRow } from "$types/stamp.d.ts";

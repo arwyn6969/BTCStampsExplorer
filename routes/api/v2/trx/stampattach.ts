@@ -16,7 +16,7 @@ import {
   ComposeAttachOptions,
   CounterpartyApiManager,
   normalizeFeeRate,
-} from "$server/services/counterpartyApiService.ts";
+} from "$server/services/core/counterpartyApiService.ts";
 import { CommonUTXOService } from "$server/services/utxo/commonUtxoService.ts";
 import type { UTXO as ServiceUTXO } from "$types/index.d.ts";
 import {

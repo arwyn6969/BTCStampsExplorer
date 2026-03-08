@@ -1,7 +1,7 @@
 import { handler } from "$routes/api/v2/olga/mint.ts";
 import { StampValidationService } from "$server/services/stamp/stampValidationService.ts";
 import { CommonUTXOService } from "$server/services/utxo/commonUtxoService.ts";
-import { CounterpartyApiManager } from "$server/services/counterpartyApiService.ts";
+import { CounterpartyApiManager } from "$server/services/core/counterpartyApiService.ts";
 import * as bitcoin from "bitcoinjs-lib";
 import { assertEquals, assertExists } from "@std/assert/mod.ts";
 import { stub } from "@std/testing/mock.ts";

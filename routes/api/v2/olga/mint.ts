@@ -11,7 +11,7 @@ import {
 import {
   CounterpartyApiManager,
   normalizeFeeRate,
-} from "$server/services/counterpartyApiService.ts";
+} from "$server/services/core/counterpartyApiService.ts";
 import * as bitcoin from "bitcoinjs-lib"; // Keep for Psbt.fromHex
 import type {
   CreateStampIssuanceParams,

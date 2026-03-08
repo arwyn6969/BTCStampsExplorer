@@ -16,7 +16,7 @@ import { logger } from "$lib/utils/logger.ts";
 import { isCpid } from "$lib/utils/typeGuards.ts";
 import { decodeBase64 } from "$lib/utils/ui/formatting/formatUtils.ts";
 import { getMimeTypeFromExtension } from "$lib/utils/ui/media/imageUtils.ts";
-import { CounterpartyApiManager } from "$server/services/counterpartyApiService.ts";
+import { CounterpartyApiManager } from "$server/services/core/counterpartyApiService.ts";
 import { RouteType } from "$server/services/infrastructure/cacheService.ts";
 import type { PaginatedStampBalanceResponseBody } from "$types/api.d.ts";
 import type { StampBalance, StampRow } from "$types/stamp.d.ts";

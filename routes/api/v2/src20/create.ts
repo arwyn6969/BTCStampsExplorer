@@ -2,7 +2,7 @@ import { Handlers } from "$fresh/server.ts";
 import { ApiResponseUtil } from "$lib/utils/api/responses/apiResponseUtil.ts";
 import { logger } from "$lib/utils/logger.ts";
 import { SRC20Service } from "$server/services/src20/index.ts";
-import { normalizeFeeRate } from "$server/services/counterpartyApiService.ts";
+import { normalizeFeeRate } from "$server/services/core/counterpartyApiService.ts";
 import type { SRC20CreateResponse } from "$types/api.d.ts";
 import type { InputData } from "$types/src20.d.ts";
 import type { TXError } from "$types/transaction.d.ts";

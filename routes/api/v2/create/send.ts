@@ -7,7 +7,7 @@ import { ApiResponseUtil } from "$lib/utils/api/responses/apiResponseUtil.ts";
 import { hex2bin } from "$lib/utils/binary/baseUtils.ts";
 import { logger } from "$lib/utils/logger.ts";
 import { getScriptTypeInfo } from "$lib/utils/scriptTypeUtils.ts";
-import { CounterpartyApiManager } from "$server/services/counterpartyApiService.ts";
+import { CounterpartyApiManager } from "$server/services/core/counterpartyApiService.ts";
 import { CommonUTXOService } from "$server/services/utxo/commonUtxoService.ts";
 import type { SendRequestBody, SendResponse } from "$types/api.d.ts";
 import { networks, Psbt, Transaction } from "bitcoinjs-lib";
