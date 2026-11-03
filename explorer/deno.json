@@ -1,0 +1,31 @@
+{
+  "lock": "deno.lock",
+  "nodeModulesDir": "auto",
+  "tasks": {
+    "build": "deno run --frozen -A build.ts build",
+    "start": "deno run --cached-only --frozen --no-prompt --allow-read=./_fresh,./static,./fixtures,./deno.json,./deno.lock --allow-env=DENO_DEPLOYMENT_ID,ESBUILD_BINARY_PATH,EXPLORER_DATA_MODE,EXPLORER_HOST,EXPLORER_REVISION,FRESH_ESBUILD_LOADER,GITHUB_SHA,HOME,JSR_URL,LOCALAPPDATA,NPM_CONFIG_REGISTRY,PORT,USERPROFILE,XDG_CACHE_HOME,__FRSH_LEGACY_DEV --allow-net=127.0.0.1:8007,stampchain.io:443 main.ts",
+    "check": "deno fmt --check && deno lint && deno check --frozen main.ts",
+    "test": "deno test --frozen --allow-read=./fixtures tests/"
+  },
+  "imports": {
+    "$fresh/": "https://deno.land/x/fresh@1.7.3/",
+    "preact": "https://esm.sh/preact@10.27.2",
+    "preact/": "https://esm.sh/preact@10.27.2/",
+    "@preact/signals": "https://esm.sh/@preact/signals@1.3.0?external=preact",
+    "@preact/signals-core": "https://esm.sh/@preact/signals-core@1.6.1"
+  },
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact",
+    "strict": true
+  },
+  "fmt": {
+    "lineWidth": 80,
+    "indentWidth": 2,
+    "singleQuote": false
+  },
+  "exclude": [
+    "_fresh/",
+    "node_modules/"
+  ]
+}

@@ -1,0 +1,1351 @@
+{
+  "checkedAtUtc": "2026-11-03T12:38:52.206Z",
+  "sourceRevision": "7e3cd554b44302f9c07dc6c8c557ed63a6520294",
+  "implementation": "explorer/lib/adapter.ts",
+  "implementationSha256": "4f467b9d0d95dc962e8484848b958bfe623ca1b84d211b702ae1a25bf162885d",
+  "method": "Real adapter invoked with injected mock fetch returning each saved detail body unchanged; real fixture adapter invoked against committed-candidate fixture rows. No network access or credentials.",
+  "limitations": "Saved list envelopes use limit4 while production adapter requires limit12; list row mapping is checked through actual fixture mode and exact raw detail bodies through live mode. This does not simulate live twelve-row API pagination or prove service stability/tie order. No chain/indexer audit.",
+  "passed": true,
+  "liveDetail": [
+    {
+      "id": "1507273",
+      "calls": [
+        {
+          "url": "https://stampchain.io/api/v2/stamps/1507273",
+          "method": "GET",
+          "redirect": "error"
+        }
+      ],
+      "rawBodyUnchanged": true,
+      "source": "live",
+      "freshness": "unknown",
+      "comparison": {
+        "id": "1507273",
+        "passed": true,
+        "checks": {
+          "id": {
+            "expected": "1507273",
+            "actual": "1507273",
+            "matches": true
+          },
+          "cpid": {
+            "expected": "A1301847304853164300",
+            "actual": "A1301847304853164300",
+            "matches": true
+          },
+          "txHash": {
+            "expected": "7046278a4bda05c7dd3063dd10607800cbb92ba6f8c7c41f49bd985edee6bbed",
+            "actual": "7046278a4bda05c7dd3063dd10607800cbb92ba6f8c7c41f49bd985edee6bbed",
+            "matches": true
+          },
+          "creator": {
+            "expected": "1PJ8FYDnNrtA4R3GrSesjbcbnz7iHYdKCH",
+            "actual": "1PJ8FYDnNrtA4R3GrSesjbcbnz7iHYdKCH",
+            "matches": true
+          },
+          "creatorName": {
+            "expected": null,
+            "actual": null,
+            "matches": true
+          },
+          "name": {
+            "expected": null,
+            "actual": null,
+            "matches": true
+          },
+          "mime": {
+            "expected": "image/png",
+            "actual": "image/png",
+            "matches": true
+          },
+          "mediaUrl": {
+            "expected": "https://stampchain.io/stamps/7046278a4bda05c7dd3063dd10607800cbb92ba6f8c7c41f49bd985edee6bbed.png",
+            "actual": "https://stampchain.io/stamps/7046278a4bda05c7dd3063dd10607800cbb92ba6f8c7c41f49bd985edee6bbed.png",
+            "matches": true
+          },
+          "supply": {
+            "expected": "1",
+            "actual": "1",
+            "matches": true
+          },
+          "block": {
+            "expected": 973464,
+            "actual": 973464,
+            "matches": true
+          },
+          "timestamp": {
+            "expected": "2026-10-27T22:16:09.000Z",
+            "actual": "2026-10-27T22:16:09.000Z",
+            "matches": true
+          },
+          "locked": {
+            "expected": true,
+            "actual": true,
+            "matches": true
+          },
+          "divisible": {
+            "expected": false,
+            "actual": false,
+            "matches": true
+          }
+        }
+      }
+    },
+    {
+      "id": "0",
+      "calls": [
+        {
+          "url": "https://stampchain.io/api/v2/stamps/0",
+          "method": "GET",
+          "redirect": "error"
+        }
+      ],
+      "rawBodyUnchanged": true,
+      "source": "live",
+      "freshness": "unknown",
+      "comparison": {
+        "id": "0",
+        "passed": true,
+        "checks": {
+          "id": {
+            "expected": "0",
+            "actual": "0",
+            "matches": true
+          },
+          "cpid": {
+            "expected": "A7337447728884561000",
+            "actual": "A7337447728884561000",
+            "matches": true
+          },
+          "txHash": {
+            "expected": "17686488353b65b128d19031240478ba50f1387d0ea7e5f188ea7fda78ea06f4",
+            "actual": "17686488353b65b128d19031240478ba50f1387d0ea7e5f188ea7fda78ea06f4",
+            "matches": true
+          },
+          "creator": {
+            "expected": "1GotRejB6XsGgMsM79TvcypeanDJRJbMtg",
+            "actual": "1GotRejB6XsGgMsM79TvcypeanDJRJbMtg",
+            "matches": true
+          },
+          "creatorName": {
+            "expected": "Mike in Space",
+            "actual": "Mike in Space",
+            "matches": true
+          },
+          "name": {
+            "expected": null,
+            "actual": null,
+            "matches": true
+          },
+          "mime": {
+            "expected": "image/png",
+            "actual": "image/png",
+            "matches": true
+          },
+          "mediaUrl": {
+            "expected": "https://stampchain.io/stamps/17686488353b65b128d19031240478ba50f1387d0ea7e5f188ea7fda78ea06f4.png",
+            "actual": "https://stampchain.io/stamps/17686488353b65b128d19031240478ba50f1387d0ea7e5f188ea7fda78ea06f4.png",
+            "matches": true
+          },
+          "supply": {
+            "expected": "1",
+            "actual": "1",
+            "matches": true
+          },
+          "block": {
+            "expected": 779652,
+            "actual": 779652,
+            "matches": true
+          },
+          "timestamp": {
+            "expected": "2023-03-07T01:19:09.000Z",
+            "actual": "2023-03-07T01:19:09.000Z",
+            "matches": true
+          },
+          "locked": {
+            "expected": true,
+            "actual": true,
+            "matches": true
+          },
+          "divisible": {
+            "expected": false,
+            "actual": false,
+            "matches": true
+          }
+        }
+      }
+    }
+  ],
+  "fixturePages": [
+    {
+      "page": 1,
+      "count": 12,
+      "total": 16,
+      "totalPages": 2,
+      "stampIds": [
+        "1507273",
+        "1505513",
+        "1472320",
+        "1467205",
+        "1467163",
+        "1465071",
+        "1462443",
+        "1457949",
+        "1384307",
+        "1384306",
+        "1384305",
+        "1383565"
+      ]
+    },
+    {
+      "page": 2,
+      "count": 4,
+      "total": 16,
+      "totalPages": 2,
+      "stampIds": [
+        "3",
+        "2",
+        "1",
+        "0"
+      ]
+    }
+  ],
+  "fixtureComparisons": [
+    {
+      "id": "1507273",
+      "passed": true,
+      "checks": {
+        "id": {
+          "expected": "1507273",
+          "actual": "1507273",
+          "matches": true
+        },
+        "cpid": {
+          "expected": "A1301847304853164300",
+          "actual": "A1301847304853164300",
+          "matches": true
+        },
+        "txHash": {
+          "expected": "7046278a4bda05c7dd3063dd10607800cbb92ba6f8c7c41f49bd985edee6bbed",
+          "actual": "7046278a4bda05c7dd3063dd10607800cbb92ba6f8c7c41f49bd985edee6bbed",
+          "matches": true
+        },
+        "creator": {
+          "expected": "1PJ8FYDnNrtA4R3GrSesjbcbnz7iHYdKCH",
+          "actual": "1PJ8FYDnNrtA4R3GrSesjbcbnz7iHYdKCH",
+          "matches": true
+        },
+        "creatorName": {
+          "expected": null,
+          "actual": null,
+          "matches": true
+        },
+        "name": {
+          "expected": null,
+          "actual": null,
+          "matches": true
+        },
+        "mime": {
+          "expected": "image/png",
+          "actual": "image/png",
+          "matches": true
+        },
+        "mediaUrl": {
+          "expected": "https://stampchain.io/stamps/7046278a4bda05c7dd3063dd10607800cbb92ba6f8c7c41f49bd985edee6bbed.png",
+          "actual": "https://stampchain.io/stamps/7046278a4bda05c7dd3063dd10607800cbb92ba6f8c7c41f49bd985edee6bbed.png",
+          "matches": true
+        },
+        "supply": {
+          "expected": "1",
+          "actual": "1",
+          "matches": true
+        },
+        "block": {
+          "expected": 973464,
+          "actual": 973464,
+          "matches": true
+        },
+        "timestamp": {
+          "expected": "2026-10-27T22:16:09.000Z",
+          "actual": "2026-10-27T22:16:09.000Z",
+          "matches": true
+        },
+        "locked": {
+          "expected": true,
+          "actual": true,
+          "matches": true
+        },
+        "divisible": {
+          "expected": false,
+          "actual": false,
+          "matches": true
+        }
+      }
+    },
+    {
+      "id": "1505513",
+      "passed": true,
+      "checks": {
+        "id": {
+          "expected": "1505513",
+          "actual": "1505513",
+          "matches": true
+        },
+        "cpid": {
+          "expected": "A12139512354757593000",
+          "actual": "A12139512354757593000",
+          "matches": true
+        },
+        "txHash": {
+          "expected": "d6881659855f8f9721f4246efae3276952b022589717588803e34caec8737c8b",
+          "actual": "d6881659855f8f9721f4246efae3276952b022589717588803e34caec8737c8b",
+          "matches": true
+        },
+        "creator": {
+          "expected": "1PJ8FYDnNrtA4R3GrSesjbcbnz7iHYdKCH",
+          "actual": "1PJ8FYDnNrtA4R3GrSesjbcbnz7iHYdKCH",
+          "matches": true
+        },
+        "creatorName": {
+          "expected": null,
+          "actual": null,
+          "matches": true
+        },
+        "name": {
+          "expected": null,
+          "actual": null,
+          "matches": true
+        },
+        "mime": {
+          "expected": "text/html",
+          "actual": "text/html",
+          "matches": true
+        },
+        "mediaUrl": {
+          "expected": null,
+          "actual": null,
+          "matches": true
+        },
+        "supply": {
+          "expected": "47",
+          "actual": "47",
+          "matches": true
+        },
+        "block": {
+          "expected": 970905,
+          "actual": 970905,
+          "matches": true
+        },
+        "timestamp": {
+          "expected": "2026-10-11T09:58:59.000Z",
+          "actual": "2026-10-11T09:58:59.000Z",
+          "matches": true
+        },
+        "locked": {
+          "expected": true,
+          "actual": true,
+          "matches": true
+        },
+        "divisible": {
+          "expected": false,
+          "actual": false,
+          "matches": true
+        }
+      }
+    },
+    {
+      "id": "1472320",
+      "passed": true,
+      "checks": {
+        "id": {
+          "expected": "1472320",
+          "actual": "1472320",
+          "matches": true
+        },
+        "cpid": {
+          "expected": "A18124448351826151000",
+          "actual": "A18124448351826151000",
+          "matches": true
+        },
+        "txHash": {
+          "expected": "6dc47753ef445f57833a032b6cb14c64806004ca24df1f89b22b79f76494fe9e",
+          "actual": "6dc47753ef445f57833a032b6cb14c64806004ca24df1f89b22b79f76494fe9e",
+          "matches": true
+        },
+        "creator": {
+          "expected": "1PJ8FYDnNrtA4R3GrSesjbcbnz7iHYdKCH",
+          "actual": "1PJ8FYDnNrtA4R3GrSesjbcbnz7iHYdKCH",
+          "matches": true
+        },
+        "creatorName": {
+          "expected": null,
+          "actual": null,
+          "matches": true
+        },
+        "name": {
+          "expected": null,
+          "actual": null,
+          "matches": true
+        },
+        "mime": {
+          "expected": "text/html",
+          "actual": "text/html",
+          "matches": true
+        },
+        "mediaUrl": {
+          "expected": null,
+          "actual": null,
+          "matches": true
+        },
+        "supply": {
+          "expected": "33",
+          "actual": "33",
+          "matches": true
+        },
+        "block": {
+          "expected": 956621,
+          "actual": 956621,
+          "matches": true
+        },
+        "timestamp": {
+          "expected": "2026-07-04T07:32:17.000Z",
+          "actual": "2026-07-04T07:32:17.000Z",
+          "matches": true
+        },
+        "locked": {
+          "expected": true,
+          "actual": true,
+          "matches": true
+        },
+        "divisible": {
+          "expected": false,
+          "actual": false,
+          "matches": true
+        }
+      }
+    },
+    {
+      "id": "1467205",
+      "passed": true,
+      "checks": {
+        "id": {
+          "expected": "1467205",
+          "actual": "1467205",
+          "matches": true
+        },
+        "cpid": {
+          "expected": "A2408613761288012300",
+          "actual": "A2408613761288012300",
+          "matches": true
+        },
+        "txHash": {
+          "expected": "176a5d0329a8b48d5f86bcaf0078ccc3a57d50013744f4af3ea0c827347520ce",
+          "actual": "176a5d0329a8b48d5f86bcaf0078ccc3a57d50013744f4af3ea0c827347520ce",
+          "matches": true
+        },
+        "creator": {
+          "expected": "17hhaQLGEBNMBxruLYEA2aeW473n8YNEZ5",
+          "actual": "17hhaQLGEBNMBxruLYEA2aeW473n8YNEZ5",
+          "matches": true
+        },
+        "creatorName": {
+          "expected": null,
+          "actual": null,
+          "matches": true
+        },
+        "name": {
+          "expected": null,
+          "actual": null,
+          "matches": true
+        },
+        "mime": {
+          "expected": "image/png",
+          "actual": "image/png",
+          "matches": true
+        },
+        "mediaUrl": {
+          "expected": "https://stampchain.io/stamps/176a5d0329a8b48d5f86bcaf0078ccc3a57d50013744f4af3ea0c827347520ce.png",
+          "actual": "https://stampchain.io/stamps/176a5d0329a8b48d5f86bcaf0078ccc3a57d50013744f4af3ea0c827347520ce.png",
+          "matches": true
+        },
+        "supply": {
+          "expected": "25",
+          "actual": "25",
+          "matches": true
+        },
+        "block": {
+          "expected": 955032,
+          "actual": 955032,
+          "matches": true
+        },
+        "timestamp": {
+          "expected": "2026-06-23T17:15:39.000Z",
+          "actual": "2026-06-23T17:15:39.000Z",
+          "matches": true
+        },
+        "locked": {
+          "expected": true,
+          "actual": true,
+          "matches": true
+        },
+        "divisible": {
+          "expected": false,
+          "actual": false,
+          "matches": true
+        }
+      }
+    },
+    {
+      "id": "1467163",
+      "passed": true,
+      "checks": {
+        "id": {
+          "expected": "1467163",
+          "actual": "1467163",
+          "matches": true
+        },
+        "cpid": {
+          "expected": "A12538216832734396000",
+          "actual": "A12538216832734396000",
+          "matches": true
+        },
+        "txHash": {
+          "expected": "92df895bbf715316fee36cb536453fcd509dc80569afee6dce9e8203ad51de15",
+          "actual": "92df895bbf715316fee36cb536453fcd509dc80569afee6dce9e8203ad51de15",
+          "matches": true
+        },
+        "creator": {
+          "expected": "bc1qnu8rmy42tw2tkr25d4tw6uppmprxlfd49fvepg",
+          "actual": "bc1qnu8rmy42tw2tkr25d4tw6uppmprxlfd49fvepg",
+          "matches": true
+        },
+        "creatorName": {
+          "expected": "TonyNL",
+          "actual": "TonyNL",
+          "matches": true
+        },
+        "name": {
+          "expected": null,
+          "actual": null,
+          "matches": true
+        },
+        "mime": {
+          "expected": "image/png",
+          "actual": "image/png",
+          "matches": true
+        },
+        "mediaUrl": {
+          "expected": "https://stampchain.io/stamps/92df895bbf715316fee36cb536453fcd509dc80569afee6dce9e8203ad51de15.png",
+          "actual": "https://stampchain.io/stamps/92df895bbf715316fee36cb536453fcd509dc80569afee6dce9e8203ad51de15.png",
+          "matches": true
+        },
+        "supply": {
+          "expected": "21",
+          "actual": "21",
+          "matches": true
+        },
+        "block": {
+          "expected": 955006,
+          "actual": 955006,
+          "matches": true
+        },
+        "timestamp": {
+          "expected": "2026-06-23T13:44:02.000Z",
+          "actual": "2026-06-23T13:44:02.000Z",
+          "matches": true
+        },
+        "locked": {
+          "expected": true,
+          "actual": true,
+          "matches": true
+        },
+        "divisible": {
+          "expected": false,
+          "actual": false,
+          "matches": true
+        }
+      }
+    },
+    {
+      "id": "1465071",
+      "passed": true,
+      "checks": {
+        "id": {
+          "expected": "1465071",
+          "actual": "1465071",
+          "matches": true
+        },
+        "cpid": {
+          "expected": "A3872417558148287000",
+          "actual": "A3872417558148287000",
+          "matches": true
+        },
+        "txHash": {
+          "expected": "14bb8ee422e2cc7af7b5a2f1e055438ca4c8028198d7869008f1347f99dd2d2c",
+          "actual": "14bb8ee422e2cc7af7b5a2f1e055438ca4c8028198d7869008f1347f99dd2d2c",
+          "matches": true
+        },
+        "creator": {
+          "expected": "1PJ8FYDnNrtA4R3GrSesjbcbnz7iHYdKCH",
+          "actual": "1PJ8FYDnNrtA4R3GrSesjbcbnz7iHYdKCH",
+          "matches": true
+        },
+        "creatorName": {
+          "expected": null,
+          "actual": null,
+          "matches": true
+        },
+        "name": {
+          "expected": null,
+          "actual": null,
+          "matches": true
+        },
+        "mime": {
+          "expected": "text/html",
+          "actual": "text/html",
+          "matches": true
+        },
+        "mediaUrl": {
+          "expected": null,
+          "actual": null,
+          "matches": true
+        },
+        "supply": {
+          "expected": "24",
+          "actual": "24",
+          "matches": true
+        },
+        "block": {
+          "expected": 954359,
+          "actual": 954359,
+          "matches": true
+        },
+        "timestamp": {
+          "expected": "2026-06-19T05:19:24.000Z",
+          "actual": "2026-06-19T05:19:24.000Z",
+          "matches": true
+        },
+        "locked": {
+          "expected": true,
+          "actual": true,
+          "matches": true
+        },
+        "divisible": {
+          "expected": false,
+          "actual": false,
+          "matches": true
+        }
+      }
+    },
+    {
+      "id": "1462443",
+      "passed": true,
+      "checks": {
+        "id": {
+          "expected": "1462443",
+          "actual": "1462443",
+          "matches": true
+        },
+        "cpid": {
+          "expected": "A10446630279113530000",
+          "actual": "A10446630279113530000",
+          "matches": true
+        },
+        "txHash": {
+          "expected": "8e882bb07d50297aa74ac71b31e82a7556741934398d6d059b34745100e7d06d",
+          "actual": "8e882bb07d50297aa74ac71b31e82a7556741934398d6d059b34745100e7d06d",
+          "matches": true
+        },
+        "creator": {
+          "expected": "bc1q20d2cdvy2x83h3ssrz5lgryy4c9wqxsgc749ej",
+          "actual": "bc1q20d2cdvy2x83h3ssrz5lgryy4c9wqxsgc749ej",
+          "matches": true
+        },
+        "creatorName": {
+          "expected": "mikeinspace.btc",
+          "actual": "mikeinspace.btc",
+          "matches": true
+        },
+        "name": {
+          "expected": null,
+          "actual": null,
+          "matches": true
+        },
+        "mime": {
+          "expected": "text/html",
+          "actual": "text/html",
+          "matches": true
+        },
+        "mediaUrl": {
+          "expected": null,
+          "actual": null,
+          "matches": true
+        },
+        "supply": {
+          "expected": "21",
+          "actual": "21",
+          "matches": true
+        },
+        "block": {
+          "expected": 953470,
+          "actual": 953470,
+          "matches": true
+        },
+        "timestamp": {
+          "expected": "2026-06-13T05:17:49.000Z",
+          "actual": "2026-06-13T05:17:49.000Z",
+          "matches": true
+        },
+        "locked": {
+          "expected": true,
+          "actual": true,
+          "matches": true
+        },
+        "divisible": {
+          "expected": false,
+          "actual": false,
+          "matches": true
+        }
+      }
+    },
+    {
+      "id": "1457949",
+      "passed": true,
+      "checks": {
+        "id": {
+          "expected": "1457949",
+          "actual": "1457949",
+          "matches": true
+        },
+        "cpid": {
+          "expected": "A12039904590847662000",
+          "actual": "A12039904590847662000",
+          "matches": true
+        },
+        "txHash": {
+          "expected": "e915fa8be0a5d25c4327d056a54bbed7051f6ecf850993994741645012bb0e6b",
+          "actual": "e915fa8be0a5d25c4327d056a54bbed7051f6ecf850993994741645012bb0e6b",
+          "matches": true
+        },
+        "creator": {
+          "expected": "bc1qnu8rmy42tw2tkr25d4tw6uppmprxlfd49fvepg",
+          "actual": "bc1qnu8rmy42tw2tkr25d4tw6uppmprxlfd49fvepg",
+          "matches": true
+        },
+        "creatorName": {
+          "expected": "TonyNL",
+          "actual": "TonyNL",
+          "matches": true
+        },
+        "name": {
+          "expected": null,
+          "actual": null,
+          "matches": true
+        },
+        "mime": {
+          "expected": "image/png",
+          "actual": "image/png",
+          "matches": true
+        },
+        "mediaUrl": {
+          "expected": "https://stampchain.io/stamps/e915fa8be0a5d25c4327d056a54bbed7051f6ecf850993994741645012bb0e6b.png",
+          "actual": "https://stampchain.io/stamps/e915fa8be0a5d25c4327d056a54bbed7051f6ecf850993994741645012bb0e6b.png",
+          "matches": true
+        },
+        "supply": {
+          "expected": "1",
+          "actual": "1",
+          "matches": true
+        },
+        "block": {
+          "expected": 952121,
+          "actual": 952121,
+          "matches": true
+        },
+        "timestamp": {
+          "expected": "2026-06-02T15:16:20.000Z",
+          "actual": "2026-06-02T15:16:20.000Z",
+          "matches": true
+        },
+        "locked": {
+          "expected": true,
+          "actual": true,
+          "matches": true
+        },
+        "divisible": {
+          "expected": false,
+          "actual": false,
+          "matches": true
+        }
+      }
+    },
+    {
+      "id": "1384307",
+      "passed": true,
+      "checks": {
+        "id": {
+          "expected": "1384307",
+          "actual": "1384307",
+          "matches": true
+        },
+        "cpid": {
+          "expected": "A888354448084788958",
+          "actual": "A888354448084788958",
+          "matches": true
+        },
+        "txHash": {
+          "expected": "e94be2793462692ca8fea3a54dd90ff4b18735196a2bc426382c11959533c8ca",
+          "actual": "e94be2793462692ca8fea3a54dd90ff4b18735196a2bc426382c11959533c8ca",
+          "matches": true
+        },
+        "creator": {
+          "expected": "bc1qkqqre5xuqk60xtt93j297zgg7t6x0ul7gwjmv4",
+          "actual": "bc1qkqqre5xuqk60xtt93j297zgg7t6x0ul7gwjmv4",
+          "matches": true
+        },
+        "creatorName": {
+          "expected": null,
+          "actual": null,
+          "matches": true
+        },
+        "name": {
+          "expected": null,
+          "actual": null,
+          "matches": true
+        },
+        "mime": {
+          "expected": "image/png",
+          "actual": "image/png",
+          "matches": true
+        },
+        "mediaUrl": {
+          "expected": "https://stampchain.io/stamps/e94be2793462692ca8fea3a54dd90ff4b18735196a2bc426382c11959533c8ca.png",
+          "actual": "https://stampchain.io/stamps/e94be2793462692ca8fea3a54dd90ff4b18735196a2bc426382c11959533c8ca.png",
+          "matches": true
+        },
+        "supply": {
+          "expected": "1",
+          "actual": "1",
+          "matches": true
+        },
+        "block": {
+          "expected": 933837,
+          "actual": 933837,
+          "matches": true
+        },
+        "timestamp": {
+          "expected": "2026-01-26T11:23:22.000Z",
+          "actual": "2026-01-26T11:23:22.000Z",
+          "matches": true
+        },
+        "locked": {
+          "expected": true,
+          "actual": true,
+          "matches": true
+        },
+        "divisible": {
+          "expected": false,
+          "actual": false,
+          "matches": true
+        }
+      }
+    },
+    {
+      "id": "1384306",
+      "passed": true,
+      "checks": {
+        "id": {
+          "expected": "1384306",
+          "actual": "1384306",
+          "matches": true
+        },
+        "cpid": {
+          "expected": "A808878051088522858",
+          "actual": "A808878051088522858",
+          "matches": true
+        },
+        "txHash": {
+          "expected": "5a6f0c747e5b9b22d6faec98ef1b0934e94a4e2e9384f21456280861a9b931fa",
+          "actual": "5a6f0c747e5b9b22d6faec98ef1b0934e94a4e2e9384f21456280861a9b931fa",
+          "matches": true
+        },
+        "creator": {
+          "expected": "bc1qkqqre5xuqk60xtt93j297zgg7t6x0ul7gwjmv4",
+          "actual": "bc1qkqqre5xuqk60xtt93j297zgg7t6x0ul7gwjmv4",
+          "matches": true
+        },
+        "creatorName": {
+          "expected": null,
+          "actual": null,
+          "matches": true
+        },
+        "name": {
+          "expected": null,
+          "actual": null,
+          "matches": true
+        },
+        "mime": {
+          "expected": "image/png",
+          "actual": "image/png",
+          "matches": true
+        },
+        "mediaUrl": {
+          "expected": "https://stampchain.io/stamps/5a6f0c747e5b9b22d6faec98ef1b0934e94a4e2e9384f21456280861a9b931fa.png",
+          "actual": "https://stampchain.io/stamps/5a6f0c747e5b9b22d6faec98ef1b0934e94a4e2e9384f21456280861a9b931fa.png",
+          "matches": true
+        },
+        "supply": {
+          "expected": "1",
+          "actual": "1",
+          "matches": true
+        },
+        "block": {
+          "expected": 933837,
+          "actual": 933837,
+          "matches": true
+        },
+        "timestamp": {
+          "expected": "2026-01-26T11:23:22.000Z",
+          "actual": "2026-01-26T11:23:22.000Z",
+          "matches": true
+        },
+        "locked": {
+          "expected": true,
+          "actual": true,
+          "matches": true
+        },
+        "divisible": {
+          "expected": false,
+          "actual": false,
+          "matches": true
+        }
+      }
+    },
+    {
+      "id": "1384305",
+      "passed": true,
+      "checks": {
+        "id": {
+          "expected": "1384305",
+          "actual": "1384305",
+          "matches": true
+        },
+        "cpid": {
+          "expected": "A848384122988885728",
+          "actual": "A848384122988885728",
+          "matches": true
+        },
+        "txHash": {
+          "expected": "d79da3538713568504c73726708a6ddfca5681bc111845dbae17265f455448ed",
+          "actual": "d79da3538713568504c73726708a6ddfca5681bc111845dbae17265f455448ed",
+          "matches": true
+        },
+        "creator": {
+          "expected": "bc1qkqqre5xuqk60xtt93j297zgg7t6x0ul7gwjmv4",
+          "actual": "bc1qkqqre5xuqk60xtt93j297zgg7t6x0ul7gwjmv4",
+          "matches": true
+        },
+        "creatorName": {
+          "expected": null,
+          "actual": null,
+          "matches": true
+        },
+        "name": {
+          "expected": null,
+          "actual": null,
+          "matches": true
+        },
+        "mime": {
+          "expected": "image/png",
+          "actual": "image/png",
+          "matches": true
+        },
+        "mediaUrl": {
+          "expected": "https://stampchain.io/stamps/d79da3538713568504c73726708a6ddfca5681bc111845dbae17265f455448ed.png",
+          "actual": "https://stampchain.io/stamps/d79da3538713568504c73726708a6ddfca5681bc111845dbae17265f455448ed.png",
+          "matches": true
+        },
+        "supply": {
+          "expected": "1",
+          "actual": "1",
+          "matches": true
+        },
+        "block": {
+          "expected": 933837,
+          "actual": 933837,
+          "matches": true
+        },
+        "timestamp": {
+          "expected": "2026-01-26T11:23:22.000Z",
+          "actual": "2026-01-26T11:23:22.000Z",
+          "matches": true
+        },
+        "locked": {
+          "expected": true,
+          "actual": true,
+          "matches": true
+        },
+        "divisible": {
+          "expected": false,
+          "actual": false,
+          "matches": true
+        }
+      }
+    },
+    {
+      "id": "1383565",
+      "passed": true,
+      "checks": {
+        "id": {
+          "expected": "1383565",
+          "actual": "1383565",
+          "matches": true
+        },
+        "cpid": {
+          "expected": "A197900000000002026",
+          "actual": "A197900000000002026",
+          "matches": true
+        },
+        "txHash": {
+          "expected": "516e62beeffb26fb37f8e95e809274e5bbde76eb75a28357f6bbcd4eedbfe8ca",
+          "actual": "516e62beeffb26fb37f8e95e809274e5bbde76eb75a28357f6bbcd4eedbfe8ca",
+          "matches": true
+        },
+        "creator": {
+          "expected": "bc1q7mlw0y0qe9dadg24q2225ded0myuxkw2wm8pzj",
+          "actual": "bc1q7mlw0y0qe9dadg24q2225ded0myuxkw2wm8pzj",
+          "matches": true
+        },
+        "creatorName": {
+          "expected": "Bbleiztz",
+          "actual": "Bbleiztz",
+          "matches": true
+        },
+        "name": {
+          "expected": null,
+          "actual": null,
+          "matches": true
+        },
+        "mime": {
+          "expected": "image/png",
+          "actual": "image/png",
+          "matches": true
+        },
+        "mediaUrl": {
+          "expected": "https://stampchain.io/stamps/516e62beeffb26fb37f8e95e809274e5bbde76eb75a28357f6bbcd4eedbfe8ca.png",
+          "actual": "https://stampchain.io/stamps/516e62beeffb26fb37f8e95e809274e5bbde76eb75a28357f6bbcd4eedbfe8ca.png",
+          "matches": true
+        },
+        "supply": {
+          "expected": "42",
+          "actual": "42",
+          "matches": true
+        },
+        "block": {
+          "expected": 933540,
+          "actual": 933540,
+          "matches": true
+        },
+        "timestamp": {
+          "expected": "2026-01-23T16:27:08.000Z",
+          "actual": "2026-01-23T16:27:08.000Z",
+          "matches": true
+        },
+        "locked": {
+          "expected": true,
+          "actual": true,
+          "matches": true
+        },
+        "divisible": {
+          "expected": false,
+          "actual": false,
+          "matches": true
+        }
+      }
+    },
+    {
+      "id": "3",
+      "passed": true,
+      "checks": {
+        "id": {
+          "expected": "3",
+          "actual": "3",
+          "matches": true
+        },
+        "cpid": {
+          "expected": "A3331514441475851300",
+          "actual": "A3331514441475851300",
+          "matches": true
+        },
+        "txHash": {
+          "expected": "47054da12382223bfa928e9c3e0c8c99b42fe3e88985fb6043d8d84f17b893c9",
+          "actual": "47054da12382223bfa928e9c3e0c8c99b42fe3e88985fb6043d8d84f17b893c9",
+          "matches": true
+        },
+        "creator": {
+          "expected": "16ty9iygA4N1uw8Tu7ssGV5SeHscAAXjXP",
+          "actual": "16ty9iygA4N1uw8Tu7ssGV5SeHscAAXjXP",
+          "matches": true
+        },
+        "creatorName": {
+          "expected": "Arwyn",
+          "actual": "Arwyn",
+          "matches": true
+        },
+        "name": {
+          "expected": null,
+          "actual": null,
+          "matches": true
+        },
+        "mime": {
+          "expected": "image/png",
+          "actual": "image/png",
+          "matches": true
+        },
+        "mediaUrl": {
+          "expected": "https://stampchain.io/stamps/47054da12382223bfa928e9c3e0c8c99b42fe3e88985fb6043d8d84f17b893c9.png",
+          "actual": "https://stampchain.io/stamps/47054da12382223bfa928e9c3e0c8c99b42fe3e88985fb6043d8d84f17b893c9.png",
+          "matches": true
+        },
+        "supply": {
+          "expected": "1",
+          "actual": "1",
+          "matches": true
+        },
+        "block": {
+          "expected": 779975,
+          "actual": 779975,
+          "matches": true
+        },
+        "timestamp": {
+          "expected": "2023-03-09T05:42:23.000Z",
+          "actual": "2023-03-09T05:42:23.000Z",
+          "matches": true
+        },
+        "locked": {
+          "expected": true,
+          "actual": true,
+          "matches": true
+        },
+        "divisible": {
+          "expected": false,
+          "actual": false,
+          "matches": true
+        }
+      }
+    },
+    {
+      "id": "2",
+      "passed": true,
+      "checks": {
+        "id": {
+          "expected": "2",
+          "actual": "2",
+          "matches": true
+        },
+        "cpid": {
+          "expected": "A3121984346241143000",
+          "actual": "A3121984346241143000",
+          "matches": true
+        },
+        "txHash": {
+          "expected": "1b15bd78a0f957ebcf38e6de7b56e173b4746c294cdfdca0e64b60b3e548bf92",
+          "actual": "1b15bd78a0f957ebcf38e6de7b56e173b4746c294cdfdca0e64b60b3e548bf92",
+          "matches": true
+        },
+        "creator": {
+          "expected": "16ty9iygA4N1uw8Tu7ssGV5SeHscAAXjXP",
+          "actual": "16ty9iygA4N1uw8Tu7ssGV5SeHscAAXjXP",
+          "matches": true
+        },
+        "creatorName": {
+          "expected": "Arwyn",
+          "actual": "Arwyn",
+          "matches": true
+        },
+        "name": {
+          "expected": null,
+          "actual": null,
+          "matches": true
+        },
+        "mime": {
+          "expected": "image/png",
+          "actual": "image/png",
+          "matches": true
+        },
+        "mediaUrl": {
+          "expected": "https://stampchain.io/stamps/1b15bd78a0f957ebcf38e6de7b56e173b4746c294cdfdca0e64b60b3e548bf92.png",
+          "actual": "https://stampchain.io/stamps/1b15bd78a0f957ebcf38e6de7b56e173b4746c294cdfdca0e64b60b3e548bf92.png",
+          "matches": true
+        },
+        "supply": {
+          "expected": "1",
+          "actual": "1",
+          "matches": true
+        },
+        "block": {
+          "expected": 779972,
+          "actual": 779972,
+          "matches": true
+        },
+        "timestamp": {
+          "expected": "2023-03-09T05:39:08.000Z",
+          "actual": "2023-03-09T05:39:08.000Z",
+          "matches": true
+        },
+        "locked": {
+          "expected": false,
+          "actual": false,
+          "matches": true
+        },
+        "divisible": {
+          "expected": false,
+          "actual": false,
+          "matches": true
+        }
+      }
+    },
+    {
+      "id": "1",
+      "passed": true,
+      "checks": {
+        "id": {
+          "expected": "1",
+          "actual": "1",
+          "matches": true
+        },
+        "cpid": {
+          "expected": "A6360128538192758000",
+          "actual": "A6360128538192758000",
+          "matches": true
+        },
+        "txHash": {
+          "expected": "eb3da8146e626b5783f4359fb1510729f4aad923dfac45b6f1f3a2063907147c",
+          "actual": "eb3da8146e626b5783f4359fb1510729f4aad923dfac45b6f1f3a2063907147c",
+          "matches": true
+        },
+        "creator": {
+          "expected": "1GotRejB6XsGgMsM79TvcypeanDJRJbMtg",
+          "actual": "1GotRejB6XsGgMsM79TvcypeanDJRJbMtg",
+          "matches": true
+        },
+        "creatorName": {
+          "expected": "Mike in Space",
+          "actual": "Mike in Space",
+          "matches": true
+        },
+        "name": {
+          "expected": null,
+          "actual": null,
+          "matches": true
+        },
+        "mime": {
+          "expected": "image/png",
+          "actual": "image/png",
+          "matches": true
+        },
+        "mediaUrl": {
+          "expected": "https://stampchain.io/stamps/eb3da8146e626b5783f4359fb1510729f4aad923dfac45b6f1f3a2063907147c.png",
+          "actual": "https://stampchain.io/stamps/eb3da8146e626b5783f4359fb1510729f4aad923dfac45b6f1f3a2063907147c.png",
+          "matches": true
+        },
+        "supply": {
+          "expected": "1",
+          "actual": "1",
+          "matches": true
+        },
+        "block": {
+          "expected": 779652,
+          "actual": 779652,
+          "matches": true
+        },
+        "timestamp": {
+          "expected": "2023-03-07T01:19:09.000Z",
+          "actual": "2023-03-07T01:19:09.000Z",
+          "matches": true
+        },
+        "locked": {
+          "expected": true,
+          "actual": true,
+          "matches": true
+        },
+        "divisible": {
+          "expected": false,
+          "actual": false,
+          "matches": true
+        }
+      }
+    },
+    {
+      "id": "0",
+      "passed": true,
+      "checks": {
+        "id": {
+          "expected": "0",
+          "actual": "0",
+          "matches": true
+        },
+        "cpid": {
+          "expected": "A7337447728884561000",
+          "actual": "A7337447728884561000",
+          "matches": true
+        },
+        "txHash": {
+          "expected": "17686488353b65b128d19031240478ba50f1387d0ea7e5f188ea7fda78ea06f4",
+          "actual": "17686488353b65b128d19031240478ba50f1387d0ea7e5f188ea7fda78ea06f4",
+          "matches": true
+        },
+        "creator": {
+          "expected": "1GotRejB6XsGgMsM79TvcypeanDJRJbMtg",
+          "actual": "1GotRejB6XsGgMsM79TvcypeanDJRJbMtg",
+          "matches": true
+        },
+        "creatorName": {
+          "expected": "Mike in Space",
+          "actual": "Mike in Space",
+          "matches": true
+        },
+        "name": {
+          "expected": null,
+          "actual": null,
+          "matches": true
+        },
+        "mime": {
+          "expected": "image/png",
+          "actual": "image/png",
+          "matches": true
+        },
+        "mediaUrl": {
+          "expected": "https://stampchain.io/stamps/17686488353b65b128d19031240478ba50f1387d0ea7e5f188ea7fda78ea06f4.png",
+          "actual": "https://stampchain.io/stamps/17686488353b65b128d19031240478ba50f1387d0ea7e5f188ea7fda78ea06f4.png",
+          "matches": true
+        },
+        "supply": {
+          "expected": "1",
+          "actual": "1",
+          "matches": true
+        },
+        "block": {
+          "expected": 779652,
+          "actual": 779652,
+          "matches": true
+        },
+        "timestamp": {
+          "expected": "2023-03-07T01:19:09.000Z",
+          "actual": "2023-03-07T01:19:09.000Z",
+          "matches": true
+        },
+        "locked": {
+          "expected": true,
+          "actual": true,
+          "matches": true
+        },
+        "divisible": {
+          "expected": false,
+          "actual": false,
+          "matches": true
+        }
+      }
+    }
+  ]
+}

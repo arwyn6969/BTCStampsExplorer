@@ -1,0 +1,34 @@
+HTTP/2 200 
+date: Tue, 03 Nov 2026 12:33:44 GMT
+content-type: application/json
+content-length: 591
+access-control-max-age: 86400
+api-version: 2.3
+cache-control: public, max-age=31536000, immutable, public, max-age=86400, stale-while-revalidate=3600, stale-if-error=7200
+cdn-cache-control: public, max-age=31536000, immutable, public, max-age=86400, stale-while-revalidate=3600, stale-if-error=7200
+content-encoding: gzip
+content-security-policy: default-src 'none'; connect-src 'self', default-src 'none'; connect-src 'self'
+edge-control: cache-maxage=31536000, cache-maxage=86400
+surrogate-control: max-age=31536000, max-age=86400
+vary: Accept-Encoding, Accept, Origin, X-API-Version
+x-api-version: v2.2.7, v2.2.7
+x-content-type-options: nosniff, nosniff
+x-frame-options: DENY, DENY
+x-permitted-cross-domain-policies: none, none
+api-version-supported: 2.2, 2.3
+x-api-version-used: 2.3
+x-api-version-default: 2.3
+x-ratelimit-limit: 100
+x-ratelimit-remaining: 99
+x-ratelimit-reset: 1793709284423
+cf-cache-status: DYNAMIC
+speculation-rules: "/cdn-cgi/speculation"
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=rsKtXEP4GnQMa00H%2BvDfbjOg9LXaD5GU9G7eHPh%2FNRAo11Wtb2CA4dIYuMDFEnBQj%2FTyPm7Mq%2FfSYD9Yyx8zsJp7bk9kPrXgYtW5Ofou6cZimaCxt4M6DE2LblcFgPo%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+access-control-allow-headers: Content-Type, Accept, Origin, Authorization
+access-control-allow-methods: GET, POST, OPTIONS
+access-control-allow-origin: *
+server: cloudflare
+cf-ray: a54b68a8dd672547-LHR
+alt-svc: h3=":443"; ma=86400
+

@@ -1,0 +1,24 @@
+HTTP/2 200 
+date: Tue, 03 Nov 2026 12:05:59 GMT
+content-type: image/png
+content-length: 325
+cf-ray: a54b4018a8d0bed2-LHR
+cf-cache-status: HIT
+accept-ranges: bytes
+access-control-allow-origin: *
+age: 91301
+cache-control: public, max-age=31536000
+etag: "8f2392e171b59eff3485f10c2755f0c8"
+last-modified: Tue, 02 Jun 2026 15:16:39 GMT
+server: cloudflare
+vary: accept-encoding
+access-control-allow-headers: Content-Type, Accept, Origin, Authorization, Content-Encoding, Accept-Encoding, Range, If-None-Match, If-Modified-Since
+access-control-allow-methods: GET, HEAD, OPTIONS
+access-control-expose-headers: Content-Length, Content-Range, Content-Encoding
+cdn-cache-control: public, max-age=31536000
+x-proxied-by: Cloudflare Worker
+speculation-rules: "/cdn-cgi/speculation"
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=7O1BsCrq%2BSBtsrk8NzzEpG7cPL%2ByrkB3DR7wdfSyMAbwI%2Fl3l1gCAicFRuFm%2BAkbo4VbzVeKTxVgR4iNlSezrG9bhmnBAjtbpcL39TpUGHPSFInzQbsicOBVZHqnFsk%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+alt-svc: h3=":443"; ma=86400
+

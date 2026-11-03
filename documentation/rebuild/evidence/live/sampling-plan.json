@@ -1,0 +1,31 @@
+{
+  "preparedDate": "2026-11-03",
+  "sourceRevision": "7e3cd554b44302f9c07dc6c8c557ed63a6520294",
+  "selectionRule": "Before fetching, select all four returned records from each stratum in response order. Do not substitute records because media fail. Record empty strata, duplicates, failed responses and unsupported types honestly.",
+  "strata": [
+    {
+      "name": "recent-raster",
+      "query": "limit=4&page=1&sortBy=DESC&type=classic&filetype=png,jpg,gif,webp"
+    },
+    {
+      "name": "older-raster",
+      "query": "limit=4&page=1&sortBy=ASC&type=classic&filetype=png,jpg,gif,webp"
+    },
+    {
+      "name": "active-originals",
+      "query": "limit=4&page=1&sortBy=DESC&type=classic&filetype=html,svg"
+    }
+  ],
+  "supplementaryReads": [
+    "Same recent-raster filter at page=2 for adjacent-page comparison",
+    "Detail for first recent-raster and first older-raster identifiers",
+    "Invalid page=0 for error-envelope comparison"
+  ],
+  "limits": {
+    "timeoutSeconds": 15,
+    "connectTimeoutSeconds": 5,
+    "maxResponseBytes": 2097152,
+    "followRedirects": false
+  },
+  "mediaRule": "Request only existing HTTPS stampchain.io /stamps/<64-hex>.<png|jpg|jpeg|gif|webp> originals whose advertised MIME is the corresponding raster type. Do not request HTML, SVG, /content/, generation or refresh endpoints. Verify content type, magic bytes and local decoding; record other formats as intentionally unsupported. No retries or load test."
+}

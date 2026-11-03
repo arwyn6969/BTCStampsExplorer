@@ -1,0 +1,471 @@
+{
+  "selectionPlan": "sampling-plan.json",
+  "sourceRevision": "7e3cd554b44302f9c07dc6c8c557ed63a6520294",
+  "sampleCount": 12,
+  "uniqueStampCount": 12,
+  "advertisedMimeCounts": {
+    "image/png": 8,
+    "text/html": 4
+  },
+  "records": [
+    {
+      "stratum": "recent-raster",
+      "position": 1,
+      "stamp": 1507273,
+      "cpid": "A1301847304853164300",
+      "txHash": "7046278a4bda05c7dd3063dd10607800cbb92ba6f8c7c41f49bd985edee6bbed",
+      "advertisedUrl": "https://stampchain.io/stamps/7046278a4bda05c7dd3063dd10607800cbb92ba6f8c7c41f49bd985edee6bbed.png",
+      "advertisedMime": "image/png",
+      "advertisedFileSizeBytes": 517,
+      "httpStatus": 200,
+      "responseContentType": "image/png",
+      "downloadedBytes": 227,
+      "downloadedSha256": "e17e3b742567175b1af11356b4eef86e04fc7f911c6592762118b0c6d6d95944",
+      "hasPngSignature": true,
+      "redirectsFollowed": 0,
+      "decodedFormat": "PNG",
+      "width": 24,
+      "height": 24,
+      "pixelSha256": "3e031607ae21862699a7381b9a2326314d2e873413b3646007df39412e6331c2",
+      "mediaStatus": "signature and full pixel decoding passed"
+    },
+    {
+      "stratum": "recent-raster",
+      "position": 2,
+      "stamp": 1467205,
+      "cpid": "A2408613761288012300",
+      "txHash": "176a5d0329a8b48d5f86bcaf0078ccc3a57d50013744f4af3ea0c827347520ce",
+      "advertisedUrl": "https://stampchain.io/stamps/176a5d0329a8b48d5f86bcaf0078ccc3a57d50013744f4af3ea0c827347520ce.png",
+      "advertisedMime": "image/png",
+      "advertisedFileSizeBytes": 1311,
+      "httpStatus": 200,
+      "responseContentType": "image/png",
+      "downloadedBytes": 1202,
+      "downloadedSha256": "e3221ac8734e28a1a5fc314aa26c92ac84facc3afbe6be67c77cf98f7a7ab29c",
+      "hasPngSignature": true,
+      "redirectsFollowed": 0,
+      "decodedFormat": "PNG",
+      "width": 84,
+      "height": 84,
+      "pixelSha256": "224882a7c4108b3762e532b0afa763d491edd8edb3c25a7022e3a934712494b6",
+      "mediaStatus": "signature and full pixel decoding passed"
+    },
+    {
+      "stratum": "recent-raster",
+      "position": 3,
+      "stamp": 1467163,
+      "cpid": "A12538216832734396000",
+      "txHash": "92df895bbf715316fee36cb536453fcd509dc80569afee6dce9e8203ad51de15",
+      "advertisedUrl": "https://stampchain.io/stamps/92df895bbf715316fee36cb536453fcd509dc80569afee6dce9e8203ad51de15.png",
+      "advertisedMime": "image/png",
+      "advertisedFileSizeBytes": 408,
+      "httpStatus": 200,
+      "responseContentType": "image/png",
+      "downloadedBytes": 402,
+      "downloadedSha256": "c0a9cd1b2a2799ba61fc5cca6077dddeeace69888e99bf475d4e980152a8bbb5",
+      "hasPngSignature": true,
+      "redirectsFollowed": 0,
+      "decodedFormat": "PNG",
+      "width": 50,
+      "height": 50,
+      "pixelSha256": "8f72119b2247766e825f76eb01f7b326b653247c148025b6958b6049a3f339b4",
+      "mediaStatus": "signature and full pixel decoding passed"
+    },
+    {
+      "stratum": "recent-raster",
+      "position": 4,
+      "stamp": 1457949,
+      "cpid": "A12039904590847662000",
+      "txHash": "e915fa8be0a5d25c4327d056a54bbed7051f6ecf850993994741645012bb0e6b",
+      "advertisedUrl": "https://stampchain.io/stamps/e915fa8be0a5d25c4327d056a54bbed7051f6ecf850993994741645012bb0e6b.png",
+      "advertisedMime": "image/png",
+      "advertisedFileSizeBytes": 325,
+      "httpStatus": 200,
+      "responseContentType": "image/png",
+      "downloadedBytes": 325,
+      "downloadedSha256": "168073f7112d79d439bc1e2a3f37955ffcc2a61a7311542dc830306663e08a91",
+      "hasPngSignature": true,
+      "redirectsFollowed": 0,
+      "decodedFormat": "PNG",
+      "width": 50,
+      "height": 50,
+      "pixelSha256": "f7f0a2d5e597e265415b2c844fa9f42e43abf7a9c855d0e15137fca558f65bf2",
+      "mediaStatus": "signature and full pixel decoding passed"
+    },
+    {
+      "stratum": "older-raster",
+      "position": 1,
+      "stamp": 0,
+      "cpid": "A7337447728884561000",
+      "txHash": "17686488353b65b128d19031240478ba50f1387d0ea7e5f188ea7fda78ea06f4",
+      "advertisedUrl": "https://stampchain.io/stamps/17686488353b65b128d19031240478ba50f1387d0ea7e5f188ea7fda78ea06f4.png",
+      "advertisedMime": "image/png",
+      "advertisedFileSizeBytes": 85,
+      "httpStatus": 200,
+      "responseContentType": "image/png",
+      "downloadedBytes": 79,
+      "downloadedSha256": "dd80e7287ba4932e319c9113e6b2b374945b904571ffec75c91e369dd3b44f0a",
+      "hasPngSignature": true,
+      "redirectsFollowed": 0,
+      "decodedFormat": "PNG",
+      "width": 5,
+      "height": 5,
+      "pixelSha256": "013cbdf0f236affda68f21729d18513d06e72409bd50bb1e0cc95ac4d5e257bd",
+      "mediaStatus": "signature and full pixel decoding passed"
+    },
+    {
+      "stratum": "older-raster",
+      "position": 2,
+      "stamp": 1,
+      "cpid": "A6360128538192758000",
+      "txHash": "eb3da8146e626b5783f4359fb1510729f4aad923dfac45b6f1f3a2063907147c",
+      "advertisedUrl": "https://stampchain.io/stamps/eb3da8146e626b5783f4359fb1510729f4aad923dfac45b6f1f3a2063907147c.png",
+      "advertisedMime": "image/png",
+      "advertisedFileSizeBytes": 85,
+      "httpStatus": 200,
+      "responseContentType": "image/png",
+      "downloadedBytes": 79,
+      "downloadedSha256": "dd80e7287ba4932e319c9113e6b2b374945b904571ffec75c91e369dd3b44f0a",
+      "hasPngSignature": true,
+      "redirectsFollowed": 0,
+      "decodedFormat": "PNG",
+      "width": 5,
+      "height": 5,
+      "pixelSha256": "013cbdf0f236affda68f21729d18513d06e72409bd50bb1e0cc95ac4d5e257bd",
+      "mediaStatus": "signature and full pixel decoding passed"
+    },
+    {
+      "stratum": "older-raster",
+      "position": 3,
+      "stamp": 2,
+      "cpid": "A3121984346241143000",
+      "txHash": "1b15bd78a0f957ebcf38e6de7b56e173b4746c294cdfdca0e64b60b3e548bf92",
+      "advertisedUrl": "https://stampchain.io/stamps/1b15bd78a0f957ebcf38e6de7b56e173b4746c294cdfdca0e64b60b3e548bf92.png",
+      "advertisedMime": "image/png",
+      "advertisedFileSizeBytes": 141,
+      "httpStatus": 200,
+      "responseContentType": "image/png",
+      "downloadedBytes": 125,
+      "downloadedSha256": "cd43c443723032b8474ce456be91ec6f5b8d5ce8d876f066418b6e2b740bf829",
+      "hasPngSignature": true,
+      "redirectsFollowed": 0,
+      "decodedFormat": "PNG",
+      "width": 12,
+      "height": 12,
+      "pixelSha256": "964e09e2cb8d363ae75934eecbf628cc9f5a53b4e1fa46f3166be677f80d81a6",
+      "mediaStatus": "signature and full pixel decoding passed"
+    },
+    {
+      "stratum": "older-raster",
+      "position": 4,
+      "stamp": 3,
+      "cpid": "A3331514441475851300",
+      "txHash": "47054da12382223bfa928e9c3e0c8c99b42fe3e88985fb6043d8d84f17b893c9",
+      "advertisedUrl": "https://stampchain.io/stamps/47054da12382223bfa928e9c3e0c8c99b42fe3e88985fb6043d8d84f17b893c9.png",
+      "advertisedMime": "image/png",
+      "advertisedFileSizeBytes": 253,
+      "httpStatus": 200,
+      "responseContentType": "image/png",
+      "downloadedBytes": 242,
+      "downloadedSha256": "090275c94a7f3481a50024de0615fd12dad25d34d965690bd60d4a6989339992",
+      "hasPngSignature": true,
+      "redirectsFollowed": 0,
+      "decodedFormat": "PNG",
+      "width": 24,
+      "height": 24,
+      "pixelSha256": "d5d9367605756dfc7244c6ca3b97865cc5b8823cd4dd31079842911bd2c042c4",
+      "mediaStatus": "signature and full pixel decoding passed"
+    },
+    {
+      "stratum": "active-originals",
+      "position": 1,
+      "stamp": 1505513,
+      "cpid": "A12139512354757593000",
+      "txHash": "d6881659855f8f9721f4246efae3276952b022589717588803e34caec8737c8b",
+      "advertisedUrl": "https://stampchain.io/stamps/d6881659855f8f9721f4246efae3276952b022589717588803e34caec8737c8b.html",
+      "advertisedMime": "text/html",
+      "advertisedFileSizeBytes": 56239,
+      "mediaStatus": "intentionally unsupported; no body requested"
+    },
+    {
+      "stratum": "active-originals",
+      "position": 2,
+      "stamp": 1472320,
+      "cpid": "A18124448351826151000",
+      "txHash": "6dc47753ef445f57833a032b6cb14c64806004ca24df1f89b22b79f76494fe9e",
+      "advertisedUrl": "https://stampchain.io/stamps/6dc47753ef445f57833a032b6cb14c64806004ca24df1f89b22b79f76494fe9e.html",
+      "advertisedMime": "text/html",
+      "advertisedFileSizeBytes": 41886,
+      "mediaStatus": "intentionally unsupported; no body requested"
+    },
+    {
+      "stratum": "active-originals",
+      "position": 3,
+      "stamp": 1465071,
+      "cpid": "A3872417558148287000",
+      "txHash": "14bb8ee422e2cc7af7b5a2f1e055438ca4c8028198d7869008f1347f99dd2d2c",
+      "advertisedUrl": "https://stampchain.io/stamps/14bb8ee422e2cc7af7b5a2f1e055438ca4c8028198d7869008f1347f99dd2d2c.html",
+      "advertisedMime": "text/html",
+      "advertisedFileSizeBytes": 28585,
+      "mediaStatus": "intentionally unsupported; no body requested"
+    },
+    {
+      "stratum": "active-originals",
+      "position": 4,
+      "stamp": 1462443,
+      "cpid": "A10446630279113530000",
+      "txHash": "8e882bb07d50297aa74ac71b31e82a7556741934398d6d059b34745100e7d06d",
+      "advertisedUrl": "https://stampchain.io/stamps/8e882bb07d50297aa74ac71b31e82a7556741934398d6d059b34745100e7d06d.html",
+      "advertisedMime": "text/html",
+      "advertisedFileSizeBytes": 1239,
+      "mediaStatus": "intentionally unsupported; no body requested"
+    }
+  ],
+  "sourceDataComparisons": [
+    {
+      "stamp": 1507273,
+      "fieldsCompared": [
+        "stamp",
+        "cpid",
+        "tx_hash",
+        "creator",
+        "creator_name",
+        "stamp_url",
+        "stamp_mimetype",
+        "block_index",
+        "tx_index",
+        "block_time",
+        "supply"
+      ],
+      "exactMatches": {
+        "stamp": true,
+        "cpid": true,
+        "tx_hash": true,
+        "creator": true,
+        "creator_name": true,
+        "stamp_url": true,
+        "stamp_mimetype": true,
+        "block_index": true,
+        "tx_index": true,
+        "block_time": true,
+        "supply": true
+      },
+      "normalizedFlagsMatch": {
+        "locked": true,
+        "divisible": true
+      },
+      "base64Dimensions": [
+        24,
+        24
+      ],
+      "servedDimensions": [
+        24,
+        24
+      ],
+      "base64Bytes": 517,
+      "servedBytes": 227,
+      "byteIdentical": false,
+      "decodedRgbaPixelsIdentical": true,
+      "compositedPixelsIdentical": {
+        "black": true,
+        "white": true
+      }
+    },
+    {
+      "stamp": 0,
+      "fieldsCompared": [
+        "stamp",
+        "cpid",
+        "tx_hash",
+        "creator",
+        "creator_name",
+        "stamp_url",
+        "stamp_mimetype",
+        "block_index",
+        "tx_index",
+        "block_time",
+        "supply"
+      ],
+      "exactMatches": {
+        "stamp": true,
+        "cpid": true,
+        "tx_hash": true,
+        "creator": true,
+        "creator_name": true,
+        "stamp_url": true,
+        "stamp_mimetype": true,
+        "block_index": true,
+        "tx_index": true,
+        "block_time": true,
+        "supply": true
+      },
+      "normalizedFlagsMatch": {
+        "locked": true,
+        "divisible": true
+      },
+      "base64Dimensions": [
+        5,
+        5
+      ],
+      "servedDimensions": [
+        5,
+        5
+      ],
+      "base64Bytes": 85,
+      "servedBytes": 79,
+      "byteIdentical": false,
+      "decodedRgbaPixelsIdentical": false,
+      "compositedPixelsIdentical": {
+        "black": true,
+        "white": true
+      }
+    }
+  ],
+  "pagingObservations": {
+    "firstPageStampNumbers": [
+      1507273,
+      1467205,
+      1467163,
+      1457949
+    ],
+    "secondPageStampNumbers": [
+      1384307,
+      1384306,
+      1384305,
+      1383565
+    ],
+    "olderPageStampNumbers": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "adjacentPageIntersection": [],
+    "firstPageTransactionIndexesDescending": true,
+    "secondPageTransactionIndexesDescending": true,
+    "olderTransactionIndexesAscending": true,
+    "snapshotStabilityProven": false
+  },
+  "requestSummary": [
+    {
+      "name": "active-originals",
+      "startedUtc": "2026-11-03T12:05:22.635277+00:00",
+      "status": 200,
+      "seconds": 0.639464,
+      "bytes": 2967,
+      "exitCode": 0
+    },
+    {
+      "name": "detail-0",
+      "startedUtc": "2026-11-03T12:05:52.748481+00:00",
+      "status": 200,
+      "seconds": 0.61243,
+      "bytes": 1673,
+      "exitCode": 0
+    },
+    {
+      "name": "detail-1507273",
+      "startedUtc": "2026-11-03T12:05:52.512193+00:00",
+      "status": 200,
+      "seconds": 0.227436,
+      "bytes": 1449,
+      "exitCode": 0
+    },
+    {
+      "name": "invalid-page",
+      "startedUtc": "2026-11-03T12:05:53.370841+00:00",
+      "status": 400,
+      "seconds": 0.190079,
+      "bytes": 72,
+      "exitCode": 0
+    },
+    {
+      "name": "media-0",
+      "startedUtc": "2026-11-03T12:05:59.936695+00:00",
+      "status": 200,
+      "seconds": 0.137746,
+      "bytes": 79,
+      "exitCode": 0
+    },
+    {
+      "name": "media-1",
+      "startedUtc": "2026-11-03T12:06:00.090295+00:00",
+      "status": 200,
+      "seconds": 0.220304,
+      "bytes": 79,
+      "exitCode": 0
+    },
+    {
+      "name": "media-1457949",
+      "startedUtc": "2026-11-03T12:05:59.718366+00:00",
+      "status": 200,
+      "seconds": 0.206219,
+      "bytes": 325,
+      "exitCode": 0
+    },
+    {
+      "name": "media-1467163",
+      "startedUtc": "2026-11-03T12:05:59.596478+00:00",
+      "status": 200,
+      "seconds": 0.112395,
+      "bytes": 402,
+      "exitCode": 0
+    },
+    {
+      "name": "media-1467205",
+      "startedUtc": "2026-11-03T12:05:59.489593+00:00",
+      "status": 200,
+      "seconds": 0.09729,
+      "bytes": 1202,
+      "exitCode": 0
+    },
+    {
+      "name": "media-1507273",
+      "startedUtc": "2026-11-03T12:05:59.324752+00:00",
+      "status": 200,
+      "seconds": 0.154384,
+      "bytes": 227,
+      "exitCode": 0
+    },
+    {
+      "name": "media-2",
+      "startedUtc": "2026-11-03T12:06:00.326269+00:00",
+      "status": 200,
+      "seconds": 0.117709,
+      "bytes": 125,
+      "exitCode": 0
+    },
+    {
+      "name": "media-3",
+      "startedUtc": "2026-11-03T12:06:00.456974+00:00",
+      "status": 200,
+      "seconds": 0.118695,
+      "bytes": 242,
+      "exitCode": 0
+    },
+    {
+      "name": "older-raster",
+      "startedUtc": "2026-11-03T12:05:21.882737+00:00",
+      "status": 200,
+      "seconds": 0.737749,
+      "bytes": 6112,
+      "exitCode": 0
+    },
+    {
+      "name": "recent-raster-page2",
+      "startedUtc": "2026-11-03T12:05:51.804161+00:00",
+      "status": 200,
+      "seconds": 0.697823,
+      "bytes": 2968,
+      "exitCode": 0
+    },
+    {
+      "name": "recent-raster",
+      "startedUtc": "2026-11-03T12:05:21.151701+00:00",
+      "status": 200,
+      "seconds": 0.717702,
+      "bytes": 2960,
+      "exitCode": 0
+    }
+  ]
+}

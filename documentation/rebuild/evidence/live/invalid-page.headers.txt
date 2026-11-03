@@ -1,0 +1,34 @@
+HTTP/2 400 
+date: Tue, 03 Nov 2026 12:05:53 GMT
+content-type: application/json
+content-length: 87
+access-control-max-age: 86400
+cache-control: public, max-age=300, stale-while-revalidate=60
+cdn-cache-control: public, max-age=300, stale-while-revalidate=60
+content-encoding: gzip
+content-security-policy: default-src 'none'; connect-src 'self'
+edge-control: cache-maxage=300
+surrogate-control: max-age=300
+vary: Accept-Encoding, Accept, Origin, X-API-Version
+x-api-version: v2.2.7
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-permitted-cross-domain-policies: none
+api-version: 2.3
+api-version-supported: 2.2, 2.3
+x-api-version-used: 2.3
+x-api-version-default: 2.3
+x-ratelimit-limit: 100
+x-ratelimit-remaining: 95
+x-ratelimit-reset: 1793707613536
+cf-cache-status: DYNAMIC
+speculation-rules: "/cdn-cgi/speculation"
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=37f99TdiaCsZDqH8yWnEGOCAMsS4BnHg9Lx8qZaot99VIrL95rtBl79UjWLUAWyh5xCeUe77qkAjUp%2B4gUGrb2zvaVtftub%2BolF45JzDKSedNTvHzxyV9NCtqTTGwNg%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+access-control-allow-headers: Content-Type, Accept, Origin, Authorization
+access-control-allow-methods: GET, POST, OPTIONS
+access-control-allow-origin: *
+server: cloudflare
+cf-ray: a54b3ff10c614133-LHR
+alt-svc: h3=":443"; ma=86400
+

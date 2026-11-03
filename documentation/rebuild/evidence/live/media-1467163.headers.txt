@@ -1,0 +1,25 @@
+HTTP/2 200 
+date: Tue, 03 Nov 2026 12:05:59 GMT
+content-type: image/png
+content-length: 402
+cf-ray: a54b4017ee6449f8-LHR
+cf-cache-status: HIT
+accept-ranges: bytes
+access-control-allow-origin: *
+age: 446984
+cache-control: public, max-age=31536000
+etag: "3ff39dde4dd97b49b241e46f9abdd383"
+last-modified: Tue, 23 Jun 2026 21:36:13 GMT
+server: cloudflare
+vary: accept, accept-encoding
+access-control-allow-headers: Content-Type, Accept, Origin, Authorization, Content-Encoding, Accept-Encoding, Range, If-None-Match, If-Modified-Since
+access-control-allow-methods: GET, HEAD, OPTIONS
+access-control-expose-headers: Content-Length, Content-Range, Content-Encoding
+cdn-cache-control: public, max-age=31536000
+x-proxied-by: Cloudflare Worker
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+priority: u=4;i=?0,cf-chb=(94;u=4;i=?0)
+speculation-rules: "/cdn-cgi/speculation"
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=O97oDMD9cxMZjez%2BFfDnH68Hjezd5yQ0RG5ES8Iiw8zbVq4wRn1OI3RaXXknbG9gpIJx6IBzHPH4NAYK%2F8rBkGXadUIhpP8Vz7r%2BHPNf7aq7dcXPXQT5PgJ4LfVgG5w%3D"}]}
+alt-svc: h3=":443"; ma=86400
+

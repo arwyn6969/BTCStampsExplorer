@@ -1,0 +1,28 @@
+{
+  "target": "http://127.0.0.1:8007",
+  "cases": [],
+  "pass": false,
+  "manifest": {
+    "routes": [
+      "./routes/_404.tsx",
+      "./routes/_500.tsx",
+      "./routes/_app.tsx",
+      "./routes/_middleware.ts",
+      "./routes/explorer.tsx",
+      "./routes/media/[asset].ts",
+      "./routes/stamp/[id].tsx"
+    ],
+    "expectedRoutes": [
+      "./routes/_404.tsx",
+      "./routes/_500.tsx",
+      "./routes/_app.tsx",
+      "./routes/_middleware.ts",
+      "./routes/explorer.tsx",
+      "./routes/media/[asset].ts",
+      "./routes/stamp/[id].tsx"
+    ],
+    "noIslands": true,
+    "pass": true
+  },
+  "error": "error sending request for url (http://127.0.0.1:8007/explorer): client error (Connect): tcp connect error: Connection refused (os error 61)"
+}

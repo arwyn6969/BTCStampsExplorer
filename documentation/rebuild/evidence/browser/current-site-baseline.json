@@ -1,0 +1,85 @@
+{
+  "capturedAt": "2026-11-03T12:46:45.417Z",
+  "task": "Classic PNG newest -> stamp1507273 -> browser Back",
+  "listUrl": "https://stampchain.io/explorer?section=stamps&type=classic&filetype=png&sortBy=DESC&limit=12&page=1",
+  "returnedUrl": "https://stampchain.io/explorer?section=stamps&type=classic&filetype=png&sortBy=DESC&limit=12&page=1",
+  "completion": "Known stamp and creator visible; browser Back retained all query state.",
+  "detailMediaSources": [
+    {
+      "src": "https://stampchain.io/stamps/7046278a4bda05c7dd3063dd10607800cbb92ba6f8c7c41f49bd985edee6bbed.png",
+      "tag": "IMG"
+    },
+    {
+      "src": "https://stampchain.io/stamps/7046278a4bda05c7dd3063dd10607800cbb92ba6f8c7c41f49bd985edee6bbed.png",
+      "tag": "IMG"
+    },
+    {
+      "src": "/api/v2/stamp/1505513/preview?placeholderOnFail=true&__frsh_c=f81cb3f41b2985753c2809b2f679527ac18bd71a",
+      "tag": "IMG"
+    },
+    {
+      "src": "/api/v2/stamp/1472320/preview?placeholderOnFail=true&__frsh_c=f81cb3f41b2985753c2809b2f679527ac18bd71a",
+      "tag": "IMG"
+    },
+    {
+      "src": "https://stampchain.io/stamps/176a5d0329a8b48d5f86bcaf0078ccc3a57d50013744f4af3ea0c827347520ce.png",
+      "tag": "IMG"
+    },
+    {
+      "src": "https://stampchain.io/stamps/92df895bbf715316fee36cb536453fcd509dc80569afee6dce9e8203ad51de15.png",
+      "tag": "IMG"
+    },
+    {
+      "src": "/api/v2/stamp/1465071/preview?placeholderOnFail=true&__frsh_c=f81cb3f41b2985753c2809b2f679527ac18bd71a",
+      "tag": "IMG"
+    },
+    {
+      "src": "/api/v2/stamp/1464654/preview?placeholderOnFail=true&__frsh_c=f81cb3f41b2985753c2809b2f679527ac18bd71a",
+      "tag": "IMG"
+    },
+    {
+      "src": "/api/v2/stamp/1464650/preview?placeholderOnFail=true&__frsh_c=f81cb3f41b2985753c2809b2f679527ac18bd71a",
+      "tag": "IMG"
+    },
+    {
+      "src": "/api/v2/stamp/1462443/preview?placeholderOnFail=true&__frsh_c=f81cb3f41b2985753c2809b2f679527ac18bd71a",
+      "tag": "IMG"
+    },
+    {
+      "src": "/api/v2/stamp/1462056/preview?placeholderOnFail=true&__frsh_c=f81cb3f41b2985753c2809b2f679527ac18bd71a",
+      "tag": "IMG"
+    },
+    {
+      "src": "https://stampchain.io/stamps/f1a60d7523b56e0c2a5b7037f8b909e2ee7e6451116135ee01ebbe82653908f3.svg",
+      "tag": "IMG"
+    },
+    {
+      "src": "https://stampchain.io/stamps/15dbe5456566aa55ee74ae8ffedf0e7251138b585af3feb365afd342db65baaa.svg",
+      "tag": "IMG"
+    },
+    {
+      "src": "https://stampchain.io/stamps/7046278a4bda05c7dd3063dd10607800cbb92ba6f8c7c41f49bd985edee6bbed.png",
+      "tag": "IMG"
+    },
+    {
+      "src": "/api/v2/stamp/1505513/preview?placeholderOnFail=true&__frsh_c=f81cb3f41b2985753c2809b2f679527ac18bd71a",
+      "tag": "IMG"
+    },
+    {
+      "src": "/api/v2/stamp/1472320/preview?placeholderOnFail=true&__frsh_c=f81cb3f41b2985753c2809b2f679527ac18bd71a",
+      "tag": "IMG"
+    },
+    {
+      "src": "https://stampchain.io/stamps/176a5d0329a8b48d5f86bcaf0078ccc3a57d50013744f4af3ea0c827347520ce.png",
+      "tag": "IMG"
+    },
+    {
+      "src": "https://stampchain.io/stamps/92df895bbf715316fee36cb536453fcd509dc80569afee6dce9e8203ad51de15.png",
+      "tag": "IMG"
+    }
+  ],
+  "limitations": [
+    "Agent used an already-filtered URL; this is not a human discovery or timing study.",
+    "Related artwork in the existing detail page emits legacy generator URLs. Navigation was stopped; network dispatch/cache side effects were not established. This is not evidence that the baseline visit avoided generation requests."
+  ]
+}
