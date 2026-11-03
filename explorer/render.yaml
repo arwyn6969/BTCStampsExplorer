@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=https://render.com/schema/render.yaml.json
+# Prepared configuration only. Applying the Blueprint creates a public service.
+# Separately set Blueprint Settings > Auto Sync to No after initial creation.
+services:
+  - type: web
+    name: stampchain-explorer-proof
+    runtime: docker
+    plan: free
+    region: frankfurt
+    repo: https://github.com/arwyn6969/BTCStampsExplorer
+    branch: codex/explorer-proof
+    autoDeployTrigger: "off"
+    dockerfilePath: ./explorer/Dockerfile
+    dockerContext: .
+    healthCheckPath: /robots.txt
+    envVars:
+      - key: EXPLORER_DATA_MODE
+        value: live
+      - key: EXPLORER_HOST
+        value: 0.0.0.0
+      - key: PORT
+        value: "8007"

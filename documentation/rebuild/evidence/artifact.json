@@ -1,0 +1,15 @@
+{
+  "artifact": "/private/tmp/stampchain-explorer-artifacts/explorer-4ff242c9a4d6-c39b0e79d007.tar.gz",
+  "sha256": "c39b0e79d0078794a4bd47bbd4edf0b9a8f9213d3696f90ac1f56dd4a7dbafef",
+  "bytes": 80847,
+  "sourceRevision": "4ff242c9a4d6c27878cfaec5c8d7253fcd8a52bf",
+  "freshBuildId": "c64f227ca3bee1273bc6b19e1e0a39c313805d75",
+  "fileCount": 46,
+  "manifest": "/private/tmp/stampchain-explorer-artifacts/explorer-4ff242c9a4d6-c39b0e79d007.tar.gz.manifest.json",
+  "repeatArchiveIdentical": true,
+  "allFileHashesVerified": true,
+  "sourceState": "",
+  "safeExtractionVerified": true,
+  "restoreMode": "fixture; outbound runtime network permission denied",
+  "scope": "Local immutable archive and restored cold start, not a staging deployment or staging rollback"
+}

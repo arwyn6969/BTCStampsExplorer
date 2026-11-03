@@ -7,16 +7,18 @@ not been recorded.
 
 ## Delivery state
 
-| Item                 | State                                         | Evidence / limit                                                                                                                                                                                                 |
-| -------------------- | --------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| E01 option check     | Local probes and decision delivered           | [Decision](E01.md), [import graph](evidence/reuse-imports.json), [live contracts](evidence/live/data-contract.md). Staging access, service agreement, quotas, costs and operational support remain unverified.   |
-| E02 two-page slice   | Implemented; local browser checks in progress | Dark compact list/detail, URL-owned type/format/order/page, canonical identity, explicit Back, failure states, fixtures. Desktop/mobile captures in `evidence/browser/`. Human and final acceptance remain open. |
-| E03 live integration | Implemented and sampled                       | Real adapter comparison, PNG body/decoding evidence, bounded JSON/media and protocol-pinned list queries. A sampled dataset does not establish complete indexer correctness or media coverage.                   |
-| E04 deployed proof   | Not complete                                  | No separately verified compatible staging target, deployed route inventory or staged rollback. A local production build is not staging proof.                                                                    |
+| Item                 | State                                      | Evidence / limit                                                                                                                                                                                                                  |
+| -------------------- | ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| E01 option check     | Local probes and decision delivered        | [Decision](E01.md), [import graph](evidence/reuse-imports.json), [live contracts](evidence/live/data-contract.md). Staging access, service agreement, quotas, costs and operational support remain unverified.                    |
+| E02 two-page slice   | Implemented; local browser checks recorded | Dark compact list/detail, URL-owned type/format/order/page, canonical identity, explicit Back, failure states, fixtures. Desktop/mobile captures and observations in `evidence/browser/`. Human and final acceptance remain open. |
+| E03 live integration | Implemented and sampled                    | Real adapter comparison, PNG body/decoding evidence, bounded JSON/media and protocol-pinned list queries. A sampled dataset does not establish complete indexer correctness or media coverage.                                    |
+| E04 deployed proof   | Not complete                               | No separately verified compatible staging target, deployed route inventory or staged rollback. A local production build is not staging proof.                                                                                     |
 
 ## Source and code changes
 
 Reviewed upstream baseline is `7e3cd554b44302f9c07dc6c8c557ed63a6520294`.
+Application revision is `4ff242c9a4d6c27878cfaec5c8d7253fcd8a52bf`, pushed to
+[the owner fork proof branch](https://github.com/arwyn6969/BTCStampsExplorer/tree/codex/explorer-proof).
 Implementation is isolated on `codex/explorer-proof`, using the application
 repository rather than its parent. Only the three planning documents were copied
 from the dirty checkout; the original application changes are intact.
@@ -59,6 +61,16 @@ are preserved in [raw evidence](evidence/live/list-detail-contract-gap.md).
   Four material integration/mapping issues were found and corrected during the
   bounded correction work; none is concealed as a successful first attempt.
 
+The final restored artifact also passes all 32 capability checks in fixture mode
+with outbound network permission denied, and all 32 again in live mode. The
+archive was safely extracted into a different directory and cold-started without
+credentials or the original checkout. Its SHA-256 inventory was checked for
+every file, and a second complete packaging run produced identical bytes.
+[Artifact record](evidence/artifact.json): 80,847 bytes, SHA-256
+`c39b0e79d0078794a4bd47bbd4edf0b9a8f9213d3696f90ac1f56dd4a7dbafef`, Fresh build
+ID `c64f227ca3bee1273bc6b19e1e0a39c313805d75`. This is a local restore
+demonstration, not a staged rollback.
+
 The first all-formats capability run reported 28/29 HTTP cases passing; its
 first detail record was an unsupported SRC-20 result. That report was
 overwritten by an interrupted rerun before preservation, so its original JSON is
@@ -82,6 +94,27 @@ cover language, landmarks, headings, control/link names, image alternatives and
 active frames; they are not a full accessibility certification. Native-key
 activation and focus/zoom limitations are recorded with the final observations.
 No human completion-time improvement claim is made.
+
+Final captures: [desktop list](evidence/browser/desktop-list.jpg),
+[desktop detail](evidence/browser/desktop-detail.jpg),
+[mobile list](evidence/browser/mobile-list.jpg),
+[mobile detail](evidence/browser/mobile-detail.jpg),
+[missing media](evidence/browser/fixture-fallbacks.jpg), and
+[unsupported artwork](evidence/browser/unsupported-artwork.jpg).
+[Browser observations](evidence/browser/observations.json) identify the exact
+committed source/build. The earlier development observations remain separate,
+including an error-page heading/return-link issue that was then corrected.
+
+Three repeated list measurements per profile are in
+[performance.json](evidence/browser/performance.json): desktop LCP 856/852/668
+ms at a measured CSS viewport of 1600×1000; mobile LCP 636/644/632 ms at
+390×844. All observed CLS values were zero. These are unthrottled local SSR
+loads against a live API in a warm module/cache environment, not hosted
+cold-start, field-percentile or general capacity results. Native Return
+submitted the focused filter form. The complete unfamiliar-human keyboard/focus
+journey remains pending. A native zoom shortcut did not change the browser's
+measured viewport, so only 800×500 reflow equivalent to 200% of the desktop
+viewport was verified; actual 200% browser zoom is not claimed.
 
 The existing-site baseline used the same already-filtered Classic PNG task and
 known stamp, and browser Back retained the query. Its detail page's unrelated

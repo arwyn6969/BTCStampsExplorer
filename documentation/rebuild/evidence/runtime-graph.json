@@ -1,0 +1,9 @@
+{
+  "sourceRevision": "4ff242c9a4d6c27878cfaec5c8d7253fcd8a52bf",
+  "moduleCount": 318,
+  "legacyRuntimeModules": [
+    "file:///private/tmp/stampchain-explorer-proof/lib/constants/stampConstants.ts"
+  ],
+  "forbiddenMatches": [],
+  "interpretation": "Source graph check, supplemented by actual restricted cold start and HTTP capability cases; not a claim that every reachable framework function executes."
+}

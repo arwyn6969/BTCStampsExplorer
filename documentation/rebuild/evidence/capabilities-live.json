@@ -1,5 +1,5 @@
 {
-  "capturedAtUtc": "2026-11-03T12:38:36.678Z",
+  "capturedAtUtc": "2026-11-03T14:01:45.237Z",
   "scope": "Local production-build checks; this does not establish a staging deployment",
   "target": "http://127.0.0.1:8007",
   "cases": [

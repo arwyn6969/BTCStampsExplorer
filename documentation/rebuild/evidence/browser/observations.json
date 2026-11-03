@@ -1,0 +1,9 @@
+{
+  "sourceRevision": "4ff242c9a4d6c27878cfaec5c8d7253fcd8a52bf",
+  "freshBuildId": "c64f227ca3bee1273bc6b19e1e0a39c313805d75",
+  "browser": "ChatGPT in-app browser on macOS",
+  "viewportNote": "Measured DOM viewport is recorded; browser override target has a scale factor. Actual CSS widths1600desktop,390mobile,800reflow-equivalent.",
+  "keyboard": "Native Return submitted the focused filter form. Selection was also exercised through semantic controls. Complete human Tab/focus task remains pending.",
+  "zoom": "Native browser zoom shortcut did not alter measured width;800x500CSS reflow equivalent to200% of1600x1000 was checked, not a claimed actual200%browser-zoom test.",
+  "records": []
+}

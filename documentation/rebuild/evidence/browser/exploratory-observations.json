@@ -1,0 +1,472 @@
+{
+  "scope": "Pre-freeze development observations; includes the error-page heading issue before correction.",
+  "records": [
+    {
+      "decoded": 12,
+      "filters": [
+        [
+          "type",
+          "classic"
+        ],
+        [
+          "format",
+          "png"
+        ],
+        [
+          "sort",
+          "newest"
+        ]
+      ],
+      "height": 1000,
+      "kind": "desktop-list",
+      "metrics": {
+        "cls": "0",
+        "lcp": "708",
+        "resourceUrls": "[\"http://127.0.0.1:8007/style.css\",\"http://127.0.0.1:8007/app.js\",\"http://127.0.0.1:8007/logo.svg?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/7046278a4bda05c7dd3063dd10607800cbb92ba6f8c7c41f49bd985edee6bbed.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/176a5d0329a8b48d5f86bcaf0078ccc3a57d50013744f4af3ea0c827347520ce.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/92df895bbf715316fee36cb536453fcd509dc80569afee6dce9e8203ad51de15.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/e915fa8be0a5d25c4327d056a54bbed7051f6ecf850993994741645012bb0e6b.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/5a6f0c747e5b9b22d6faec98ef1b0934e94a4e2e9384f21456280861a9b931fa.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/e94be2793462692ca8fea3a54dd90ff4b18735196a2bc426382c11959533c8ca.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\"]",
+        "ttfb": "532.0999999940395"
+      },
+      "overflow": false,
+      "width": 1600
+    },
+    {
+      "kind": "desktop-detail",
+      "url": "http://127.0.0.1:8007/stamp/1507273?from=%3Ftype%3Dclassic%26format%3Dpng%26sort%3Dnewest%26page%3D1",
+      "audit": {
+        "activeFrames": 0,
+        "emptyLinks": 0,
+        "h1Count": 1,
+        "imagesMissingAlt": 0,
+        "language": "en",
+        "mainCount": 1,
+        "unlabelledControls": 0
+      },
+      "decoded": 1,
+      "filters": [],
+      "height": 1000,
+      "metrics": {
+        "cls": "0",
+        "lcp": "232",
+        "resourceUrls": "[\"http://127.0.0.1:8007/style.css\",\"http://127.0.0.1:8007/app.js\",\"http://127.0.0.1:8007/logo.svg?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/7046278a4bda05c7dd3063dd10607800cbb92ba6f8c7c41f49bd985edee6bbed.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\"]",
+        "ttfb": "164.09999999403954"
+      },
+      "overflow": false,
+      "sourceText": "Stampchain APIFetched 3 November 2026 at 12:39 UTCIndexed block: 974386Source freshness unknown",
+      "stamps": [],
+      "width": 1600
+    },
+    {
+      "kind": "browser-back",
+      "url": "http://127.0.0.1:8007/explorer?type=classic&format=png&sort=newest",
+      "audit": {
+        "activeFrames": 0,
+        "emptyLinks": 0,
+        "h1Count": 1,
+        "imagesMissingAlt": 0,
+        "language": "en",
+        "mainCount": 1,
+        "unlabelledControls": 0
+      },
+      "decoded": 12,
+      "filters": [
+        [
+          "type",
+          "classic"
+        ],
+        [
+          "format",
+          "png"
+        ],
+        [
+          "sort",
+          "newest"
+        ]
+      ],
+      "height": 1000,
+      "metrics": {
+        "cls": "0",
+        "lcp": "964",
+        "resourceUrls": "[\"http://127.0.0.1:8007/style.css\",\"http://127.0.0.1:8007/app.js\",\"http://127.0.0.1:8007/logo.svg?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/7046278a4bda05c7dd3063dd10607800cbb92ba6f8c7c41f49bd985edee6bbed.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/176a5d0329a8b48d5f86bcaf0078ccc3a57d50013744f4af3ea0c827347520ce.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/92df895bbf715316fee36cb536453fcd509dc80569afee6dce9e8203ad51de15.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/e915fa8be0a5d25c4327d056a54bbed7051f6ecf850993994741645012bb0e6b.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/e94be2793462692ca8fea3a54dd90ff4b18735196a2bc426382c11959533c8ca.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/5a6f0c747e5b9b22d6faec98ef1b0934e94a4e2e9384f21456280861a9b931fa.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/d79da3538713568504c73726708a6ddfca5681bc111845dbae17265f455448ed.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\"]",
+        "ttfb": "735.5"
+      },
+      "overflow": false,
+      "sourceText": "Live APIFetched 12:41:27 UTCIndexed block 974,386Freshness unknown",
+      "stamps": [
+        "1507273",
+        "1467205",
+        "1467163",
+        "1457949",
+        "1384307",
+        "1384306",
+        "1384305",
+        "1383565",
+        "1374851",
+        "1304120",
+        "1295283",
+        "1246777"
+      ],
+      "width": 1600
+    },
+    {
+      "kind": "mobile-list-390",
+      "url": "http://127.0.0.1:8007/explorer?type=classic&format=png&sort=newest&page=1",
+      "audit": {
+        "activeFrames": 0,
+        "emptyLinks": 0,
+        "h1Count": 1,
+        "imagesMissingAlt": 0,
+        "language": "en",
+        "mainCount": 1,
+        "unlabelledControls": 0
+      },
+      "decoded": 12,
+      "filters": [
+        [
+          "type",
+          "classic"
+        ],
+        [
+          "format",
+          "png"
+        ],
+        [
+          "sort",
+          "newest"
+        ]
+      ],
+      "height": 844,
+      "metrics": {
+        "cls": "0",
+        "lcp": "648",
+        "resourceUrls": "[\"http://127.0.0.1:8007/style.css\",\"http://127.0.0.1:8007/app.js\",\"http://127.0.0.1:8007/logo.svg?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/176a5d0329a8b48d5f86bcaf0078ccc3a57d50013744f4af3ea0c827347520ce.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/7046278a4bda05c7dd3063dd10607800cbb92ba6f8c7c41f49bd985edee6bbed.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/e915fa8be0a5d25c4327d056a54bbed7051f6ecf850993994741645012bb0e6b.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/92df895bbf715316fee36cb536453fcd509dc80569afee6dce9e8203ad51de15.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/e94be2793462692ca8fea3a54dd90ff4b18735196a2bc426382c11959533c8ca.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/5a6f0c747e5b9b22d6faec98ef1b0934e94a4e2e9384f21456280861a9b931fa.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\"]",
+        "ttfb": "605.2999999970198"
+      },
+      "overflow": false,
+      "sourceText": "Live APIFetched 12:41:55 UTCIndexed block 974,386Freshness unknown",
+      "stamps": [
+        "1507273",
+        "1467205",
+        "1467163",
+        "1457949",
+        "1384307",
+        "1384306",
+        "1384305",
+        "1383565",
+        "1374851",
+        "1304120",
+        "1295283",
+        "1246777"
+      ],
+      "width": 390
+    },
+    {
+      "kind": "mobile-detail-390",
+      "url": "http://127.0.0.1:8007/stamp/1507273?from=%3Ftype%3Dclassic%26format%3Dpng%26sort%3Dnewest%26page%3D1",
+      "audit": {
+        "activeFrames": 0,
+        "emptyLinks": 0,
+        "h1Count": 1,
+        "imagesMissingAlt": 0,
+        "language": "en",
+        "mainCount": 1,
+        "unlabelledControls": 0
+      },
+      "decoded": 1,
+      "filters": [],
+      "height": 844,
+      "metrics": {
+        "cls": "0",
+        "lcp": "212",
+        "resourceUrls": "[\"http://127.0.0.1:8007/style.css\",\"http://127.0.0.1:8007/app.js\",\"http://127.0.0.1:8007/logo.svg?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/7046278a4bda05c7dd3063dd10607800cbb92ba6f8c7c41f49bd985edee6bbed.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\"]",
+        "ttfb": "153.5"
+      },
+      "overflow": false,
+      "sourceText": "Stampchain APIFetched 3 November 2026 at 12:41 UTCIndexed block: 974386Source freshness unknown",
+      "stamps": [],
+      "width": 390
+    },
+    {
+      "kind": "oldest-sort-zero",
+      "url": "http://127.0.0.1:8007/explorer?type=classic&format=png&sort=oldest",
+      "audit": {
+        "activeFrames": 0,
+        "emptyLinks": 0,
+        "h1Count": 1,
+        "imagesMissingAlt": 0,
+        "language": "en",
+        "mainCount": 1,
+        "unlabelledControls": 0
+      },
+      "decoded": 12,
+      "filters": [
+        [
+          "type",
+          "classic"
+        ],
+        [
+          "format",
+          "png"
+        ],
+        [
+          "sort",
+          "oldest"
+        ]
+      ],
+      "height": 844,
+      "metrics": {
+        "cls": "0",
+        "lcp": "700",
+        "resourceUrls": "[\"http://127.0.0.1:8007/style.css\",\"http://127.0.0.1:8007/app.js\",\"http://127.0.0.1:8007/logo.svg?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/47054da12382223bfa928e9c3e0c8c99b42fe3e88985fb6043d8d84f17b893c9.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/eb3da8146e626b5783f4359fb1510729f4aad923dfac45b6f1f3a2063907147c.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/1b15bd78a0f957ebcf38e6de7b56e173b4746c294cdfdca0e64b60b3e548bf92.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/17686488353b65b128d19031240478ba50f1387d0ea7e5f188ea7fda78ea06f4.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/ddca4f5b61445fa52af02b3bb7dab259add31f40deb550da4e53c82bc21f19d6.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\"]",
+        "ttfb": "644.3999999910593"
+      },
+      "overflow": false,
+      "sourceText": "Live APIFetched 12:47:25 UTCIndexed block 974,386Freshness unknown",
+      "stamps": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "width": 390
+    },
+    {
+      "kind": "mobile-page-two",
+      "url": "http://127.0.0.1:8007/explorer?type=classic&format=png&sort=oldest&page=2",
+      "audit": {
+        "activeFrames": 0,
+        "emptyLinks": 0,
+        "h1Count": 1,
+        "imagesMissingAlt": 0,
+        "language": "en",
+        "mainCount": 1,
+        "unlabelledControls": 0
+      },
+      "decoded": 12,
+      "filters": [
+        [
+          "type",
+          "classic"
+        ],
+        [
+          "format",
+          "png"
+        ],
+        [
+          "sort",
+          "oldest"
+        ]
+      ],
+      "height": 844,
+      "metrics": {
+        "cls": "0",
+        "lcp": "864",
+        "resourceUrls": "[\"http://127.0.0.1:8007/style.css\",\"http://127.0.0.1:8007/app.js\",\"http://127.0.0.1:8007/logo.svg?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/2c112530ef322147cfb7517872c69ab808ea60d66dfda80bf0fc36f3c102ed4e.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/1ae5d90af112478e4076cd2f4b86805f888d9fe8f0e3360ed9e40e3fd3af89c3.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/14d9e8dbf9a54db20f7c4363c26dc8f7f124b509301655d3733722cf6cafaf34.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/e41864470260d3eb6688bf81d2651b4261cbf8e84b74879b831289eaf806455b.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/9e99825880aa7cac75629ec01de28b419f691503af2c4f51b4c8b939fd37e310.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\"]",
+        "ttfb": "803.9000000059605"
+      },
+      "overflow": false,
+      "sourceText": "Live APIFetched 12:48:18 UTCIndexed block 974,386Freshness unknown",
+      "stamps": [
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23"
+      ],
+      "width": 390
+    },
+    {
+      "kind": "page-two-back",
+      "url": "http://127.0.0.1:8007/explorer?type=classic&format=png&sort=oldest&page=2",
+      "audit": {
+        "activeFrames": 0,
+        "emptyLinks": 0,
+        "h1Count": 1,
+        "imagesMissingAlt": 0,
+        "language": "en",
+        "mainCount": 1,
+        "unlabelledControls": 0
+      },
+      "decoded": 12,
+      "filters": [
+        [
+          "type",
+          "classic"
+        ],
+        [
+          "format",
+          "png"
+        ],
+        [
+          "sort",
+          "oldest"
+        ]
+      ],
+      "height": 844,
+      "metrics": {
+        "cls": "0",
+        "resourceUrls": "[\"http://127.0.0.1:8007/style.css\",\"http://127.0.0.1:8007/logo.svg?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/1ae5d90af112478e4076cd2f4b86805f888d9fe8f0e3360ed9e40e3fd3af89c3.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/app.js\",\"http://127.0.0.1:8007/media/2c112530ef322147cfb7517872c69ab808ea60d66dfda80bf0fc36f3c102ed4e.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/14d9e8dbf9a54db20f7c4363c26dc8f7f124b509301655d3733722cf6cafaf34.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/e41864470260d3eb6688bf81d2651b4261cbf8e84b74879b831289eaf806455b.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/9e99825880aa7cac75629ec01de28b419f691503af2c4f51b4c8b939fd37e310.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/b9d304c70439a198e4b9c5ec653787c4a1e58c2f772c997748e618091b7c1e56.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/d037b65119dd0373cb2ece482264d1f7cbac50d2c1eed52336f4bdd51fdd9f43.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/7926c7471b308de043496dc62f71cae3e8b5b7d70f79d1730ae1476fc7976ab1.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/de52429e4532436c4b8e06093d2b55cd5801b0e25c6bf8d05662e1dc8924a7bc.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/941593f7506e937cd3d79cc5309fe2e717901b3c884741905537832c9fb7b6f8.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/e4d6c4edfff19748ddd75f2dc5b51d0d42863122a66eacebec3afcfeec993799.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/d83dd3827c5c693916686d299bc72f778c7201c5ce995defb20a0c82f2effe55.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\"]",
+        "ttfb": "519.7000000029802"
+      },
+      "overflow": false,
+      "sourceText": "Live APIFetched 12:48:20 UTCIndexed block 974,386Freshness unknown",
+      "stamps": [
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23"
+      ],
+      "width": 390
+    },
+    {
+      "kind": "page-two-reload",
+      "url": "http://127.0.0.1:8007/explorer?type=classic&format=png&sort=oldest&page=2",
+      "audit": {
+        "activeFrames": 0,
+        "emptyLinks": 0,
+        "h1Count": 1,
+        "imagesMissingAlt": 0,
+        "language": "en",
+        "mainCount": 1,
+        "unlabelledControls": 0
+      },
+      "decoded": 12,
+      "filters": [
+        [
+          "type",
+          "classic"
+        ],
+        [
+          "format",
+          "png"
+        ],
+        [
+          "sort",
+          "oldest"
+        ]
+      ],
+      "height": 844,
+      "metrics": {
+        "cls": "0",
+        "lcp": "552",
+        "resourceUrls": "[\"http://127.0.0.1:8007/style.css\",\"http://127.0.0.1:8007/app.js\",\"http://127.0.0.1:8007/logo.svg?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/1ae5d90af112478e4076cd2f4b86805f888d9fe8f0e3360ed9e40e3fd3af89c3.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/14d9e8dbf9a54db20f7c4363c26dc8f7f124b509301655d3733722cf6cafaf34.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/2c112530ef322147cfb7517872c69ab808ea60d66dfda80bf0fc36f3c102ed4e.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/e41864470260d3eb6688bf81d2651b4261cbf8e84b74879b831289eaf806455b.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\"]",
+        "ttfb": "493"
+      },
+      "overflow": false,
+      "sourceText": "Live APIFetched 12:48:21 UTCIndexed block 974,386Freshness unknown",
+      "stamps": [
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23"
+      ],
+      "width": 390
+    },
+    {
+      "kind": "invalid-identifier-with-return",
+      "url": "http://127.0.0.1:8007/stamp/not-valid?from=%3Ftype%3Dclassic%26format%3Dpng%26sort%3Doldest%26page%3D2",
+      "audit": {
+        "activeFrames": 0,
+        "emptyLinks": 0,
+        "h1Count": 0,
+        "imagesMissingAlt": 0,
+        "language": "en",
+        "mainCount": 1,
+        "unlabelledControls": 0
+      },
+      "decoded": 0,
+      "filters": [],
+      "height": 844,
+      "metrics": {
+        "cls": "0",
+        "lcp": "172",
+        "resourceUrls": "[\"http://127.0.0.1:8007/style.css\",\"http://127.0.0.1:8007/app.js\",\"http://127.0.0.1:8007/logo.svg?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\"]",
+        "ttfb": "121.09999999403954"
+      },
+      "overflow": false,
+      "stamps": [],
+      "width": 390
+    },
+    {
+      "kind": "invalid-identifier-back",
+      "url": "http://127.0.0.1:8007/explorer?type=classic&format=png&sort=oldest&page=2",
+      "audit": {
+        "activeFrames": 0,
+        "emptyLinks": 0,
+        "h1Count": 1,
+        "imagesMissingAlt": 0,
+        "language": "en",
+        "mainCount": 1,
+        "unlabelledControls": 0
+      },
+      "decoded": 12,
+      "filters": [
+        [
+          "type",
+          "classic"
+        ],
+        [
+          "format",
+          "png"
+        ],
+        [
+          "sort",
+          "oldest"
+        ]
+      ],
+      "height": 844,
+      "metrics": {
+        "cls": "0",
+        "lcp": "540",
+        "resourceUrls": "[\"http://127.0.0.1:8007/style.css\",\"http://127.0.0.1:8007/app.js\",\"http://127.0.0.1:8007/logo.svg?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/1ae5d90af112478e4076cd2f4b86805f888d9fe8f0e3360ed9e40e3fd3af89c3.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/2c112530ef322147cfb7517872c69ab808ea60d66dfda80bf0fc36f3c102ed4e.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/e41864470260d3eb6688bf81d2651b4261cbf8e84b74879b831289eaf806455b.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\",\"http://127.0.0.1:8007/media/14d9e8dbf9a54db20f7c4363c26dc8f7f124b509301655d3733722cf6cafaf34.png?__frsh_c=29f2297bed410fcab3fab5ca67cb02c1363ea3d7\"]",
+        "ttfb": "493.5"
+      },
+      "overflow": false,
+      "sourceText": "Live APIFetched 12:48:55 UTCIndexed block 974,386Freshness unknown",
+      "stamps": [
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23"
+      ],
+      "width": 390
+    }
+  ]
+}

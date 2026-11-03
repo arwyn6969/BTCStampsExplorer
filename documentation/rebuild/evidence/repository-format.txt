@@ -1,0 +1,2 @@
+Task check:fmt deno fmt --check .
+Checked 702 files

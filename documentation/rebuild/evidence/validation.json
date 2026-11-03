@@ -1,0 +1,24 @@
+{
+  "sourceRevision": "4ff242c9a4d6c27878cfaec5c8d7253fcd8a52bf",
+  "freshBuildId": "c64f227ca3bee1273bc6b19e1e0a39c313805d75",
+  "artifactSha256": "c39b0e79d0078794a4bd47bbd4edf0b9a8f9213d3696f90ac1f56dd4a7dbafef",
+  "unitTests": {
+    "adapter": 13,
+    "media": 10,
+    "query": 2,
+    "passed": 25
+  },
+  "repositoryFormatting": "pass",
+  "repositoryLint": "pass",
+  "packageTypes": "pass",
+  "frozenProductionBuild": "pass",
+  "liveCapabilityCases": 32,
+  "liveCapabilityPass": true,
+  "restoredFixtureCases": 32,
+  "restoredFixturePass": true,
+  "restoreOutboundNetworkPermission": false,
+  "stagingDeployed": false,
+  "stagingRollbackDemonstrated": false,
+  "actual200PercentBrowserZoomVerified": false,
+  "humanTaskComparisonComplete": false
+}

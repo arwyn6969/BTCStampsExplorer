@@ -1,0 +1,61 @@
+{
+  "sourceRevision": "4ff242c9a4d6c27878cfaec5c8d7253fcd8a52bf",
+  "freshBuildId": "c64f227ca3bee1273bc6b19e1e0a39c313805d75",
+  "profile": "IAB local production SSR server on macOS, live public API; no CPU/network throttling; repeated reloads, warm module/cache environment; Cache-Control no-store from local server. Not field percentiles or hosted cold-start results.",
+  "samples": [
+    {
+      "profile": "desktop",
+      "run": 1,
+      "cls": "0",
+      "height": 1000,
+      "lcpMs": "856",
+      "ttfbMs": "682.7000000029802",
+      "width": 1600
+    },
+    {
+      "profile": "desktop",
+      "run": 2,
+      "cls": "0",
+      "height": 1000,
+      "lcpMs": "852",
+      "ttfbMs": "730.6000000089407",
+      "width": 1600
+    },
+    {
+      "profile": "desktop",
+      "run": 3,
+      "cls": "0",
+      "height": 1000,
+      "lcpMs": "668",
+      "ttfbMs": "534.6000000089407",
+      "width": 1600
+    },
+    {
+      "profile": "mobile",
+      "run": 1,
+      "cls": "0",
+      "height": 844,
+      "lcpMs": "636",
+      "ttfbMs": "493",
+      "width": 390
+    },
+    {
+      "profile": "mobile",
+      "run": 2,
+      "cls": "0",
+      "height": 844,
+      "lcpMs": "644",
+      "ttfbMs": "500.20000000298023",
+      "width": 390
+    },
+    {
+      "profile": "mobile",
+      "run": 3,
+      "cls": "0",
+      "height": 844,
+      "lcpMs": "632",
+      "ttfbMs": "490.69999998807907",
+      "width": 390
+    }
+  ]
+}
