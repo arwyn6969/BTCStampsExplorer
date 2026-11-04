@@ -1,11 +1,13 @@
 # Explorer proof: delivery evidence
 
-Updated 4 November 2026. Render has been selected and the owner authorized the
-test deployment. The public-repository service form is prepared for one Free
-Docker service in Frankfurt with manual deploys. Render requested account
-verification when deployment was submitted; no service, provider artifact,
-public test URL or hosted rollback has been established yet. Completion still
-requires the provider build and hosted checks below.
+Updated 4 November 2026. The working temporary public preview is
+[the explorer](https://hottest-position-turbo-patients.trycloudflare.com/explorer),
+using a Cloudflare Quick Tunnel over HTTP/2. It forwards to the production-built
+proof on the local Mac and lasts only while its server and tunnel processes run.
+It requires no account or card. Render setup was canceled under the owner's
+no-card requirement; the dashboard was checked and showed zero services.
+Independent hosting, hosted artifact rollback, and human acceptance remain open;
+the temporary public preview does not complete E04.
 
 3 November 2026. The owner authorized continuation of E01–E04 and requested the
 existing dark style with a condensed layout. That design direction is
@@ -19,12 +21,13 @@ not been recorded.
 | E01 option check     | Local probes and decision delivered        | [Decision](E01.md), [import graph](evidence/reuse-imports.json), [live contracts](evidence/live/data-contract.md). Staging access, service agreement, quotas, costs and operational support remain unverified.                    |
 | E02 two-page slice   | Implemented; local browser checks recorded | Dark compact list/detail, URL-owned type/format/order/page, canonical identity, explicit Back, failure states, fixtures. Desktop/mobile captures and observations in `evidence/browser/`. Human and final acceptance remain open. |
 | E03 live integration | Implemented and sampled                    | Real adapter comparison, PNG body/decoding evidence, bounded JSON/media and protocol-pinned list queries. A sampled dataset does not establish complete indexer correctness or media coverage.                                    |
-| E04 deployed proof   | Not complete                               | No separately verified compatible staging target, deployed route inventory or staged rollback. A local production build is not staging proof.                                                                                     |
+| E04 deployed proof   | Temporary public review verified; E04 open | Public HTTPS route/header/media checks and browser journeys pass through the temporary proxy. Independent deployment, provider artifacts, staged rollback and human acceptance remain unverified.                                 |
 
 ## Source and code changes
 
 Reviewed upstream baseline is `7e3cd554b44302f9c07dc6c8c557ed63a6520294`.
-Application revision is `4ff242c9a4d6c27878cfaec5c8d7253fcd8a52bf`, pushed to
+Initial application revision is `4ff242c9a4d6c27878cfaec5c8d7253fcd8a52bf`,
+pushed to
 [the owner fork proof branch](https://github.com/arwyn6969/BTCStampsExplorer/tree/codex/explorer-proof).
 Implementation is isolated on `codex/explorer-proof`, using the application
 repository rather than its parent. Only the three planning documents were copied
@@ -48,8 +51,9 @@ extracted artifact cold-started with a cleared environment and outbound network
 permission denied. Its 32 fixture capability cases and source/data-mode headers
 pass. See [preparation record](evidence/render-preparation.json) and
 [restored check](evidence/capabilities-restored-fixture-31d81df.json). This is
-still local evidence; account verification, provider build, staged journey,
-rollback and human acceptance remain open.
+local artifact evidence. That same restored artifact now serves the temporary
+public preview, with source revision and live-data headers verified there.
+Independent hosting, staged rollback and human acceptance remain open.
 
 The new `explorer/` package contains one restricted Fresh manifest and entry
 point, two page types, one typed read adapter, query normalization, bounded
@@ -71,10 +75,17 @@ are preserved in [raw evidence](evidence/live/list-detail-contract-gap.md).
 - Deno 2.6.9; Fresh 1.7.3; Preact 10.27.2; package lockfile enabled and frozen
   for production/check/test commands.
 - Package formatting, lint, type check and production build pass.
-- Twenty-five focused tests pass: 13 adapter, 10 media, 2 query tests.
+- Twenty-five focused tests pass: 13 adapter, 10 media, 2 query tests. Four
+  hosted checker safety/regression tests also pass, for 29 focused tests in
+  total.
 - Repository `check:fmt` passes (702 files at that run) and `check:lint` passes.
   Initial sandbox-only attempts could not fetch inherited Node typings; the
   permitted network retry completed. No inherited source repair was needed.
+- A later accidental whole-repository `deno task check` passed root formatting
+  and lint, then could not resolve an unrelated legacy `js-beautify` import in
+  the sandbox. No legacy repair was attempted. The correct explorer package
+  check, including its types, and the four checker tests passed afterward; a
+  successful whole-repository type check is not claimed.
 - The production server cold-starts from a cleared environment and a built
   snapshot, with no database, Redis, AWS-write or administrative credentials.
   Runtime has no write, subprocess or system permission. Selected framework
@@ -89,7 +100,7 @@ are preserved in [raw evidence](evidence/live/list-detail-contract-gap.md).
   Four material integration/mapping issues were found and corrected during the
   bounded correction work; none is concealed as a successful first attempt.
 
-The final restored artifact also passes all 32 capability checks in fixture mode
+The earlier `4ff242c` artifact passed all 32 capability checks in fixture mode
 with outbound network permission denied, and all 32 again in live mode. The
 archive was safely extracted into a different directory and cold-started without
 credentials or the original checkout. Its SHA-256 inventory was checked for
@@ -108,11 +119,44 @@ interrupted report is retained and is not presented as the original failure.
 
 ## Browser, data and media evidence
 
-Browser observations/captures are under `evidence/browser/`. Live list/detail
-values agree with saved source records for stamps 1507273 and 0. The fixture
-adapter maps all sixteen captured rows. Eight preselected PNGs were fully
-decoded independently; four HTML originals were intentionally unsupported and
-not fetched during sampling. Native CDN PNG bytes can differ from API base64
+The current public run is recorded in
+[HTTP/2 capabilities](evidence/quick-tunnel/capabilities-http2.json): all 35
+HTTP cases pass, including three bounded raster responses, source/live-data
+headers, and the existing route/method and HTML/header boundaries. Its five
+injected source-parser checks are local checks, separately labelled in that
+report. The served artifact is source
+`31d81df8de44a0357c6aba0f681b7434203fda16`, Fresh build ID
+`9daedd9b1ee1b716192c035b1535db9499625722`.
+
+Public browser observations cover desktop 1440×900 and mobile 390×844
+filter/detail/Back/Forward journeys and oldest-first stamp zero. Those captures
+include the earlier QUIC hostname. On the final HTTP/2 hostname, page two and
+reload passed at 1280×720. The earlier host's page-two failure remains recorded;
+it is not counted as a successful observation. No actual 200% zoom or complete
+unfamiliar-human test is claimed.
+[Public browser observations](evidence/quick-tunnel/browser-observations.json).
+
+Public captures: [desktop list](evidence/quick-tunnel/desktop-list.jpg),
+[desktop detail](evidence/quick-tunnel/desktop-detail.jpg),
+[mobile list](evidence/quick-tunnel/mobile-list.jpg),
+[mobile detail](evidence/quick-tunnel/mobile-detail.jpg), and
+[final HTTP/2 preview](evidence/quick-tunnel/final-preview.jpg).
+
+The first QUIC tunnel passed its 32 route cases, then the checker failed to
+discover raster links carrying Fresh's cache query. The harness was corrected
+with a regression test; the failure remains in
+[first media discovery](evidence/quick-tunnel/capabilities-first-media-discovery-failed.json).
+That tunnel later dropped connections with error 1033/timeouts and was stopped;
+[the timeout run](evidence/quick-tunnel/capabilities-quic-timeout.json) is
+retained. The replacement HTTP/2 hostname passed the complete 35-case run above.
+These observations establish a temporary review path, not independent service
+availability or provider cold-start performance.
+
+Earlier local observations/captures are under `evidence/browser/`. Live
+list/detail values agree with saved source records for stamps 1507273 and 0. The
+fixture adapter maps all sixteen captured rows. Eight preselected PNGs were
+fully decoded independently; four HTML originals were intentionally unsupported
+and not fetched during sampling. Native CDN PNG bytes can differ from API base64
 while preserving visible pixels, so byte identity is not asserted.
 
 Browser checks cover the known filter/detail/Back task, Forward, explicit
@@ -123,7 +167,7 @@ active frames; they are not a full accessibility certification. Native-key
 activation and focus/zoom limitations are recorded with the final observations.
 No human completion-time improvement claim is made.
 
-Final captures: [desktop list](evidence/browser/desktop-list.jpg),
+Earlier local captures: [desktop list](evidence/browser/desktop-list.jpg),
 [desktop detail](evidence/browser/desktop-detail.jpg),
 [mobile list](evidence/browser/mobile-list.jpg),
 [mobile detail](evidence/browser/mobile-detail.jpg),
@@ -156,21 +200,21 @@ the owner/unfamiliar-reviewer usability comparison required by the plan.
 ## Remaining dependencies and decision
 
 No production deployment or merge is requested or performed. The existing AWS
-scripts target production and were not used. The owner chose Render for staging
-on 4 November 2026. The connector returned unavailable-tool errors, so the
-dashboard was used with the owner's sign-in. A public Git repository source
-avoids granting new Git-provider access. The prepared form uses the exact proof
-branch and Dockerfile, Free compute, port 8007, a static health check, and
-manual deploys. Provider account verification is pending; no service or hosted
-artifact is claimed. The Docker recipe remains unverified because no running
-local Docker daemon was available and the provider build has not started.
+scripts target production and were not used. The attempted Render setup was
+canceled, and zero Render services were verified in the dashboard. The retained
+[Render recipe](../../explorer/render.yaml) is optional and unapplied; it is not
+the active preview. The owner requires a route without a card. No account
+billing details are included here, and no card-dependent setup is an outstanding
+instruction. Linux Docker build/start remains unverified.
 
-Continue with the existing bounded proof when staging access is established:
-deploy the exact immutable artifact, repeat
-capability/browser/header/performance checks there, demonstrate rollback to a
-prior staged artifact, and complete owner plus unfamiliar human task review. Do
-not expand routes or declare E04 complete while those conditions are unresolved.
-A local archive/restart is useful evidence but cannot satisfy staged rollback.
+The temporary HTTPS preview enables owner review while the local processes run.
+Continue the existing bounded proof when an independently hosted target meeting
+the owner's constraint is established: deploy the exact immutable artifact,
+repeat capability/browser/header/performance checks there, demonstrate rollback
+to a prior staged artifact, and complete owner plus unfamiliar human task
+review. Do not expand routes or declare E04 complete while those conditions are
+unresolved. A local archive/restart is useful evidence but cannot satisfy staged
+rollback.
 
 The 4–8 engineering-day allowance remains provisional. Evidence timestamps
 describe this implementation session; they do not calibrate agent work into paid

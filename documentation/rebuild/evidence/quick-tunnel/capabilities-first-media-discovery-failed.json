@@ -1,0 +1,987 @@
+{
+  "capturedAtUtc": "2026-11-04T12:10:33.839Z",
+  "scope": "Temporary public HTTPS Quick Tunnel forwarding the production-built proof on the local Mac; not an independently hosted artifact or E04 staging deployment. Local source manifest/parser checks are labelled separately",
+  "target": "https://creek-engagement-written-handling.trycloudflare.com",
+  "targetKind": "quick-tunnel",
+  "expectedRevision": "31d81df8de44a0357c6aba0f681b7434203fda16",
+  "expectedSource": "live",
+  "limits": {
+    "requestTimeoutMs": 15000,
+    "runTimeoutMs": 120000,
+    "responseBytes": 2097152
+  },
+  "cases": [
+    {
+      "path": "/explorer",
+      "method": "GET",
+      "expectedStatus": 302,
+      "actualStatus": 302,
+      "durationMs": 269,
+      "bodyBytes": 0,
+      "headers": {
+        "contentType": null,
+        "csp": "default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; object-src 'none'",
+        "robots": "noindex, nofollow, noarchive, none, none",
+        "nosniff": "nosniff",
+        "allow": null,
+        "location": "/explorer?type=all&format=png&sort=newest&page=1",
+        "revision": "31d81df8de44a0357c6aba0f681b7434203fda16",
+        "source": "live"
+      },
+      "checks": {
+        "status": true,
+        "revision": true,
+        "source": true,
+        "csp": true,
+        "noindex": true,
+        "nosniff": true,
+        "noCookies": true,
+        "redirectLocation": true
+      },
+      "pass": true
+    },
+    {
+      "path": "/explorer?type=all&format=png&sort=newest&page=1",
+      "method": "GET",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "durationMs": 1241,
+      "bodyBytes": 13238,
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "csp": "default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; object-src 'none'",
+        "robots": "noindex, nofollow, noarchive, none, none",
+        "nosniff": "nosniff",
+        "allow": null,
+        "location": null,
+        "revision": "31d81df8de44a0357c6aba0f681b7434203fda16",
+        "source": "live"
+      },
+      "checks": {
+        "status": true,
+        "revision": true,
+        "source": true,
+        "csp": true,
+        "noindex": true,
+        "nosniff": true,
+        "noCookies": true,
+        "htmlContentType": true,
+        "htmlDocument": true,
+        "noGeneratorReferences": true,
+        "noActiveArtworkFrames": true,
+        "noInlineHandlers": true,
+        "noJavascriptLinks": true,
+        "sameOriginSources": true,
+        "noWalletControls": true,
+        "getOnlyForms": true
+      },
+      "pass": true
+    },
+    {
+      "path": "/stamp/1507273?from=%3Ftype%3Dall%26format%3Dpng%26sort%3Dnewest%26page%3D1",
+      "method": "GET",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "durationMs": 287,
+      "bodyBytes": 3533,
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "csp": "default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; object-src 'none'",
+        "robots": "noindex, nofollow, noarchive, none, none",
+        "nosniff": "nosniff",
+        "allow": null,
+        "location": null,
+        "revision": "31d81df8de44a0357c6aba0f681b7434203fda16",
+        "source": "live"
+      },
+      "checks": {
+        "status": true,
+        "revision": true,
+        "source": true,
+        "csp": true,
+        "noindex": true,
+        "nosniff": true,
+        "noCookies": true,
+        "htmlContentType": true,
+        "htmlDocument": true,
+        "noGeneratorReferences": true,
+        "noActiveArtworkFrames": true,
+        "noInlineHandlers": true,
+        "noJavascriptLinks": true,
+        "sameOriginSources": true,
+        "noWalletControls": true,
+        "getOnlyForms": true
+      },
+      "pass": true
+    },
+    {
+      "path": "/explorer?type=all&format=all&sort=newest&page=1",
+      "method": "GET",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "durationMs": 749,
+      "bodyBytes": 12694,
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "csp": "default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; object-src 'none'",
+        "robots": "noindex, nofollow, noarchive, none, none",
+        "nosniff": "nosniff",
+        "allow": null,
+        "location": null,
+        "revision": "31d81df8de44a0357c6aba0f681b7434203fda16",
+        "source": "live"
+      },
+      "checks": {
+        "status": true,
+        "revision": true,
+        "source": true,
+        "csp": true,
+        "noindex": true,
+        "nosniff": true,
+        "noCookies": true,
+        "htmlContentType": true,
+        "htmlDocument": true,
+        "noGeneratorReferences": true,
+        "noActiveArtworkFrames": true,
+        "noInlineHandlers": true,
+        "noJavascriptLinks": true,
+        "sameOriginSources": true,
+        "noWalletControls": true,
+        "getOnlyForms": true
+      },
+      "pass": true
+    },
+    {
+      "path": "/stamp/1507273?from=%3Ftype%3Dall%26format%3Dall%26sort%3Dnewest%26page%3D1",
+      "method": "GET",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "durationMs": 440,
+      "bodyBytes": 3533,
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "csp": "default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; object-src 'none'",
+        "robots": "noindex, nofollow, noarchive, none, none",
+        "nosniff": "nosniff",
+        "allow": null,
+        "location": null,
+        "revision": "31d81df8de44a0357c6aba0f681b7434203fda16",
+        "source": "live"
+      },
+      "checks": {
+        "status": true,
+        "revision": true,
+        "source": true,
+        "csp": true,
+        "noindex": true,
+        "nosniff": true,
+        "noCookies": true,
+        "htmlContentType": true,
+        "htmlDocument": true,
+        "noGeneratorReferences": true,
+        "noActiveArtworkFrames": true,
+        "noInlineHandlers": true,
+        "noJavascriptLinks": true,
+        "sameOriginSources": true,
+        "noWalletControls": true,
+        "getOnlyForms": true
+      },
+      "pass": true
+    },
+    {
+      "path": "/api/internal/fee-security",
+      "method": "GET",
+      "expectedStatus": 404,
+      "actualStatus": 404,
+      "durationMs": 108,
+      "bodyBytes": 9,
+      "headers": {
+        "contentType": "text/plain;charset=UTF-8",
+        "csp": "default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; object-src 'none'",
+        "robots": "noindex, nofollow, noarchive, none, none",
+        "nosniff": "nosniff",
+        "allow": null,
+        "location": null,
+        "revision": "31d81df8de44a0357c6aba0f681b7434203fda16",
+        "source": "live"
+      },
+      "checks": {
+        "status": true,
+        "revision": true,
+        "source": true,
+        "csp": true,
+        "noindex": true,
+        "nosniff": true,
+        "noCookies": true
+      },
+      "pass": true
+    },
+    {
+      "path": "/api/internal/fee-security",
+      "method": "POST",
+      "expectedStatus": 405,
+      "actualStatus": 405,
+      "durationMs": 110,
+      "bodyBytes": 18,
+      "headers": {
+        "contentType": "text/plain;charset=UTF-8",
+        "csp": "default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; object-src 'none'",
+        "robots": "noindex, nofollow, noarchive, none, none",
+        "nosniff": "nosniff",
+        "allow": "GET, HEAD",
+        "location": null,
+        "revision": "31d81df8de44a0357c6aba0f681b7434203fda16",
+        "source": "live"
+      },
+      "checks": {
+        "status": true,
+        "revision": true,
+        "source": true,
+        "csp": true,
+        "noindex": true,
+        "nosniff": true,
+        "noCookies": true,
+        "methodAllowlist": true
+      },
+      "pass": true
+    },
+    {
+      "path": "/api/internal/src20Background",
+      "method": "GET",
+      "expectedStatus": 404,
+      "actualStatus": 404,
+      "durationMs": 109,
+      "bodyBytes": 9,
+      "headers": {
+        "contentType": "text/plain;charset=UTF-8",
+        "csp": "default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; object-src 'none'",
+        "robots": "noindex, nofollow, noarchive, none, none",
+        "nosniff": "nosniff",
+        "allow": null,
+        "location": null,
+        "revision": "31d81df8de44a0357c6aba0f681b7434203fda16",
+        "source": "live"
+      },
+      "checks": {
+        "status": true,
+        "revision": true,
+        "source": true,
+        "csp": true,
+        "noindex": true,
+        "nosniff": true,
+        "noCookies": true
+      },
+      "pass": true
+    },
+    {
+      "path": "/api/internal/src20Background",
+      "method": "POST",
+      "expectedStatus": 405,
+      "actualStatus": 405,
+      "durationMs": 76,
+      "bodyBytes": 18,
+      "headers": {
+        "contentType": "text/plain;charset=UTF-8",
+        "csp": "default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; object-src 'none'",
+        "robots": "noindex, nofollow, noarchive, none, none",
+        "nosniff": "nosniff",
+        "allow": "GET, HEAD",
+        "location": null,
+        "revision": "31d81df8de44a0357c6aba0f681b7434203fda16",
+        "source": "live"
+      },
+      "checks": {
+        "status": true,
+        "revision": true,
+        "source": true,
+        "csp": true,
+        "noindex": true,
+        "nosniff": true,
+        "noCookies": true,
+        "methodAllowlist": true
+      },
+      "pass": true
+    },
+    {
+      "path": "/api/src20Background",
+      "method": "GET",
+      "expectedStatus": 404,
+      "actualStatus": 404,
+      "durationMs": 119,
+      "bodyBytes": 9,
+      "headers": {
+        "contentType": "text/plain;charset=UTF-8",
+        "csp": "default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; object-src 'none'",
+        "robots": "noindex, nofollow, noarchive, none, none",
+        "nosniff": "nosniff",
+        "allow": null,
+        "location": null,
+        "revision": "31d81df8de44a0357c6aba0f681b7434203fda16",
+        "source": "live"
+      },
+      "checks": {
+        "status": true,
+        "revision": true,
+        "source": true,
+        "csp": true,
+        "noindex": true,
+        "nosniff": true,
+        "noCookies": true
+      },
+      "pass": true
+    },
+    {
+      "path": "/api/src20Background",
+      "method": "POST",
+      "expectedStatus": 405,
+      "actualStatus": 405,
+      "durationMs": 75,
+      "bodyBytes": 18,
+      "headers": {
+        "contentType": "text/plain;charset=UTF-8",
+        "csp": "default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; object-src 'none'",
+        "robots": "noindex, nofollow, noarchive, none, none",
+        "nosniff": "nosniff",
+        "allow": "GET, HEAD",
+        "location": null,
+        "revision": "31d81df8de44a0357c6aba0f681b7434203fda16",
+        "source": "live"
+      },
+      "checks": {
+        "status": true,
+        "revision": true,
+        "source": true,
+        "csp": true,
+        "noindex": true,
+        "nosniff": true,
+        "noCookies": true,
+        "methodAllowlist": true
+      },
+      "pass": true
+    },
+    {
+      "path": "/api/v2/stamp/0/preview",
+      "method": "GET",
+      "expectedStatus": 404,
+      "actualStatus": 404,
+      "durationMs": 100,
+      "bodyBytes": 9,
+      "headers": {
+        "contentType": "text/plain;charset=UTF-8",
+        "csp": "default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; object-src 'none'",
+        "robots": "noindex, nofollow, noarchive, none, none",
+        "nosniff": "nosniff",
+        "allow": null,
+        "location": null,
+        "revision": "31d81df8de44a0357c6aba0f681b7434203fda16",
+        "source": "live"
+      },
+      "checks": {
+        "status": true,
+        "revision": true,
+        "source": true,
+        "csp": true,
+        "noindex": true,
+        "nosniff": true,
+        "noCookies": true
+      },
+      "pass": true
+    },
+    {
+      "path": "/api/v2/stamp/0/preview",
+      "method": "POST",
+      "expectedStatus": 405,
+      "actualStatus": 405,
+      "durationMs": 57,
+      "bodyBytes": 18,
+      "headers": {
+        "contentType": "text/plain;charset=UTF-8",
+        "csp": "default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; object-src 'none'",
+        "robots": "noindex, nofollow, noarchive, none, none",
+        "nosniff": "nosniff",
+        "allow": "GET, HEAD",
+        "location": null,
+        "revision": "31d81df8de44a0357c6aba0f681b7434203fda16",
+        "source": "live"
+      },
+      "checks": {
+        "status": true,
+        "revision": true,
+        "source": true,
+        "csp": true,
+        "noindex": true,
+        "nosniff": true,
+        "noCookies": true,
+        "methodAllowlist": true
+      },
+      "pass": true
+    },
+    {
+      "path": "/api/v2/stamp/0/preview?refresh=true",
+      "method": "GET",
+      "expectedStatus": 404,
+      "actualStatus": 404,
+      "durationMs": 189,
+      "bodyBytes": 9,
+      "headers": {
+        "contentType": "text/plain;charset=UTF-8",
+        "csp": "default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; object-src 'none'",
+        "robots": "noindex, nofollow, noarchive, none, none",
+        "nosniff": "nosniff",
+        "allow": null,
+        "location": null,
+        "revision": "31d81df8de44a0357c6aba0f681b7434203fda16",
+        "source": "live"
+      },
+      "checks": {
+        "status": true,
+        "revision": true,
+        "source": true,
+        "csp": true,
+        "noindex": true,
+        "nosniff": true,
+        "noCookies": true
+      },
+      "pass": true
+    },
+    {
+      "path": "/api/v2/stamp/0/preview?refresh=true",
+      "method": "POST",
+      "expectedStatus": 405,
+      "actualStatus": 405,
+      "durationMs": 63,
+      "bodyBytes": 18,
+      "headers": {
+        "contentType": "text/plain;charset=UTF-8",
+        "csp": "default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; object-src 'none'",
+        "robots": "noindex, nofollow, noarchive, none, none",
+        "nosniff": "nosniff",
+        "allow": "GET, HEAD",
+        "location": null,
+        "revision": "31d81df8de44a0357c6aba0f681b7434203fda16",
+        "source": "live"
+      },
+      "checks": {
+        "status": true,
+        "revision": true,
+        "source": true,
+        "csp": true,
+        "noindex": true,
+        "nosniff": true,
+        "noCookies": true,
+        "methodAllowlist": true
+      },
+      "pass": true
+    },
+    {
+      "path": "/api/v2/ecx/broadcast",
+      "method": "GET",
+      "expectedStatus": 404,
+      "actualStatus": 404,
+      "durationMs": 106,
+      "bodyBytes": 9,
+      "headers": {
+        "contentType": "text/plain;charset=UTF-8",
+        "csp": "default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; object-src 'none'",
+        "robots": "noindex, nofollow, noarchive, none, none",
+        "nosniff": "nosniff",
+        "allow": null,
+        "location": null,
+        "revision": "31d81df8de44a0357c6aba0f681b7434203fda16",
+        "source": "live"
+      },
+      "checks": {
+        "status": true,
+        "revision": true,
+        "source": true,
+        "csp": true,
+        "noindex": true,
+        "nosniff": true,
+        "noCookies": true
+      },
+      "pass": true
+    },
+    {
+      "path": "/api/v2/ecx/broadcast",
+      "method": "POST",
+      "expectedStatus": 405,
+      "actualStatus": 405,
+      "durationMs": 66,
+      "bodyBytes": 18,
+      "headers": {
+        "contentType": "text/plain;charset=UTF-8",
+        "csp": "default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; object-src 'none'",
+        "robots": "noindex, nofollow, noarchive, none, none",
+        "nosniff": "nosniff",
+        "allow": "GET, HEAD",
+        "location": null,
+        "revision": "31d81df8de44a0357c6aba0f681b7434203fda16",
+        "source": "live"
+      },
+      "checks": {
+        "status": true,
+        "revision": true,
+        "source": true,
+        "csp": true,
+        "noindex": true,
+        "nosniff": true,
+        "noCookies": true,
+        "methodAllowlist": true
+      },
+      "pass": true
+    },
+    {
+      "path": "/api/v2/olga/mint",
+      "method": "GET",
+      "expectedStatus": 404,
+      "actualStatus": 404,
+      "durationMs": 162,
+      "bodyBytes": 9,
+      "headers": {
+        "contentType": "text/plain;charset=UTF-8",
+        "csp": "default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; object-src 'none'",
+        "robots": "noindex, nofollow, noarchive, none, none",
+        "nosniff": "nosniff",
+        "allow": null,
+        "location": null,
+        "revision": "31d81df8de44a0357c6aba0f681b7434203fda16",
+        "source": "live"
+      },
+      "checks": {
+        "status": true,
+        "revision": true,
+        "source": true,
+        "csp": true,
+        "noindex": true,
+        "nosniff": true,
+        "noCookies": true
+      },
+      "pass": true
+    },
+    {
+      "path": "/api/v2/olga/mint",
+      "method": "POST",
+      "expectedStatus": 405,
+      "actualStatus": 405,
+      "durationMs": 56,
+      "bodyBytes": 18,
+      "headers": {
+        "contentType": "text/plain;charset=UTF-8",
+        "csp": "default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; object-src 'none'",
+        "robots": "noindex, nofollow, noarchive, none, none",
+        "nosniff": "nosniff",
+        "allow": "GET, HEAD",
+        "location": null,
+        "revision": "31d81df8de44a0357c6aba0f681b7434203fda16",
+        "source": "live"
+      },
+      "checks": {
+        "status": true,
+        "revision": true,
+        "source": true,
+        "csp": true,
+        "noindex": true,
+        "nosniff": true,
+        "noCookies": true,
+        "methodAllowlist": true
+      },
+      "pass": true
+    },
+    {
+      "path": "/api/v2/fairmint/compose",
+      "method": "GET",
+      "expectedStatus": 404,
+      "actualStatus": 404,
+      "durationMs": 161,
+      "bodyBytes": 9,
+      "headers": {
+        "contentType": "text/plain;charset=UTF-8",
+        "csp": "default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; object-src 'none'",
+        "robots": "noindex, nofollow, noarchive, none, none",
+        "nosniff": "nosniff",
+        "allow": null,
+        "location": null,
+        "revision": "31d81df8de44a0357c6aba0f681b7434203fda16",
+        "source": "live"
+      },
+      "checks": {
+        "status": true,
+        "revision": true,
+        "source": true,
+        "csp": true,
+        "noindex": true,
+        "nosniff": true,
+        "noCookies": true
+      },
+      "pass": true
+    },
+    {
+      "path": "/api/v2/fairmint/compose",
+      "method": "POST",
+      "expectedStatus": 405,
+      "actualStatus": 405,
+      "durationMs": 90,
+      "bodyBytes": 18,
+      "headers": {
+        "contentType": "text/plain;charset=UTF-8",
+        "csp": "default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; object-src 'none'",
+        "robots": "noindex, nofollow, noarchive, none, none",
+        "nosniff": "nosniff",
+        "allow": "GET, HEAD",
+        "location": null,
+        "revision": "31d81df8de44a0357c6aba0f681b7434203fda16",
+        "source": "live"
+      },
+      "checks": {
+        "status": true,
+        "revision": true,
+        "source": true,
+        "csp": true,
+        "noindex": true,
+        "nosniff": true,
+        "noCookies": true,
+        "methodAllowlist": true
+      },
+      "pass": true
+    },
+    {
+      "path": "/wallet/proof-capability-check",
+      "method": "GET",
+      "expectedStatus": 404,
+      "actualStatus": 404,
+      "durationMs": 92,
+      "bodyBytes": 9,
+      "headers": {
+        "contentType": "text/plain;charset=UTF-8",
+        "csp": "default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; object-src 'none'",
+        "robots": "noindex, nofollow, noarchive, none, none",
+        "nosniff": "nosniff",
+        "allow": null,
+        "location": null,
+        "revision": "31d81df8de44a0357c6aba0f681b7434203fda16",
+        "source": "live"
+      },
+      "checks": {
+        "status": true,
+        "revision": true,
+        "source": true,
+        "csp": true,
+        "noindex": true,
+        "nosniff": true,
+        "noCookies": true
+      },
+      "pass": true
+    },
+    {
+      "path": "/wallet/proof-capability-check",
+      "method": "POST",
+      "expectedStatus": 405,
+      "actualStatus": 405,
+      "durationMs": 57,
+      "bodyBytes": 18,
+      "headers": {
+        "contentType": "text/plain;charset=UTF-8",
+        "csp": "default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; object-src 'none'",
+        "robots": "noindex, nofollow, noarchive, none, none",
+        "nosniff": "nosniff",
+        "allow": "GET, HEAD",
+        "location": null,
+        "revision": "31d81df8de44a0357c6aba0f681b7434203fda16",
+        "source": "live"
+      },
+      "checks": {
+        "status": true,
+        "revision": true,
+        "source": true,
+        "csp": true,
+        "noindex": true,
+        "nosniff": true,
+        "noCookies": true,
+        "methodAllowlist": true
+      },
+      "pass": true
+    },
+    {
+      "path": "/tool/stamp",
+      "method": "GET",
+      "expectedStatus": 404,
+      "actualStatus": 404,
+      "durationMs": 113,
+      "bodyBytes": 9,
+      "headers": {
+        "contentType": "text/plain;charset=UTF-8",
+        "csp": "default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; object-src 'none'",
+        "robots": "noindex, nofollow, noarchive, none, none",
+        "nosniff": "nosniff",
+        "allow": null,
+        "location": null,
+        "revision": "31d81df8de44a0357c6aba0f681b7434203fda16",
+        "source": "live"
+      },
+      "checks": {
+        "status": true,
+        "revision": true,
+        "source": true,
+        "csp": true,
+        "noindex": true,
+        "nosniff": true,
+        "noCookies": true
+      },
+      "pass": true
+    },
+    {
+      "path": "/tool/stamp",
+      "method": "POST",
+      "expectedStatus": 405,
+      "actualStatus": 405,
+      "durationMs": 69,
+      "bodyBytes": 18,
+      "headers": {
+        "contentType": "text/plain;charset=UTF-8",
+        "csp": "default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; object-src 'none'",
+        "robots": "noindex, nofollow, noarchive, none, none",
+        "nosniff": "nosniff",
+        "allow": "GET, HEAD",
+        "location": null,
+        "revision": "31d81df8de44a0357c6aba0f681b7434203fda16",
+        "source": "live"
+      },
+      "checks": {
+        "status": true,
+        "revision": true,
+        "source": true,
+        "csp": true,
+        "noindex": true,
+        "nosniff": true,
+        "noCookies": true,
+        "methodAllowlist": true
+      },
+      "pass": true
+    },
+    {
+      "path": "/upload",
+      "method": "GET",
+      "expectedStatus": 404,
+      "actualStatus": 404,
+      "durationMs": 80,
+      "bodyBytes": 9,
+      "headers": {
+        "contentType": "text/plain;charset=UTF-8",
+        "csp": "default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; object-src 'none'",
+        "robots": "noindex, nofollow, noarchive, none, none",
+        "nosniff": "nosniff",
+        "allow": null,
+        "location": null,
+        "revision": "31d81df8de44a0357c6aba0f681b7434203fda16",
+        "source": "live"
+      },
+      "checks": {
+        "status": true,
+        "revision": true,
+        "source": true,
+        "csp": true,
+        "noindex": true,
+        "nosniff": true,
+        "noCookies": true
+      },
+      "pass": true
+    },
+    {
+      "path": "/upload",
+      "method": "POST",
+      "expectedStatus": 405,
+      "actualStatus": 405,
+      "durationMs": 96,
+      "bodyBytes": 18,
+      "headers": {
+        "contentType": "text/plain;charset=UTF-8",
+        "csp": "default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; object-src 'none'",
+        "robots": "noindex, nofollow, noarchive, none, none",
+        "nosniff": "nosniff",
+        "allow": "GET, HEAD",
+        "location": null,
+        "revision": "31d81df8de44a0357c6aba0f681b7434203fda16",
+        "source": "live"
+      },
+      "checks": {
+        "status": true,
+        "revision": true,
+        "source": true,
+        "csp": true,
+        "noindex": true,
+        "nosniff": true,
+        "noCookies": true,
+        "methodAllowlist": true
+      },
+      "pass": true
+    },
+    {
+      "path": "/admin",
+      "method": "GET",
+      "expectedStatus": 404,
+      "actualStatus": 404,
+      "durationMs": 136,
+      "bodyBytes": 9,
+      "headers": {
+        "contentType": "text/plain;charset=UTF-8",
+        "csp": "default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; object-src 'none'",
+        "robots": "noindex, nofollow, noarchive, none, none",
+        "nosniff": "nosniff",
+        "allow": null,
+        "location": null,
+        "revision": "31d81df8de44a0357c6aba0f681b7434203fda16",
+        "source": "live"
+      },
+      "checks": {
+        "status": true,
+        "revision": true,
+        "source": true,
+        "csp": true,
+        "noindex": true,
+        "nosniff": true,
+        "noCookies": true
+      },
+      "pass": true
+    },
+    {
+      "path": "/admin",
+      "method": "POST",
+      "expectedStatus": 405,
+      "actualStatus": 405,
+      "durationMs": 57,
+      "bodyBytes": 18,
+      "headers": {
+        "contentType": "text/plain;charset=UTF-8",
+        "csp": "default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; object-src 'none'",
+        "robots": "noindex, nofollow, noarchive, none, none",
+        "nosniff": "nosniff",
+        "allow": "GET, HEAD",
+        "location": null,
+        "revision": "31d81df8de44a0357c6aba0f681b7434203fda16",
+        "source": "live"
+      },
+      "checks": {
+        "status": true,
+        "revision": true,
+        "source": true,
+        "csp": true,
+        "noindex": true,
+        "nosniff": true,
+        "noCookies": true,
+        "methodAllowlist": true
+      },
+      "pass": true
+    },
+    {
+      "path": "/content/proof-capability-check",
+      "method": "GET",
+      "expectedStatus": 404,
+      "actualStatus": 404,
+      "durationMs": 81,
+      "bodyBytes": 9,
+      "headers": {
+        "contentType": "text/plain;charset=UTF-8",
+        "csp": "default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; object-src 'none'",
+        "robots": "noindex, nofollow, noarchive, none, none",
+        "nosniff": "nosniff",
+        "allow": null,
+        "location": null,
+        "revision": "31d81df8de44a0357c6aba0f681b7434203fda16",
+        "source": "live"
+      },
+      "checks": {
+        "status": true,
+        "revision": true,
+        "source": true,
+        "csp": true,
+        "noindex": true,
+        "nosniff": true,
+        "noCookies": true
+      },
+      "pass": true
+    },
+    {
+      "path": "/content/proof-capability-check",
+      "method": "POST",
+      "expectedStatus": 405,
+      "actualStatus": 405,
+      "durationMs": 48,
+      "bodyBytes": 18,
+      "headers": {
+        "contentType": "text/plain;charset=UTF-8",
+        "csp": "default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; object-src 'none'",
+        "robots": "noindex, nofollow, noarchive, none, none",
+        "nosniff": "nosniff",
+        "allow": "GET, HEAD",
+        "location": null,
+        "revision": "31d81df8de44a0357c6aba0f681b7434203fda16",
+        "source": "live"
+      },
+      "checks": {
+        "status": true,
+        "revision": true,
+        "source": true,
+        "csp": true,
+        "noindex": true,
+        "nosniff": true,
+        "noCookies": true,
+        "methodAllowlist": true
+      },
+      "pass": true
+    },
+    {
+      "path": "/explorer",
+      "method": "POST",
+      "expectedStatus": 405,
+      "actualStatus": 405,
+      "durationMs": 54,
+      "bodyBytes": 18,
+      "headers": {
+        "contentType": "text/plain;charset=UTF-8",
+        "csp": "default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; object-src 'none'",
+        "robots": "noindex, nofollow, noarchive, none, none",
+        "nosniff": "nosniff",
+        "allow": "GET, HEAD",
+        "location": null,
+        "revision": "31d81df8de44a0357c6aba0f681b7434203fda16",
+        "source": "live"
+      },
+      "checks": {
+        "status": true,
+        "revision": true,
+        "source": true,
+        "csp": true,
+        "noindex": true,
+        "nosniff": true,
+        "noCookies": true,
+        "methodAllowlist": true
+      },
+      "pass": true
+    }
+  ],
+  "pass": false,
+  "sourceManifest": {
+    "scope": "Local source inventory; not remote manifest introspection",
+    "routes": [
+      "./routes/_404.tsx",
+      "./routes/_500.tsx",
+      "./routes/_app.tsx",
+      "./routes/_middleware.ts",
+      "./routes/explorer.tsx",
+      "./routes/media/[asset].ts",
+      "./routes/stamp/[id].tsx"
+    ],
+    "expectedRoutes": [
+      "./routes/_404.tsx",
+      "./routes/_500.tsx",
+      "./routes/_app.tsx",
+      "./routes/_middleware.ts",
+      "./routes/explorer.tsx",
+      "./routes/media/[asset].ts",
+      "./routes/stamp/[id].tsx"
+    ],
+    "noIslands": true,
+    "pass": true
+  },
+  "error": "No bounded static raster is advertised by the live explorer"
+}

@@ -96,6 +96,22 @@ manifest inventory and injected parser cases are explicitly labelled as local.
 Warm the service separately before running the 15-second request deadline; this
 checker does not measure Render's idle wake-up.
 
+For a temporary, no-account review link, Cloudflare Quick Tunnels can forward
+the local restricted Deno server without changing the application runtime. Start
+the server, create an empty YAML config containing `{}`, then run:
+
+```sh
+TUNNEL_TRANSPORT_PROTOCOL=http2 cloudflared tunnel --config /absolute/empty-config.yml --no-autoupdate --url http://127.0.0.1:8007 --metrics 127.0.0.1:0 --management-diagnostics=false
+```
+
+The public URL is temporary and depends on this computer, the server and the
+tunnel staying online. It provides no uptime guarantee and does not establish an
+independently hosted E04 artifact or staged rollback. The checker also accepts
+an exact HTTPS `NAME.trycloudflare.com` origin and labels its results as a local
+server reached through a public tunnel. Use that exact hostname in the network
+permission above. The initial QUIC connection dropped during review; the
+replacement HTTP/2 tunnel passed all 35 HTTP cases.
+
 After committing and building the exact source, create an immutable local
 archive:
 

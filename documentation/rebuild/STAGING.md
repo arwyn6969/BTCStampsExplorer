@@ -1,152 +1,102 @@
-# Explorer staging: prepared Render setup
+# Explorer preview and staging status
 
-Updated 4 November 2026. The owner selected Render and authorized the test site.
-The direct single-service dashboard flow is prepared against the public owner
-fork, with the same settings described below. Deployment submission requested
-account verification; no service or hosted artifact has been created. The
-Blueprint remains a reproducible alternative configuration, not a claim that one
-was applied.
+Updated 4 November 2026. The working public preview is
+[the explorer](https://hottest-position-turbo-patients.trycloudflare.com/explorer),
+through a Cloudflare Quick Tunnel using HTTP/2. It forwards HTTPS requests to
+the production-built proof running on the local Mac. The URL works only while
+that server and tunnel stay running; it requires no account or card.
 
-Prepared 3 November 2026. Staging means a public preview on a separate
-`onrender.com` address, where the owner can review the explorer before any
-production release. It uses the existing read API and static raster originals.
-The existing Stampchain domain and routing stay in place.
+Render setup was canceled under the owner's no-card requirement. The dashboard
+was checked and showed zero services. No Render deployment, provider artifact,
+or hosted rollback is claimed. The retained Render configuration is optional and
+unapplied; it is not the current preview or an instruction to add a card. No
+account billing details are recorded in this document.
 
-**Status: configuration prepared; no Render service or staged deployment is
-claimed.** Account access, billing settings, the first Docker build, staged
-checks, and rollback remain unverified. No database, disk, secret,
-administrative credential, wallet connection, or new backend is required by this
-configuration.
+## Current served artifact and evidence
 
-## Configuration to review
+The tunnel serves the restored immutable local artifact at source revision
+`31d81df8de44a0357c6aba0f681b7434203fda16`, Fresh build ID
+`9daedd9b1ee1b716192c035b1535db9499625722`. Its existing local archive is 85,784
+bytes, SHA-256
+`a02c5c33af3c77010485b71b2e39e68ba54391a1b85890ac0f38baacd27c4a6b`.
+[Local preparation and restore record](evidence/render-preparation.json),
+[restored fixture check](evidence/capabilities-restored-fixture-31d81df.json).
 
-[explorer/render.yaml](../../explorer/render.yaml) defines one Free Docker web
-service in Frankfurt, using the repository root as its build context. Its
-environment contains fixed live-data mode, the listening host, port 8007, and a
-required full source revision input. Docker keeps Deno 2.6.9 and the restricted
-production command. The direct service also needs `EXPLORER_REVISION` set to the
-exact full selected commit. Render exposes this as a Docker build argument and
-runtime environment value; the Dockerfile requires it, checks any supplied
-`RENDER_GIT_COMMIT` for a match, and builds Fresh with that identity. Update
-this value before manually deploying a different commit. The revision and live
-data mode are returned in application response headers for the hosted checker.
-The Blueprint prompts for this full revision on initial creation using
-`sync: false`; subsequent revision changes must be set manually in the service
-environment before a deploy.
+The final public
+[HTTP/2 capability report](evidence/quick-tunnel/capabilities-http2.json) passes
+all 35 HTTP cases, including three media checks, full source/live-data
+headers, forbidden route/method checks, and HTML/security headers. Its five
+injected source-parser checks are explicitly local checks. The explorer's 25
+focused tests and four hosted-checker safety/regression tests pass, for 29 tests
+in total. Package types and the required repository format/lint checks pass; an
+unrelated sandbox resolution failure does not establish a passing full
+legacy-repository type check.
 
-The source must be **arwyn6969/BTCStampsExplorer**, branch
-**codex/explorer-proof**. The fork's older default `dev` branch is unsuitable;
-choose the proof branch explicitly in both the Blueprint setup and service
-settings. These fields and manual service deployment are supported by the
-[Blueprint reference](https://render.com/docs/blueprint-spec).
+[Browser observations](evidence/quick-tunnel/browser-observations.json) cover
+list/filter/detail/Back/Forward and oldest-first stamp zero at desktop 1440×900
+and mobile 390×844 on the earlier tunnel. The final HTTP/2 hostname also passed
+page two and reload at 1280×720. Captures are available for
+[desktop list](evidence/quick-tunnel/desktop-list.jpg),
+[desktop detail](evidence/quick-tunnel/desktop-detail.jpg),
+[mobile list](evidence/quick-tunnel/mobile-list.jpg),
+[mobile detail](evidence/quick-tunnel/mobile-detail.jpg), and the
+[final preview](evidence/quick-tunnel/final-preview.jpg). No actual 200% browser
+zoom, full unfamiliar-human test, or timing improvement is claimed.
 
-Health checks use `/robots.txt`, a local static response that does not call the
-API. Render accepts successful HTTP responses and redirects, but a healthy
-static route does not prove live integration.
-[Health-check behavior](https://render.com/docs/health-checks).
+## Earlier tunnel failures remain recorded
 
-## Before creating the preview
+The earlier `creek-engagement-written-handling.trycloudflare.com` tunnel used
+QUIC. Its first run passed 32 HTTP route cases, then the harness failed to find
+media URLs carrying Fresh's cache query. A regression test and harness
+correction address that discovery error; the
+[first failure](evidence/quick-tunnel/capabilities-first-media-discovery-failed.json)
+is retained. The tunnel subsequently dropped connections with error 1033 and
+timeouts; its
+[timeout report](evidence/quick-tunnel/capabilities-quic-timeout.json) is also
+retained. It was stopped and replaced by the current HTTP/2 hostname. The failed
+first-host page-two visit is not recorded as a pass.
 
-1. Connect the intended Render account and owner GitHub fork. Confirm the
-   workspace, payment-method status, current included usage, and service plan in
-   the native Render dashboard. Keep compute on **Free** and review the
-   workspace's existing subscription independently.
-2. Inspect the pipeline spend limit under Workspace Settings → Build Pipeline.
-   This limit covers pipeline minutes; it is not a global bandwidth spending
-   cap. With a payment method, excess pipeline usage and bandwidth can incur
-   charges. Without one, Render documents suspending the relevant free services
-   or builds instead. Confirm acceptable account-level cost controls before
-   creating anything; this file does not promise an entirely zero-cost account.
-   [Pipeline controls](https://render.com/docs/build-pipeline),
-   [bandwidth billing](https://render.com/docs/outbound-bandwidth),
-   [Free-service limits](https://render.com/docs/free).
-3. Confirm the reviewed configuration commit is present on the proof branch. The
-   application baseline is `4ff242c9a4d6c27878cfaec5c8d7253fcd8a52bf`; a later
-   configuration-only commit should be recorded separately. Inspect its diff
-   before selecting that commit for deployment. This preparation does not
-   authorize a main merge or domain cutover.
+## E04 still requires independent staging
 
-## Create the staging service when access and deployment are authorized
+A staging deployment for E04 needs an independently running, identified artifact
+on a host meeting the owner's no-card constraint. The current tunnel depends on
+the local Mac and its processes. It supports public review but does not prove
+independent hosting, provider build/start behavior, sustained service capacity,
+or a hosted rollback.
 
-1. In Render, choose **New → Blueprint**, connect the owner fork, and select
-   `codex/explorer-proof`. Set **Blueprint Path** to `explorer/render.yaml`.
-2. Review the proposed changes: exactly one Free web service, the correct fork
-   and branch, Frankfurt, Dockerfile `explorer/Dockerfile`, root build context,
-   and no added databases, disks, domains, or secrets. Applying **Deploy
-   Blueprint** creates the service and initiates its first deployment; merely
-   opening the review does not establish a deployed result.
-3. Set the Blueprint's **Auto Sync** to **No**, and confirm the service's
-   **Auto-Deploy** remains **Off**. These are separate controls: disabling
-   commit-triggered service deploys does not disable automatic Blueprint
-   configuration updates. Subsequent changes require a deliberate manual sync or
-   deploy.
-   [Blueprint setup and sync controls](https://render.com/docs/infrastructure-as-code).
-4. Record the actual service URL, service/deploy identifiers, selected commit,
-   and build/start logs. Use **Manual Deploy → Deploy a specific commit** for
-   subsequent reviewed builds. Keep the Docker command unchanged. The Docker
-   build creates a new artifact; record its identity rather than claiming that
-   the existing local archive was deployed.
-   [Manual commit deployment](https://render.com/docs/deploys#deploying-a-specific-commit).
+Remaining acceptance is to record the actual deployed artifact and source,
+repeat capability/media/browser/header checks on that host, measure performance
+with stated device/network/cache conditions, and demonstrate rollback between
+two known successful staged artifacts. Owner design/task acceptance and an
+unfamiliar reviewer's task result remain pending. A local archive restore or
+restarting a tunnel does not satisfy staged rollback. Keep noindex/robots
+exclusion and avoid production DNS or domain cutover; the preview URL is public.
 
-## Evidence to collect on that hostname
+The earlier archive remains historical local evidence: source
+`4ff242c9a4d6c27878cfaec5c8d7253fcd8a52bf`, 80,847 bytes, SHA-256
+`c39b0e79d0078794a4bd47bbd4edf0b9a8f9213d3696f90ac1f56dd4a7dbafef`, Fresh build
+ID `c64f227ca3bee1273bc6b19e1e0a39c313805d75`.
+[Original artifact record](evidence/artifact.json). It is not the artifact now
+served through the tunnel and was never a Render deployment.
 
-- Verify `/robots.txt` and the default explorer redirect, then demonstrate the
-  same filter/sort → stamp detail → Back task at desktop/mobile sizes. Confirm
-  both the PNG default and the explicit all-formats view.
-- Repeat the route/method, header, rendered-HTML, and media checks represented
-  by `explorer/scripts/check-capabilities.ts` against the staged hostname using
-  `explorer/scripts/check-hosted-capabilities.ts`. The local script remains
-  fixed to localhost; its existing passing output is local evidence only. The
-  hosted checker accepts only an exact HTTPS `onrender.com` origin, the full
-  expected source revision, and live data mode. It stops on an identity or
-  capability failure and never follows redirects. Warm the service separately;
-  its 15-second request deadline does not measure idle wake-up.
-- Capture the deployed commit, browser results, media decoding/fallbacks,
-  sampled source comparison, and performance with device/network/cache
-  conditions. Keep failed or interrupted results alongside later corrections.
-- Confirm noindex headers and robots exclusion on the live preview. The URL is
-  public; noindex does not make it private. Add no custom domain or production
-  DNS change.
-- Record owner design feedback and an unfamiliar reviewer's task result before
-  declaring E04 complete or expanding routes.
+## Optional Render recipe retained, unapplied
 
-Free services idle after 15 minutes and may take about a minute to wake. Measure
-that provider wake-up separately from a warm page request. A `/robots.txt`
-response while the service is idle can be served by Render without waking the
-application; it does not establish a successful cold explorer request.
-[Free-service behavior](https://render.com/docs/free).
+[explorer/render.yaml](../../explorer/render.yaml) retains one Free Docker web
+service in Frankfurt, owner fork `arwyn6969/BTCStampsExplorer`, explicit branch
+`codex/explorer-proof`, root build context, Dockerfile `explorer/Dockerfile`,
+and `/robots.txt` health checks. It requires the full selected source revision
+in `EXPLORER_REVISION`; the Dockerfile checks the revision and derives Fresh's
+build identity from it. The fork's older default `dev` branch is unsuitable.
 
-## Demonstrate staging rollback
+Service auto-deploy is Off. Blueprint Auto Sync is a separate dashboard control;
+applying a Blueprint initiates creation/deployment even with service auto-deploy
+disabled. This recipe was not applied. Resume no provider setup that conflicts
+with the owner's current no-card requirement.
+[Blueprint controls](https://render.com/docs/infrastructure-as-code),
+[Blueprint fields](https://render.com/docs/blueprint-spec).
 
-Keep two successful, identified staged artifacts: A as the tested rollback
-target and B as the current candidate. Record each provider deploy ID and
-commit. A restart or rebuild of the same local source is not this demonstration.
-
-With B active, use the service's Deploys page to roll back to A's retained
-artifact. Confirm A is live, rerun the core journey and capability checks, and
-save the results. Record environment/settings separately because rollback does
-not replace every configuration value. Free services retain only their two most
-recent previous deploys for rollback, so confirm A remains available before the
-exercise. [Render rollback behavior](https://render.com/docs/rollbacks),
-[Free rollback retention](https://render.com/docs/free).
-
-If only one artifact has been staged, record rollback as pending. The unchanged
-local package remains a separate artifact: SHA-256
-`c39b0e79d0078794a4bd47bbd4edf0b9a8f9213d3696f90ac1f56dd4a7dbafef`, 80,847
-bytes, application revision `4ff242c9a4d6c27878cfaec5c8d7253fcd8a52bf`, Fresh
-build ID `c64f227ca3bee1273bc6b19e1e0a39c313805d75`.
-
-## Validation recorded for this preparation
-
-The fields were checked against Render's official documentation and the
-[published Blueprint JSON Schema](https://render.com/schema/render.yaml.json) on
-3 November 2026. Local schema validation checks structure only; it cannot verify
-fork permissions, account eligibility, cost controls, Docker build success,
-service availability, or staging acceptance.
-
-Local validation passed with PyYAML and `jsonschema.Draft202012Validator`, plus
-explicit checks for the single Free service, exact owner fork/branch, manual
-deploy setting, root context, static health route, and three fixed non-secret
-environment values. On 4 November, the added full source revision prompt was
-revalidated against the same official schema. The schema's SHA-256 was
-`8a3fb8da6b4f55fe686fbefa790e011d3dd7895f013f355953c572a21ab6494a`.
+The earlier configuration/schema validation remains a preparation result only.
+It passed Render's published schema on 3 November and the full revision prompt
+was revalidated on 4 November. The schema SHA-256 was
+`8a3fb8da6b4f55fe686fbefa790e011d3dd7895f013f355953c572a21ab6494a`. No
+successful Linux Docker build or Render runtime verification followed.

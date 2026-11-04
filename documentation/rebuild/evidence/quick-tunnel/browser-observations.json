@@ -1,0 +1,521 @@
+{
+  "sourceRevision": "31d81df8de44a0357c6aba0f681b7434203fda16",
+  "freshBuildId": "9daedd9b1ee1b716192c035b1535db9499625722",
+  "scope": "Temporary HTTPS proxy to a local Mac; not independent E04 hosting",
+  "notes": [
+    "The earlier creek-engagement URL used QUIC and was stopped after connection timeouts; the final hottest-position URL uses HTTP/2.",
+    "First-host page-two navigation failed; no successful observation is claimed for it.",
+    "Metrics are unthrottled journey observations, not controlled performance comparisons or field measurements."
+  ],
+  "observations": [
+    {
+      "kind": "desktop-default",
+      "activeFrames": 0,
+      "artworks": [
+        {
+          "complete": true,
+          "hidden": false,
+          "src": "/media/7046278a4bda05c7dd3063dd10607800cbb92ba6f8c7c41f49bd985edee6bbed.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722",
+          "width": 24
+        },
+        {
+          "complete": true,
+          "hidden": false,
+          "src": "/media/cf6689d99c1744dbf59c2eb9f9dd5f8d83e8a5e5a38e13a5f1cc39fed263a94e.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722",
+          "width": 40
+        },
+        {
+          "complete": true,
+          "hidden": false,
+          "src": "/media/a854454a25b59686823e7abb65bc1af26380db15abd0da56846d2982bd2b9706.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722",
+          "width": 32
+        },
+        {
+          "complete": true,
+          "hidden": false,
+          "src": "/media/d281b84592c01c13c8a081571c1bf4e3d340fb84f24fab7419c43e9cb5b4106e.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722",
+          "width": 40
+        },
+        {
+          "complete": true,
+          "hidden": false,
+          "src": "/media/5d9d9160e1f5bc772f99003fd6b2b9630d31d2961e1a3ea54d8c27a291aab8e8.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722",
+          "width": 40
+        },
+        {
+          "complete": true,
+          "hidden": false,
+          "src": "/media/550a9cdfa72badc1a9e260011ecdd910f9c0213165863121d990423336d169a5.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722",
+          "width": 24
+        },
+        {
+          "complete": true,
+          "hidden": false,
+          "src": "/media/176a5d0329a8b48d5f86bcaf0078ccc3a57d50013744f4af3ea0c827347520ce.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722",
+          "width": 84
+        },
+        {
+          "complete": true,
+          "hidden": false,
+          "src": "/media/92df895bbf715316fee36cb536453fcd509dc80569afee6dce9e8203ad51de15.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722",
+          "width": 50
+        },
+        {
+          "complete": true,
+          "hidden": false,
+          "src": "/media/e915fa8be0a5d25c4327d056a54bbed7051f6ecf850993994741645012bb0e6b.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722",
+          "width": 50
+        },
+        {
+          "complete": true,
+          "hidden": false,
+          "src": "/media/1731fe977d2aeb8af7f7f46394102924f164ee3fea6d93e85ca7673fbba15f59.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722",
+          "width": 66
+        },
+        {
+          "complete": true,
+          "hidden": false,
+          "src": "/media/7da4b2e2c9366744e71abc5e698731975ee0b77e58ce7b87b954a08d6a017626.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722",
+          "width": 74
+        },
+        {
+          "complete": true,
+          "hidden": false,
+          "src": "/media/94b6b53890bf1a0f195555879fe2ac39c39a3ee143982ccd5a0aee0a7a3c14de.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722",
+          "width": 74
+        }
+      ],
+      "filters": [
+        {
+          "name": "type",
+          "value": "all"
+        },
+        {
+          "name": "format",
+          "value": "png"
+        },
+        {
+          "name": "sort",
+          "value": "newest"
+        }
+      ],
+      "h1": [
+        "Explore Bitcoin Stamps"
+      ],
+      "mainCount": 1,
+      "metrics": {
+        "cls": "0",
+        "lcp": "1172",
+        "resourceUrls": "[\"https://creek-engagement-written-handling.trycloudflare.com/style.css\",\"https://creek-engagement-written-handling.trycloudflare.com/app.js\",\"https://creek-engagement-written-handling.trycloudflare.com/logo.svg?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722\",\"https://creek-engagement-written-handling.trycloudflare.com/media/d281b84592c01c13c8a081571c1bf4e3d340fb84f24fab7419c43e9cb5b4106e.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722\",\"https://creek-engagement-written-handling.trycloudflare.com/media/7046278a4bda05c7dd3063dd10607800cbb92ba6f8c7c41f49bd985edee6bbed.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722\",\"https://creek-engagement-written-handling.trycloudflare.com/media/a854454a25b59686823e7abb65bc1af26380db15abd0da56846d2982bd2b9706.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722\",\"https://creek-engagement-written-handling.trycloudflare.com/media/cf6689d99c1744dbf59c2eb9f9dd5f8d83e8a5e5a38e13a5f1cc39fed263a94e.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722\"]",
+        "ttfb": "1010.7999999998137"
+      },
+      "overflow": false,
+      "title": "Explore Bitcoin Stamps · Stampchain",
+      "url": "https://creek-engagement-written-handling.trycloudflare.com/explorer?type=all&format=png&sort=newest&page=1",
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      }
+    },
+    {
+      "kind": "desktop-detail",
+      "filters": [],
+      "frames": 0,
+      "h1": [
+        "Stamp #1507273"
+      ],
+      "images": [
+        {
+          "complete": true,
+          "hidden": false,
+          "src": "/media/7046278a4bda05c7dd3063dd10607800cbb92ba6f8c7c41f49bd985edee6bbed.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722",
+          "width": 24
+        }
+      ],
+      "mainCount": 1,
+      "metrics": {
+        "cls": "0",
+        "lcp": "432",
+        "resourceUrls": "[\"https://creek-engagement-written-handling.trycloudflare.com/style.css\",\"https://creek-engagement-written-handling.trycloudflare.com/logo.svg?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722\",\"https://creek-engagement-written-handling.trycloudflare.com/app.js\",\"https://creek-engagement-written-handling.trycloudflare.com/media/7046278a4bda05c7dd3063dd10607800cbb92ba6f8c7c41f49bd985edee6bbed.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722\"]",
+        "ttfb": "297.29999999981374"
+      },
+      "overflow": false,
+      "url": "https://creek-engagement-written-handling.trycloudflare.com/stamp/1507273?from=%3Ftype%3Dclassic%26format%3Dpng%26sort%3Dnewest%26page%3D1",
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      }
+    },
+    {
+      "kind": "desktop-browser-back",
+      "filters": [
+        {
+          "name": "type",
+          "value": "classic"
+        },
+        {
+          "name": "format",
+          "value": "png"
+        },
+        {
+          "name": "sort",
+          "value": "newest"
+        }
+      ],
+      "frames": 0,
+      "h1": [
+        "Explore Bitcoin Stamps"
+      ],
+      "images": [
+        {
+          "complete": true,
+          "hidden": false,
+          "src": "/media/7046278a4bda05c7dd3063dd10607800cbb92ba6f8c7c41f49bd985edee6bbed.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722",
+          "width": 24
+        },
+        {
+          "complete": true,
+          "hidden": false,
+          "src": "/media/176a5d0329a8b48d5f86bcaf0078ccc3a57d50013744f4af3ea0c827347520ce.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722",
+          "width": 84
+        },
+        {
+          "complete": true,
+          "hidden": false,
+          "src": "/media/92df895bbf715316fee36cb536453fcd509dc80569afee6dce9e8203ad51de15.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722",
+          "width": 50
+        },
+        {
+          "complete": true,
+          "hidden": false,
+          "src": "/media/e915fa8be0a5d25c4327d056a54bbed7051f6ecf850993994741645012bb0e6b.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722",
+          "width": 50
+        },
+        {
+          "complete": false,
+          "hidden": false,
+          "src": "/media/e94be2793462692ca8fea3a54dd90ff4b18735196a2bc426382c11959533c8ca.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722",
+          "width": 0
+        },
+        {
+          "complete": false,
+          "hidden": false,
+          "src": "/media/5a6f0c747e5b9b22d6faec98ef1b0934e94a4e2e9384f21456280861a9b931fa.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722",
+          "width": 0
+        },
+        {
+          "complete": false,
+          "hidden": false,
+          "src": "/media/d79da3538713568504c73726708a6ddfca5681bc111845dbae17265f455448ed.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722",
+          "width": 0
+        },
+        {
+          "complete": false,
+          "hidden": false,
+          "src": "/media/516e62beeffb26fb37f8e95e809274e5bbde76eb75a28357f6bbcd4eedbfe8ca.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722",
+          "width": 0
+        },
+        {
+          "complete": false,
+          "hidden": false,
+          "src": "/media/60c0c9a8dc7b4f3a857a66fd1e8032da5c10f41e76d08d1e4c9f7d652edf749a.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722",
+          "width": 0
+        },
+        {
+          "complete": false,
+          "hidden": false,
+          "src": "/media/88ea3bfcd7229131c9dfc70364de295f5c27cfe0b097932249e066470ae4afa5.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722",
+          "width": 0
+        },
+        {
+          "complete": false,
+          "hidden": false,
+          "src": "/media/4ce0c51ddd7745407f502ac8d12f8d883084d92e4edf5ca52f3cf6c4dba79459.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722",
+          "width": 0
+        },
+        {
+          "complete": false,
+          "hidden": false,
+          "src": "/media/6557b184fa4b6749e6150f6c7fa64db78911b28c33e0c275fddc52131919586e.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722",
+          "width": 0
+        }
+      ],
+      "mainCount": 1,
+      "metrics": {
+        "cls": "0",
+        "resourceUrls": "[\"https://creek-engagement-written-handling.trycloudflare.com/style.css\",\"https://creek-engagement-written-handling.trycloudflare.com/logo.svg?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722\",\"https://creek-engagement-written-handling.trycloudflare.com/app.js\",\"https://creek-engagement-written-handling.trycloudflare.com/media/7046278a4bda05c7dd3063dd10607800cbb92ba6f8c7c41f49bd985edee6bbed.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722\",\"https://creek-engagement-written-handling.trycloudflare.com/media/e915fa8be0a5d25c4327d056a54bbed7051f6ecf850993994741645012bb0e6b.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722\",\"https://creek-engagement-written-handling.trycloudflare.com/media/176a5d0329a8b48d5f86bcaf0078ccc3a57d50013744f4af3ea0c827347520ce.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722\",\"https://creek-engagement-written-handling.trycloudflare.com/media/92df895bbf715316fee36cb536453fcd509dc80569afee6dce9e8203ad51de15.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722\"]",
+        "ttfb": "621.8000000002794"
+      },
+      "overflow": false,
+      "url": "https://creek-engagement-written-handling.trycloudflare.com/explorer?type=classic&format=png&sort=newest",
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      }
+    },
+    {
+      "kind": "desktop-browser-forward",
+      "filters": [],
+      "frames": 0,
+      "h1": [
+        "Stamp #1507273"
+      ],
+      "images": [
+        {
+          "complete": true,
+          "hidden": false,
+          "src": "/media/7046278a4bda05c7dd3063dd10607800cbb92ba6f8c7c41f49bd985edee6bbed.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722",
+          "width": 24
+        }
+      ],
+      "mainCount": 1,
+      "metrics": {
+        "cls": "0",
+        "resourceUrls": "[\"https://creek-engagement-written-handling.trycloudflare.com/logo.svg?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722\",\"https://creek-engagement-written-handling.trycloudflare.com/app.js\",\"https://creek-engagement-written-handling.trycloudflare.com/style.css\",\"https://creek-engagement-written-handling.trycloudflare.com/media/7046278a4bda05c7dd3063dd10607800cbb92ba6f8c7c41f49bd985edee6bbed.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722\"]",
+        "ttfb": "221"
+      },
+      "overflow": false,
+      "url": "https://creek-engagement-written-handling.trycloudflare.com/stamp/1507273?from=%3Ftype%3Dclassic%26format%3Dpng%26sort%3Dnewest%26page%3D1",
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      }
+    },
+    {
+      "kind": "mobile-detail",
+      "filters": [],
+      "frames": 0,
+      "h1": [
+        "Stamp #1507273"
+      ],
+      "images": [
+        {
+          "complete": true,
+          "hidden": false,
+          "src": "/media/7046278a4bda05c7dd3063dd10607800cbb92ba6f8c7c41f49bd985edee6bbed.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722",
+          "width": 24
+        }
+      ],
+      "mainCount": 1,
+      "metrics": {
+        "cls": "0",
+        "lcp": "324",
+        "resourceUrls": "[\"https://creek-engagement-written-handling.trycloudflare.com/logo.svg?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722\",\"https://creek-engagement-written-handling.trycloudflare.com/app.js\",\"https://creek-engagement-written-handling.trycloudflare.com/style.css\",\"https://creek-engagement-written-handling.trycloudflare.com/media/7046278a4bda05c7dd3063dd10607800cbb92ba6f8c7c41f49bd985edee6bbed.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722\"]",
+        "ttfb": "221"
+      },
+      "overflow": false,
+      "url": "https://creek-engagement-written-handling.trycloudflare.com/stamp/1507273?from=%3Ftype%3Dclassic%26format%3Dpng%26sort%3Dnewest%26page%3D1",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    {
+      "kind": "mobile-explicit-back",
+      "filters": [
+        {
+          "name": "type",
+          "value": "classic"
+        },
+        {
+          "name": "format",
+          "value": "png"
+        },
+        {
+          "name": "sort",
+          "value": "newest"
+        }
+      ],
+      "frames": 0,
+      "h1": [
+        "Explore Bitcoin Stamps"
+      ],
+      "images": [
+        {
+          "complete": true,
+          "hidden": false,
+          "src": "/media/7046278a4bda05c7dd3063dd10607800cbb92ba6f8c7c41f49bd985edee6bbed.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722",
+          "width": 24
+        },
+        {
+          "complete": true,
+          "hidden": false,
+          "src": "/media/176a5d0329a8b48d5f86bcaf0078ccc3a57d50013744f4af3ea0c827347520ce.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722",
+          "width": 84
+        },
+        {
+          "complete": true,
+          "hidden": false,
+          "src": "/media/92df895bbf715316fee36cb536453fcd509dc80569afee6dce9e8203ad51de15.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722",
+          "width": 50
+        },
+        {
+          "complete": true,
+          "hidden": false,
+          "src": "/media/e915fa8be0a5d25c4327d056a54bbed7051f6ecf850993994741645012bb0e6b.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722",
+          "width": 50
+        },
+        {
+          "complete": true,
+          "hidden": false,
+          "src": "/media/e94be2793462692ca8fea3a54dd90ff4b18735196a2bc426382c11959533c8ca.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722",
+          "width": 24
+        },
+        {
+          "complete": true,
+          "hidden": false,
+          "src": "/media/5a6f0c747e5b9b22d6faec98ef1b0934e94a4e2e9384f21456280861a9b931fa.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722",
+          "width": 24
+        },
+        {
+          "complete": true,
+          "hidden": false,
+          "src": "/media/d79da3538713568504c73726708a6ddfca5681bc111845dbae17265f455448ed.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722",
+          "width": 24
+        },
+        {
+          "complete": true,
+          "hidden": false,
+          "src": "/media/516e62beeffb26fb37f8e95e809274e5bbde76eb75a28357f6bbcd4eedbfe8ca.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722",
+          "width": 158
+        },
+        {
+          "complete": true,
+          "hidden": false,
+          "src": "/media/60c0c9a8dc7b4f3a857a66fd1e8032da5c10f41e76d08d1e4c9f7d652edf749a.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722",
+          "width": 100
+        },
+        {
+          "complete": true,
+          "hidden": false,
+          "src": "/media/88ea3bfcd7229131c9dfc70364de295f5c27cfe0b097932249e066470ae4afa5.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722",
+          "width": 50
+        },
+        {
+          "complete": true,
+          "hidden": false,
+          "src": "/media/4ce0c51ddd7745407f502ac8d12f8d883084d92e4edf5ca52f3cf6c4dba79459.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722",
+          "width": 32
+        },
+        {
+          "complete": true,
+          "hidden": false,
+          "src": "/media/6557b184fa4b6749e6150f6c7fa64db78911b28c33e0c275fddc52131919586e.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722",
+          "width": 140
+        }
+      ],
+      "mainCount": 1,
+      "metrics": {
+        "cls": "0",
+        "lcp": "792",
+        "resourceUrls": "[\"https://creek-engagement-written-handling.trycloudflare.com/style.css\",\"https://creek-engagement-written-handling.trycloudflare.com/app.js\",\"https://creek-engagement-written-handling.trycloudflare.com/logo.svg?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722\",\"https://creek-engagement-written-handling.trycloudflare.com/media/e915fa8be0a5d25c4327d056a54bbed7051f6ecf850993994741645012bb0e6b.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722\",\"https://creek-engagement-written-handling.trycloudflare.com/media/176a5d0329a8b48d5f86bcaf0078ccc3a57d50013744f4af3ea0c827347520ce.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722\",\"https://creek-engagement-written-handling.trycloudflare.com/media/92df895bbf715316fee36cb536453fcd509dc80569afee6dce9e8203ad51de15.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722\",\"https://creek-engagement-written-handling.trycloudflare.com/media/7046278a4bda05c7dd3063dd10607800cbb92ba6f8c7c41f49bd985edee6bbed.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722\"]",
+        "ttfb": "659.7999999998137"
+      },
+      "overflow": false,
+      "url": "https://creek-engagement-written-handling.trycloudflare.com/explorer?type=classic&format=png&sort=newest&page=1",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    {
+      "kind": "http2-page-two",
+      "filters": [
+        {
+          "name": "type",
+          "value": "all"
+        },
+        {
+          "name": "format",
+          "value": "png"
+        },
+        {
+          "name": "sort",
+          "value": "newest"
+        }
+      ],
+      "frames": 0,
+      "h1": [
+        "Explore Bitcoin Stamps"
+      ],
+      "metrics": {
+        "cls": "0",
+        "lcp": "1952",
+        "resourceUrls": "[\"https://hottest-position-turbo-patients.trycloudflare.com/style.css\",\"https://hottest-position-turbo-patients.trycloudflare.com/app.js\",\"https://hottest-position-turbo-patients.trycloudflare.com/logo.svg?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722\",\"https://hottest-position-turbo-patients.trycloudflare.com/media/d79da3538713568504c73726708a6ddfca5681bc111845dbae17265f455448ed.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722\",\"https://hottest-position-turbo-patients.trycloudflare.com/media/e94be2793462692ca8fea3a54dd90ff4b18735196a2bc426382c11959533c8ca.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722\",\"https://hottest-position-turbo-patients.trycloudflare.com/media/5a6f0c747e5b9b22d6faec98ef1b0934e94a4e2e9384f21456280861a9b931fa.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722\",\"https://hottest-position-turbo-patients.trycloudflare.com/media/516e62beeffb26fb37f8e95e809274e5bbde76eb75a28357f6bbcd4eedbfe8ca.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722\"]",
+        "ttfb": "1752.7999999998137"
+      },
+      "overflow": false,
+      "url": "https://hottest-position-turbo-patients.trycloudflare.com/explorer?type=all&format=png&sort=newest&page=2",
+      "viewport": {
+        "height": 720,
+        "width": 1280
+      }
+    },
+    {
+      "kind": "http2-page-two-reload",
+      "filters": [
+        {
+          "name": "type",
+          "value": "all"
+        },
+        {
+          "name": "format",
+          "value": "png"
+        },
+        {
+          "name": "sort",
+          "value": "newest"
+        }
+      ],
+      "frames": 0,
+      "h1": [
+        "Explore Bitcoin Stamps"
+      ],
+      "metrics": {
+        "cls": "0",
+        "lcp": "1992",
+        "resourceUrls": "[\"https://hottest-position-turbo-patients.trycloudflare.com/style.css\",\"https://hottest-position-turbo-patients.trycloudflare.com/app.js\",\"https://hottest-position-turbo-patients.trycloudflare.com/logo.svg?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722\",\"https://hottest-position-turbo-patients.trycloudflare.com/media/e94be2793462692ca8fea3a54dd90ff4b18735196a2bc426382c11959533c8ca.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722\",\"https://hottest-position-turbo-patients.trycloudflare.com/media/5a6f0c747e5b9b22d6faec98ef1b0934e94a4e2e9384f21456280861a9b931fa.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722\",\"https://hottest-position-turbo-patients.trycloudflare.com/media/d79da3538713568504c73726708a6ddfca5681bc111845dbae17265f455448ed.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722\",\"https://hottest-position-turbo-patients.trycloudflare.com/media/516e62beeffb26fb37f8e95e809274e5bbde76eb75a28357f6bbcd4eedbfe8ca.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722\"]",
+        "ttfb": "1811.2999999998137"
+      },
+      "overflow": false,
+      "url": "https://hottest-position-turbo-patients.trycloudflare.com/explorer?type=all&format=png&sort=newest&page=2",
+      "viewport": {
+        "height": 720,
+        "width": 1280
+      }
+    },
+    {
+      "kind": "http2-final-default",
+      "filters": [
+        {
+          "name": "type",
+          "value": "all"
+        },
+        {
+          "name": "format",
+          "value": "png"
+        },
+        {
+          "name": "sort",
+          "value": "newest"
+        }
+      ],
+      "frames": 0,
+      "h1": [
+        "Explore Bitcoin Stamps"
+      ],
+      "metrics": {
+        "cls": "0",
+        "lcp": "1108",
+        "resourceUrls": "[\"https://hottest-position-turbo-patients.trycloudflare.com/style.css\",\"https://hottest-position-turbo-patients.trycloudflare.com/app.js\",\"https://hottest-position-turbo-patients.trycloudflare.com/logo.svg?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722\",\"https://hottest-position-turbo-patients.trycloudflare.com/media/cf6689d99c1744dbf59c2eb9f9dd5f8d83e8a5e5a38e13a5f1cc39fed263a94e.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722\",\"https://hottest-position-turbo-patients.trycloudflare.com/media/7046278a4bda05c7dd3063dd10607800cbb92ba6f8c7c41f49bd985edee6bbed.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722\",\"https://hottest-position-turbo-patients.trycloudflare.com/media/d281b84592c01c13c8a081571c1bf4e3d340fb84f24fab7419c43e9cb5b4106e.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722\",\"https://hottest-position-turbo-patients.trycloudflare.com/media/a854454a25b59686823e7abb65bc1af26380db15abd0da56846d2982bd2b9706.png?__frsh_c=9daedd9b1ee1b716192c035b1535db9499625722\"]",
+        "ttfb": "1005.2000000001863"
+      },
+      "overflow": false,
+      "url": "https://hottest-position-turbo-patients.trycloudflare.com/explorer?type=all&format=png&sort=newest&page=1",
+      "viewport": {
+        "height": 720,
+        "width": 1280
+      }
+    }
+  ]
+}

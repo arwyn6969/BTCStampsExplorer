@@ -1,0 +1,39 @@
+{
+  "capturedAtUtc": "2026-11-04T12:13:21.508Z",
+  "scope": "Temporary public HTTPS Quick Tunnel forwarding the production-built proof on the local Mac; not an independently hosted artifact or E04 staging deployment. Local source manifest/parser checks are labelled separately",
+  "target": "https://creek-engagement-written-handling.trycloudflare.com",
+  "targetKind": "quick-tunnel",
+  "expectedRevision": "31d81df8de44a0357c6aba0f681b7434203fda16",
+  "expectedSource": "live",
+  "limits": {
+    "requestTimeoutMs": 15000,
+    "runTimeoutMs": 120000,
+    "responseBytes": 2097152
+  },
+  "cases": [],
+  "pass": false,
+  "sourceManifest": {
+    "scope": "Local source inventory; not remote manifest introspection",
+    "routes": [
+      "./routes/_404.tsx",
+      "./routes/_500.tsx",
+      "./routes/_app.tsx",
+      "./routes/_middleware.ts",
+      "./routes/explorer.tsx",
+      "./routes/media/[asset].ts",
+      "./routes/stamp/[id].tsx"
+    ],
+    "expectedRoutes": [
+      "./routes/_404.tsx",
+      "./routes/_500.tsx",
+      "./routes/_app.tsx",
+      "./routes/_middleware.ts",
+      "./routes/explorer.tsx",
+      "./routes/media/[asset].ts",
+      "./routes/stamp/[id].tsx"
+    ],
+    "noIslands": true,
+    "pass": true
+  },
+  "error": "Signal timed out."
+}

@@ -1,5 +1,5 @@
-// Staging-only checks. This script never follows redirects or accepts a
-// production/custom-domain target. Keep check-capabilities.ts local-only.
+// Staging/tunnel-only checks. This script never follows redirects or accepts
+// production/custom-domain targets. Keep check-capabilities.ts local-only.
 import { MEDIA_MAX_BYTES, serveMedia } from "../lib/media.ts";
 
 const EXPECTED_ROUTES = [
@@ -19,7 +19,7 @@ const DEFAULT_VIEW = "/explorer?type=all&format=png&sort=newest&page=1";
 export function parseHostedArguments(args: string[]) {
   if (args.length !== 2) {
     throw new Error(
-      "Usage: check-hosted-capabilities.ts https://NAME.onrender.com FULL_COMMIT_SHA",
+      "Usage: check-hosted-capabilities.ts https://NAME.onrender.com|https://NAME.trycloudflare.com FULL_COMMIT_SHA",
     );
   }
   const [target, revision] = args;
@@ -27,15 +27,18 @@ export function parseHostedArguments(args: string[]) {
   try {
     url = new URL(target);
   } catch {
-    throw new Error("Staging target must be an explicit HTTPS Render origin");
+    throw new Error(
+      "Target must be an explicit HTTPS Render or Quick Tunnel origin",
+    );
   }
   if (
     target !== url.origin || url.protocol !== "https:" || url.username ||
     url.password || url.port || url.search || url.hash ||
-    !/^[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.onrender\.com$/.test(url.hostname)
+    !/^[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.(?:onrender|trycloudflare)\.com$/
+      .test(url.hostname)
   ) {
     throw new Error(
-      "Only an exact https://NAME.onrender.com origin without credentials, port, path, query or fragment is allowed",
+      "Only an exact https://NAME.onrender.com or https://NAME.trycloudflare.com origin without credentials, port, path, query or fragment is allowed",
     );
   }
   if (!/^[a-f0-9]{40}$/.test(revision)) {
@@ -43,7 +46,10 @@ export function parseHostedArguments(args: string[]) {
       "Expected revision must be a complete lowercase commit SHA",
     );
   }
-  return { target, revision };
+  const targetKind = url.hostname.endsWith(".trycloudflare.com")
+    ? "quick-tunnel" as const
+    : "render" as const;
+  return { target, revision, targetKind };
 }
 
 function securityHeaders(response: Response): Record<string, boolean> {
@@ -82,6 +88,13 @@ function htmlChecks(html: string): Record<string, boolean> {
         .test(html),
     getOnlyForms: methods.every((match) => match[1].toLowerCase() === "get"),
   };
+}
+
+export function discoverMediaAsset(html: string): string | null {
+  // Fresh AOT appends its own immutable-build cache key. Accept only that
+  // exact optional suffix; the subsequent request uses the canonical asset.
+  return /(?:^|[\s<])src\s*=\s*(["'])\/media\/([a-f0-9]{64}\.(?:png|jpg|jpeg|gif|webp))(?:\?__frsh_c=[a-f0-9]{40})?\1/
+    .exec(html)?.[2] ?? null;
 }
 
 async function boundedBody(response: Response): Promise<Uint8Array> {
@@ -124,6 +137,7 @@ interface Report {
   capturedAtUtc: string;
   scope: string;
   target: string | null;
+  targetKind: "render" | "quick-tunnel" | null;
   expectedRevision: string | null;
   expectedSource: "live";
   limits: Record<string, number>;
@@ -138,9 +152,9 @@ interface Report {
 async function run(args: string[]): Promise<Report> {
   const report: Report = {
     capturedAtUtc: new Date().toISOString(),
-    scope:
-      "Render staging production-build HTTP evidence; local source manifest/parser checks are labelled separately",
+    scope: "Target not yet validated; no public requests made",
     target: null,
+    targetKind: null,
     expectedRevision: null,
     expectedSource: "live",
     limits: {
@@ -152,8 +166,12 @@ async function run(args: string[]): Promise<Report> {
     pass: true,
   };
   try {
-    const { target, revision } = parseHostedArguments(args);
+    const { target, revision, targetKind } = parseHostedArguments(args);
     report.target = target;
+    report.targetKind = targetKind;
+    report.scope = targetKind === "quick-tunnel"
+      ? "Temporary public HTTPS Quick Tunnel forwarding the production-built proof on the local Mac; not an independently hosted artifact or E04 staging deployment. Local source manifest/parser checks are labelled separately"
+      : "Render staging production-build HTTP evidence; local source manifest/parser checks are labelled separately";
     report.expectedRevision = revision;
     const started = performance.now();
     const manifest = await Deno.readTextFile(
@@ -277,10 +295,7 @@ async function run(args: string[]): Promise<Report> {
       if (!detail) {
         throw new Error("Explorer has no canonical stamp detail link");
       }
-      asset ??=
-        /\bsrc="\/media\/([a-f0-9]{64}\.(?:png|jpg|jpeg|gif|webp))"/.exec(
-          list.text,
-        )?.[1] ?? null;
+      asset ??= discoverMediaAsset(list.text);
       await request(detail.replaceAll("&amp;", "&"), "GET", 200, true);
     }
     const forbidden = [
@@ -419,11 +434,49 @@ if (import.meta.main) {
   console.log(JSON.stringify(report, null, 2));
   if (!report.pass) Deno.exit(1);
 } else {
-  Deno.test("hosted checker accepts only an exact explicit Render HTTPS origin", () => {
+  Deno.test("media discovery accepts Fresh AOT keys without accepting arbitrary source URLs", () => {
+    const asset = `${"7".repeat(64)}.png`;
+    const cache = "a".repeat(40);
+    for (
+      const markup of [
+        `<img src="/media/${asset}" />`,
+        `<img src="/media/${asset}?__frsh_c=${cache}" />`,
+        `<img src='/media/${asset}?__frsh_c=${cache}' />`,
+      ]
+    ) {
+      if (discoverMediaAsset(markup) !== asset) {
+        throw new Error("Canonical raster was not discovered in AOT markup");
+      }
+    }
+    for (
+      const markup of [
+        `<img src="https://evil.invalid/media/${asset}" />`,
+        `<img src="//evil.invalid/media/${asset}" />`,
+        `<img src="/media/${asset}?url=https://evil.invalid" />`,
+        `<img src="/media/${asset}?__frsh_c=short" />`,
+        `<img src="/media/${asset}?__frsh_c=${cache}&refresh=true" />`,
+        `<img src="/media/${asset}#fragment" />`,
+        `<img data-src="/media/${asset}" />`,
+        `<img src="/media/${asset}' />`,
+      ]
+    ) {
+      if (discoverMediaAsset(markup) !== null) {
+        throw new Error("Noncanonical media source was accepted");
+      }
+    }
+  });
+  Deno.test("checker accepts only exact explicit Render or Quick Tunnel HTTPS origins", () => {
     const sha = "a".repeat(40);
     const good = "https://stampchain-proof-test.onrender.com";
     if (parseHostedArguments([good, sha]).target !== good) {
       throw new Error("Valid origin rejected");
+    }
+    const tunnel = "https://one-two-three.trycloudflare.com";
+    if (parseHostedArguments([tunnel, sha]).targetKind !== "quick-tunnel") {
+      throw new Error("Valid tunnel origin rejected or mislabelled");
+    }
+    if (parseHostedArguments([good, sha]).targetKind !== "render") {
+      throw new Error("Render origin mislabelled");
     }
     for (
       const target of [
@@ -446,6 +499,22 @@ if (import.meta.main) {
         "https://*.onrender.com",
         "https://proof.onrender.com\n",
         "//proof.onrender.com",
+        "http://proof.trycloudflare.com",
+        "https://trycloudflare.com",
+        "https://proof.trycloudflare.com.evil.invalid",
+        "https://proof.extra.trycloudflare.com",
+        "https://proof.trycloudflare.com/",
+        "https://proof.trycloudflare.com/path",
+        "https://proof.trycloudflare.com?query=1",
+        "https://proof.trycloudflare.com#fragment",
+        "https://user:password@proof.trycloudflare.com",
+        "https://proof.trycloudflare.com:443",
+        "https://proof.trycloudflare.com:8443",
+        "https://PROOF.trycloudflare.com",
+        "https://-proof.trycloudflare.com",
+        "https://proof-.trycloudflare.com",
+        "https://*.trycloudflare.com",
+        "https://proof.trycloudflare.com\n",
       ]
     ) {
       let rejected = false;
