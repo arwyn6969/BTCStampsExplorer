@@ -1,5 +1,12 @@
 # Explorer proof: delivery evidence
 
+Updated 4 November 2026. Render has been selected and the owner authorized the
+test deployment. The public-repository service form is prepared for one Free
+Docker service in Frankfurt with manual deploys. Render requested account
+verification when deployment was submitted; no service, provider artifact,
+public test URL or hosted rollback has been established yet. Completion still
+requires the provider build and hosted checks below.
+
 3 November 2026. The owner authorized continuation of E01–E04 and requested the
 existing dark style with a condensed layout. That design direction is
 implemented. Final owner task acceptance and the unfamiliar human review have
@@ -22,6 +29,15 @@ Application revision is `4ff242c9a4d6c27878cfaec5c8d7253fcd8a52bf`, pushed to
 Implementation is isolated on `codex/explorer-proof`, using the application
 repository rather than its parent. Only the three planning documents were copied
 from the dirty checkout; the original application changes are intact.
+
+Deployment preparation commit `31ff31698d18cd40f6d3380c36f281353115aefc` adds
+source-revision and data-mode response headers, full revision enforcement and a
+deterministic Fresh build identity in Docker, a Dockerfile-specific context
+allowlist, and a separate hostname-restricted hosted checker. Local package
+checks, the original 25 focused tests, three checker-safety tests, and
+repository format/lint checks pass. Linux Docker build/start remains unverified.
+The original archive and browser records below refer to the earlier application
+revision and do not establish evidence for a hosted version of this follow-up.
 
 The new `explorer/` package contains one restricted Fresh manifest and entry
 point, two page types, one typed read adapter, query normalization, bounded
@@ -128,12 +144,14 @@ the owner/unfamiliar-reviewer usability comparison required by the plan.
 ## Remaining dependencies and decision
 
 No production deployment or merge is requested or performed. The existing AWS
-scripts target production and were not used. Available Sites hosting uses
-Workers and does not directly run this retained Deno/Fresh package. Host
-discovery found Deno-capable alternatives requiring a connection; no account or
-service capacity is invented. The owner has been asked to identify a staging
-target. The Docker recipe is unverified because no running Docker daemon was
-available.
+scripts target production and were not used. The owner chose Render for staging
+on 4 November 2026. The connector returned unavailable-tool errors, so the
+dashboard was used with the owner's sign-in. A public Git repository source
+avoids granting new Git-provider access. The prepared form uses the exact proof
+branch and Dockerfile, Free compute, port 8007, a static health check, and
+manual deploys. Provider account verification is pending; no service or hosted
+artifact is claimed. The Docker recipe remains unverified because no running
+local Docker daemon was available and the provider build has not started.
 
 Continue with the existing bounded proof when staging access is established:
 deploy the exact immutable artifact, repeat

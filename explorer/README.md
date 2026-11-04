@@ -70,10 +70,31 @@ docker build -f explorer/Dockerfile --build-arg EXPLORER_REVISION=COMMIT_SHA -t 
 docker run --rm --read-only -p 127.0.0.1:8007:8007 explorer-proof:COMMIT_SHA
 ```
 
+Replace `COMMIT_SHA` with the full lowercase 40-character source revision. The
+build refuses a missing/invalid revision or a mismatched Render commit, sets
+Fresh's build identity from that revision, and records it in the image label and
+build log. `Dockerfile.dockerignore` includes only proof inputs and the reused
+constants file. Every application response exposes the revision and data mode
+through `X-Explorer-Revision` and `X-Explorer-Data-Mode`.
+
 The Docker recipe has not been executed where a daemon is unavailable. It is not
 deployment evidence. It binds inside the container using
 `EXPLORER_HOST=0.0.0.0`; the local start task deliberately permits only
 loopback.
+
+For an owned Render staging service, use the separate hosted checker. It
+requires an exact HTTPS `onrender.com` origin and the deployed full revision; it
+rejects the production hostname before dispatching requests:
+
+```sh
+deno run --frozen --allow-read=./fresh.gen.ts --allow-net=NAME.onrender.com:443 scripts/check-hosted-capabilities.ts https://NAME.onrender.com COMMIT_SHA
+```
+
+Its 32 route/method cases, three media cases, source identity, response-size
+limits, security headers and live source checks are remote evidence. The local
+manifest inventory and injected parser cases are explicitly labelled as local.
+Warm the service separately before running the 15-second request deadline; this
+checker does not measure Render's idle wake-up.
 
 After committing and building the exact source, create an immutable local
 archive:

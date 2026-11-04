@@ -1,5 +1,12 @@
 # Explorer staging: prepared Render setup
 
+Updated 4 November 2026. The owner selected Render and authorized the test site.
+The direct single-service dashboard flow is prepared against the public owner
+fork, with the same settings described below. Deployment submission requested
+account verification; no service or hosted artifact has been created. The
+Blueprint remains a reproducible alternative configuration, not a claim that one
+was applied.
+
 Prepared 3 November 2026. Staging means a public preview on a separate
 `onrender.com` address, where the owner can review the explorer before any
 production release. It uses the existing read API and static raster originals.
@@ -15,8 +22,17 @@ configuration.
 
 [explorer/render.yaml](../../explorer/render.yaml) defines one Free Docker web
 service in Frankfurt, using the repository root as its build context. Its
-environment contains only live-data mode, the listening host, and port 8007.
-Docker keeps Deno 2.6.9 and the restricted production command.
+environment contains fixed live-data mode, the listening host, port 8007, and a
+required full source revision input. Docker keeps Deno 2.6.9 and the restricted
+production command. The direct service also needs `EXPLORER_REVISION` set to the
+exact full selected commit. Render exposes this as a Docker build argument and
+runtime environment value; the Dockerfile requires it, checks any supplied
+`RENDER_GIT_COMMIT` for a match, and builds Fresh with that identity. Update
+this value before manually deploying a different commit. The revision and live
+data mode are returned in application response headers for the hosted checker.
+The Blueprint prompts for this full revision on initial creation using
+`sync: false`; subsequent revision changes must be set manually in the service
+environment before a deploy.
 
 The source must be **arwyn6969/BTCStampsExplorer**, branch
 **codex/explorer-proof**. The fork's older default `dev` branch is unsuitable;
@@ -79,8 +95,12 @@ static route does not prove live integration.
   both the PNG default and the explicit all-formats view.
 - Repeat the route/method, header, rendered-HTML, and media checks represented
   by `explorer/scripts/check-capabilities.ts` against the staged hostname using
-  a separate staging check harness. That script is intentionally fixed to
-  localhost; its existing passing output is local evidence only.
+  `explorer/scripts/check-hosted-capabilities.ts`. The local script remains
+  fixed to localhost; its existing passing output is local evidence only. The
+  hosted checker accepts only an exact HTTPS `onrender.com` origin, the full
+  expected source revision, and live data mode. It stops on an identity or
+  capability failure and never follows redirects. Warm the service separately;
+  its 15-second request deadline does not measure idle wake-up.
 - Capture the deployed commit, browser results, media decoding/fallbacks,
   sampled source comparison, and performance with device/network/cache
   conditions. Keep failed or interrupted results alongside later corrections.
@@ -126,6 +146,7 @@ service availability, or staging acceptance.
 
 Local validation passed with PyYAML and `jsonschema.Draft202012Validator`, plus
 explicit checks for the single Free service, exact owner fork/branch, manual
-deploy setting, root context, static health route, and three non-secret
-environment values. The downloaded official schema's SHA-256 was
+deploy setting, root context, static health route, and three fixed non-secret
+environment values. On 4 November, the added full source revision prompt was
+revalidated against the same official schema. The schema's SHA-256 was
 `8a3fb8da6b4f55fe686fbefa790e011d3dd7895f013f355953c572a21ab6494a`.

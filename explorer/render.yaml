@@ -20,3 +20,7 @@ services:
         value: 0.0.0.0
       - key: PORT
         value: "8007"
+      # Enter the full selected source commit when creating the Blueprint.
+      # Update it manually before every later specific-commit deployment.
+      - key: EXPLORER_REVISION
+        sync: false

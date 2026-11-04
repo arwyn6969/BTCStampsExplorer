@@ -15,6 +15,7 @@ const roots = [
   "explorer/fresh.gen.ts",
   "explorer/fresh.config.ts",
   "explorer/Dockerfile",
+  "explorer/Dockerfile.dockerignore",
   "explorer/components",
   "explorer/lib",
   "explorer/routes",
