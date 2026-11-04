@@ -15,16 +15,19 @@ deno task start
 ```
 
 Open `http://127.0.0.1:8007/explorer`. The initial URL explicitly selects PNG;
-All formats exposes other records with safe placeholders. Type, format, global
-transaction order and page are URL-owned. Detail links carry a whitelisted
-return query. Browser Back/Forward and the explicit return link retain it.
-Invalid query values normalize to documented defaults; the forward link cannot
-wrap at the supported page limit.
+format buttons allow combinations such as PNG + JPEG, with HTML as another
+option. All clears the selection; Apply filters submits the selected formats as
+one upstream OR filter before pagination. Type, formats, global transaction
+order and page are URL-owned. Detail links carry a whitelisted return query.
+Browser Back/Forward and the explicit return link retain it. Invalid query
+values normalize to documented defaults; the forward link cannot wrap at the
+supported page limit.
 
 `EXPLORER_DATA_MODE=fixture deno task start` uses the sixteen captured source
-records and eight verified local PNGs. Fixture images not present in the sample
-show a placeholder. No credentials or network requests are needed for fixture
-data/media; the Deno module cache must already be populated by the build.
+records, eight verified original PNGs and four verified HTML-preview PNGs.
+Fixture images not present in the sample show a placeholder. No credentials or
+network requests are needed for fixture data/media; the Deno module cache must
+already be populated by the build.
 
 The production start task denies filesystem writes, subprocesses and system
 access. Runtime network access is limited to the local listener and
@@ -40,13 +43,16 @@ SRC-20 records that the stamp-detail endpoint rejects. It does not filter a live
 page client-side or silently report the unrestricted total as art-stamp
 coverage.
 
-`/media/:asset` reads only the existing canonical static raster host/key shape.
-It rejects redirects, HTML/SVG, MIME/signature mismatches, malformed structures,
-animation, oversized bodies and excessive dimensions. It never requests a
-preview generator. Static GIF/JPEG/WebP parsers have controlled tests; only PNG
-has sampled live decoding evidence. Full decoding is left to the browser.
-Missing/unsupported artwork has a text placeholder. No untrusted content or
-arbitrary URL can be served from the explorer origin.
+`/media/:asset` reads only the existing canonical static raster host/key shapes.
+HTML stamps use `preview-{id}.png`, resolving only to the existing static
+`https://stampchain.io/stamps/previews/{id}.png` file. A missing thumbnail fails
+visibly; it never invokes preview generation or runs the HTML artwork. The
+boundary rejects redirects, HTML/SVG bodies, MIME/signature mismatches,
+malformed structures, animation, oversized bodies and excessive dimensions. It
+never requests a preview generator. Static GIF/JPEG/WebP parsers have controlled
+tests; only PNG has sampled live decoding evidence. Full decoding is left to the
+browser. Missing/unsupported artwork has a text placeholder. No untrusted
+content or arbitrary URL can be served from the explorer origin.
 
 Only the two pages, bounded media, local static assets and Fresh assets are
 allowed; mutation methods and legacy routes fail before dispatch. The restricted

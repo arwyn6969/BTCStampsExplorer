@@ -15,33 +15,53 @@ account billing details are recorded in this document.
 ## Current served artifact and evidence
 
 The tunnel serves the restored immutable local artifact at source revision
-`31d81df8de44a0357c6aba0f681b7434203fda16`, Fresh build ID
-`9daedd9b1ee1b716192c035b1535db9499625722`. Its existing local archive is 85,784
+`911a1e5597d5d55cbd1244aec41277de31c4dd3d`, Fresh build ID
+`1eac0c88692d30f5b1b314a73aa38d67299abf46`. Its clean local archive is 429,681
 bytes, SHA-256
-`a02c5c33af3c77010485b71b2e39e68ba54391a1b85890ac0f38baacd27c4a6b`.
-[Local preparation and restore record](evidence/render-preparation.json),
-[restored fixture check](evidence/capabilities-restored-fixture-31d81df.json).
+`ac20c5f315d027f472a77886b1e8afa9f4bb7fc8453bc369de7d66d992303967`; all 52
+inventory files were verified after extraction.
 
-The final public
-[HTTP/2 capability report](evidence/quick-tunnel/capabilities-http2.json) passes
-all 35 HTTP cases, including three media checks, full source/live-data
-headers, forbidden route/method checks, and HTML/security headers. Its five
-injected source-parser checks are explicitly local checks. The explorer's 25
-focused tests and four hosted-checker safety/regression tests pass, for 29 tests
-in total. Package types and the required repository format/lint checks pass; an
-unrelated sandbox resolution failure does not establish a passing full
-legacy-repository type check.
+The final public [capability report](evidence/format-buttons/capabilities.json)
+passes all 35 HTTP cases, including three media checks, full source/live-data
+headers, forbidden route/method checks, and HTML/security headers. The
+explorer's 31 package tests and four hosted-checker safety/regression tests
+pass, for 35 tests in total. Package types and the required repository
+format/lint checks pass; an unrelated sandbox resolution failure does not
+establish a passing full legacy-repository type check.
 
-[Browser observations](evidence/quick-tunnel/browser-observations.json) cover
-list/filter/detail/Back/Forward and oldest-first stamp zero at desktop 1440×900
-and mobile 390×844 on the earlier tunnel. The final HTTP/2 hostname also passed
-page two and reload at 1280×720. Captures are available for
-[desktop list](evidence/quick-tunnel/desktop-list.jpg),
-[desktop detail](evidence/quick-tunnel/desktop-detail.jpg),
-[mobile list](evidence/quick-tunnel/mobile-list.jpg),
-[mobile detail](evidence/quick-tunnel/mobile-detail.jpg), and the
-[final preview](evidence/quick-tunnel/final-preview.jpg). No actual 200% browser
-zoom, full unfamiliar-human test, or timing improvement is claimed.
+The latest format controls use multi-select checkbox pills, canonical comma
+URLs, a sole default Apply submit button, and an All reset with a no-JavaScript
+link fallback. Existing static PNG thumbnails now represent HTML stamps;
+original HTML never executes and production generation endpoints are not used.
+The first sampled HTML page decoded 12/12 thumbnails in the browser; four also
+have
+[independent decode/hash evidence](evidence/html-previews/static-preview-sample.json).
+Missing thumbnails retain an unavailable fallback; complete coverage is not
+claimed.
+
+[Latest browser observations](evidence/format-buttons/browser-observations.json)
+cover desktop 1440×900 and mobile 390×844 selection by Space, Apply by Enter,
+detail/Back state retention, HTML list/detail, and mobile combined-format page
+two/reload. PNG + JPEG excludes GIF; All clears selections. No overflow or
+active frames were observed. Captures include
+[desktop PNG + JPEG](evidence/format-buttons/desktop-png-jpeg.jpg),
+[desktop HTML](evidence/format-buttons/desktop-html.jpg),
+[HTML detail](evidence/format-buttons/html-detail.jpg),
+[mobile HTML](evidence/format-buttons/mobile-html.jpg),
+[mobile combined formats](evidence/format-buttons/mobile-combined.jpg), and
+[desktop combined formats](evidence/format-buttons/desktop-combined.jpg). No
+actual 200% browser zoom, full unfamiliar-human test, or timing improvement is
+claimed.
+
+The prior public run served source `31d81df8de44a0357c6aba0f681b7434203fda16`,
+Fresh build ID `9daedd9b1ee1b716192c035b1535db9499625722`, from an 85,784-byte
+archive with SHA-256
+`a02c5c33af3c77010485b71b2e39e68ba54391a1b85890ac0f38baacd27c4a6b`. Its
+[preparation record](evidence/render-preparation.json),
+[restored fixture check](evidence/capabilities-restored-fixture-31d81df.json),
+[earlier HTTP/2 report](evidence/quick-tunnel/capabilities-http2.json), and
+[earlier browser observations](evidence/quick-tunnel/browser-observations.json)
+remain historical evidence, rather than current-artifact acceptance.
 
 ## Earlier tunnel failures remain recorded
 

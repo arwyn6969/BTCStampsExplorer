@@ -14,6 +14,43 @@ existing dark style with a condensed layout. That design direction is
 implemented. Final owner task acceptance and the unfamiliar human review have
 not been recorded.
 
+## Latest owner-feedback update
+
+The same temporary HTTP/2 URL now serves source
+`911a1e5597d5d55cbd1244aec41277de31c4dd3d`, Fresh build ID
+`1eac0c88692d30f5b1b314a73aa38d67299abf46`. Its clean local archive is 429,681
+bytes, SHA-256
+`ac20c5f315d027f472a77886b1e8afa9f4bb7fc8453bc369de7d66d992303967`; all 52
+inventory files were verified after extraction.
+
+File-format checkbox pills support multiple selections and canonical comma URLs.
+PNG + JPEG excludes GIF; All clears the selection. Apply is the sole default
+submit button, with an ordinary All link when JavaScript is unavailable. HTML
+stamps use existing static PNG thumbnails through the same bounded raster
+boundary. No original HTML executes and no production preview generator is
+called. Missing thumbnails retain an honest fallback. All 12 thumbnails on the
+sampled first HTML page decoded in the browser; four preselected thumbnails also
+have independent Pillow decoding and saved hashes in the
+[static preview sample](evidence/html-previews/static-preview-sample.json). This
+does not establish complete HTML coverage.
+
+Package formatting, lint, types and production build pass, as do repository
+format/lint checks. The latest suite passes 31 package tests plus four checker
+safety/regression tests, 35 targeted tests in total. The
+[new-revision capability report](evidence/format-buttons/capabilities.json)
+passes the baseline 35 HTTP cases. Desktop 1440×900 and mobile 390×844 checks
+cover Space selection, Apply via Enter, and detail/Back selection retention.
+HTML list/detail previews work, including stamp 1505513; the mobile PNG + JPEG +
+HTML combination preserves page two and reload. No overflow or active frames
+were observed. See
+[latest browser observations](evidence/format-buttons/browser-observations.json),
+[desktop PNG + JPEG](evidence/format-buttons/desktop-png-jpeg.jpg),
+[desktop HTML](evidence/format-buttons/desktop-html.jpg),
+[HTML detail](evidence/format-buttons/html-detail.jpg),
+[mobile HTML](evidence/format-buttons/mobile-html.jpg),
+[mobile combined formats](evidence/format-buttons/mobile-combined.jpg), and
+[desktop combined formats](evidence/format-buttons/desktop-combined.jpg).
+
 ## Delivery state
 
 | Item                 | State                                      | Evidence / limit                                                                                                                                                                                                                  |
@@ -42,7 +79,7 @@ repository format/lint checks pass. Linux Docker build/start remains unverified.
 The original archive and browser records below refer to the earlier application
 revision and do not establish evidence for a hosted version of this follow-up.
 
-The prepared source `31d81df8de44a0357c6aba0f681b7434203fda16` also has an
+The earlier prepared source `31d81df8de44a0357c6aba0f681b7434203fda16` has a
 updated local archive: 85,784 bytes, SHA-256
 `a02c5c33af3c77010485b71b2e39e68ba54391a1b85890ac0f38baacd27c4a6b`, Fresh build
 ID `9daedd9b1ee1b716192c035b1535db9499625722`. All 48 inventory files were
@@ -51,8 +88,8 @@ extracted artifact cold-started with a cleared environment and outbound network
 permission denied. Its 32 fixture capability cases and source/data-mode headers
 pass. See [preparation record](evidence/render-preparation.json) and
 [restored check](evidence/capabilities-restored-fixture-31d81df.json). This is
-local artifact evidence. That same restored artifact now serves the temporary
-public preview, with source revision and live-data headers verified there.
+historical local artifact evidence. That artifact served the earlier temporary
+public preview and has been superseded by the revision recorded above.
 Independent hosting, staged rollback and human acceptance remain open.
 
 The new `explorer/` package contains one restricted Fresh manifest and entry
@@ -75,9 +112,9 @@ are preserved in [raw evidence](evidence/live/list-detail-contract-gap.md).
 - Deno 2.6.9; Fresh 1.7.3; Preact 10.27.2; package lockfile enabled and frozen
   for production/check/test commands.
 - Package formatting, lint, type check and production build pass.
-- Twenty-five focused tests pass: 13 adapter, 10 media, 2 query tests. Four
-  hosted checker safety/regression tests also pass, for 29 focused tests in
-  total.
+- The latest 31 package tests and four hosted checker safety/regression tests
+  pass, for 35 targeted tests. Earlier 25-package-test and 29-total-test results
+  describe the prior artifacts, before format buttons and HTML thumbnails.
 - Repository `check:fmt` passes (702 files at that run) and `check:lint` passes.
   Initial sandbox-only attempts could not fetch inherited Node typings; the
   permitted network retry completed. No inherited source repair was needed.
@@ -119,16 +156,16 @@ interrupted report is retained and is not presented as the original failure.
 
 ## Browser, data and media evidence
 
-The current public run is recorded in
+The earlier public run is recorded in
 [HTTP/2 capabilities](evidence/quick-tunnel/capabilities-http2.json): all 35
 HTTP cases pass, including three bounded raster responses, source/live-data
 headers, and the existing route/method and HTML/header boundaries. Its five
 injected source-parser checks are local checks, separately labelled in that
-report. The served artifact is source
+report. Its served artifact was source
 `31d81df8de44a0357c6aba0f681b7434203fda16`, Fresh build ID
 `9daedd9b1ee1b716192c035b1535db9499625722`.
 
-Public browser observations cover desktop 1440×900 and mobile 390×844
+Earlier public browser observations cover desktop 1440×900 and mobile 390×844
 filter/detail/Back/Forward journeys and oldest-first stamp zero. Those captures
 include the earlier QUIC hostname. On the final HTTP/2 hostname, page two and
 reload passed at 1280×720. The earlier host's page-two failure remains recorded;
@@ -136,7 +173,7 @@ it is not counted as a successful observation. No actual 200% zoom or complete
 unfamiliar-human test is claimed.
 [Public browser observations](evidence/quick-tunnel/browser-observations.json).
 
-Public captures: [desktop list](evidence/quick-tunnel/desktop-list.jpg),
+Earlier public captures: [desktop list](evidence/quick-tunnel/desktop-list.jpg),
 [desktop detail](evidence/quick-tunnel/desktop-detail.jpg),
 [mobile list](evidence/quick-tunnel/mobile-list.jpg),
 [mobile detail](evidence/quick-tunnel/mobile-detail.jpg), and

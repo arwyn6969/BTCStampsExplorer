@@ -1,0 +1,35 @@
+{
+  "sourceRevision": "911a1e5597d5d55cbd1244aec41277de31c4dd3d",
+  "freshBuildId": "1eac0c88692d30f5b1b314a73aa38d67299abf46",
+  "scope": "Restored immutable artifact reached through the existing temporary HTTP/2 tunnel to the local Mac.",
+  "artifact": {
+    "filename": "explorer-911a1e5597d5-ac20c5f315d0.tar.gz",
+    "bytes": 429681,
+    "sha256": "ac20c5f315d027f472a77886b1e8afa9f4bb7fc8453bc369de7d66d992303967",
+    "verifiedInventoryFiles": 52,
+    "sourceStateAtPackaging": ""
+  },
+  "validation": {
+    "packageUnitTests": 31,
+    "checkerSafetyTests": 4,
+    "baselinePublicHttpCases": 35,
+    "packageFormatLintTypeBuild": true,
+    "repositoryFormatLint": true,
+    "browserObservationCount": 10,
+    "desktopCssViewport": "1440x900",
+    "mobileCssViewport": "390x844",
+    "htmlFirstPageBrowserDecoded": 12,
+    "independentlyDecodedHtmlSamples": 4,
+    "keyboardSpaceAndApplyEnter": true
+  },
+  "features": [
+    "Multiple file formats before global upstream pagination; canonical URL retains selections.",
+    "Existing static PNG thumbnails for HTML stamps, with the same raster validation and explicit missing fallback."
+  ],
+  "limits": [
+    "No active HTML rendering or preview generation is added.",
+    "Sampled success does not prove complete static-thumbnail coverage or interactive HTML fidelity.",
+    "The free temporary URL still depends on the local Mac, proof server and tunnel.",
+    "Independent E04 hosting, staged rollback and unfamiliar-human acceptance remain pending."
+  ]
+}
