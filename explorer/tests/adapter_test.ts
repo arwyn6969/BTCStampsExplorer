@@ -241,6 +241,80 @@ Deno.test("protocol scope is applied upstream and unexpected live records fail v
   await rejects(() => live.list(query), hasKind("invalid-data"));
 });
 
+Deno.test("multi-format live filters use one upstream OR request and retain source pagination", async () => {
+  let requests = 0;
+  let requestedUrl = "";
+  const jpeg = {
+    ...rawStamp(1),
+    stamp_mimetype: "image/jpeg",
+    stamp_url: `https://stampchain.io/stamps/${TX}.jpeg`,
+  };
+  const adapter = createAdapter({
+    mode: "live",
+    fetcher: ((url) => {
+      requests++;
+      requestedUrl = String(url);
+      return Promise.resolve(jsonResponse({
+        data: [jpeg, rawStamp(0)],
+        page: 1,
+        limit: LIMIT,
+        total: 120,
+        totalPages: 10,
+      }));
+    }) as typeof fetch,
+  });
+  const result = await adapter.list({ ...query, format: "jpg,png,jpg" });
+  const url = new URL(requestedUrl);
+  strictEqual(requests, 1);
+  deepStrictEqual(url.searchParams.getAll("filetype"), ["png,jpg,jpeg"]);
+  strictEqual(url.searchParams.get("ident"), "STAMP,SRC-721");
+  strictEqual(result.total, 120);
+  strictEqual(result.totalPages, 10);
+  deepStrictEqual(result.stamps.map((stamp) => stamp.id), ["1", "0"]);
+});
+
+Deno.test("multi-format fixtures exclude GIF before paging and preserve selectable HTML metadata", async () => {
+  const rows = Array.from({ length: 30 }, (_, index) => {
+    const extension = ["png", "jpeg", "gif"][index % 3];
+    return {
+      ...rawStamp(index),
+      stamp_mimetype: extension === "jpeg"
+        ? "image/jpeg"
+        : `image/${extension}`,
+      stamp_url: `https://stampchain.io/stamps/${TX}.${extension}`,
+    };
+  });
+  const html = {
+    ...rawStamp(31),
+    stamp_mimetype: "text/html",
+    stamp_url: `https://stampchain.io/stamps/${TX}.html`,
+  };
+  const adapter = createAdapter({
+    mode: "fixture",
+    fixtureData: { data: [...rows, html] },
+  });
+  const seen: string[] = [];
+  for (const page of [1, 2]) {
+    const result = await adapter.list({ ...query, format: "png,jpg", page });
+    strictEqual(result.total, 20);
+    strictEqual(result.totalPages, 2);
+    strictEqual(
+      result.stamps.every((stamp) => stamp.mime !== "image/gif"),
+      true,
+    );
+    seen.push(...result.stamps.map((stamp) => stamp.id));
+  }
+  const expected = rows.filter((row) => row.stamp_mimetype !== "image/gif")
+    .reverse().map((row) => String(row.stamp));
+  deepStrictEqual(seen, expected);
+  strictEqual(new Set(seen).size, 20);
+  const htmlResult = await adapter.list({ ...query, format: "html" });
+  strictEqual(htmlResult.total, 1);
+  strictEqual(htmlResult.stamps[0].id, "31");
+  strictEqual(htmlResult.stamps[0].mime, "text/html");
+  strictEqual(htmlResult.stamps[0].mediaUrl, null);
+});
+
 Deno.test("fixture chronology uses transaction index for negative stamps", async () => {
   const rows = [
     { ...rawStamp(-100), tx_index: 30 },

@@ -1331,3 +1331,137 @@ button, select {
     padding: 9px 0;
   }
 }
+/* Format selections use native checkboxes styled as compact toggle buttons. */
+.filter-bar {
+  display: grid;
+  grid-template-columns: 150px minmax(310px, 1fr) 160px auto auto;
+  align-items: end;
+}
+.filter-bar > label,
+.filter-bar > .sort-filter {
+  min-width: 0;
+  margin-left: 0;
+}
+.format-filter {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+.format-filter legend {
+  padding: 0;
+  margin-bottom: 5px;
+  font-size: 10px;
+  color: var(--muted);
+}
+.format-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.filter-bar .format-chip {
+  position: relative;
+  display: inline-flex;
+  min-width: 0;
+  flex: none;
+  gap: 0;
+  cursor: pointer;
+}
+.format-chip input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: inherit;
+}
+.filter-bar .format-chip > span,
+.format-all {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 38px;
+  border: 1px solid #353535;
+  border-radius: 4px;
+  padding: 8px 10px;
+  background: #171717;
+  color: #c7c7c7;
+  font-size: 11px;
+  line-height: 1;
+  font-weight: 500;
+  cursor: inherit;
+}
+.format-all {
+  cursor: pointer;
+}
+.format-all[hidden] {
+  display: none;
+}
+.artwork[data-preview="existing-static-png"] > img {
+  image-rendering: auto;
+}
+.format-chip:hover > span,
+.format-all:hover {
+  border-color: #a3a3a3;
+  color: #fff;
+}
+.filter-bar .format-chip input:checked + span,
+.format-all[aria-pressed="true"] {
+  color: #fff;
+  border-color: var(--accent);
+  background: #312235;
+  box-shadow: inset 0 -2px 0 var(--accent);
+}
+.format-chip input:focus-visible + span {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+.filter-bar > .apply-filter {
+  min-width: 0;
+  max-width: none;
+  margin: 0;
+}
+.filter-bar > .reset-link {
+  align-self: center;
+  margin: 17px 0 0;
+}
+@media (max-width: 1100px) {
+  .filter-bar {
+    grid-template-columns: 1fr 1fr auto;
+    grid-template-areas: "type sort apply" "formats formats reset";
+  }
+  .type-filter {
+    grid-area: type;
+  }
+  .filter-bar > .sort-filter {
+    grid-area: sort;
+  }
+  .format-filter {
+    grid-area: formats;
+  }
+  .apply-filter {
+    grid-area: apply;
+  }
+  .filter-bar > .reset-link {
+    grid-area: reset;
+    align-self: end;
+    margin: 0 0 12px;
+    justify-self: center;
+  }
+}
+@media (max-width: 540px) {
+  .filter-bar {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "type sort" "formats formats" "apply reset";
+  }
+  .filter-bar .format-chip > span,
+  .format-all {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .filter-bar > .reset-link {
+    align-self: center;
+    margin: 0;
+  }
+}

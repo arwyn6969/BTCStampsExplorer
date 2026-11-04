@@ -1,0 +1,164 @@
+{
+  "capturedAtUtc": "2026-11-04T13:00:01.638165+00:00",
+  "scope": "Four preselected saved HTML records, using only preexisting static PNG thumbnails. This does not establish complete HTML coverage, freshness, or thumbnail generation fidelity.",
+  "sourceList": "documentation/rebuild/evidence/live/active-originals.json",
+  "staticPathContract": {
+    "code": "server/services/aws/previewStorageService.ts:getPreviewUrl",
+    "defaults": ".env.sample:CLOUDFRONT_PREVIEW_DOMAIN=stampchain.io; AWS_S3_IMAGE_DIR=stamps"
+  },
+  "requestBoundary": {
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "origin": "https://stampchain.io",
+    "path": "/stamps/previews/{canonical-stamp-id}.png",
+    "redirectsFollowed": false,
+    "maxBytesPerBody": 2097152,
+    "timeoutSeconds": 8,
+    "productionGenerationOrContentEndpointsCalled": false,
+    "htmlOriginalsFetchedOrExecuted": false
+  },
+  "records": [
+    {
+      "stamp": "1505513",
+      "url": "https://stampchain.io/stamps/previews/1505513.png",
+      "curlExit": 0,
+      "error": "",
+      "bytes": 122465,
+      "sha256": "a3c7512618e71e52751f24ec3e304f2c181bd1d8faa2e341ec2d19c2e26f0bbd",
+      "signaturePng": true,
+      "decoder": "Pillow",
+      "format": "PNG",
+      "dimensions": [
+        1200,
+        1200
+      ],
+      "frames": 1,
+      "decoded": true,
+      "fixture": "explorer/fixtures/media/preview-1505513.png",
+      "getHeaders": [
+        "HTTP/2 200",
+        "content-type: image/png",
+        "content-length: 122465",
+        "cache-control: public, max-age=31536000"
+      ],
+      "head": {
+        "stamp": 1505513,
+        "url": "https://stampchain.io/stamps/previews/1505513.png",
+        "curlExit": 0,
+        "headers": [
+          "HTTP/2 200",
+          "content-type: image/png",
+          "content-length: 122465"
+        ],
+        "error": ""
+      }
+    },
+    {
+      "stamp": "1472320",
+      "url": "https://stampchain.io/stamps/previews/1472320.png",
+      "curlExit": 0,
+      "error": "",
+      "bytes": 106210,
+      "sha256": "9c758048f4e86c9bd0a9e3dfdd91f9ec80cdb0cdb5b48207536a3d08a34f218c",
+      "signaturePng": true,
+      "decoder": "Pillow",
+      "format": "PNG",
+      "dimensions": [
+        1200,
+        1200
+      ],
+      "frames": 1,
+      "decoded": true,
+      "fixture": "explorer/fixtures/media/preview-1472320.png",
+      "getHeaders": [
+        "HTTP/2 200",
+        "content-type: image/png",
+        "content-length: 106210",
+        "cache-control: public, max-age=31536000"
+      ],
+      "head": {
+        "stamp": 1472320,
+        "url": "https://stampchain.io/stamps/previews/1472320.png",
+        "curlExit": 0,
+        "headers": [
+          "HTTP/2 200",
+          "content-type: image/png",
+          "content-length: 106210"
+        ],
+        "error": ""
+      }
+    },
+    {
+      "stamp": "1465071",
+      "url": "https://stampchain.io/stamps/previews/1465071.png",
+      "curlExit": 0,
+      "error": "",
+      "bytes": 61074,
+      "sha256": "bdd4ca4cd2648d24b86170ab0405066f636985ad503d85d5f9e43be83ea9634c",
+      "signaturePng": true,
+      "decoder": "Pillow",
+      "format": "PNG",
+      "dimensions": [
+        1200,
+        1200
+      ],
+      "frames": 1,
+      "decoded": true,
+      "fixture": "explorer/fixtures/media/preview-1465071.png",
+      "getHeaders": [
+        "HTTP/2 200",
+        "content-type: image/png",
+        "content-length: 61074",
+        "cache-control: public, max-age=31536000"
+      ],
+      "head": {
+        "stamp": 1465071,
+        "url": "https://stampchain.io/stamps/previews/1465071.png",
+        "curlExit": 0,
+        "headers": [
+          "HTTP/2 200",
+          "content-type: image/png",
+          "content-length: 61074"
+        ],
+        "error": ""
+      }
+    },
+    {
+      "stamp": "1462443",
+      "url": "https://stampchain.io/stamps/previews/1462443.png",
+      "curlExit": 0,
+      "error": "",
+      "bytes": 65612,
+      "sha256": "cd8aec59ed932baa8e9492d1d3e6b2a5af87b21a128b0cbcfa4d36a7ae0f29d6",
+      "signaturePng": true,
+      "decoder": "Pillow",
+      "format": "PNG",
+      "dimensions": [
+        1200,
+        1200
+      ],
+      "frames": 1,
+      "decoded": true,
+      "fixture": "explorer/fixtures/media/preview-1462443.png",
+      "getHeaders": [
+        "HTTP/2 200",
+        "content-type: image/png",
+        "content-length: 65612",
+        "cache-control: public, max-age=31536000"
+      ],
+      "head": {
+        "stamp": 1462443,
+        "url": "https://stampchain.io/stamps/previews/1462443.png",
+        "curlExit": 0,
+        "headers": [
+          "HTTP/2 200",
+          "content-type: image/png",
+          "content-length: 65612"
+        ],
+        "error": ""
+      }
+    }
+  ]
+}

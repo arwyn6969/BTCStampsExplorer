@@ -1,4 +1,9 @@
-import { MEDIA_MAX_BYTES, mediaAsset, serveMedia } from "../lib/media.ts";
+import {
+  htmlPreviewAsset,
+  MEDIA_MAX_BYTES,
+  mediaAsset,
+  serveMedia,
+} from "../lib/media.ts";
 
 const HASH = "a".repeat(64);
 const ASSET = `${HASH}.png`;
@@ -298,4 +303,129 @@ Deno.test("fixture media uses sampled files without making network calls", async
   const absent = await serveMedia(`${"f".repeat(64)}.png`, "fixture");
   assert(absent.status === 404);
   await absent.text();
+});
+
+Deno.test("HTML thumbnail identifiers use a bounded canonical numeric namespace", async () => {
+  for (
+    const id of [
+      "0",
+      "1505513",
+      "-1849",
+      "9007199254740991",
+      "-9007199254740991",
+    ]
+  ) {
+    assert(htmlPreviewAsset(id) === `preview-${id}.png`);
+  }
+  for (
+    const id of [
+      "",
+      "-0",
+      "01",
+      "-01",
+      "+1",
+      "1e3",
+      "1.5",
+      "9007199254740992",
+      "-9007199254740992",
+      "../1",
+      "1?refresh=true",
+      "https://evil.test",
+    ]
+  ) {
+    assert(htmlPreviewAsset(id) === null, `Accepted noncanonical ID: ${id}`);
+  }
+  for (
+    const asset of [
+      "preview-01.png",
+      "preview--0.png",
+      "preview-9007199254740992.png",
+      "preview-1505513.svg",
+      "preview-1505513.png?refresh=true",
+      "preview-../1505513.png",
+      "previews/1505513.png",
+    ]
+  ) {
+    const response = await serveMedia(asset, "live", () => {
+      throw new Error("Invalid HTML preview asset reached fetch");
+    });
+    assert(response.status === 404);
+    await response.text();
+  }
+});
+
+Deno.test("HTML thumbnails fetch only existing static PNGs with the raster boundary", async () => {
+  for (const id of ["1505513", "0", "-1849"]) {
+    const response = await serveMedia(
+      `preview-${id}.png`,
+      "live",
+      (input, init) => {
+        assert(input === `${ORIGIN}previews/${id}.png`);
+        const request = init as { redirect?: string; credentials?: string };
+        assert(request.redirect === "error" && request.credentials === "omit");
+        return respond(PNG)(input, init);
+      },
+    );
+    assert(response.status === 200);
+    assert(response.headers.get("Content-Type") === "image/png");
+    assert(
+      response.headers.get("Content-Security-Policy") ===
+        "sandbox; default-src 'none'",
+    );
+    await response.arrayBuffer();
+  }
+  const missing = await serveMedia(
+    "preview-1505513.png",
+    "live",
+    () => Promise.resolve(new Response("Not found", { status: 404 })),
+  );
+  assert(missing.status === 404);
+  await missing.text();
+  const redirect = await serveMedia(
+    "preview-1505513.png",
+    "live",
+    () =>
+      Promise.resolve(
+        new Response(null, {
+          status: 302,
+          headers: { Location: "/api/v2/stamp/1505513/preview" },
+        }),
+      ),
+  );
+  assert(redirect.status === 502);
+  await redirect.text();
+  for (
+    const fetcher of [
+      respond(
+        new TextEncoder().encode("<html><script>alert(1)</script></html>"),
+      ),
+      respond(PNG, "text/html"),
+      respond(PNG.subarray(0, PNG.length - 4)),
+    ]
+  ) {
+    const response = await serveMedia("preview-1505513.png", "live", fetcher);
+    assert(response.status === 502);
+    await response.text();
+  }
+  const stalled = await serveMedia(
+    "preview-1505513.png",
+    "live",
+    () => new Promise(() => {}),
+    { timeoutMs: 5 },
+  );
+  assert(stalled.status === 502);
+  await stalled.text();
+});
+
+Deno.test("four sampled HTML PNG thumbnails are available as offline fixtures", async () => {
+  for (const id of ["1505513", "1472320", "1465071", "1462443"]) {
+    const response = await serveMedia(`preview-${id}.png`, "fixture", () => {
+      throw new Error("HTML fixture attempted a network call");
+    });
+    assert(response.status === 200, `HTML preview fixture failed: ${id}`);
+    const bytes = new Uint8Array(await response.arrayBuffer());
+    const view = new DataView(bytes.buffer);
+    assert(view.getUint32(16) === 1200 && view.getUint32(20) === 1200);
+    assert(response.headers.get("Content-Type") === "image/png");
+  }
 });

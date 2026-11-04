@@ -52,8 +52,8 @@ export function Page({ title, children }: PageProps) {
               rel="noopener noreferrer"
             >
               Stampchain
-            </a>. Raster artwork is shown where available; other formats use a
-            placeholder.
+            </a>. Original images and existing HTML previews are shown where
+            available.
           </p>
         </footer>
       </body>

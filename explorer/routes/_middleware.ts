@@ -10,6 +10,7 @@ const routes = [
   /^\/explorer\/?$/,
   /^\/stamp\/[^/]+\/?$/,
   /^\/media\/[a-f0-9]{64}\.(?:png|jpg|jpeg|gif|webp)$/,
+  /^\/media\/preview-(?:0|[1-9]\d{0,15}|-[1-9]\d{0,15})\.png$/,
   /^\/(?:style\.css|app\.js|logo\.svg|robots\.txt)$/,
   /^\/_frsh\/[a-zA-Z0-9_./-]+$/,
 ];

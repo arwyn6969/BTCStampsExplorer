@@ -6,9 +6,11 @@ import { adapter } from "../lib/data.ts";
 import type { StampPage } from "../lib/adapter.ts";
 import {
   type ExplorerQuery,
+  FORMAT_OPTIONS,
   MAX_PAGE,
   parseQuery,
   queryString,
+  selectedFormats,
   withPage,
 } from "../lib/query.ts";
 
@@ -30,6 +32,13 @@ export const handler: Handlers<ExplorerData> = {
       });
     }
     const query = parseQuery(url.searchParams);
+    const canonical = queryString(query);
+    if (url.search !== canonical) {
+      return new Response(null, {
+        status: 302,
+        headers: { location: `/explorer${canonical}` },
+      });
+    }
     try {
       return ctx.render({
         query,
@@ -56,6 +65,7 @@ const typeLabels = [
 export default function Explorer({ data }: PageProps<ExplorerData>) {
   const { query, result, error } = data;
   const state = queryString(query);
+  const formats = selectedFormats(query.format);
   return (
     <Page title="Explore Bitcoin Stamps · Stampchain">
       <div class="shell">
@@ -67,8 +77,8 @@ export default function Explorer({ data }: PageProps<ExplorerData>) {
             <h1>Explore Bitcoin Stamps</h1>
             <p>Discover the art. Trace its origin. All preserved on Bitcoin.</p>
             <p class="scope-note">
-              PNG artwork is selected to start. All formats includes records
-              without a static preview.
+              Choose one or more formats. HTML artwork uses an existing static
+              preview where available.
             </p>
           </div>
           <div class="intro-note">
@@ -85,7 +95,7 @@ export default function Explorer({ data }: PageProps<ExplorerData>) {
           action="/explorer"
           aria-label="Filter and sort stamps"
         >
-          <label>
+          <label class="type-filter">
             <span>Stamp type</span>
             <select name="type" value={query.type}>
               {typeLabels.map(([value, label]) => (
@@ -93,16 +103,44 @@ export default function Explorer({ data }: PageProps<ExplorerData>) {
               ))}
             </select>
           </label>
-          <label>
-            <span>File format</span>
-            <select name="format" value={query.format}>
-              <option value="all">All formats</option>
-              <option value="png">PNG</option>
-              <option value="jpg">JPEG</option>
-              <option value="gif">GIF</option>
-              <option value="webp">WebP</option>
-            </select>
-          </label>
+          <fieldset class="format-filter">
+            <legend>File formats</legend>
+            <div class="format-options">
+              <button
+                class="format-all"
+                type="button"
+                aria-label="All formats"
+                aria-pressed={formats.length === 0}
+                data-format-all
+                hidden
+              >
+                All
+              </button>
+              <noscript>
+                <a
+                  class="format-all"
+                  href={`/explorer${
+                    queryString({ ...query, format: "all", page: 1 })
+                  }`}
+                >
+                  All
+                </a>
+              </noscript>
+              {FORMAT_OPTIONS.map((format) => (
+                <label class="format-chip" key={format}>
+                  <input
+                    type="checkbox"
+                    name="format"
+                    value={format}
+                    checked={formats.includes(format)}
+                  />
+                  <span>
+                    {format === "jpg" ? "JPEG" : format.toUpperCase()}
+                  </span>
+                </label>
+              ))}
+            </div>
+          </fieldset>
           <label class="sort-filter">
             <span>Order</span>
             <select name="sort" value={query.sort}>
@@ -110,7 +148,7 @@ export default function Explorer({ data }: PageProps<ExplorerData>) {
               <option value="oldest">Oldest first</option>
             </select>
           </label>
-          <button class="button primary" type="submit">
+          <button class="button primary apply-filter" type="submit">
             Apply filters <span aria-hidden="true">↗</span>
           </button>
           <a class="reset-link" href="/explorer">Reset</a>

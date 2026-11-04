@@ -1,5 +1,11 @@
 import { deepStrictEqual, strictEqual } from "node:assert";
-import { MAX_PAGE, parseQuery, queryString, withPage } from "../lib/query.ts";
+import {
+  MAX_PAGE,
+  parseQuery,
+  queryString,
+  selectedFormats,
+  withPage,
+} from "../lib/query.ts";
 
 Deno.test("query state round-trips every supported list control", () => {
   const query = {
@@ -23,7 +29,7 @@ Deno.test("query state bounds invalid input and drops unknown fields", () => {
       new URLSearchParams({
         page,
         type: "../admin",
-        format: "html",
+        format: "svg",
         sort: "RANDOM",
         refresh: "true",
       }),
@@ -45,4 +51,30 @@ Deno.test("query state bounds invalid input and drops unknown fields", () => {
     withPage(parseQuery(new URLSearchParams("page=100000")), 100001).page,
     100001,
   );
+});
+
+Deno.test("format checkboxes and comma URLs produce one deterministic selection", () => {
+  const repeated = parseQuery(
+    new URLSearchParams(
+      "format=jpg&format=png&format=jpeg&format=jpg&sort=oldest&page=4",
+    ),
+  );
+  strictEqual(repeated.format, "png,jpg");
+  deepStrictEqual(selectedFormats(repeated.format), ["png", "jpg"]);
+  strictEqual(
+    queryString(repeated),
+    "?type=all&format=png,jpg&sort=oldest&page=4",
+  );
+  const copied = parseQuery(new URLSearchParams(queryString(repeated)));
+  deepStrictEqual(copied, repeated);
+  strictEqual(withPage(copied, 5).format, "png,jpg");
+  strictEqual(
+    parseQuery(new URLSearchParams("format=html,png&format=WEBP")).format,
+    "png,webp,html",
+  );
+  strictEqual(
+    parseQuery(new URLSearchParams("format=png&format=all")).format,
+    "all",
+  );
+  deepStrictEqual(selectedFormats("all"), []);
 });

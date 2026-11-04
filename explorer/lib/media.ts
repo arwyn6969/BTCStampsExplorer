@@ -1,4 +1,6 @@
 const ASSET = /^[a-f0-9]{64}\.(png|jpg|jpeg|gif|webp)$/;
+const STAMP_ID = /^(?:0|[1-9]\d{0,15}|-[1-9]\d{0,15})$/;
+const PREVIEW_ASSET = /^preview-((?:0|[1-9]\d{0,15}|-[1-9]\d{0,15}))\.png$/;
 const STATIC_MEDIA = "https://stampchain.io/stamps/";
 export const MEDIA_MAX_BYTES = 2 * 1024 * 1024;
 const MAX_DIMENSION = 4096;
@@ -16,6 +18,29 @@ export function mediaAsset(url: string | null): string | null {
   if (!url?.startsWith(STATIC_MEDIA)) return null;
   const asset = url.slice(STATIC_MEDIA.length);
   return ASSET.test(asset) ? asset : null;
+}
+
+/** Existing PNG thumbnails only; a missing file never triggers generation. */
+export function htmlPreviewAsset(id: string): string | null {
+  if (!STAMP_ID.test(id)) return null;
+  const number = BigInt(id);
+  if (number < -9007199254740991n || number > 9007199254740991n) return null;
+  return `preview-${id}.png`;
+}
+
+function assetSource(
+  asset: string,
+): { extension: string; url: string } | null {
+  const raster = ASSET.exec(asset);
+  if (raster) return { extension: raster[1], url: STATIC_MEDIA + asset };
+  const preview = PREVIEW_ASSET.exec(asset);
+  if (preview && htmlPreviewAsset(preview[1]) === asset) {
+    return {
+      extension: "png",
+      url: `${STATIC_MEDIA}previews/${preview[1]}.png`,
+    };
+  }
+  return null;
 }
 
 function check(condition: unknown): asserts condition {
@@ -294,9 +319,9 @@ export async function serveMedia(
   fetcher: typeof fetch = fetch,
   options: { timeoutMs?: number } = {},
 ): Promise<Response> {
-  const match = ASSET.exec(asset);
-  if (!match) return failure(404);
-  const extension = match[1];
+  const source = assetSource(asset);
+  if (!source) return failure(404);
+  const { extension, url } = source;
   const mime = MIME[extension];
   let reader: ReadableStreamDefaultReader<Uint8Array> | undefined;
   let timer: number | undefined;
@@ -313,7 +338,7 @@ export async function serveMedia(
         }, Math.max(1, Math.min(options.timeoutMs ?? 8000, 8000)));
       });
       const load = async (): Promise<Uint8Array> => {
-        const response = await fetcher(STATIC_MEDIA + asset, {
+        const response = await fetcher(url, {
           method: "GET",
           redirect: "error",
           credentials: "omit",
@@ -321,8 +346,9 @@ export async function serveMedia(
           headers: { Accept: mime },
           signal: controller.signal,
         });
+        if (response.status === 404) throw new Deno.errors.NotFound();
         check(response.status === 200 && !response.redirected);
-        check(!response.url || response.url === STATIC_MEDIA + asset);
+        check(!response.url || response.url === url);
         check(
           response.headers.get("content-type")?.split(";")[0].trim()
             .toLowerCase() === mime,

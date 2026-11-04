@@ -91,8 +91,10 @@ export default function StampDetail({ data, url }: PageProps<DetailData>) {
                 <div class="detail-art">
                   <StampArt stamp={stamp} priority />
                   <p class="art-caption">
-                    {stamp.mime ?? "Format unavailable"}{" "}
-                    · Existing raster artwork where available
+                    {stamp.mime ?? "Format unavailable"} ·{" "}
+                    {stamp.mime === "text/html"
+                      ? "Static preview of the HTML artwork"
+                      : "Existing raster artwork where available"}
                   </p>
                 </div>
                 <section class="detail-info" aria-labelledby="stamp-title">

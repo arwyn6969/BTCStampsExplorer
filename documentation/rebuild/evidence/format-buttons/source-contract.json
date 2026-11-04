@@ -1,0 +1,24 @@
+{
+  "captured_at_utc": "2026-11-04T12:56:44.982750+00:00",
+  "scope": "Two bounded read-only filter contract samples; no media or generator requests",
+  "requests": [
+    {
+      "name": "png-jpeg-or",
+      "url": "https://stampchain.io/api/v2/stamps?type=all&ident=STAMP%2CSRC-721&limit=3&page=1&sortBy=DESC&filetype=png%2Cjpg%2Cjpeg",
+      "status": 200,
+      "content_type": "application/json",
+      "duration_ms": 905,
+      "body_bytes": 2249,
+      "raw_json": "{\"data\":[{\"stamp\":1507273,\"block_index\":973464,\"cpid\":\"A1301847304853164300\",\"creator\":\"1PJ8FYDnNrtA4R3GrSesjbcbnz7iHYdKCH\",\"creator_name\":null,\"divisible\":0,\"keyburn\":null,\"locked\":1,\"stamp_url\":\"https://stampchain.io/stamps/7046278a4bda05c7dd3063dd10607800cbb92ba6f8c7c41f49bd985edee6bbed.png\",\"stamp_mimetype\":\"image/png\",\"supply\":1,\"block_time\":\"2026-10-27T22:16:09.000Z\",\"tx_hash\":\"7046278a4bda05c7dd3063dd10607800cbb92ba6f8c7c41f49bd985edee6bbed\",\"tx_index\":1525917,\"ident\":\"STAMP\",\"stamp_hash\":\"iLMe2ocVQBJDCAfPfRKw\",\"file_hash\":\"c9abc80348f733dfb4924bda42da528f\",\"file_size_bytes\":517,\"market_data\":null,\"lowestPriceDispenser\":null,\"marketDataMessage\":\"No market data available for this stamp\"},{\"stamp\":-1849,\"block_index\":959674,\"cpid\":\"A8699880411563928855\",\"creator\":\"bc1qpunk457dkh4ydmg4mm5sc5lq8ak8hc9r4tv2xq\",\"creator_name\":null,\"divisible\":0,\"keyburn\":null,\"locked\":1,\"stamp_url\":\"https://stampchain.io/stamps/cf6689d99c1744dbf59c2eb9f9dd5f8d83e8a5e5a38e13a5f1cc39fed263a94e.png\",\"stamp_mimetype\":\"image/png\",\"supply\":1,\"block_time\":\"2026-07-26T08:01:21.000Z\",\"tx_hash\":\"cf6689d99c1744dbf59c2eb9f9dd5f8d83e8a5e5a38e13a5f1cc39fed263a94e\",\"tx_index\":1499241,\"ident\":\"STAMP\",\"stamp_hash\":\"lTp3zZa1M4Sf04euvPir\",\"file_hash\":\"1da68108c77da41f6c9fc673d8e69896\",\"file_size_bytes\":322,\"market_data\":null,\"lowestPriceDispenser\":null,\"marketDataMessage\":\"No market data available for this stamp\"},{\"stamp\":-1848,\"block_index\":959456,\"cpid\":\"A6087451001497250110\",\"creator\":\"bc1qpunk457dkh4ydmg4mm5sc5lq8ak8hc9r4tv2xq\",\"creator_name\":null,\"divisible\":0,\"keyburn\":null,\"locked\":1,\"stamp_url\":\"https://stampchain.io/stamps/a854454a25b59686823e7abb65bc1af26380db15abd0da56846d2982bd2b9706.png\",\"stamp_mimetype\":\"image/png\",\"supply\":1,\"block_time\":\"2026-07-24T18:54:20.000Z\",\"tx_hash\":\"a854454a25b59686823e7abb65bc1af26380db15abd0da56846d2982bd2b9706\",\"tx_index\":1498456,\"ident\":\"STAMP\",\"stamp_hash\":\"QuBrDRrO6SOupYgDgts7\",\"file_hash\":\"f1df52007da7db6a4dae5e935cdcdcd7\",\"file_size_bytes\":402,\"market_data\":null,\"lowestPriceDispenser\":null,\"marketDataMessage\":\"No market data available for this stamp\"}],\"last_block\":974527,\"metadata\":{\"btcPrice\":78108.3,\"cacheStatus\":\"unknown\",\"source\":\"cached\"},\"page\":1,\"limit\":3,\"totalPages\":7225,\"total\":21674}"
+    },
+    {
+      "name": "html-filter",
+      "url": "https://stampchain.io/api/v2/stamps?type=all&ident=STAMP%2CSRC-721&limit=1&page=1&sortBy=DESC&filetype=html",
+      "status": 200,
+      "content_type": "application/json",
+      "duration_ms": 564,
+      "body_bytes": 851,
+      "raw_json": "{\"data\":[{\"stamp\":1505513,\"block_index\":970905,\"cpid\":\"A12139512354757593000\",\"creator\":\"1PJ8FYDnNrtA4R3GrSesjbcbnz7iHYdKCH\",\"creator_name\":null,\"divisible\":0,\"keyburn\":null,\"locked\":1,\"stamp_url\":\"https://stampchain.io/stamps/d6881659855f8f9721f4246efae3276952b022589717588803e34caec8737c8b.html\",\"stamp_mimetype\":\"text/html\",\"supply\":47,\"block_time\":\"2026-10-11T09:58:59.000Z\",\"tx_hash\":\"d6881659855f8f9721f4246efae3276952b022589717588803e34caec8737c8b\",\"tx_index\":1524157,\"ident\":\"STAMP\",\"stamp_hash\":\"XZi4en0eJwba2XEzsUdJ\",\"file_hash\":\"9118bec32d2b67bab8314033681b4110\",\"file_size_bytes\":56239,\"market_data\":null,\"lowestPriceDispenser\":null,\"marketDataMessage\":\"No market data available for this stamp\"}],\"last_block\":974527,\"metadata\":{\"btcPrice\":78108.3,\"cacheStatus\":\"unknown\",\"source\":\"cached\"},\"page\":1,\"limit\":1,\"totalPages\":468,\"total\":468}"
+    }
+  ]
+}

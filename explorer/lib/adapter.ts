@@ -1,4 +1,9 @@
-import { type ExplorerQuery, LIMIT, parseQuery } from "./query.ts";
+import {
+  type ExplorerQuery,
+  LIMIT,
+  parseQuery,
+  selectedFormats,
+} from "./query.ts";
 
 const API = "https://stampchain.io/api/v2/stamps";
 const MAX_BODY_BYTES = 2 * 1024 * 1024;
@@ -409,12 +414,26 @@ export function createAdapter(options: AdapterOptions) {
           q.type === "posh" &&
           !(number < 0n && !cpid.startsWith("A") && isStamp)
         ) return false;
-        const stamp = normalizeStamp(row);
         if (q.format === "all") return true;
-        const extension = stamp.mediaUrl?.split(".").at(-1);
-        return q.format === "jpg"
-          ? extension === "jpg" || extension === "jpeg"
-          : extension === q.format;
+        // Match the source filter's OR-of-suffixes AND OR-of-MIME-types.
+        // HTML records remain selectable even though safe mediaUrl is null.
+        const extension = typeof row.stamp_url === "string"
+          ? /\.([a-z]+)$/.exec(row.stamp_url)?.[1]
+          : undefined;
+        const formats = selectedFormats(q.format);
+        const suffixes = formats.flatMap((format) =>
+          format === "jpg" ? ["jpg", "jpeg"] : [format]
+        );
+        const mimeTypes = formats.map((format) =>
+          format === "jpg"
+            ? "image/jpeg"
+            : format === "html"
+            ? "text/html"
+            : `image/${format}`
+        );
+        return suffixes.includes(extension ?? "") &&
+          typeof row.stamp_mimetype === "string" &&
+          mimeTypes.includes(row.stamp_mimetype);
       }).map((value) => {
         const row = object(value);
         const transaction = integerString(row.tx_index);
@@ -460,7 +479,14 @@ export function createAdapter(options: AdapterOptions) {
       type: q.type,
       ident: SUPPORTED_PROTOCOLS.join(","),
     });
-    if (q.format !== "all") params.set("filetype", q.format);
+    if (q.format !== "all") {
+      params.set(
+        "filetype",
+        selectedFormats(q.format).flatMap((format) =>
+          format === "jpg" ? ["jpg", "jpeg"] : [format]
+        ).join(","),
+      );
+    }
     const envelope = await request(`${API}?${params}`);
     if (!Array.isArray(envelope.data) || envelope.data.length > LIMIT) {
       throw new AdapterError(

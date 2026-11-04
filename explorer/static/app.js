@@ -1,4 +1,23 @@
 // Filters, paging and detail state use ordinary server navigation.
+for (const form of document.querySelectorAll("form.filter-bar")) {
+  const allFormats = form.querySelector("[data-format-all]");
+  const formats = [...form.querySelectorAll('input[name="format"]')];
+  if (!allFormats || !formats.length) continue;
+  allFormats.hidden = false;
+  const updateAll = () => {
+    allFormats.setAttribute(
+      "aria-pressed",
+      String(formats.every((input) => !input.checked)),
+    );
+  };
+  for (const input of formats) input.addEventListener("change", updateAll);
+  allFormats.addEventListener("click", (event) => {
+    event.preventDefault();
+    for (const input of formats) input.checked = false;
+    updateAll();
+  });
+}
+
 document.addEventListener("error", (event) => {
   const image = event.target;
   if (image instanceof HTMLImageElement && image.closest(".artwork")) {
