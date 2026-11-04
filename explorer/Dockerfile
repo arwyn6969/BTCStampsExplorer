@@ -17,7 +17,7 @@ FROM denoland/deno:alpine-2.6.9
 ENV DENO_DIR=/opt/deno-cache \
     EXPLORER_HOST=0.0.0.0 \
     PORT=8007 \
-    EXPLORER_DATA_MODE=live
+    EXPLORER_DATA_MODE=fixture
 ARG EXPLORER_REVISION
 ENV EXPLORER_REVISION=${EXPLORER_REVISION} \
     GITHUB_SHA=${EXPLORER_REVISION}
@@ -34,4 +34,4 @@ COPY --from=builder --chown=deno:deno /app/explorer/_fresh /app/explorer/_fresh
 COPY --from=builder --chown=deno:deno /app/lib/constants/stampConstants.ts /app/lib/constants/stampConstants.ts
 USER deno
 EXPOSE 8007
-CMD ["run", "--cached-only", "--frozen", "--no-prompt", "--allow-read=./_fresh,./static,./fixtures,./deno.json,./deno.lock", "--allow-env=DENO_DEPLOYMENT_ID,ESBUILD_BINARY_PATH,EXPLORER_DATA_MODE,EXPLORER_HOST,EXPLORER_REVISION,FRESH_ESBUILD_LOADER,GITHUB_SHA,HOME,JSR_URL,LOCALAPPDATA,NPM_CONFIG_REGISTRY,PORT,USERPROFILE,XDG_CACHE_HOME,__FRSH_LEGACY_DEV", "--allow-net=0.0.0.0:8007,stampchain.io:443", "main.ts"]
+CMD ["run", "--cached-only", "--frozen", "--no-prompt", "--allow-read=./_fresh,./static,./fixtures,./deno.json,./deno.lock", "--allow-env=DENO_DEPLOYMENT_ID,ESBUILD_BINARY_PATH,EXPLORER_DATA_MODE,EXPLORER_HOST,EXPLORER_REVISION,FRESH_ESBUILD_LOADER,GITHUB_SHA,HOME,JSR_URL,LOCALAPPDATA,NPM_CONFIG_REGISTRY,PORT,USERPROFILE,XDG_CACHE_HOME,__FRSH_LEGACY_DEV", "--allow-net=0.0.0.0:8007", "main.ts"]

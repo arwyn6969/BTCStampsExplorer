@@ -1,4 +1,5 @@
 import type { ComponentChildren } from "preact";
+import { dataMode } from "../lib/data.ts";
 
 interface PageProps {
   title: string;
@@ -34,26 +35,65 @@ export function Page({ title, children }: PageProps) {
             </a>
             <nav aria-label="Main navigation">
               <a href="/explorer">Explorer</a>
+              <a href="/collections">Collections</a>
+              <a href="/marketplace">Listings</a>
+              <a href="/activity">Activity</a>
             </nav>
-            <span class="preview-tag">Browsing preview</span>
-            <span class="network">
-              <span aria-hidden="true" /> Bitcoin
-            </span>
+            <form
+              class="header-search"
+              method="get"
+              action="/search"
+              role="search"
+              aria-label="Site search"
+            >
+              <label class="sr-only" for="site-search">
+                Search stamps, usernames or addresses
+              </label>
+              <input
+                id="site-search"
+                name="q"
+                type="search"
+                placeholder="Stamp, username, address…"
+                maxLength={100}
+              />
+              <button type="submit" aria-label="Search">↗</button>
+            </form>
+            <a class="help-link" href="/help">About this preview</a>
           </div>
         </header>
+        <div class="preview-banner">
+          <span class="source-dot" aria-hidden="true" />
+          {dataMode === "fixture"
+            ? (
+              <span>
+                <strong>Demo data.</strong>{" "}
+                Fixed samples of artwork, profiles, listings and activity.
+              </span>
+            )
+            : (
+              <span>
+                <strong>Live stamp browsing.</strong>{" "}
+                Other sections need their live data connections.
+              </span>
+            )}
+          <a href="/help">Preview scope ↗</a>
+        </div>
         <main id="main">{children}</main>
         <footer class="site-footer">
           <p>Bitcoin Stamps. Art that stays.</p>
           <p>
-            Data from{" "}
+            {dataMode === "fixture"
+              ? "Demo artwork sampled from "
+              : "Stamp data from "}
             <a
               href="https://stampchain.io"
               target="_blank"
               rel="noopener noreferrer"
             >
               Stampchain
-            </a>. Original images and existing HTML previews are shown where
-            available.
+            </a>. {dataMode === "fixture"
+              ? "Profiles, holdings and market activity are fixed examples, not live records."
+              : "Original images and existing HTML previews are shown where available."}
           </p>
         </footer>
       </body>

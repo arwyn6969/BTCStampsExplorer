@@ -1,14 +1,45 @@
 # Explorer renewal: delivery plan
 
-Status: proposed implementation plan, revised after adversarial self-review. No
-rebuild, production change, merge, or new fork has been performed by this
-review. Prepared 3 November 2026. The owner selected **explorer and browsing
-first**. Detailed evidence is in [PR reconciliation](PR_RECONCILIATION.md).
-Revised 3 November 2026 after a further strategy challenge: test reuse versus
-extraction before selecting the implementation, compare the result with today's
-user journey, and decide at the proof cap. This is a decision-ready plan, not
-proof of delivery feasibility. The detailed gates below support one bounded
-experiment; they are not additional discovery projects.
+Prepared 3 November 2026 and updated 4 November 2026. The owner selected
+**explorer and browsing first**. The initial plan followed an adversarial review
+and strategy challenge: test reuse versus extraction, compare the result with
+today's journey, and decide at the proof cap. Implementation and its limits are
+recorded in [delivery status](STATUS.md); the original review evidence remains
+in [PR reconciliation](PR_RECONCILIATION.md). No production change or merge is
+claimed.
+
+## Authorized demo extension: 4 November 2026
+
+After reviewing the two-page proof, the owner asked to continue the fuller
+read-only explorer and pointed to `DATA_PLACEHOLDER_DEV = true` in
+`lib/utils/dataPlaceholderProd.ts` to avoid any database connection. This
+authorizes the demo extension below while the independent-hosting gate remains
+open. The original E02 two-page cap describes the earlier proof; it does not
+prohibit this subsequently requested fixture work.
+
+The original checkout's switch is now enabled locally and is not part of a
+production commit. The isolated `explorer/` package uses its equivalent
+`EXPLORER_DATA_MODE=fixture` by default. It does not import that legacy switch
+or the legacy database-backed runtime. Extended views label their fixed
+examples; explicit live mode keeps the original stamp browsing adapter and
+reports the other views as unavailable until their live integrations are
+verified.
+
+| Order | Current implementation                                                                                           | Remaining release evidence                                                                 |
+| ----- | ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| E05   | Demo search for stamp identifiers, usernames, addresses and collections; native result links and contextual Back | Verified live search contracts and partial-failure behavior                                |
+| E06   | Demo public profiles, created/held views, collection index/detail, paging and explicit unknown data              | Verified live ownership, creator and collection contracts                                  |
+| E07   | Demo listings, sales and transfers on dedicated views and stamp details; exact quantities and price units        | Verified live listing/activity contracts and source-supported status                       |
+| E08   | Selected route aliases and keyboard-accessible forms/links implemented; mobile QA in progress                    | Final hostname/canonical metadata, sitemap policy and complete manual accessibility review |
+| E09   | Pinned build and restricted offline runtime configured; expanded capability/build checks in progress             | Independently hosted checks, operational ownership, monitoring and staged rollback         |
+| E10   | Reviewable demo and scope notes prepared                                                                         | Owner and unfamiliar-human acceptance, final handover                                      |
+
+E05–E07 implement the read-only interaction flows with fixtures. They do not
+complete live-data acceptance or establish a production-ready release. E04
+independent hosting and hosted rollback remain open. The owner requires a free
+preview without a card; the canceled Render attempt is not an outstanding
+instruction to add one. Token browsing remains a separate unresolved release
+choice, and wallet/transaction actions remain outside this scope.
 
 ## Recommendation
 
@@ -100,6 +131,8 @@ Confirmed by the owner:
 - Reconcile the review with existing PRs and issues before duplicating work.
 - Prefer demonstrable delivery and a streamlined plan over a speculative
   promise.
+- Continue the read-only search/profile/collection/market demo using dummy data
+  without a database; retain the dark, condensed design.
 
 Recommended scope assumptions, to be tested during the first milestone:
 
@@ -116,9 +149,10 @@ Recommended scope assumptions, to be tested during the first milestone:
 
 ## Candidate release inventory
 
-These are proposed surfaces, not an owner-approved feature contract. E01 records
-the intended audience and primary tasks. Final route coverage is settled after
-the proof demonstrates data access and the owner has reviewed the design.
+The read-only surfaces below are now implemented for demo review under the 4
+November continuation instruction. Their live contracts, final release coverage
+and operational acceptance remain to be established; this inventory does not
+convert fixture behavior into verified live coverage.
 
 | Surface                | First release behavior                                                                                    | Acceptance boundary                                                               |
 | ---------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
@@ -392,14 +426,14 @@ At the proof cap, make one recorded decision:
 
 ## Workstream C: complete the first release after the proof
 
-| Order | Deliverable                                                | Dependency / acceptance                                                                                        |
-| ----- | ---------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| E05   | Search and URL-state completion                            | Exact lookup first; reuse #1321 only with verified creator-search service; accessible links and explicit scope |
-| E06   | Address and collection browsing, subject to route decision | Contract fixtures, paging, empty/error states and sampled live verification                                    |
-| E07   | Listing/activity views and content polish                  | Proven source fields, explicit missing data, no unsupported trading-volume claims                              |
-| E08   | Route compatibility, metadata, sitemap, accessibility      | Chosen hostname/cutover policy; route map, canonical metadata, meaningful dates and mobile/manual review       |
-| E09   | Release hardening and operations                           | Production-build browser checks, monitoring, cache/failure behavior, deployment identity, rollback             |
-| E10   | Owner acceptance and handover                              | Agreed journeys demonstrated, known defects recorded, operational owners and access confirmed                  |
+| Order | Deliverable                                           | Dependency / acceptance                                                                                        |
+| ----- | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| E05   | Search and URL-state completion                       | Exact lookup first; reuse #1321 only with verified creator-search service; accessible links and explicit scope |
+| E06   | Address and collection browsing                       | Contract fixtures, paging, empty/error states and sampled live verification                                    |
+| E07   | Listing/activity views and content polish             | Proven source fields, explicit missing data, no unsupported trading-volume claims                              |
+| E08   | Route compatibility, metadata, sitemap, accessibility | Chosen hostname/cutover policy; route map, canonical metadata, meaningful dates and mobile/manual review       |
+| E09   | Release hardening and operations                      | Production-build browser checks, monitoring, cache/failure behavior, deployment identity, rollback             |
+| E10   | Owner acceptance and handover                         | Agreed journeys demonstrated, known defects recorded, operational owners and access confirmed                  |
 
 E05 search acceptance additionally requires native result links, useful group
 and result labels, stale-response protection, and a visible partial-failure

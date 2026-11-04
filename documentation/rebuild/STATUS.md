@@ -1,49 +1,83 @@
-# Explorer proof: delivery evidence
+# Explorer: delivery evidence and remaining work
 
-Updated 4 November 2026. The working temporary public preview is
-[the explorer](https://hottest-position-turbo-patients.trycloudflare.com/explorer),
-using a Cloudflare Quick Tunnel over HTTP/2. It forwards to the production-built
-proof on the local Mac and lasts only while its server and tunnel processes run.
-It requires no account or card. Render setup was canceled under the owner's
-no-card requirement; the dashboard was checked and showed zero services.
-Independent hosting, hosted artifact rollback, and human acceptance remain open;
-the temporary public preview does not complete E04.
+Updated 4 November 2026. The read-only demo now extends beyond the original
+list/detail proof to search, public profiles, collections, listings and separate
+sales/transfer views. These new flows use clearly labelled fixed examples and
+need no database or live API connection. Their live integrations, independent
+hosting, hosted rollback and human acceptance remain open. This is a reviewable
+demo extension, not a completed production release.
+
+Expanded-preview source and URL: pending final verification.
+
+## Current scope and status
+
+On 4 November the owner asked to continue the fuller read-only explorer and
+supplied the existing `DATA_PLACEHOLDER_DEV` switch. It is now `true` in the
+original checkout as a local, uncommitted development change. The isolated app
+does not load that legacy module: its equivalent fixture mode is the default,
+using captured stamp/media samples and a separate synthetic catalog of holdings,
+collection membership, listings and activity. Names from captured stamp records
+remain distinct from synthetic profile descriptions and market examples. Demo
+holdings and prices do not establish real ownership or current availability.
+
+| Item                                | Current state                                                                                                                    | Still needed for release                                                                   |
+| ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| E05 search                          | Fixture UX implemented: exact identifiers, usernames/address discovery, grouped native links and contextual Back                 | Verified live search contracts and partial-failure behavior                                |
+| E06 profiles and collections        | Fixture UX implemented: created/held tabs, quantities, collection index/detail and paging; unavailable holdings stay unavailable | Verified live creator, holdings and collection coverage                                    |
+| E07 listings and activity           | Fixture UX implemented: dedicated listings/activity and stamp-detail sections; sales and transfers kept distinct                 | Verified live fields, status, quantities, prices and source metadata                       |
+| E08 compatibility and accessibility | Selected route aliases and native forms/links implemented; expanded mobile QA in progress                                        | Final hostname/canonical metadata, sitemap policy and complete manual accessibility review |
+| E09 hardening and operations        | Pinned build and offline runtime configured; expanded capability/build checks in progress                                        | Independent hosting, monitoring, operational ownership and staged rollback                 |
+| E10 acceptance and handover         | Demo and scope notes prepared for review                                                                                         | Owner and unfamiliar-human task acceptance and final handover                              |
+
+The default preview runtime allows its local listener and denies outbound
+network access. It has no database, Redis or administrative credentials and no
+wallet connection or transaction actions. Explicit live mode retains the
+existing stamp list/detail adapter; extended catalog views return a visible
+unavailable state rather than mixing demo balances or events into live claims.
+
+E04 is still open: a temporary tunnel and local artifact restore do not prove
+independent deployment or hosted rollback. Render setup was canceled under the
+owner's free/no-card requirement; zero services were verified at cancellation.
+No card setup is outstanding. The prior tunnel was tied to local processes and
+may no longer be available after an interruption. Its evidence below is
+historical, not validation of the new expanded demo.
 
 3 November 2026. The owner authorized continuation of E01–E04 and requested the
 existing dark style with a condensed layout. That design direction is
 implemented. Final owner task acceptance and the unfamiliar human review have
 not been recorded.
 
-## Latest owner-feedback update
+## Previous owner-feedback update: source 911a1e5
 
-The same temporary HTTP/2 URL now serves source
-`911a1e5597d5d55cbd1244aec41277de31c4dd3d`, Fresh build ID
+The previous temporary HTTP/2 preview at
+`https://hottest-position-turbo-patients.trycloudflare.com/explorer` served
+source `911a1e5597d5d55cbd1244aec41277de31c4dd3d`, Fresh build ID
 `1eac0c88692d30f5b1b314a73aa38d67299abf46`. Its clean local archive is 429,681
 bytes, SHA-256
 `ac20c5f315d027f472a77886b1e8afa9f4bb7fc8453bc369de7d66d992303967`; all 52
 inventory files were verified after extraction.
 
-File-format checkbox pills support multiple selections and canonical comma URLs.
-PNG + JPEG excludes GIF; All clears the selection. Apply is the sole default
-submit button, with an ordinary All link when JavaScript is unavailable. HTML
-stamps use existing static PNG thumbnails through the same bounded raster
-boundary. No original HTML executes and no production preview generator is
-called. Missing thumbnails retain an honest fallback. All 12 thumbnails on the
-sampled first HTML page decoded in the browser; four preselected thumbnails also
-have independent Pillow decoding and saved hashes in the
-[static preview sample](evidence/html-previews/static-preview-sample.json). This
-does not establish complete HTML coverage.
+At that revision, file-format checkbox pills support multiple selections and
+canonical comma URLs. PNG + JPEG excludes GIF; All clears the selection. Apply
+is the sole default submit button, with an ordinary All link when JavaScript is
+unavailable. HTML stamps use existing static PNG thumbnails through the same
+bounded raster boundary. No original HTML executes and no production preview
+generator is called. Missing thumbnails retain an honest fallback. All 12
+thumbnails on the sampled first HTML page decoded in the browser; four
+preselected thumbnails also have independent Pillow decoding and saved hashes in
+the [static preview sample](evidence/html-previews/static-preview-sample.json).
+This does not establish complete HTML coverage.
 
-Package formatting, lint, types and production build pass, as do repository
-format/lint checks. The latest suite passes 31 package tests plus four checker
-safety/regression tests, 35 targeted tests in total. The
+At that revision, package formatting, lint, types and production build pass, as
+do repository format/lint checks. Its suite passes 31 package tests plus four
+checker safety/regression tests, 35 targeted tests in total. The
 [new-revision capability report](evidence/format-buttons/capabilities.json)
 passes the baseline 35 HTTP cases. Desktop 1440×900 and mobile 390×844 checks
 cover Space selection, Apply via Enter, and detail/Back selection retention.
 HTML list/detail previews work, including stamp 1505513; the mobile PNG + JPEG +
 HTML combination preserves page two and reload. No overflow or active frames
 were observed. See
-[latest browser observations](evidence/format-buttons/browser-observations.json),
+[previous browser observations](evidence/format-buttons/browser-observations.json),
 [desktop PNG + JPEG](evidence/format-buttons/desktop-png-jpeg.jpg),
 [desktop HTML](evidence/format-buttons/desktop-html.jpg),
 [HTML detail](evidence/format-buttons/html-detail.jpg),
@@ -51,7 +85,7 @@ were observed. See
 [mobile combined formats](evidence/format-buttons/mobile-combined.jpg), and
 [desktop combined formats](evidence/format-buttons/desktop-combined.jpg).
 
-## Delivery state
+## Initial proof delivery state
 
 | Item                 | State                                      | Evidence / limit                                                                                                                                                                                                                  |
 | -------------------- | ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -92,13 +126,14 @@ historical local artifact evidence. That artifact served the earlier temporary
 public preview and has been superseded by the revision recorded above.
 Independent hosting, staged rollback and human acceptance remain open.
 
-The new `explorer/` package contains one restricted Fresh manifest and entry
-point, two page types, one typed read adapter, query normalization, bounded
-static raster serving, explicit request allowlists, deterministic fixtures,
-focused tests and packaging/capability scripts. It reuses the pure stamp
-constants leaf and existing logo. It does not inherit the legacy layout, route
-manifest, wallet/signing/broadcast code, administrative handlers or backend
-credentials. No search, address, collection or token page is implemented.
+The initial `explorer/` package contained one restricted Fresh manifest and
+entry point, two page types, one typed read adapter, query normalization,
+bounded static raster serving, explicit request allowlists, deterministic
+fixtures, focused tests and packaging/capability scripts. The 4 November demo
+extension adds the public browsing routes described above. Both retain the pure
+stamp-constants leaf and existing logo without inheriting the legacy layout,
+full route manifest, wallet/signing/broadcast code, administrative handlers or
+backend credentials. Token pages remain unimplemented.
 
 The initial page selects PNG through an explicit redirect, with an explanation
 that All formats includes placeholders. This is a useful static-art proof scope,
@@ -107,7 +142,7 @@ requests `ident=STAMP,SRC-721` because unrestricted source lists include SRC-20
 records whose stamp-detail endpoint returns 404. The source gap and correction
 are preserved in [raw evidence](evidence/live/list-detail-contract-gap.md).
 
-## Checks run
+## Historical proof checks
 
 - Deno 2.6.9; Fresh 1.7.3; Preact 10.27.2; package lockfile enabled and frozen
   for production/check/test commands.
@@ -244,14 +279,14 @@ the active preview. The owner requires a route without a card. No account
 billing details are included here, and no card-dependent setup is an outstanding
 instruction. Linux Docker build/start remains unverified.
 
-The temporary HTTPS preview enables owner review while the local processes run.
-Continue the existing bounded proof when an independently hosted target meeting
-the owner's constraint is established: deploy the exact immutable artifact,
-repeat capability/browser/header/performance checks there, demonstrate rollback
-to a prior staged artifact, and complete owner plus unfamiliar human task
-review. Do not expand routes or declare E04 complete while those conditions are
-unresolved. A local archive/restart is useful evidence but cannot satisfy staged
-rollback.
+Temporary HTTPS previews enable owner review while their local processes run.
+Complete the deployment proof when an independently hosted target meeting the
+owner's constraint is established: deploy the exact immutable artifact, repeat
+capability/browser/header/performance checks there, demonstrate rollback to a
+prior staged artifact, and complete owner plus unfamiliar human task review. The
+owner separately authorized the 4 November fixture-based route extension while
+those conditions remain unresolved. It does not complete E04. A local
+archive/restart is useful evidence but cannot satisfy staged rollback.
 
 The 4–8 engineering-day allowance remains provisional. Evidence timestamps
 describe this implementation session; they do not calibrate agent work into paid

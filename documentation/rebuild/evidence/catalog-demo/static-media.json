@@ -1,0 +1,82 @@
+{
+  "capturedAtUtc": "2026-11-04T13:50:42.697Z",
+  "scope": "Four preselected static original PNGs from captured stamp fixture URLs. serveMedia live validation enforced fixed host/key, 8 second deadline, 2 MiB bound, MIME/signature/PNG structure/CRC and dimensions. No database/API/preview generator was requested. Saved files support completely offline fixture rendering; no substitutions.",
+  "results": [
+    {
+      "stampId": "1384307",
+      "source": "https://stampchain.io/stamps/e94be2793462692ca8fea3a54dd90ff4b18735196a2bc426382c11959533c8ca.png",
+      "asset": "e94be2793462692ca8fea3a54dd90ff4b18735196a2bc426382c11959533c8ca.png",
+      "status": 200,
+      "bytes": 198,
+      "sha256": "716d7f93f79d318d7af69a00a00cf6657533622a14740b127c8a781e4eaae290",
+      "pngWidth": 24,
+      "pngHeight": 24,
+      "fixturePath": "explorer/fixtures/media/e94be2793462692ca8fea3a54dd90ff4b18735196a2bc426382c11959533c8ca.png",
+      "independentDecode": {
+        "library": "Pillow",
+        "format": "PNG",
+        "width": 24,
+        "height": 24,
+        "frames": 1,
+        "pass": true
+      }
+    },
+    {
+      "stampId": "1384306",
+      "source": "https://stampchain.io/stamps/5a6f0c747e5b9b22d6faec98ef1b0934e94a4e2e9384f21456280861a9b931fa.png",
+      "asset": "5a6f0c747e5b9b22d6faec98ef1b0934e94a4e2e9384f21456280861a9b931fa.png",
+      "status": 200,
+      "bytes": 184,
+      "sha256": "b3e94a1b28e9baf7a59366648e91e94ebb3796af69a623f7ded5e87f75723482",
+      "pngWidth": 24,
+      "pngHeight": 24,
+      "fixturePath": "explorer/fixtures/media/5a6f0c747e5b9b22d6faec98ef1b0934e94a4e2e9384f21456280861a9b931fa.png",
+      "independentDecode": {
+        "library": "Pillow",
+        "format": "PNG",
+        "width": 24,
+        "height": 24,
+        "frames": 1,
+        "pass": true
+      }
+    },
+    {
+      "stampId": "1384305",
+      "source": "https://stampchain.io/stamps/d79da3538713568504c73726708a6ddfca5681bc111845dbae17265f455448ed.png",
+      "asset": "d79da3538713568504c73726708a6ddfca5681bc111845dbae17265f455448ed.png",
+      "status": 200,
+      "bytes": 211,
+      "sha256": "b1c48c1187de0794cb725c4cbfac1c641029af7b31ceab1340c7a66f2971c77e",
+      "pngWidth": 24,
+      "pngHeight": 24,
+      "fixturePath": "explorer/fixtures/media/d79da3538713568504c73726708a6ddfca5681bc111845dbae17265f455448ed.png",
+      "independentDecode": {
+        "library": "Pillow",
+        "format": "PNG",
+        "width": 24,
+        "height": 24,
+        "frames": 1,
+        "pass": true
+      }
+    },
+    {
+      "stampId": "1383565",
+      "source": "https://stampchain.io/stamps/516e62beeffb26fb37f8e95e809274e5bbde76eb75a28357f6bbcd4eedbfe8ca.png",
+      "asset": "516e62beeffb26fb37f8e95e809274e5bbde76eb75a28357f6bbcd4eedbfe8ca.png",
+      "status": 200,
+      "bytes": 1393,
+      "sha256": "8f3b23ae80babcad2706f4660c2454c176c9f696dbdfca47da6a6a1b84091976",
+      "pngWidth": 158,
+      "pngHeight": 221,
+      "fixturePath": "explorer/fixtures/media/516e62beeffb26fb37f8e95e809274e5bbde76eb75a28357f6bbcd4eedbfe8ca.png",
+      "independentDecode": {
+        "library": "Pillow",
+        "format": "PNG",
+        "width": 158,
+        "height": 221,
+        "frames": 1,
+        "pass": true
+      }
+    }
+  ]
+}

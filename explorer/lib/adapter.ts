@@ -140,7 +140,7 @@ function mediaUrl(value: unknown, mime: string | null): string | null {
   return match && MIME_EXTENSIONS[mime]?.includes(match[1]) ? value : null;
 }
 
-function normalizeStamp(value: unknown): Stamp {
+export function normalizeStamp(value: unknown): Stamp {
   const row = object(value);
   if (
     typeof row.ident !== "string" || !SUPPORTED_PROTOCOLS.includes(row.ident)

@@ -4,9 +4,13 @@ const sourceRevision = Deno.env.get("EXPLORER_REVISION") ?? "unknown";
 const revision = /^[a-f0-9]{40}$/.test(sourceRevision)
   ? sourceRevision
   : "unknown";
-const dataMode = Deno.env.get("EXPLORER_DATA_MODE") ?? "live";
+const dataMode = Deno.env.get("EXPLORER_DATA_MODE") ?? "fixture";
 
 const routes = [
+  /^\/$/,
+  /^\/(?:search|collections|collection|marketplace|activity|help)\/?$/,
+  /^\/wallet\/[a-zA-Z0-9_.%~-]{1,300}\/?$/,
+  /^\/collection\/[a-zA-Z0-9_-]{1,80}\/?$/,
   /^\/explorer\/?$/,
   /^\/stamp\/[^/]+\/?$/,
   /^\/media\/[a-f0-9]{64}\.(?:png|jpg|jpeg|gif|webp)$/,

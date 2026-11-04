@@ -15,7 +15,7 @@ services:
     healthCheckPath: /robots.txt
     envVars:
       - key: EXPLORER_DATA_MODE
-        value: live
+        value: fixture
       - key: EXPLORER_HOST
         value: 0.0.0.0
       - key: PORT

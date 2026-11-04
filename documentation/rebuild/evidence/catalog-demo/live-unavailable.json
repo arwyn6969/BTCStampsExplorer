@@ -1,0 +1,103 @@
+{
+  "capturedAtUtc": "2026-11-04T13:56:14.296829+00:00",
+  "scope": "Local live-mode failure-state test; app runtime permitted loopback only, no upstream API was contacted",
+  "cases": [
+    {
+      "path": "/search?q=TonyNL",
+      "expectedStatus": 503,
+      "actualStatus": 503,
+      "checks": {
+        "status": true,
+        "mode": true,
+        "noDemoMarketRows": true,
+        "noCookies": true
+      },
+      "pass": true
+    },
+    {
+      "path": "/wallet/bc1qnu8rmy42tw2tkr25d4tw6uppmprxlfd49fvepg",
+      "expectedStatus": 503,
+      "actualStatus": 503,
+      "checks": {
+        "status": true,
+        "mode": true,
+        "noDemoMarketRows": true,
+        "noCookies": true
+      },
+      "pass": true
+    },
+    {
+      "path": "/collections",
+      "expectedStatus": 503,
+      "actualStatus": 503,
+      "checks": {
+        "status": true,
+        "mode": true,
+        "noDemoMarketRows": true,
+        "noCookies": true
+      },
+      "pass": true
+    },
+    {
+      "path": "/collection/archive-sampler",
+      "expectedStatus": 503,
+      "actualStatus": 503,
+      "checks": {
+        "status": true,
+        "mode": true,
+        "noDemoMarketRows": true,
+        "noCookies": true
+      },
+      "pass": true
+    },
+    {
+      "path": "/marketplace",
+      "expectedStatus": 503,
+      "actualStatus": 503,
+      "checks": {
+        "status": true,
+        "mode": true,
+        "noDemoMarketRows": true,
+        "noCookies": true
+      },
+      "pass": true
+    },
+    {
+      "path": "/activity",
+      "expectedStatus": 503,
+      "actualStatus": 503,
+      "checks": {
+        "status": true,
+        "mode": true,
+        "noDemoMarketRows": true,
+        "noCookies": true
+      },
+      "pass": true
+    },
+    {
+      "path": "/wallet/proof-capability-check",
+      "expectedStatus": 404,
+      "actualStatus": 404,
+      "checks": {
+        "status": true,
+        "mode": true,
+        "noDemoMarketRows": true,
+        "noCookies": true
+      },
+      "pass": true
+    },
+    {
+      "path": "/help",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "checks": {
+        "status": true,
+        "mode": true,
+        "noDemoMarketRows": true,
+        "noCookies": true
+      },
+      "pass": true
+    }
+  ],
+  "pass": true
+}

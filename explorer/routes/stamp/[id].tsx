@@ -4,6 +4,8 @@ import { StampArt } from "../../components/StampArt.tsx";
 import { AdapterError, type DetailResult } from "../../lib/adapter.ts";
 import { adapter } from "../../lib/data.ts";
 import { parseQuery, queryString } from "../../lib/query.ts";
+import { contextBack, contextBackLabel } from "../../lib/navigation.ts";
+import { StampMarket } from "../../components/StampMarket.tsx";
 
 interface DetailData {
   result?: DetailResult;
@@ -17,16 +19,17 @@ export const handler: Handlers<DetailData> = {
     const query = parseQuery(
       new URLSearchParams(url.searchParams.get("from") ?? ""),
     );
-    const backHref = `/explorer${queryString(query)}`;
+    const back = contextBack(url.searchParams.get("back"));
+    const backHref = back ?? `/explorer${queryString(query)}`;
     try {
       const result = await adapter.detail(context.params.id);
       if (context.params.id !== result.stamp.id) {
         return new Response(null, {
           status: 302,
           headers: {
-            location: `/stamp/${encodeURIComponent(result.stamp.id)}?from=${
-              encodeURIComponent(queryString(query))
-            }`,
+            location: `/stamp/${encodeURIComponent(result.stamp.id)}?${
+              back ? "back" : "from"
+            }=${encodeURIComponent(back ?? queryString(query))}`,
           },
         });
       }
@@ -74,7 +77,7 @@ export default function StampDetail({ data, url }: PageProps<DetailData>) {
     >
       <div class="page-shell detail-shell">
         <a class="back-link" href={backHref}>
-          <span aria-hidden="true">←</span> Back to explorer
+          <span aria-hidden="true">←</span> {contextBackLabel(backHref)}
         </a>
         {!result || !stamp
           ? (
@@ -127,9 +130,18 @@ export default function StampDetail({ data, url }: PageProps<DetailData>) {
                             <br />
                           </span>
                         )}
-                        <span class="mono">
-                          {stamp.creator ?? "Unavailable"}
-                        </span>
+                        {stamp.creator
+                          ? (
+                            <a
+                              class="mono"
+                              href={`/wallet/${
+                                encodeURIComponent(stamp.creator)
+                              }`}
+                            >
+                              {stamp.creator}
+                            </a>
+                          )
+                          : <span>Unavailable</span>}
                       </dd>
                     </div>
                     <div>
@@ -163,12 +175,9 @@ export default function StampDetail({ data, url }: PageProps<DetailData>) {
                       </dd>
                     </div>
                   </dl>
-                  <p class="detail-scope">
-                    This view shows creation provenance. Listings, sales, and
-                    transfers are not included in this preview.
-                  </p>
                 </section>
               </div>
+              <StampMarket stampId={stamp.id} />
               <aside class="data-note" aria-label="Data source">
                 <span>
                   {result.source === "fixture"

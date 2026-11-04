@@ -1,8 +1,9 @@
-# Isolated explorer proof
+# Isolated explorer preview
 
-Two server-rendered page types: `/explorer` and `/stamp/:id`. This is a bounded
-art-stamp browsing proof, not a first-release route commitment. Token browsing
-remains a later release decision.
+A read-only Bitcoin Stamps explorer with a complete demo browsing journey. The
+owner authorized extending the original two-page proof with search, public
+profiles, collections, listings and activity using dummy data. Live-release
+acceptance and token browsing remain separate decisions.
 
 Use **Deno 2.6.9**, Fresh 1.7.3 and the package's committed lockfile. Run
 commands from this directory, not the legacy application root:
@@ -14,29 +15,60 @@ deno task build
 deno task start
 ```
 
-Open `http://127.0.0.1:8007/explorer`. The initial URL explicitly selects PNG;
-format buttons allow combinations such as PNG + JPEG, with HTML as another
-option. All clears the selection; Apply filters submits the selected formats as
-one upstream OR filter before pagination. Type, formats, global transaction
-order and page are URL-owned. Detail links carry a whitelisted return query.
-Browser Back/Forward and the explicit return link retain it. Invalid query
-values normalize to documented defaults; the forward link cannot wrap at the
-supported page limit.
+Open `http://127.0.0.1:8007/explorer`. The default start task uses **fixed demo
+fixtures**, with outbound network permission denied. It needs no database,
+credentials or API access after dependencies are cached by the build.
 
-`EXPLORER_DATA_MODE=fixture deno task start` uses the sixteen captured source
-records, eight verified original PNGs and four verified HTML-preview PNGs.
-Fixture images not present in the sample show a placeholder. No credentials or
-network requests are needed for fixture data/media; the Deno module cache must
-already be populated by the build.
+The preview includes:
 
-The production start task denies filesystem writes, subprocesses and system
-access. Runtime network access is limited to the local listener and
-`stampchain.io:443`. Environment reads are explicit framework/config names. It
-does not read a `.env` file. Data defaults to live public reads. Every JSON
-response has a 2 MiB bound and a 10-second deadline; integer quantity lexemes
-retain their precision. Source freshness stays unknown, with retrieval time and
-reported indexed block shown separately. Source errors remain distinct from
-empty data or a valid zero.
+- `/explorer` and `/stamp/:id`: multi-format buttons, global sort/paging,
+  creation provenance, existing static HTML thumbnails and related demo records.
+- `/search`: exact stamp number, CPID or creation transaction, plus public
+  username/address and collection discovery within the fixed sample.
+- `/wallet/:address`: public creator/address profiles, created/held views and
+  exact example holding quantities. Known username aliases redirect to
+  addresses.
+- `/collections` and `/collection/:id`: filtered collection index, memberships,
+  creator links and paged stamp grids. `/collection` redirects to the index.
+- `/marketplace`: paged example listings with status, per-unit BTC prices,
+  quantity, seller and timestamp.
+- `/activity`: separate sale and transfer records, participants and quantities;
+  unknown sale prices remain unavailable, while transfer prices are
+  inapplicable.
+- `/help`: visible preview scope and remaining live-release work.
+
+There are sixteen captured stamp records and sixteen locally stored static
+images (twelve originals and four HTML-preview PNGs). Usernames on captured
+records are source display labels. Biographies, holdings, collection membership,
+listings and activity are synthetic review examples. Their exact provenance is
+recorded in `fixtures/catalog.json`; sample market transaction hashes are shown
+as text, never linked to real chain records. This is not a current ownership or
+market availability service. Empty, unknown and zero remain distinct.
+
+GET forms and native links own URL state. Format buttons allow combinations such
+as PNG + JPEG while excluding GIF. Detail Back links preserve explorer filters
+or a validated local search/profile/collection context. Profiles and collections
+have useful missing/empty states. No client-side search requests or
+stale-response race are introduced.
+
+The original app's local `DATA_PLACEHOLDER_DEV` switch was set to `true` at the
+owner's request in the original checkout, outside this proof branch's commit.
+The isolated preview does not import that legacy module or the rich legacy
+fixture runtime; it uses `EXPLORER_DATA_MODE=fixture`, which is now the default.
+The pure catalog shares the adapter's stamp normalization and has no IO.
+
+`deno task start:live` explicitly permits the original public stamp adapter to
+read `stampchain.io:443`. Search, profiles, collections and market pages return
+503 unavailable views in live mode until their real read contracts are connected
+and checked; synthetic data is never silently mixed into a live view. The Docker
+review image also defaults to fixture mode and permits only its listener.
+
+Runtime filesystem writes, subprocesses and system access are denied.
+Environment reads are explicit framework/config names; no `.env` is read. In
+explicit live stamp mode, JSON responses have a 2 MiB bound and ten-second
+deadline. Integer quantity lexemes retain their precision. Source freshness
+stays unknown, with retrieval time and indexed block displayed separately.
+Source errors remain distinct from empty data or a valid zero.
 
 The adapter requests `ident=STAMP,SRC-721`: unrestricted source lists include
 SRC-20 records that the stamp-detail endpoint rejects. It does not filter a live
@@ -54,12 +86,14 @@ tests; only PNG has sampled live decoding evidence. Full decoding is left to the
 browser. Missing/unsupported artwork has a text placeholder. No untrusted
 content or arbitrary URL can be served from the explorer origin.
 
-Only the two pages, bounded media, local static assets and Fresh assets are
-allowed; mutation methods and legacy routes fail before dispatch. The restricted
-manifest has no islands. The only reused legacy runtime module is the pure stamp
-constants leaf; the logo is copied from the existing branding. All pages carry
-noindex and restrictive security headers. Local DOM performance observations
-stay in attributes; they are never transmitted or persisted by the app.
+Only the sixteen manifest routes (including error/layout/middleware entries),
+bounded media, local static assets and Fresh assets are allowed. Mutation
+methods and transaction/admin/generator routes fail before dispatch. The
+restricted manifest has no islands. The only reused legacy runtime module is the
+pure stamp constants leaf; the logo is copied from the existing branding. All
+pages carry noindex and restrictive security headers. Local DOM performance
+observations stay in attributes; they are never transmitted or persisted by the
+app.
 
 ## Capability checks and packaging
 
@@ -93,14 +127,14 @@ requires an exact HTTPS `onrender.com` origin and the deployed full revision; it
 rejects the production hostname before dispatching requests:
 
 ```sh
-deno run --frozen --allow-read=./fresh.gen.ts --allow-net=NAME.onrender.com:443 scripts/check-hosted-capabilities.ts https://NAME.onrender.com COMMIT_SHA
+deno run --frozen --allow-read=./fresh.gen.ts --allow-net=NAME.onrender.com:443 scripts/check-hosted-capabilities.ts https://NAME.onrender.com COMMIT_SHA fixture
 ```
 
-Its 32 route/method cases, three media cases, source identity, response-size
-limits, security headers and live source checks are remote evidence. The local
-manifest inventory and injected parser cases are explicitly labelled as local.
-Warm the service separately before running the 15-second request deadline; this
-checker does not measure Render's idle wake-up.
+Route/method cases, media validation, source identity, response-size limits,
+security headers and the explicitly selected data mode are remote evidence. The
+local manifest inventory and injected parser cases are explicitly labelled as
+local. Warm the service separately before running the 15-second request
+deadline; this checker does not measure Render's idle wake-up.
 
 For a temporary, no-account review link, Cloudflare Quick Tunnels can forward
 the local restricted Deno server without changing the application runtime. Start

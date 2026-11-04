@@ -1,3 +1,13 @@
+for (const link of document.querySelectorAll(".site-header nav a")) {
+  const path = new URL(link.href).pathname;
+  if (
+    location.pathname === path ||
+    (path === "/collections" && location.pathname.startsWith("/collection/"))
+  ) {
+    link.setAttribute("aria-current", "page");
+  }
+}
+
 // Filters, paging and detail state use ordinary server navigation.
 for (const form of document.querySelectorAll("form.filter-bar")) {
   const allFormats = form.querySelector("[data-format-all]");

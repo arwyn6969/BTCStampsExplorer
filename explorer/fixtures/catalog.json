@@ -1,0 +1,517 @@
+{
+  "source": "fixture",
+  "description": "Captured stamp identity and artwork records from explorer/fixtures/stamps.json are reused unchanged. Public usernames on those records are captured source labels. Biographies, collector stamper.btc, holdings, collection memberships, listings, prices, sale/transfer events and their transaction hashes are synthetic review examples, adapted to the existing lib/utils/dataPlaceholderDev.ts wallet/dispenser/recent-sales shapes. These examples are not live balances or market records.",
+  "profiles": [
+    {
+      "address": "1PJ8FYDnNrtA4R3GrSesjbcbnz7iHYdKCH",
+      "username": null,
+      "bio": "Demo profile showing PNG and HTML creations.",
+      "holdings": [
+        {
+          "stampId": "1505513",
+          "quantity": "3"
+        }
+      ]
+    },
+    {
+      "address": "bc1qnu8rmy42tw2tkr25d4tw6uppmprxlfd49fvepg",
+      "username": "TonyNL",
+      "bio": "A sample public creator view. The username comes from the captured artwork record; this biography and holdings are examples.",
+      "holdings": [
+        {
+          "stampId": "1467163",
+          "quantity": "2"
+        },
+        {
+          "stampId": "1462443",
+          "quantity": "1"
+        }
+      ]
+    },
+    {
+      "address": "16ty9iygA4N1uw8Tu7ssGV5SeHscAAXjXP",
+      "username": "Arwyn",
+      "bio": "A sample public address view. No wallet connection is required.",
+      "holdings": null
+    },
+    {
+      "address": "1GotRejB6XsGgMsM79TvcypeanDJRJbMtg",
+      "username": "Mike in Space",
+      "bio": null,
+      "holdings": null
+    },
+    {
+      "address": "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh",
+      "username": "stamper.btc",
+      "bio": "Synthetic collector profile adapted from the existing development placeholder shapes. This username is an example, not an ownership claim.",
+      "holdings": [
+        {
+          "stampId": "1507273",
+          "quantity": "1"
+        },
+        {
+          "stampId": "1467205",
+          "quantity": "3"
+        },
+        {
+          "stampId": "1467163",
+          "quantity": "2"
+        },
+        {
+          "stampId": "1457949",
+          "quantity": "1"
+        },
+        {
+          "stampId": "0",
+          "quantity": "1"
+        },
+        {
+          "stampId": "1",
+          "quantity": "1"
+        },
+        {
+          "stampId": "2",
+          "quantity": "1"
+        },
+        {
+          "stampId": "3",
+          "quantity": "1"
+        },
+        {
+          "stampId": "1505513",
+          "quantity": "4"
+        },
+        {
+          "stampId": "1472320",
+          "quantity": "2"
+        },
+        {
+          "stampId": "1465071",
+          "quantity": "1"
+        },
+        {
+          "stampId": "1462443",
+          "quantity": "2"
+        },
+        {
+          "stampId": "1384307",
+          "quantity": "1"
+        },
+        {
+          "stampId": "1384306",
+          "quantity": "1"
+        }
+      ]
+    },
+    {
+      "address": "17hhaQLGEBNMBxruLYEA2aeW473n8YNEZ5",
+      "username": null,
+      "bio": null,
+      "holdings": []
+    },
+    {
+      "address": "bc1q20d2cdvy2x83h3ssrz5lgryy4c9wqxsgc749ej",
+      "username": "mikeinspace.btc",
+      "bio": null,
+      "holdings": null
+    },
+    {
+      "address": "bc1qkqqre5xuqk60xtt93j297zgg7t6x0ul7gwjmv4",
+      "username": null,
+      "bio": null,
+      "holdings": null
+    },
+    {
+      "address": "bc1q7mlw0y0qe9dadg24q2225ded0myuxkw2wm8pzj",
+      "username": "Bbleiztz",
+      "bio": null,
+      "holdings": null
+    }
+  ],
+  "collections": [
+    {
+      "id": "pixel-origins",
+      "name": "Pixel Origins",
+      "description": "Demo collection grouping four early Bitcoin Stamps. This is sample curation, not a verified on-chain collection.",
+      "creatorAddresses": [
+        "1GotRejB6XsGgMsM79TvcypeanDJRJbMtg",
+        "16ty9iygA4N1uw8Tu7ssGV5SeHscAAXjXP"
+      ],
+      "stampIds": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "id": "html-playground",
+      "name": "HTML Playground",
+      "description": "Demo collection of HTML artwork, shown through existing static PNG previews.",
+      "creatorAddresses": [
+        "1PJ8FYDnNrtA4R3GrSesjbcbnz7iHYdKCH",
+        "bc1q20d2cdvy2x83h3ssrz5lgryy4c9wqxsgc749ej"
+      ],
+      "stampIds": [
+        "1505513",
+        "1472320",
+        "1465071",
+        "1462443"
+      ]
+    },
+    {
+      "id": "archive-sampler",
+      "name": "Archive Sampler",
+      "description": "A synthetic collection containing the sixteen captured records, to exercise paging and mixed artwork formats.",
+      "creatorAddresses": [
+        "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh"
+      ],
+      "stampIds": [
+        "1507273",
+        "1467205",
+        "1467163",
+        "1457949",
+        "0",
+        "1",
+        "2",
+        "3",
+        "1505513",
+        "1472320",
+        "1465071",
+        "1462443",
+        "1384307",
+        "1384306",
+        "1384305",
+        "1383565"
+      ]
+    },
+    {
+      "id": "empty-example",
+      "name": "Empty Collection",
+      "description": "An intentional empty demo collection for the collection empty state.",
+      "creatorAddresses": [
+        "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh"
+      ],
+      "stampIds": []
+    }
+  ],
+  "listings": [
+    {
+      "id": "demo-listing-01",
+      "stampId": "1505513",
+      "seller": "1PJ8FYDnNrtA4R3GrSesjbcbnz7iHYdKCH",
+      "priceSats": "2100",
+      "available": "3",
+      "status": "open",
+      "timestamp": "2026-11-03T22:00:00Z",
+      "txHash": "84c931ee7898e94154ce7759f98dffc9a34641e19a94e3392ce8036489828d1f"
+    },
+    {
+      "id": "demo-listing-02",
+      "stampId": "1467163",
+      "seller": "bc1qnu8rmy42tw2tkr25d4tw6uppmprxlfd49fvepg",
+      "priceSats": "690000",
+      "available": "2",
+      "status": "open",
+      "timestamp": "2026-11-03T21:00:00Z",
+      "txHash": "c530d2b60e082304ef146b1e0f05e4427b93ade69410e5970c8eca223db98ca7"
+    },
+    {
+      "id": "demo-listing-03",
+      "stampId": "1467205",
+      "seller": "17hhaQLGEBNMBxruLYEA2aeW473n8YNEZ5",
+      "priceSats": "42000",
+      "available": "5",
+      "status": "open",
+      "timestamp": "2026-11-03T20:00:00Z",
+      "txHash": "9d2c2e94217c73bd2c2746dad089c51cd285f9d716d730f071eccc4b244754dd"
+    },
+    {
+      "id": "demo-listing-04",
+      "stampId": "2",
+      "seller": "16ty9iygA4N1uw8Tu7ssGV5SeHscAAXjXP",
+      "priceSats": "12500000",
+      "available": "1",
+      "status": "open",
+      "timestamp": "2026-11-03T19:00:00Z",
+      "txHash": "1aa784bf0cab8aa3d82f490e0e7beeb5373f9b2396a4a0ff0a4f45265c71cfe4"
+    },
+    {
+      "id": "demo-listing-05",
+      "stampId": "1472320",
+      "seller": "1PJ8FYDnNrtA4R3GrSesjbcbnz7iHYdKCH",
+      "priceSats": "2100",
+      "available": "1",
+      "status": "open",
+      "timestamp": "2026-11-03T18:00:00Z",
+      "txHash": "a82eb7df76264f898b5075a1c95f23465ffe55b326828b31c2d2fc4776db1e00"
+    },
+    {
+      "id": "demo-listing-06",
+      "stampId": "1462443",
+      "seller": "bc1q20d2cdvy2x83h3ssrz5lgryy4c9wqxsgc749ej",
+      "priceSats": "10000",
+      "available": "2",
+      "status": "open",
+      "timestamp": "2026-11-03T17:00:00Z",
+      "txHash": "8c48f83784169ca96bb358d43a48045fd3c9fe362c137449c969184abd6df6d3"
+    },
+    {
+      "id": "demo-listing-07",
+      "stampId": "1383565",
+      "seller": "bc1q7mlw0y0qe9dadg24q2225ded0myuxkw2wm8pzj",
+      "priceSats": "21000",
+      "available": "7",
+      "status": "open",
+      "timestamp": "2026-11-03T16:00:00Z",
+      "txHash": "09e453f65f4708c403197572771cf92266ee41b3129af8d8d92c64ac3ff6ce51"
+    },
+    {
+      "id": "demo-listing-08",
+      "stampId": "1507273",
+      "seller": "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh",
+      "priceSats": "15000",
+      "available": "1",
+      "status": "open",
+      "timestamp": "2026-11-03T15:00:00Z",
+      "txHash": "5de8ba6b9a5489e63f2e1005e8930bece0bb661846e2ca0b588c516a37b44b17"
+    },
+    {
+      "id": "demo-listing-09",
+      "stampId": "0",
+      "seller": "1GotRejB6XsGgMsM79TvcypeanDJRJbMtg",
+      "priceSats": "210000000",
+      "available": "0",
+      "status": "closed",
+      "timestamp": "2026-11-03T14:00:00Z",
+      "txHash": "57420f873670b3b4601e8f4fe68bdad12ce10929b289d4770386bad301bff343"
+    },
+    {
+      "id": "demo-listing-10",
+      "stampId": "3",
+      "seller": "16ty9iygA4N1uw8Tu7ssGV5SeHscAAXjXP",
+      "priceSats": "900000",
+      "available": "0",
+      "status": "closed",
+      "timestamp": "2026-11-02T13:00:00Z",
+      "txHash": "a63d06fd69c48d997806557926eec939d0624ab2d57540ef8410ebb6cb65e85b"
+    },
+    {
+      "id": "demo-listing-11",
+      "stampId": "1465071",
+      "seller": "1PJ8FYDnNrtA4R3GrSesjbcbnz7iHYdKCH",
+      "priceSats": "2100",
+      "available": "0",
+      "status": "closed",
+      "timestamp": "2026-11-02T12:00:00Z",
+      "txHash": "7a301a3cbc58ed3a09bf1900e00b031c7dfbcf3f368b3c0accd6ffe68c578bc1"
+    },
+    {
+      "id": "demo-listing-12",
+      "stampId": "1457949",
+      "seller": "bc1qnu8rmy42tw2tkr25d4tw6uppmprxlfd49fvepg",
+      "priceSats": "500000",
+      "available": "0",
+      "status": "closed",
+      "timestamp": "2026-11-02T11:00:00Z",
+      "txHash": "9042494d98b71c1aa0c5b0edc94947fcdc42ab83d4e2c70f14784eb74d23250a"
+    },
+    {
+      "id": "demo-listing-13",
+      "stampId": "1384307",
+      "seller": "bc1qkqqre5xuqk60xtt93j297zgg7t6x0ul7gwjmv4",
+      "priceSats": "33000",
+      "available": "1",
+      "status": "open",
+      "timestamp": "2026-11-02T10:00:00Z",
+      "txHash": "9321e03ca1582c592160a21abbc439e03bd7e1b0702c700d4520dd8ed7b47452"
+    },
+    {
+      "id": "demo-listing-14",
+      "stampId": "1384306",
+      "seller": "bc1qkqqre5xuqk60xtt93j297zgg7t6x0ul7gwjmv4",
+      "priceSats": "33000",
+      "available": "1",
+      "status": "open",
+      "timestamp": "2026-11-02T09:00:00Z",
+      "txHash": "f207e7a260d9406b550c4198a46212b3adca046a8b865012c32c7f60cefc380d"
+    },
+    {
+      "id": "demo-listing-15",
+      "stampId": "1384305",
+      "seller": "bc1qkqqre5xuqk60xtt93j297zgg7t6x0ul7gwjmv4",
+      "priceSats": "33000",
+      "available": "1",
+      "status": "open",
+      "timestamp": "2026-11-02T08:00:00Z",
+      "txHash": "fa808100624ad47117a4fec53da79fe1aae8be25abd44b3717af75e470a81ec9"
+    }
+  ],
+  "activity": [
+    {
+      "id": "demo-sale-01",
+      "kind": "sale",
+      "stampId": "1505513",
+      "from": "1PJ8FYDnNrtA4R3GrSesjbcbnz7iHYdKCH",
+      "to": "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh",
+      "quantity": "2",
+      "priceSats": "2100",
+      "timestamp": "2026-11-03T22:30:00Z",
+      "txHash": "7e574a888d818aef00f40946a99b3e1ba047b02d0e369215adcf33d250bc3bd3"
+    },
+    {
+      "id": "demo-transfer-02",
+      "kind": "transfer",
+      "stampId": "1467163",
+      "from": "bc1qnu8rmy42tw2tkr25d4tw6uppmprxlfd49fvepg",
+      "to": "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh",
+      "quantity": "1",
+      "priceSats": null,
+      "timestamp": "2026-11-03T21:30:00Z",
+      "txHash": "c3a1519e807d5935240faf0b2e47fa6fb0ddee5315af951020123515e0542c46"
+    },
+    {
+      "id": "demo-sale-03",
+      "kind": "sale",
+      "stampId": "1467205",
+      "from": "17hhaQLGEBNMBxruLYEA2aeW473n8YNEZ5",
+      "to": "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh",
+      "quantity": "3",
+      "priceSats": "42000",
+      "timestamp": "2026-11-03T20:30:00Z",
+      "txHash": "3b2c5e83a12872f559dd7ce89556478fc716c6b4f19b403adf6af760ea57c59f"
+    },
+    {
+      "id": "demo-transfer-04",
+      "kind": "transfer",
+      "stampId": "2",
+      "from": "16ty9iygA4N1uw8Tu7ssGV5SeHscAAXjXP",
+      "to": "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh",
+      "quantity": "1",
+      "priceSats": null,
+      "timestamp": "2026-11-03T19:30:00Z",
+      "txHash": "854fcbc0f2fbf5e6fb412676689fcdde2505cb08feff64d3dcf540d79f3ef078"
+    },
+    {
+      "id": "demo-sale-05",
+      "kind": "sale",
+      "stampId": "1462443",
+      "from": "bc1q20d2cdvy2x83h3ssrz5lgryy4c9wqxsgc749ej",
+      "to": "bc1qnu8rmy42tw2tkr25d4tw6uppmprxlfd49fvepg",
+      "quantity": "1",
+      "priceSats": null,
+      "timestamp": "2026-11-03T18:30:00Z",
+      "txHash": "e1648128b856befe417d86e5e718bfff829675f96ec8f34bc3fd621d15f6fa9e"
+    },
+    {
+      "id": "demo-transfer-06",
+      "kind": "transfer",
+      "stampId": "0",
+      "from": "1GotRejB6XsGgMsM79TvcypeanDJRJbMtg",
+      "to": "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh",
+      "quantity": "1",
+      "priceSats": null,
+      "timestamp": "2026-11-03T17:30:00Z",
+      "txHash": "9134aa672b594246d7a9c2a13d6ee9b2428901e4d52580171de1c14f8fe2a30a"
+    },
+    {
+      "id": "demo-sale-07",
+      "kind": "sale",
+      "stampId": "1472320",
+      "from": "1PJ8FYDnNrtA4R3GrSesjbcbnz7iHYdKCH",
+      "to": "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh",
+      "quantity": "2",
+      "priceSats": "2100",
+      "timestamp": "2026-11-03T16:30:00Z",
+      "txHash": "679f102cbdf656ff7ca0903655c746bbc2a7c9661d3793327d3de4c5c48459e6"
+    },
+    {
+      "id": "demo-transfer-08",
+      "kind": "transfer",
+      "stampId": "3",
+      "from": "16ty9iygA4N1uw8Tu7ssGV5SeHscAAXjXP",
+      "to": "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh",
+      "quantity": "1",
+      "priceSats": null,
+      "timestamp": "2026-11-03T15:30:00Z",
+      "txHash": "fe5566fc0e858df8736b79bd6bcfdc216383a9297a3ee47e3028bffb564775a8"
+    },
+    {
+      "id": "demo-sale-09",
+      "kind": "sale",
+      "stampId": "1465071",
+      "from": "1PJ8FYDnNrtA4R3GrSesjbcbnz7iHYdKCH",
+      "to": "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh",
+      "quantity": "1",
+      "priceSats": "2100",
+      "timestamp": "2026-11-03T14:30:00Z",
+      "txHash": "bf503e308ae37f29fcefd93ce45ea53e2d712218c9a42863056049d1a8f6803a"
+    },
+    {
+      "id": "demo-transfer-10",
+      "kind": "transfer",
+      "stampId": "1384307",
+      "from": "bc1qkqqre5xuqk60xtt93j297zgg7t6x0ul7gwjmv4",
+      "to": "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh",
+      "quantity": "1",
+      "priceSats": null,
+      "timestamp": "2026-11-02T13:30:00Z",
+      "txHash": "4b752fac216fb5e38bb28084fb6a6c38365a3da3e89da8c5ca1c552a19e6da8a"
+    },
+    {
+      "id": "demo-sale-11",
+      "kind": "sale",
+      "stampId": "1383565",
+      "from": "bc1q7mlw0y0qe9dadg24q2225ded0myuxkw2wm8pzj",
+      "to": "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh",
+      "quantity": "2",
+      "priceSats": "21000",
+      "timestamp": "2026-11-02T12:30:00Z",
+      "txHash": "db27355339ba56d236678218cc4506a7eb35923801ff7a4d7f1161794d987fa1"
+    },
+    {
+      "id": "demo-transfer-12",
+      "kind": "transfer",
+      "stampId": "1384306",
+      "from": "bc1qkqqre5xuqk60xtt93j297zgg7t6x0ul7gwjmv4",
+      "to": "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh",
+      "quantity": "1",
+      "priceSats": null,
+      "timestamp": "2026-11-02T11:30:00Z",
+      "txHash": "28a6c97cdf8c5d42092887d382df6c211a2f727c0150745c61a491c47204c91e"
+    },
+    {
+      "id": "demo-sale-13",
+      "kind": "sale",
+      "stampId": "1457949",
+      "from": "bc1qnu8rmy42tw2tkr25d4tw6uppmprxlfd49fvepg",
+      "to": "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh",
+      "quantity": "1",
+      "priceSats": "500000",
+      "timestamp": "2026-11-02T10:30:00Z",
+      "txHash": "31e7577122897c41c2371dc74f3e84e52c88027cfbbf17bb5e16878822b6626f"
+    },
+    {
+      "id": "demo-transfer-14",
+      "kind": "transfer",
+      "stampId": "1",
+      "from": "1GotRejB6XsGgMsM79TvcypeanDJRJbMtg",
+      "to": "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh",
+      "quantity": "1",
+      "priceSats": null,
+      "timestamp": "2026-11-02T09:30:00Z",
+      "txHash": "eae855e93e57073cf5057c8d5eaa1e9fa1b465a7e89299d341da88f02e8b9110"
+    },
+    {
+      "id": "demo-sale-15",
+      "kind": "sale",
+      "stampId": "1507273",
+      "from": "1PJ8FYDnNrtA4R3GrSesjbcbnz7iHYdKCH",
+      "to": "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh",
+      "quantity": "1",
+      "priceSats": "15000",
+      "timestamp": "2026-11-02T08:30:00Z",
+      "txHash": "d387c0a14ccb4bf15252757d69ded7f5e7be57fc0eca955e6bc72d2d3666d373"
+    }
+  ]
+}

@@ -8,6 +8,15 @@ const EXPECTED_ROUTES = [
   "./routes/_app.tsx",
   "./routes/_middleware.ts",
   "./routes/explorer.tsx",
+  "./routes/index.ts",
+  "./routes/search.tsx",
+  "./routes/collections.tsx",
+  "./routes/collection/index.ts",
+  "./routes/collection/[id].tsx",
+  "./routes/wallet/[address].tsx",
+  "./routes/marketplace.tsx",
+  "./routes/activity.tsx",
+  "./routes/help.tsx",
   "./routes/media/[asset].ts",
   "./routes/stamp/[id].tsx",
 ].sort();
@@ -17,12 +26,15 @@ const MAX_RUN_MS = 120_000;
 const DEFAULT_VIEW = "/explorer?type=all&format=png&sort=newest&page=1";
 
 export function parseHostedArguments(args: string[]) {
-  if (args.length !== 2) {
+  if (args.length !== 2 && args.length !== 3) {
     throw new Error(
-      "Usage: check-hosted-capabilities.ts https://NAME.onrender.com|https://NAME.trycloudflare.com FULL_COMMIT_SHA",
+      "Usage: check-hosted-capabilities.ts https://NAME.onrender.com|https://NAME.trycloudflare.com FULL_COMMIT_SHA [live|fixture]",
     );
   }
-  const [target, revision] = args;
+  const [target, revision, dataMode = "live"] = args;
+  if (dataMode !== "live" && dataMode !== "fixture") {
+    throw new Error("Expected data mode must be live or fixture");
+  }
   let url: URL;
   try {
     url = new URL(target);
@@ -49,7 +61,12 @@ export function parseHostedArguments(args: string[]) {
   const targetKind = url.hostname.endsWith(".trycloudflare.com")
     ? "quick-tunnel" as const
     : "render" as const;
-  return { target, revision, targetKind };
+  return {
+    target,
+    revision,
+    targetKind,
+    dataMode: dataMode as "live" | "fixture",
+  };
 }
 
 function securityHeaders(response: Response): Record<string, boolean> {
@@ -139,7 +156,7 @@ interface Report {
   target: string | null;
   targetKind: "render" | "quick-tunnel" | null;
   expectedRevision: string | null;
-  expectedSource: "live";
+  expectedSource: "live" | "fixture";
   limits: Record<string, number>;
   sourceManifest?: unknown;
   cases: Record<string, unknown>[];
@@ -166,7 +183,10 @@ async function run(args: string[]): Promise<Report> {
     pass: true,
   };
   try {
-    const { target, revision, targetKind } = parseHostedArguments(args);
+    const { target, revision, targetKind, dataMode } = parseHostedArguments(
+      args,
+    );
+    report.expectedSource = dataMode;
     report.target = target;
     report.targetKind = targetKind;
     report.scope = targetKind === "quick-tunnel"
@@ -229,7 +249,7 @@ async function run(args: string[]): Promise<Report> {
       const checks = {
         status: response.status === expected,
         revision: actualRevision === revision,
-        source: actualSource === "live",
+        source: actualSource === dataMode,
         ...securityHeaders(response),
         ...(inspectHtml
           ? {
@@ -317,11 +337,32 @@ async function run(args: string[]): Promise<Report> {
       await request(path, "GET", 404);
       await request(path, "POST", 405);
     }
+    await request("/", "GET", 302, false, "/explorer");
+    await request("/collection", "GET", 302, false, "/collections");
+    await request("/help", "GET", 200, true);
+    for (
+      const path of [
+        "/search",
+        "/search?q=TonyNL",
+        "/search?q=1505513",
+        "/collections",
+        "/marketplace?status=open&page=1",
+        "/activity?kind=transfer&page=1",
+      ]
+    ) {
+      await request(path, "GET", dataMode === "fixture" ? 200 : 503, true);
+      await request(path, "POST", 405);
+    }
+    if (dataMode === "fixture") {
+      await request("/search?q=" + "a".repeat(101), "GET", 400, true);
+      await request("/collection/missing-sample", "GET", 404, true);
+      await request("/wallet/not-a-real-profile", "GET", 404, true);
+    }
     await request("/explorer", "POST", 405);
 
     if (!asset) {
       throw new Error(
-        "No bounded static raster is advertised by the live explorer",
+        "No bounded static raster is advertised by the explorer",
       );
     }
     const media = await request(`/media/${asset}`, "GET", 200);
@@ -471,6 +512,9 @@ if (import.meta.main) {
     if (parseHostedArguments([good, sha]).target !== good) {
       throw new Error("Valid origin rejected");
     }
+    if (parseHostedArguments([good, sha, "fixture"]).dataMode !== "fixture") {
+      throw new Error("Fixture mode mislabelled");
+    }
     const tunnel = "https://one-two-three.trycloudflare.com";
     if (parseHostedArguments([tunnel, sha]).targetKind !== "quick-tunnel") {
       throw new Error("Valid tunnel origin rejected or mislabelled");
@@ -526,7 +570,7 @@ if (import.meta.main) {
       if (!rejected) throw new Error(`Unsafe target accepted: ${target}`);
     }
   });
-  Deno.test("hosted checker requires exactly two arguments and a full revision", () => {
+  Deno.test("hosted checker requires an explicit target, full revision and valid optional mode", () => {
     const target = "https://proof.onrender.com";
     for (
       const args of [

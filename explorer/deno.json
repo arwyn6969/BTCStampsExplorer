@@ -3,9 +3,11 @@
   "nodeModulesDir": "auto",
   "tasks": {
     "build": "deno run --frozen -A build.ts build",
-    "start": "deno run --cached-only --frozen --no-prompt --allow-read=./_fresh,./static,./fixtures,./deno.json,./deno.lock --allow-env=DENO_DEPLOYMENT_ID,ESBUILD_BINARY_PATH,EXPLORER_DATA_MODE,EXPLORER_HOST,EXPLORER_REVISION,FRESH_ESBUILD_LOADER,GITHUB_SHA,HOME,JSR_URL,LOCALAPPDATA,NPM_CONFIG_REGISTRY,PORT,USERPROFILE,XDG_CACHE_HOME,__FRSH_LEGACY_DEV --allow-net=127.0.0.1:8007,stampchain.io:443 main.ts",
+    "start": "deno task start:fixture",
     "check": "deno fmt --check && deno lint && deno check --frozen main.ts",
-    "test": "deno test --frozen --allow-read=./fixtures tests/"
+    "test": "deno test --frozen --allow-read=./fixtures tests/",
+    "start:live": "deno run --cached-only --frozen --no-prompt --allow-read=./_fresh,./static,./fixtures,./deno.json,./deno.lock --allow-env=DENO_DEPLOYMENT_ID,ESBUILD_BINARY_PATH,EXPLORER_DATA_MODE,EXPLORER_HOST,EXPLORER_REVISION,FRESH_ESBUILD_LOADER,GITHUB_SHA,HOME,JSR_URL,LOCALAPPDATA,NPM_CONFIG_REGISTRY,PORT,USERPROFILE,XDG_CACHE_HOME,__FRSH_LEGACY_DEV --allow-net=127.0.0.1:8007,stampchain.io:443 main.ts",
+    "start:fixture": "EXPLORER_DATA_MODE=fixture deno run --cached-only --frozen --no-prompt --allow-read=./_fresh,./static,./fixtures,./deno.json,./deno.lock --allow-env=DENO_DEPLOYMENT_ID,ESBUILD_BINARY_PATH,EXPLORER_DATA_MODE,EXPLORER_HOST,EXPLORER_REVISION,FRESH_ESBUILD_LOADER,GITHUB_SHA,HOME,JSR_URL,LOCALAPPDATA,NPM_CONFIG_REGISTRY,PORT,USERPROFILE,XDG_CACHE_HOME,__FRSH_LEGACY_DEV --allow-net=127.0.0.1:8007 main.ts"
   },
   "imports": {
     "$fresh/": "https://deno.land/x/fresh@1.7.3/",

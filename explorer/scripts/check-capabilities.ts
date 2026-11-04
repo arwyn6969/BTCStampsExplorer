@@ -6,6 +6,15 @@ const expectedRoutes = [
   "./routes/_app.tsx",
   "./routes/_middleware.ts",
   "./routes/explorer.tsx",
+  "./routes/index.ts",
+  "./routes/search.tsx",
+  "./routes/collections.tsx",
+  "./routes/collection/index.ts",
+  "./routes/collection/[id].tsx",
+  "./routes/wallet/[address].tsx",
+  "./routes/marketplace.tsx",
+  "./routes/activity.tsx",
+  "./routes/help.tsx",
   "./routes/media/[asset].ts",
   "./routes/stamp/[id].tsx",
 ].sort();
@@ -163,6 +172,25 @@ try {
     await request(path, "GET", 404);
     await request(path, "POST", 405);
   }
+  await request("/", "GET", 302, false, "/explorer");
+  await request("/collection", "GET", 302, false, "/collections");
+  for (
+    const path of [
+      "/search",
+      "/search?q=TonyNL",
+      "/search?q=1505513",
+      "/collections",
+      "/marketplace?status=open&page=1",
+      "/activity?kind=transfer&page=1",
+      "/help",
+    ]
+  ) {
+    await request(path, "GET", 200, true);
+    await request(path, "POST", 405);
+  }
+  await request("/search?q=" + "a".repeat(101), "GET", 400, true);
+  await request("/collection/missing-sample", "GET", 404, true);
+  await request("/wallet/not-a-real-profile", "GET", 404, true);
   await request("/explorer", "POST", 405);
 } catch (error) {
   report.pass = false;

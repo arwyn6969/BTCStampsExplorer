@@ -6,9 +6,18 @@ import * as $_404 from "./routes/_404.tsx";
 import * as $_500 from "./routes/_500.tsx";
 import * as $_app from "./routes/_app.tsx";
 import * as $_middleware from "./routes/_middleware.ts";
+import * as $activity from "./routes/activity.tsx";
+import * as $collection_id_ from "./routes/collection/[id].tsx";
+import * as $collection_index from "./routes/collection/index.ts";
+import * as $collections from "./routes/collections.tsx";
 import * as $explorer from "./routes/explorer.tsx";
+import * as $help from "./routes/help.tsx";
+import * as $index from "./routes/index.ts";
+import * as $marketplace from "./routes/marketplace.tsx";
 import * as $media_asset_ from "./routes/media/[asset].ts";
+import * as $search from "./routes/search.tsx";
 import * as $stamp_id_ from "./routes/stamp/[id].tsx";
+import * as $wallet_address_ from "./routes/wallet/[address].tsx";
 
 import type { Manifest } from "$fresh/server.ts";
 
@@ -18,9 +27,18 @@ const manifest = {
     "./routes/_500.tsx": $_500,
     "./routes/_app.tsx": $_app,
     "./routes/_middleware.ts": $_middleware,
+    "./routes/activity.tsx": $activity,
+    "./routes/collection/[id].tsx": $collection_id_,
+    "./routes/collection/index.ts": $collection_index,
+    "./routes/collections.tsx": $collections,
     "./routes/explorer.tsx": $explorer,
+    "./routes/help.tsx": $help,
+    "./routes/index.ts": $index,
+    "./routes/marketplace.tsx": $marketplace,
     "./routes/media/[asset].ts": $media_asset_,
+    "./routes/search.tsx": $search,
     "./routes/stamp/[id].tsx": $stamp_id_,
+    "./routes/wallet/[address].tsx": $wallet_address_,
   },
   islands: {},
   baseUrl: import.meta.url,
