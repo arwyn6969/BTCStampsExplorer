@@ -60,6 +60,13 @@ function htmlChecks(html: string): Record<string, boolean> {
         html,
       ),
     noActiveArtworkFrames: !/<(?:iframe|object|embed)\b/i.test(html),
+    oneCurrentCatalogChoice: [
+      ...html.matchAll(
+        /<nav\b[^>]*class="catalog-tabs"[^>]*>([\s\S]*?)<\/nav>/g,
+      ),
+    ].every((match) =>
+      (match[1].match(/aria-current="page"/g) ?? []).length === 1
+    ),
     noInlineHandlers: !/\s+on[a-z]+\s*=/i.test(html),
     noJavascriptLinks: !/\bhref\s*=\s*["']\s*javascript:/i.test(html),
     sameOriginSources: sourceAttributes.every((match) =>

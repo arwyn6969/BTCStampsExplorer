@@ -119,9 +119,7 @@ export default function Explorer({ data }: PageProps<ExplorerData>) {
               <noscript>
                 <a
                   class="format-all"
-                  href={`/explorer${
-                    queryString({ ...query, format: "all", page: 1 })
-                  }`}
+                  href={queryString({ ...query, format: "all", page: 1 })}
                 >
                   All
                 </a>
@@ -228,9 +226,7 @@ export default function Explorer({ data }: PageProps<ExplorerData>) {
                     <a
                       class="button"
                       rel="prev"
-                      href={`/explorer${
-                        queryString(withPage(query, query.page - 1))
-                      }`}
+                      href={queryString(withPage(query, query.page - 1))}
                     >
                       ← Previous
                     </a>
@@ -253,9 +249,7 @@ export default function Explorer({ data }: PageProps<ExplorerData>) {
                     <a
                       class="button"
                       rel="next"
-                      href={`/explorer${
-                        queryString(withPage(query, query.page + 1))
-                      }`}
+                      href={queryString(withPage(query, query.page + 1))}
                     >
                       Next <span aria-hidden="true">→</span>
                     </a>

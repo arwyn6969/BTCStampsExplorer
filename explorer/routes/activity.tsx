@@ -87,7 +87,7 @@ export default function ActivityPage({ data }: PageProps<ActivityData>) {
                 ]] as const).map(([value, label]) => (
                   <a
                     key={value}
-                    href={href(value)}
+                    href={href(value).slice("/activity".length)}
                     aria-current={value === kind ? "page" : undefined}
                   >
                     {label}
@@ -118,7 +118,11 @@ export default function ActivityPage({ data }: PageProps<ActivityData>) {
               <nav class="catalog-pagination" aria-label="Activity pages">
                 {page > 1
                   ? (
-                    <a class="button" rel="prev" href={href(kind, page - 1)}>
+                    <a
+                      class="button"
+                      rel="prev"
+                      href={href(kind, page - 1).slice("/activity".length)}
+                    >
                       ← Previous
                     </a>
                   )
@@ -126,7 +130,11 @@ export default function ActivityPage({ data }: PageProps<ActivityData>) {
                 <span>Page {page} of {totalPages}</span>
                 {page < totalPages
                   ? (
-                    <a class="button" rel="next" href={href(kind, page + 1)}>
+                    <a
+                      class="button"
+                      rel="next"
+                      href={href(kind, page + 1).slice("/activity".length)}
+                    >
                       Next →
                     </a>
                   )

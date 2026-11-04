@@ -104,13 +104,13 @@ export default function PublicProfile({ data }: PageProps<ProfileData>) {
               </dl>
               <nav class="catalog-tabs" aria-label="Profile views">
                 <a
-                  href={`${path}?view=created&page=1`}
+                  href="?view=created&page=1"
                   aria-current={view === "created" ? "page" : undefined}
                 >
                   Created
                 </a>
                 <a
-                  href={`${path}?view=held&page=1`}
+                  href="?view=held&page=1"
                   aria-current={view === "held" ? "page" : undefined}
                 >
                   Held

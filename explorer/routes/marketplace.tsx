@@ -84,7 +84,7 @@ export default function Marketplace({ data }: PageProps<MarketplaceData>) {
                 ]] as const).map(([value, label]) => (
                   <a
                     key={value}
-                    href={href(value)}
+                    href={href(value).slice("/marketplace".length)}
                     aria-current={value === status ? "page" : undefined}
                   >
                     {label}
@@ -114,7 +114,11 @@ export default function Marketplace({ data }: PageProps<MarketplaceData>) {
               <nav class="catalog-pagination" aria-label="Listings pages">
                 {page > 1
                   ? (
-                    <a class="button" rel="prev" href={href(status, page - 1)}>
+                    <a
+                      class="button"
+                      rel="prev"
+                      href={href(status, page - 1).slice("/marketplace".length)}
+                    >
                       ← Previous
                     </a>
                   )
@@ -122,7 +126,11 @@ export default function Marketplace({ data }: PageProps<MarketplaceData>) {
                 <span>Page {page} of {totalPages}</span>
                 {page < totalPages
                   ? (
-                    <a class="button" rel="next" href={href(status, page + 1)}>
+                    <a
+                      class="button"
+                      rel="next"
+                      href={href(status, page + 1).slice("/marketplace".length)}
+                    >
                       Next →
                     </a>
                   )

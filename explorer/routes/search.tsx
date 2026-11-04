@@ -64,9 +64,9 @@ export default function Search({ data }: PageProps<SearchData>) {
               </label>
               <button class="button primary" type="submit">Search ↗</button>
               <p id="search-hint">
-                Try <a href="/search?q=TonyNL">TonyNL</a>,{" "}
-                <a href="/search?q=Arwyn">Arwyn</a>,{" "}
-                <a href="/search?q=1505513">1505513</a>{" "}
+                Try <a href="?q=TonyNL">TonyNL</a>,{" "}
+                <a href="?q=Arwyn">Arwyn</a>, <a href="?q=1505513">1505513</a>
+                {" "}
                 or a collection name. Searches cover the fixed sample only.
               </p>
             </form>

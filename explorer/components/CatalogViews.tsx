@@ -106,12 +106,13 @@ interface CatalogPaginationProps {
 }
 
 export function CatalogPagination(
-  { page, total, path, params = {}, label = "Results" }: CatalogPaginationProps,
+  { page, total, params = {}, label = "Results" }: CatalogPaginationProps,
 ) {
   const pages = Math.max(1, Math.ceil(total / CATALOG_PAGE_SIZE));
+  // Query-relative links avoid Fresh 1 marking every page link as current.
   const href = (next: number) => {
     const query = new URLSearchParams({ ...params, page: String(next) });
-    return `${path}?${query}`;
+    return `?${query}`;
   };
   return (
     <nav class="catalog-pagination" aria-label={`${label} pagination`}>
