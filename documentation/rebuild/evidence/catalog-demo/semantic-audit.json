@@ -1,0 +1,354 @@
+{
+  "capturedAtUtc": "2026-11-04T14:12:37.296Z",
+  "scope": "Independent local HTTP semantic audit of immutable production artifact; 12 HTTP requests, plus 16 local fixture-media parser reads without network. This is not a browser decode, human accessibility review or independent hosted acceptance.",
+  "target": "http://127.0.0.1:8007",
+  "expectedRevision": "c9eff0cdee5646dd3f63450034061be08679f283",
+  "expectedMode": "fixture",
+  "requests": 12,
+  "cases": [
+    {
+      "path": "/wallet/bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh?view=held&page=1",
+      "method": "GET",
+      "status": 200,
+      "location": null,
+      "sourceRevision": "c9eff0cdee5646dd3f63450034061be08679f283",
+      "dataMode": "fixture",
+      "bodyBytes": 14179,
+      "checks": {
+        "status": true,
+        "revision": true,
+        "fixtureMode": true,
+        "noCookie": true,
+        "noExternalSources": true
+      }
+    },
+    {
+      "path": "/wallet/TonyNL?view=held&page=2",
+      "method": "GET",
+      "status": 302,
+      "location": "/wallet/bc1qnu8rmy42tw2tkr25d4tw6uppmprxlfd49fvepg?view=held&page=2",
+      "sourceRevision": "c9eff0cdee5646dd3f63450034061be08679f283",
+      "dataMode": "fixture",
+      "bodyBytes": 0,
+      "checks": {
+        "status": true,
+        "revision": true,
+        "fixtureMode": true,
+        "noCookie": true,
+        "noExternalSources": true
+      }
+    },
+    {
+      "path": "/wallet/Mike%20in%20Space?view=held&page=2",
+      "method": "GET",
+      "status": 302,
+      "location": "/wallet/1GotRejB6XsGgMsM79TvcypeanDJRJbMtg?view=held&page=2",
+      "sourceRevision": "c9eff0cdee5646dd3f63450034061be08679f283",
+      "dataMode": "fixture",
+      "bodyBytes": 0,
+      "checks": {
+        "status": true,
+        "revision": true,
+        "fixtureMode": true,
+        "noCookie": true,
+        "noExternalSources": true
+      }
+    },
+    {
+      "path": "/collection/archive-sampler?page=1",
+      "method": "GET",
+      "status": 200,
+      "location": null,
+      "sourceRevision": "c9eff0cdee5646dd3f63450034061be08679f283",
+      "dataMode": "fixture",
+      "bodyBytes": 12824,
+      "checks": {
+        "status": true,
+        "revision": true,
+        "fixtureMode": true,
+        "noCookie": true,
+        "noExternalSources": true
+      }
+    },
+    {
+      "path": "/collection/archive-sampler?page=2",
+      "method": "GET",
+      "status": 200,
+      "location": null,
+      "sourceRevision": "c9eff0cdee5646dd3f63450034061be08679f283",
+      "dataMode": "fixture",
+      "bodyBytes": 6629,
+      "checks": {
+        "status": true,
+        "revision": true,
+        "fixtureMode": true,
+        "noCookie": true,
+        "noExternalSources": true
+      }
+    },
+    {
+      "path": "/stamp/1384307?back=%2Fcollection%2Farchive-sampler%3Fpage%3D2",
+      "method": "GET",
+      "status": 200,
+      "location": null,
+      "sourceRevision": "c9eff0cdee5646dd3f63450034061be08679f283",
+      "dataMode": "fixture",
+      "bodyBytes": 7191,
+      "checks": {
+        "status": true,
+        "revision": true,
+        "fixtureMode": true,
+        "noCookie": true,
+        "noExternalSources": true
+      }
+    },
+    {
+      "path": "/marketplace?status=closed&page=1",
+      "method": "GET",
+      "status": 200,
+      "location": null,
+      "sourceRevision": "c9eff0cdee5646dd3f63450034061be08679f283",
+      "dataMode": "fixture",
+      "bodyBytes": 6354,
+      "checks": {
+        "status": true,
+        "revision": true,
+        "fixtureMode": true,
+        "noCookie": true,
+        "noExternalSources": true
+      }
+    },
+    {
+      "path": "/activity?kind=transfer&page=1",
+      "method": "GET",
+      "status": 200,
+      "location": null,
+      "sourceRevision": "c9eff0cdee5646dd3f63450034061be08679f283",
+      "dataMode": "fixture",
+      "bodyBytes": 9123,
+      "checks": {
+        "status": true,
+        "revision": true,
+        "fixtureMode": true,
+        "noCookie": true,
+        "noExternalSources": true
+      }
+    },
+    {
+      "path": "/activity?kind=sale&page=1",
+      "method": "GET",
+      "status": 200,
+      "location": null,
+      "sourceRevision": "c9eff0cdee5646dd3f63450034061be08679f283",
+      "dataMode": "fixture",
+      "bodyBytes": 9060,
+      "checks": {
+        "status": true,
+        "revision": true,
+        "fixtureMode": true,
+        "noCookie": true,
+        "noExternalSources": true
+      }
+    },
+    {
+      "path": "/explorer?type=all&format=all&sort=newest&page=1",
+      "method": "HEAD",
+      "status": 200,
+      "location": null,
+      "sourceRevision": "c9eff0cdee5646dd3f63450034061be08679f283",
+      "dataMode": "fixture",
+      "bodyBytes": 0,
+      "checks": {
+        "status": true,
+        "revision": true,
+        "fixtureMode": true,
+        "noCookie": true,
+        "noExternalSources": true
+      }
+    },
+    {
+      "path": "/activity",
+      "method": "POST",
+      "status": 405,
+      "location": null,
+      "sourceRevision": "c9eff0cdee5646dd3f63450034061be08679f283",
+      "dataMode": "fixture",
+      "bodyBytes": 18,
+      "checks": {
+        "status": true,
+        "revision": true,
+        "fixtureMode": true,
+        "noCookie": true,
+        "noExternalSources": true
+      }
+    },
+    {
+      "path": "/wallet/unknownusername",
+      "method": "GET",
+      "status": 404,
+      "location": null,
+      "sourceRevision": "c9eff0cdee5646dd3f63450034061be08679f283",
+      "dataMode": "fixture",
+      "bodyBytes": 2427,
+      "checks": {
+        "status": true,
+        "revision": true,
+        "fixtureMode": true,
+        "noCookie": true,
+        "noExternalSources": true
+      }
+    }
+  ],
+  "checks": {
+    "heldProfileExactlyOneCurrentTab": true,
+    "heldProfileUsesHoldingsAndNotCreatedHeading": true,
+    "aliasCanonical:TonyNL": true,
+    "aliasCanonical:Mike in Space": true,
+    "archiveFirstPageHasTwelveCards": true,
+    "archiveSecondPageHasFourCards": true,
+    "allSixteenCardsMatchFixtureIdentities": true,
+    "secondPageStampBackContext": true,
+    "detailBackLinkPreservesCollectionPageTwo": true,
+    "closedListingsOneCurrentTab": true,
+    "closedListingsContainOnlyClosedStatuses": true,
+    "transfersOneCurrentTab": true,
+    "transferRowsHaveNoSalePrice": true,
+    "missingSalePriceIsUnavailable": true,
+    "syntheticMarketTransactionsNotExternalChainLinks": true,
+    "headHasNoBody": true,
+    "postAdvertisesReadOnlyMethods": true,
+    "allSixteenStampCardsAdvertiseLocalImages": true,
+    "allSixteenOfflineImagesAcceptedByImmutableRuntimeBoundary": true
+  },
+  "media": [
+    {
+      "stampId": "1507273",
+      "asset": "7046278a4bda05c7dd3063dd10607800cbb92ba6f8c7c41f49bd985edee6bbed.png",
+      "status": 200,
+      "bytes": 227,
+      "advertised": true,
+      "passed": true
+    },
+    {
+      "stampId": "1467205",
+      "asset": "176a5d0329a8b48d5f86bcaf0078ccc3a57d50013744f4af3ea0c827347520ce.png",
+      "status": 200,
+      "bytes": 1202,
+      "advertised": true,
+      "passed": true
+    },
+    {
+      "stampId": "1467163",
+      "asset": "92df895bbf715316fee36cb536453fcd509dc80569afee6dce9e8203ad51de15.png",
+      "status": 200,
+      "bytes": 402,
+      "advertised": true,
+      "passed": true
+    },
+    {
+      "stampId": "1457949",
+      "asset": "e915fa8be0a5d25c4327d056a54bbed7051f6ecf850993994741645012bb0e6b.png",
+      "status": 200,
+      "bytes": 325,
+      "advertised": true,
+      "passed": true
+    },
+    {
+      "stampId": "0",
+      "asset": "17686488353b65b128d19031240478ba50f1387d0ea7e5f188ea7fda78ea06f4.png",
+      "status": 200,
+      "bytes": 79,
+      "advertised": true,
+      "passed": true
+    },
+    {
+      "stampId": "1",
+      "asset": "eb3da8146e626b5783f4359fb1510729f4aad923dfac45b6f1f3a2063907147c.png",
+      "status": 200,
+      "bytes": 79,
+      "advertised": true,
+      "passed": true
+    },
+    {
+      "stampId": "2",
+      "asset": "1b15bd78a0f957ebcf38e6de7b56e173b4746c294cdfdca0e64b60b3e548bf92.png",
+      "status": 200,
+      "bytes": 125,
+      "advertised": true,
+      "passed": true
+    },
+    {
+      "stampId": "3",
+      "asset": "47054da12382223bfa928e9c3e0c8c99b42fe3e88985fb6043d8d84f17b893c9.png",
+      "status": 200,
+      "bytes": 242,
+      "advertised": true,
+      "passed": true
+    },
+    {
+      "stampId": "1505513",
+      "asset": "preview-1505513.png",
+      "status": 200,
+      "bytes": 122465,
+      "advertised": true,
+      "passed": true
+    },
+    {
+      "stampId": "1472320",
+      "asset": "preview-1472320.png",
+      "status": 200,
+      "bytes": 106210,
+      "advertised": true,
+      "passed": true
+    },
+    {
+      "stampId": "1465071",
+      "asset": "preview-1465071.png",
+      "status": 200,
+      "bytes": 61074,
+      "advertised": true,
+      "passed": true
+    },
+    {
+      "stampId": "1462443",
+      "asset": "preview-1462443.png",
+      "status": 200,
+      "bytes": 65612,
+      "advertised": true,
+      "passed": true
+    },
+    {
+      "stampId": "1384307",
+      "asset": "e94be2793462692ca8fea3a54dd90ff4b18735196a2bc426382c11959533c8ca.png",
+      "status": 200,
+      "bytes": 198,
+      "advertised": true,
+      "passed": true
+    },
+    {
+      "stampId": "1384306",
+      "asset": "5a6f0c747e5b9b22d6faec98ef1b0934e94a4e2e9384f21456280861a9b931fa.png",
+      "status": 200,
+      "bytes": 184,
+      "advertised": true,
+      "passed": true
+    },
+    {
+      "stampId": "1384305",
+      "asset": "d79da3538713568504c73726708a6ddfca5681bc111845dbae17265f455448ed.png",
+      "status": 200,
+      "bytes": 211,
+      "advertised": true,
+      "passed": true
+    },
+    {
+      "stampId": "1383565",
+      "asset": "516e62beeffb26fb37f8e95e809274e5bbde76eb75a28357f6bbcd4eedbfe8ca.png",
+      "status": 200,
+      "bytes": 1393,
+      "advertised": true,
+      "passed": true
+    }
+  ],
+  "pass": true
+}

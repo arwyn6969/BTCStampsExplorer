@@ -30,8 +30,8 @@ verified.
 | E05   | Demo search for stamp identifiers, usernames, addresses and collections; native result links and contextual Back | Verified live search contracts and partial-failure behavior                                |
 | E06   | Demo public profiles, created/held views, collection index/detail, paging and explicit unknown data              | Verified live ownership, creator and collection contracts                                  |
 | E07   | Demo listings, sales and transfers on dedicated views and stamp details; exact quantities and price units        | Verified live listing/activity contracts and source-supported status                       |
-| E08   | Selected route aliases and keyboard-accessible forms/links implemented; mobile QA in progress                    | Final hostname/canonical metadata, sitemap policy and complete manual accessibility review |
-| E09   | Pinned build and restricted offline runtime configured; expanded capability/build checks in progress             | Independently hosted checks, operational ownership, monitoring and staged rollback         |
+| E08   | Selected route aliases and keyboard-accessible forms/links implemented; mobile browser checks pass               | Final hostname/canonical metadata, sitemap policy and complete manual accessibility review |
+| E09   | Pinned build and restricted offline runtime configured; expanded capability/build checks pass                    | Independently hosted checks, operational ownership, monitoring and staged rollback         |
 | E10   | Reviewable demo and scope notes prepared                                                                         | Owner and unfamiliar-human acceptance, final handover                                      |
 
 E05–E07 implement the read-only interaction flows with fixtures. They do not

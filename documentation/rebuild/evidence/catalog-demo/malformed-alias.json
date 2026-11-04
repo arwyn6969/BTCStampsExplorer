@@ -1,0 +1,9 @@
+{
+  "capturedAtUtc": "2026-11-04T14:15:01.371308+00:00",
+  "scope": "Local final-artifact malformed alias regression",
+  "path": "/wallet/Mike%ZZ",
+  "status": 404,
+  "revision": "c9eff0cdee5646dd3f63450034061be08679f283",
+  "mode": "fixture",
+  "pass": true
+}

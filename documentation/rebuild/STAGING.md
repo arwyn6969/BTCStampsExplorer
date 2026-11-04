@@ -1,5 +1,50 @@
 # Explorer preview and staging status
 
+Updated 4 November 2026. The current expanded demo is
+[the explorer](https://boundary-nsw-cleaning-fruit.trycloudflare.com/explorer),
+using an HTTP/2 Quick Tunnel to the immutable local artifact at source
+`c9eff0cdee5646dd3f63450034061be08679f283`. The server runs in fixture mode,
+with loopback-only runtime networking and no database, credentials or live API
+access. The preview includes search, public profiles, collections, listings,
+sales and transfers with explicit demo labels. All sixteen sample images are
+stored locally, including four static HTML thumbnails.
+
+The clean archive `explorer-c9eff0cdee56-9db3812b4196.tar.gz` is 456,394 bytes,
+SHA-256 `9db3812b41969782198e07a1855cf502c1e405d3c69b407a407f5d66a2155c39`. All
+72 inventory files and the embedded manifest were verified before running its
+restored copy. Fresh build ID is `4f80a713e18f2ebffc35c28ec17b1313516d77e8`.
+Artifacts and the recovered checkout now live in persistent visualization
+storage rather than temporary storage. The runtime uses the already populated,
+pinned Deno module cache.
+
+The final
+[public HTTP report](evidence/catalog-demo/public-capabilities-c9eff0c.json)
+passes 55 cases with exact revision and fixture headers. The independent
+[semantic report](evidence/catalog-demo/semantic-audit.json),
+[browser observations](evidence/catalog-demo/browser-observations.json), and
+[validation record](evidence/catalog-demo/validation.json) provide the remaining
+review evidence. Username aliases with spaces and selected filter states were
+corrected during review; the earlier failed evidence is retained.
+
+This requires no account or card. Render was canceled and has no service to
+complete. The tunnel remains temporary: the Mac, server and tunnel must stay
+running. No independent host, Linux Docker build, hosted rollback, sustained
+capacity, or human acceptance is claimed. E04 remains open, and live catalog
+contracts remain release work. No production DNS, domain cutover or main-branch
+merge has been performed.
+
+For reproduction, use `explorer/README.md`: build with Deno2.6.9 and the full
+`GITHUB_SHA`, start with the default fixture task, then start the HTTP/2 tunnel.
+A new Quick Tunnel process can issue a different hostname. Use the hosted
+checker with the explicit full revision and `fixture` argument. Publishing a new
+link requires repeating the identity/header/media checks on that actual
+hostname.
+
+## Previous two-page proof, superseded by the expansion
+
+The material below records earlier November4 proof runs. Its hostnames,
+revisions, counts and images are historical, rather than the current demo.
+
 Updated 4 November 2026. The working public preview is
 [the explorer](https://hottest-position-turbo-patients.trycloudflare.com/explorer),
 through a Cloudflare Quick Tunnel using HTTP/2. It forwards HTTPS requests to
@@ -12,7 +57,7 @@ or hosted rollback is claimed. The retained Render configuration is optional and
 unapplied; it is not the current preview or an instruction to add a card. No
 account billing details are recorded in this document.
 
-## Current served artifact and evidence
+## Earlier served artifact and evidence
 
 The tunnel serves the restored immutable local artifact at source revision
 `911a1e5597d5d55cbd1244aec41277de31c4dd3d`, Fresh build ID
@@ -73,8 +118,8 @@ correction address that discovery error; the
 is retained. The tunnel subsequently dropped connections with error 1033 and
 timeouts; its
 [timeout report](evidence/quick-tunnel/capabilities-quic-timeout.json) is also
-retained. It was stopped and replaced by the current HTTP/2 hostname. The failed
-first-host page-two visit is not recorded as a pass.
+retained. It was stopped and replaced by that earlier HTTP/2 hostname. The
+failed first-host page-two visit is not recorded as a pass.
 
 ## E04 still requires independent staging
 

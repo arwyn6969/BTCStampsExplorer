@@ -7,7 +7,36 @@ need no database or live API connection. Their live integrations, independent
 hosting, hosted rollback and human acceptance remain open. This is a reviewable
 demo extension, not a completed production release.
 
-Expanded-preview source and URL: pending final verification.
+The verified preview is
+[the expanded explorer](https://boundary-nsw-cleaning-fruit.trycloudflare.com/explorer),
+serving source `c9eff0cdee5646dd3f63450034061be08679f283` in fixture mode. It is
+a temporary HTTP/2 tunnel to the production-built artifact on the local Mac; it
+lasts only while the server and tunnel run. No account or card is needed.
+
+The clean artifact is 456,394 bytes, SHA-256
+`9db3812b41969782198e07a1855cf502c1e405d3c69b407a407f5d66a2155c39`, Fresh build
+ID `4f80a713e18f2ebffc35c28ec17b1313516d77e8`. All 72 inventory files and the
+embedded manifest were verified on restore. Runtime allows the loopback listener
+only; all sixteen artwork files are local.
+
+Package format/lint/types, repository format/lint, production build and 44 tests
+pass. The final
+[public report](evidence/catalog-demo/public-capabilities-c9eff0c.json) passes
+55 HTTP cases, the local report 53, and the independent
+[semantic audit](evidence/catalog-demo/semantic-audit.json) passes twelve HTTP
+cases and nineteen semantic checks. It also accepts all sixteen offline media
+files. [Browser observations](evidence/catalog-demo/browser-observations.json)
+record public search/profile/HTML detail/Back, collection paging and reload,
+listings/activity selection, and mobile390×844 flows without page overflow or
+active frames. Eight observations cover the selection fix at aa90ef1; three
+final c9eff0c observations verify the encoded username redirect and settled
+explorer. The final gallery decodes all twelve displayed images.
+
+Review found and corrected two defects: Fresh1 marked query-based filter links
+current together, and an encoded username containing spaces failed lookup.
+Earlier captures/reports remain explicitly superseded evidence. See the
+[validation record](evidence/catalog-demo/validation.json) for exact scope and
+remaining limits.
 
 ## Current scope and status
 
@@ -25,8 +54,8 @@ holdings and prices do not establish real ownership or current availability.
 | E05 search                          | Fixture UX implemented: exact identifiers, usernames/address discovery, grouped native links and contextual Back                 | Verified live search contracts and partial-failure behavior                                |
 | E06 profiles and collections        | Fixture UX implemented: created/held tabs, quantities, collection index/detail and paging; unavailable holdings stay unavailable | Verified live creator, holdings and collection coverage                                    |
 | E07 listings and activity           | Fixture UX implemented: dedicated listings/activity and stamp-detail sections; sales and transfers kept distinct                 | Verified live fields, status, quantities, prices and source metadata                       |
-| E08 compatibility and accessibility | Selected route aliases and native forms/links implemented; expanded mobile QA in progress                                        | Final hostname/canonical metadata, sitemap policy and complete manual accessibility review |
-| E09 hardening and operations        | Pinned build and offline runtime configured; expanded capability/build checks in progress                                        | Independent hosting, monitoring, operational ownership and staged rollback                 |
+| E08 compatibility and accessibility | Selected route aliases and native forms/links implemented; expanded mobile browser checks pass                                   | Final hostname/canonical metadata, sitemap policy and complete manual accessibility review |
+| E09 hardening and operations        | Pinned build and offline runtime configured; expanded capability/build checks pass                                               | Independent hosting, monitoring, operational ownership and staged rollback                 |
 | E10 acceptance and handover         | Demo and scope notes prepared for review                                                                                         | Owner and unfamiliar-human task acceptance and final handover                              |
 
 The default preview runtime allows its local listener and denies outbound

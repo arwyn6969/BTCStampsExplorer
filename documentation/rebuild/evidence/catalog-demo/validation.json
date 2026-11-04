@@ -1,0 +1,43 @@
+{
+  "capturedAtUtc": "2026-11-04T14:14:24.387314+00:00",
+  "sourceRevision": "c9eff0cdee5646dd3f63450034061be08679f283",
+  "preview": "https://boundary-nsw-cleaning-fruit.trycloudflare.com/explorer",
+  "mode": "fixture",
+  "artifact": {
+    "name": "explorer-c9eff0cdee56-9db3812b4196.tar.gz",
+    "sha256": "9db3812b41969782198e07a1855cf502c1e405d3c69b407a407f5d66a2155c39",
+    "bytes": 456394,
+    "verifiedInventoryFiles": 72,
+    "freshBuildId": "4f80a713e18f2ebffc35c28ec17b1313516d77e8",
+    "cleanApplicationSource": true
+  },
+  "checks": {
+    "unitTestsPassed": 44,
+    "publicHttpCasesPassed": 55,
+    "localHttpCasesPassed": 53,
+    "liveUnavailableCasesPassed": 8,
+    "formatLintTypesBuild": "pass",
+    "repositoryFmtLint": "pass",
+    "runtimeOutboundNetwork": "denied; loopback listener only",
+    "images": "16 local files, including four HTML-preview PNGs",
+    "independentSemanticHttpCasesPassed": 12,
+    "independentSemanticChecksPassed": 19,
+    "finalRevisionBrowserRecords": 3,
+    "precedingSelectionFixBrowserRecords": 8,
+    "browserRecordsByRevision": {
+      "cc4f9b0399a4715dbabc77cd04b34e3f2a1848e7": 10,
+      "aa90ef1b9c258a5a33a23e1d2ad98b187288137f": 8,
+      "c9eff0cdee5646dd3f63450034061be08679f283": 3
+    },
+    "malformedAlias404": true
+  },
+  "correctedDuringReview": "Fresh1 path-based automatic aria-current marked all query filters current; query-relative native links now preserve precisely one selected filter. Earlier cc4f9b0 observations retained as superseded evidence. Encoded username aliases were then decoded exactly once; the final Mike in Space redirect and malformed-input404 are checked. The failed aa90ef1 audit is retained.",
+  "limits": [
+    "Temporary tunnel depends on Mac and server/tunnel processes",
+    "No independent host or hosted rollback demonstrated",
+    "Extended live read contracts are not yet integrated",
+    "Human acceptance and full manual accessibility review remain open",
+    "Actual Linux Docker build not run without daemon",
+    "Lazy images below a mobile viewport may not yet be decoded"
+  ]
+}

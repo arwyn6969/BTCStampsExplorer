@@ -1,0 +1,1177 @@
+[
+  {
+    "back": [],
+    "demo": "Demo data. Fixed samples of artwork, profiles, listings and activity.Preview scope ↗",
+    "frames": 0,
+    "headings": [
+      "Search the archive",
+      "Creators and addresses · 1"
+    ],
+    "height": 741,
+    "images": [],
+    "overflow": false,
+    "selected": [],
+    "sourceUrls": [
+      "chrome-extension://nicpjdbehgcjbjfjkobcidnfmfpijohg/injected.js",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/style.css",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/app.js",
+      "chrome-extension://idnnbdplmphpflfnlkomgpfbpcgelopg/inpage.js",
+      "chrome-extension://kbdmnbffnhepgpkflnpngklmeebgeelj/injected.js",
+      "chrome-extension://ldinpeekobnhjjdofggfgjlcehhmanlj/inpage.js",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/logo.svg?__frsh_c=1202797c02433f7c85c60215f109a5e1426b2745",
+      "chrome-extension://bnmgkjlaommgappfckljlelgahnbngme/horizon-provider.js"
+    ],
+    "tables": [],
+    "title": "Search Bitcoin Stamps · Stampchain",
+    "url": "https://boundary-nsw-cleaning-fruit.trycloudflare.com/search?q=TonyNL",
+    "width": 1496,
+    "kind": "public-username-search",
+    "sourceRevision": "cc4f9b0399a4715dbabc77cd04b34e3f2a1848e7",
+    "capturedAtUtc": "2026-11-04T13:59:12.267Z",
+    "screenshot": "public-username-search.jpg"
+  },
+  {
+    "back": [],
+    "demo": "Demo data. Fixed samples of artwork, profiles, listings and activity.Preview scope ↗",
+    "frames": 0,
+    "headings": [
+      "TonyNL",
+      "Demo holdings"
+    ],
+    "height": 741,
+    "images": [
+      {
+        "decoded": true,
+        "src": "/media/92df895bbf715316fee36cb536453fcd509dc80569afee6dce9e8203ad51de15.png?__frsh_c=1202797c02433f7c85c60215f109a5e1426b2745"
+      },
+      {
+        "decoded": true,
+        "src": "/media/preview-1462443.png?__frsh_c=1202797c02433f7c85c60215f109a5e1426b2745"
+      }
+    ],
+    "overflow": false,
+    "selected": [],
+    "sourceUrls": [
+      "chrome-extension://nicpjdbehgcjbjfjkobcidnfmfpijohg/injected.js",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/style.css",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/app.js",
+      "chrome-extension://idnnbdplmphpflfnlkomgpfbpcgelopg/inpage.js",
+      "chrome-extension://kbdmnbffnhepgpkflnpngklmeebgeelj/injected.js",
+      "chrome-extension://ldinpeekobnhjjdofggfgjlcehhmanlj/inpage.js",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/logo.svg?__frsh_c=1202797c02433f7c85c60215f109a5e1426b2745",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/92df895bbf715316fee36cb536453fcd509dc80569afee6dce9e8203ad51de15.png?__frsh_c=1202797c02433f7c85c60215f109a5e1426b2745",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/preview-1462443.png?__frsh_c=1202797c02433f7c85c60215f109a5e1426b2745",
+      "chrome-extension://bnmgkjlaommgappfckljlelgahnbngme/horizon-provider.js"
+    ],
+    "tables": [],
+    "title": "TonyNL · Stampchain",
+    "url": "https://boundary-nsw-cleaning-fruit.trycloudflare.com/wallet/bc1qnu8rmy42tw2tkr25d4tw6uppmprxlfd49fvepg?view=held&page=1",
+    "width": 1496,
+    "kind": "public-profile-held",
+    "sourceRevision": "cc4f9b0399a4715dbabc77cd04b34e3f2a1848e7",
+    "capturedAtUtc": "2026-11-04T13:59:18.698Z",
+    "screenshot": "public-profile-held.jpg"
+  },
+  {
+    "back": [
+      {
+        "href": "/wallet/bc1qnu8rmy42tw2tkr25d4tw6uppmprxlfd49fvepg?view=held&page=1",
+        "text": "← Back to profile"
+      }
+    ],
+    "demo": "Demo data. Fixed samples of artwork, profiles, listings and activity.Preview scope ↗",
+    "frames": 0,
+    "headings": [
+      "Stamp #1462443",
+      "Creation record",
+      "Listings and activity"
+    ],
+    "height": 741,
+    "images": [
+      {
+        "decoded": true,
+        "src": "/media/preview-1462443.png?__frsh_c=1202797c02433f7c85c60215f109a5e1426b2745"
+      }
+    ],
+    "overflow": false,
+    "selected": [],
+    "sourceUrls": [
+      "chrome-extension://nicpjdbehgcjbjfjkobcidnfmfpijohg/injected.js",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/style.css",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/app.js",
+      "chrome-extension://idnnbdplmphpflfnlkomgpfbpcgelopg/inpage.js",
+      "chrome-extension://kbdmnbffnhepgpkflnpngklmeebgeelj/injected.js",
+      "chrome-extension://ldinpeekobnhjjdofggfgjlcehhmanlj/inpage.js",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/logo.svg?__frsh_c=1202797c02433f7c85c60215f109a5e1426b2745",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/preview-1462443.png?__frsh_c=1202797c02433f7c85c60215f109a5e1426b2745",
+      "chrome-extension://bnmgkjlaommgappfckljlelgahnbngme/horizon-provider.js"
+    ],
+    "tables": [
+      {
+        "caption": "Example listings — prices are per stamp unit",
+        "rows": 1
+      },
+      {
+        "caption": "Example sales and transfers — a transfer is not a sale",
+        "rows": 1
+      }
+    ],
+    "title": "Bitcoin Stamp #1462443 · Stampchain",
+    "url": "https://boundary-nsw-cleaning-fruit.trycloudflare.com/stamp/1462443?back=%2Fwallet%2Fbc1qnu8rmy42tw2tkr25d4tw6uppmprxlfd49fvepg%3Fview%3Dheld%26page%3D1",
+    "width": 1496,
+    "kind": "public-html-detail",
+    "sourceRevision": "cc4f9b0399a4715dbabc77cd04b34e3f2a1848e7",
+    "capturedAtUtc": "2026-11-04T13:59:19.791Z",
+    "screenshot": "public-html-detail.jpg"
+  },
+  {
+    "back": [],
+    "demo": "Demo data. Fixed samples of artwork, profiles, listings and activity.Preview scope ↗",
+    "frames": 0,
+    "headings": [
+      "TonyNL",
+      "Demo holdings"
+    ],
+    "height": 741,
+    "images": [
+      {
+        "decoded": true,
+        "src": "/media/92df895bbf715316fee36cb536453fcd509dc80569afee6dce9e8203ad51de15.png?__frsh_c=1202797c02433f7c85c60215f109a5e1426b2745"
+      },
+      {
+        "decoded": true,
+        "src": "/media/preview-1462443.png?__frsh_c=1202797c02433f7c85c60215f109a5e1426b2745"
+      }
+    ],
+    "overflow": false,
+    "selected": [],
+    "sourceUrls": [
+      "chrome-extension://nicpjdbehgcjbjfjkobcidnfmfpijohg/injected.js",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/style.css",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/app.js",
+      "chrome-extension://idnnbdplmphpflfnlkomgpfbpcgelopg/inpage.js",
+      "chrome-extension://kbdmnbffnhepgpkflnpngklmeebgeelj/injected.js",
+      "chrome-extension://ldinpeekobnhjjdofggfgjlcehhmanlj/inpage.js",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/logo.svg?__frsh_c=1202797c02433f7c85c60215f109a5e1426b2745",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/92df895bbf715316fee36cb536453fcd509dc80569afee6dce9e8203ad51de15.png?__frsh_c=1202797c02433f7c85c60215f109a5e1426b2745",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/preview-1462443.png?__frsh_c=1202797c02433f7c85c60215f109a5e1426b2745"
+    ],
+    "tables": [],
+    "title": "TonyNL · Stampchain",
+    "url": "https://boundary-nsw-cleaning-fruit.trycloudflare.com/wallet/bc1qnu8rmy42tw2tkr25d4tw6uppmprxlfd49fvepg?view=held&page=1",
+    "width": 1496,
+    "kind": "public-profile-back",
+    "sourceRevision": "cc4f9b0399a4715dbabc77cd04b34e3f2a1848e7",
+    "capturedAtUtc": "2026-11-04T13:59:20.260Z"
+  },
+  {
+    "back": [
+      {
+        "href": "/collections",
+        "text": "← Back to collections"
+      }
+    ],
+    "demo": "Demo data. Fixed samples of artwork, profiles, listings and activity.Preview scope ↗",
+    "frames": 0,
+    "headings": [
+      "Archive Sampler",
+      "Creators",
+      "16 sample stamps"
+    ],
+    "height": 741,
+    "images": [
+      {
+        "decoded": true,
+        "src": "/media/e94be2793462692ca8fea3a54dd90ff4b18735196a2bc426382c11959533c8ca.png?__frsh_c=1202797c02433f7c85c60215f109a5e1426b2745"
+      },
+      {
+        "decoded": true,
+        "src": "/media/5a6f0c747e5b9b22d6faec98ef1b0934e94a4e2e9384f21456280861a9b931fa.png?__frsh_c=1202797c02433f7c85c60215f109a5e1426b2745"
+      },
+      {
+        "decoded": true,
+        "src": "/media/d79da3538713568504c73726708a6ddfca5681bc111845dbae17265f455448ed.png?__frsh_c=1202797c02433f7c85c60215f109a5e1426b2745"
+      },
+      {
+        "decoded": true,
+        "src": "/media/516e62beeffb26fb37f8e95e809274e5bbde76eb75a28357f6bbcd4eedbfe8ca.png?__frsh_c=1202797c02433f7c85c60215f109a5e1426b2745"
+      }
+    ],
+    "overflow": false,
+    "selected": [],
+    "sourceUrls": [
+      "chrome-extension://nicpjdbehgcjbjfjkobcidnfmfpijohg/injected.js",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/style.css",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/app.js",
+      "chrome-extension://idnnbdplmphpflfnlkomgpfbpcgelopg/inpage.js",
+      "chrome-extension://kbdmnbffnhepgpkflnpngklmeebgeelj/injected.js",
+      "chrome-extension://ldinpeekobnhjjdofggfgjlcehhmanlj/inpage.js",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/logo.svg?__frsh_c=1202797c02433f7c85c60215f109a5e1426b2745",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/e94be2793462692ca8fea3a54dd90ff4b18735196a2bc426382c11959533c8ca.png?__frsh_c=1202797c02433f7c85c60215f109a5e1426b2745",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/5a6f0c747e5b9b22d6faec98ef1b0934e94a4e2e9384f21456280861a9b931fa.png?__frsh_c=1202797c02433f7c85c60215f109a5e1426b2745",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/d79da3538713568504c73726708a6ddfca5681bc111845dbae17265f455448ed.png?__frsh_c=1202797c02433f7c85c60215f109a5e1426b2745",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/516e62beeffb26fb37f8e95e809274e5bbde76eb75a28357f6bbcd4eedbfe8ca.png?__frsh_c=1202797c02433f7c85c60215f109a5e1426b2745",
+      "chrome-extension://bnmgkjlaommgappfckljlelgahnbngme/horizon-provider.js"
+    ],
+    "tables": [],
+    "title": "Archive Sampler · Stampchain",
+    "url": "https://boundary-nsw-cleaning-fruit.trycloudflare.com/collection/archive-sampler?page=2",
+    "width": 1496,
+    "kind": "public-collection-page-two",
+    "sourceRevision": "cc4f9b0399a4715dbabc77cd04b34e3f2a1848e7",
+    "capturedAtUtc": "2026-11-04T13:59:55.978Z",
+    "screenshot": "public-collection-page-two.jpg"
+  },
+  {
+    "back": [
+      {
+        "href": "/collections",
+        "text": "← Back to collections"
+      }
+    ],
+    "demo": "Demo data. Fixed samples of artwork, profiles, listings and activity.Preview scope ↗",
+    "frames": 0,
+    "headings": [
+      "Archive Sampler",
+      "Creators",
+      "16 sample stamps"
+    ],
+    "height": 741,
+    "images": [
+      {
+        "decoded": true,
+        "src": "/media/e94be2793462692ca8fea3a54dd90ff4b18735196a2bc426382c11959533c8ca.png?__frsh_c=1202797c02433f7c85c60215f109a5e1426b2745"
+      },
+      {
+        "decoded": true,
+        "src": "/media/5a6f0c747e5b9b22d6faec98ef1b0934e94a4e2e9384f21456280861a9b931fa.png?__frsh_c=1202797c02433f7c85c60215f109a5e1426b2745"
+      },
+      {
+        "decoded": true,
+        "src": "/media/d79da3538713568504c73726708a6ddfca5681bc111845dbae17265f455448ed.png?__frsh_c=1202797c02433f7c85c60215f109a5e1426b2745"
+      },
+      {
+        "decoded": true,
+        "src": "/media/516e62beeffb26fb37f8e95e809274e5bbde76eb75a28357f6bbcd4eedbfe8ca.png?__frsh_c=1202797c02433f7c85c60215f109a5e1426b2745"
+      }
+    ],
+    "overflow": false,
+    "selected": [],
+    "sourceUrls": [
+      "chrome-extension://nicpjdbehgcjbjfjkobcidnfmfpijohg/injected.js",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/style.css",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/app.js",
+      "chrome-extension://idnnbdplmphpflfnlkomgpfbpcgelopg/inpage.js",
+      "chrome-extension://kbdmnbffnhepgpkflnpngklmeebgeelj/injected.js",
+      "chrome-extension://ldinpeekobnhjjdofggfgjlcehhmanlj/inpage.js",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/logo.svg?__frsh_c=1202797c02433f7c85c60215f109a5e1426b2745",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/e94be2793462692ca8fea3a54dd90ff4b18735196a2bc426382c11959533c8ca.png?__frsh_c=1202797c02433f7c85c60215f109a5e1426b2745",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/5a6f0c747e5b9b22d6faec98ef1b0934e94a4e2e9384f21456280861a9b931fa.png?__frsh_c=1202797c02433f7c85c60215f109a5e1426b2745",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/d79da3538713568504c73726708a6ddfca5681bc111845dbae17265f455448ed.png?__frsh_c=1202797c02433f7c85c60215f109a5e1426b2745",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/516e62beeffb26fb37f8e95e809274e5bbde76eb75a28357f6bbcd4eedbfe8ca.png?__frsh_c=1202797c02433f7c85c60215f109a5e1426b2745",
+      "chrome-extension://bnmgkjlaommgappfckljlelgahnbngme/horizon-provider.js"
+    ],
+    "tables": [],
+    "title": "Archive Sampler · Stampchain",
+    "url": "https://boundary-nsw-cleaning-fruit.trycloudflare.com/collection/archive-sampler?page=2",
+    "width": 1496,
+    "kind": "public-collection-back-reload",
+    "sourceRevision": "cc4f9b0399a4715dbabc77cd04b34e3f2a1848e7",
+    "capturedAtUtc": "2026-11-04T13:59:57.695Z"
+  },
+  {
+    "back": [],
+    "demo": "Demo data. Fixed samples of artwork, profiles, listings and activity.Preview scope ↗",
+    "frames": 0,
+    "headings": [
+      "Stamp listings",
+      "Open sample listings 11 records"
+    ],
+    "height": 741,
+    "images": [],
+    "overflow": false,
+    "selected": [],
+    "sourceUrls": [
+      "chrome-extension://nicpjdbehgcjbjfjkobcidnfmfpijohg/injected.js",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/style.css",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/app.js",
+      "chrome-extension://idnnbdplmphpflfnlkomgpfbpcgelopg/inpage.js",
+      "chrome-extension://kbdmnbffnhepgpkflnpngklmeebgeelj/injected.js",
+      "chrome-extension://ldinpeekobnhjjdofggfgjlcehhmanlj/inpage.js",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/logo.svg?__frsh_c=1202797c02433f7c85c60215f109a5e1426b2745",
+      "chrome-extension://bnmgkjlaommgappfckljlelgahnbngme/horizon-provider.js"
+    ],
+    "tables": [
+      {
+        "caption": "Example listings — prices are per stamp unit",
+        "rows": 6
+      }
+    ],
+    "title": "Stamp listings · Stampchain",
+    "url": "https://boundary-nsw-cleaning-fruit.trycloudflare.com/marketplace",
+    "width": 1496,
+    "kind": "public-listings",
+    "sourceRevision": "cc4f9b0399a4715dbabc77cd04b34e3f2a1848e7",
+    "capturedAtUtc": "2026-11-04T13:59:58.434Z",
+    "screenshot": "public-listings.jpg"
+  },
+  {
+    "back": [],
+    "demo": "Demo data. Fixed samples of artwork, profiles, listings and activity.Preview scope ↗",
+    "frames": 0,
+    "headings": [
+      "Stamp listings",
+      "Closed sample listings 4 records"
+    ],
+    "height": 741,
+    "images": [],
+    "overflow": false,
+    "selected": [],
+    "sourceUrls": [
+      "chrome-extension://nicpjdbehgcjbjfjkobcidnfmfpijohg/injected.js",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/style.css",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/app.js",
+      "chrome-extension://idnnbdplmphpflfnlkomgpfbpcgelopg/inpage.js",
+      "chrome-extension://kbdmnbffnhepgpkflnpngklmeebgeelj/injected.js",
+      "chrome-extension://ldinpeekobnhjjdofggfgjlcehhmanlj/inpage.js",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/logo.svg?__frsh_c=1202797c02433f7c85c60215f109a5e1426b2745"
+    ],
+    "tables": [
+      {
+        "caption": "Example listings — prices are per stamp unit",
+        "rows": 4
+      }
+    ],
+    "title": "Stamp listings · Stampchain",
+    "url": "https://boundary-nsw-cleaning-fruit.trycloudflare.com/marketplace?status=closed&page=1",
+    "width": 1496,
+    "kind": "public-closed-listings",
+    "sourceRevision": "cc4f9b0399a4715dbabc77cd04b34e3f2a1848e7",
+    "capturedAtUtc": "2026-11-04T14:00:10.865Z"
+  },
+  {
+    "back": [],
+    "demo": "Demo data. Fixed samples of artwork, profiles, listings and activity.Preview scope ↗",
+    "frames": 0,
+    "headings": [
+      "Sales and transfers",
+      "Sample transfers 7 records"
+    ],
+    "height": 741,
+    "images": [],
+    "overflow": false,
+    "selected": [],
+    "sourceUrls": [
+      "chrome-extension://nicpjdbehgcjbjfjkobcidnfmfpijohg/injected.js",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/style.css",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/app.js",
+      "chrome-extension://idnnbdplmphpflfnlkomgpfbpcgelopg/inpage.js",
+      "chrome-extension://ldinpeekobnhjjdofggfgjlcehhmanlj/inpage.js",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/logo.svg?__frsh_c=1202797c02433f7c85c60215f109a5e1426b2745"
+    ],
+    "tables": [
+      {
+        "caption": "Example sales and transfers — a transfer is not a sale",
+        "rows": 6
+      }
+    ],
+    "title": "Sales and transfers · Stampchain",
+    "url": "https://boundary-nsw-cleaning-fruit.trycloudflare.com/activity?kind=transfer&page=1",
+    "width": 1496,
+    "kind": "public-transfers",
+    "sourceRevision": "cc4f9b0399a4715dbabc77cd04b34e3f2a1848e7",
+    "capturedAtUtc": "2026-11-04T14:00:30.937Z",
+    "screenshot": "public-transfers.jpg"
+  },
+  {
+    "back": [],
+    "demo": "Demo data. Fixed samples of artwork, profiles, listings and activity.Preview scope ↗",
+    "frames": 0,
+    "headings": [
+      "Sales and transfers",
+      "Sample transfers 7 records"
+    ],
+    "height": 844,
+    "images": [],
+    "overflow": false,
+    "selected": [],
+    "sourceUrls": [
+      "chrome-extension://nicpjdbehgcjbjfjkobcidnfmfpijohg/injected.js",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/style.css",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/app.js",
+      "chrome-extension://idnnbdplmphpflfnlkomgpfbpcgelopg/inpage.js",
+      "chrome-extension://kbdmnbffnhepgpkflnpngklmeebgeelj/injected.js",
+      "chrome-extension://ldinpeekobnhjjdofggfgjlcehhmanlj/inpage.js",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/logo.svg?__frsh_c=1202797c02433f7c85c60215f109a5e1426b2745"
+    ],
+    "tables": [
+      {
+        "caption": "Example sales and transfers — a transfer is not a sale",
+        "rows": 6
+      }
+    ],
+    "title": "Sales and transfers · Stampchain",
+    "url": "https://boundary-nsw-cleaning-fruit.trycloudflare.com/activity?kind=transfer&page=1",
+    "width": 390,
+    "kind": "mobile-transfers",
+    "sourceRevision": "cc4f9b0399a4715dbabc77cd04b34e3f2a1848e7",
+    "capturedAtUtc": "2026-11-04T14:00:31.019Z",
+    "screenshot": "mobile-transfers.jpg"
+  },
+  {
+    "back": [],
+    "demo": "Demo data. Fixed samples of artwork, profiles, listings and activity.Preview scope ↗",
+    "frames": 0,
+    "headings": [
+      "Sales and transfers",
+      "Sample transfers 7 records"
+    ],
+    "height": 844,
+    "images": [],
+    "overflow": false,
+    "selected": [],
+    "sourceUrls": [
+      "chrome-extension://nicpjdbehgcjbjfjkobcidnfmfpijohg/injected.js",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/style.css",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/app.js",
+      "chrome-extension://idnnbdplmphpflfnlkomgpfbpcgelopg/inpage.js",
+      "chrome-extension://kbdmnbffnhepgpkflnpngklmeebgeelj/injected.js",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/logo.svg?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce",
+      "chrome-extension://ldinpeekobnhjjdofggfgjlcehhmanlj/inpage.js",
+      "chrome-extension://bnmgkjlaommgappfckljlelgahnbngme/horizon-provider.js"
+    ],
+    "tables": [
+      {
+        "caption": "Example sales and transfers — a transfer is not a sale",
+        "rows": 6
+      }
+    ],
+    "title": "Sales and transfers · Stampchain",
+    "url": "https://boundary-nsw-cleaning-fruit.trycloudflare.com/activity?kind=transfer&page=1",
+    "width": 390,
+    "kind": "final-mobile-transfers",
+    "sourceRevision": "aa90ef1b9c258a5a33a23e1d2ad98b187288137f",
+    "capturedAtUtc": "2026-11-04T14:06:27.731Z",
+    "screenshot": "final-mobile-transfers.jpg",
+    "catalogChoices": [
+      {
+        "current": null,
+        "href": "?kind=all&page=1",
+        "label": "All activity"
+      },
+      {
+        "current": null,
+        "href": "?kind=sale&page=1",
+        "label": "Sales"
+      },
+      {
+        "current": "page",
+        "href": "?kind=transfer&page=1",
+        "label": "Transfers"
+      }
+    ]
+  },
+  {
+    "back": [],
+    "demo": "Demo data. Fixed samples of artwork, profiles, listings and activity.Preview scope ↗",
+    "frames": 0,
+    "headings": [
+      "Sales and transfers",
+      "Sample sales 8 records"
+    ],
+    "height": 844,
+    "images": [],
+    "overflow": false,
+    "selected": [],
+    "sourceUrls": [
+      "chrome-extension://nicpjdbehgcjbjfjkobcidnfmfpijohg/injected.js",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/style.css",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/app.js",
+      "chrome-extension://idnnbdplmphpflfnlkomgpfbpcgelopg/inpage.js",
+      "chrome-extension://kbdmnbffnhepgpkflnpngklmeebgeelj/injected.js",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/logo.svg?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce",
+      "chrome-extension://ldinpeekobnhjjdofggfgjlcehhmanlj/inpage.js",
+      "chrome-extension://bnmgkjlaommgappfckljlelgahnbngme/horizon-provider.js"
+    ],
+    "tables": [
+      {
+        "caption": "Example sales and transfers — a transfer is not a sale",
+        "rows": 6
+      }
+    ],
+    "title": "Sales and transfers · Stampchain",
+    "url": "https://boundary-nsw-cleaning-fruit.trycloudflare.com/activity?kind=sale&page=1",
+    "width": 390,
+    "kind": "final-mobile-sales",
+    "sourceRevision": "aa90ef1b9c258a5a33a23e1d2ad98b187288137f",
+    "capturedAtUtc": "2026-11-04T14:06:28.289Z",
+    "catalogChoices": [
+      {
+        "current": null,
+        "href": "?kind=all&page=1",
+        "label": "All activity"
+      },
+      {
+        "current": "page",
+        "href": "?kind=sale&page=1",
+        "label": "Sales"
+      },
+      {
+        "current": null,
+        "href": "?kind=transfer&page=1",
+        "label": "Transfers"
+      }
+    ]
+  },
+  {
+    "back": [],
+    "demo": "Demo data. Fixed samples of artwork, profiles, listings and activity.Preview scope ↗",
+    "frames": 0,
+    "headings": [
+      "Explore Bitcoin Stamps",
+      "Explore the archive 16 stamps"
+    ],
+    "height": 844,
+    "images": [
+      {
+        "decoded": true,
+        "src": "/media/7046278a4bda05c7dd3063dd10607800cbb92ba6f8c7c41f49bd985edee6bbed.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce"
+      },
+      {
+        "decoded": true,
+        "src": "/media/preview-1505513.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce"
+      },
+      {
+        "decoded": true,
+        "src": "/media/preview-1472320.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce"
+      },
+      {
+        "decoded": true,
+        "src": "/media/176a5d0329a8b48d5f86bcaf0078ccc3a57d50013744f4af3ea0c827347520ce.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce"
+      },
+      {
+        "decoded": true,
+        "src": "/media/92df895bbf715316fee36cb536453fcd509dc80569afee6dce9e8203ad51de15.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce"
+      },
+      {
+        "decoded": true,
+        "src": "/media/preview-1465071.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce"
+      },
+      {
+        "decoded": false,
+        "src": "/media/preview-1462443.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce"
+      },
+      {
+        "decoded": false,
+        "src": "/media/e915fa8be0a5d25c4327d056a54bbed7051f6ecf850993994741645012bb0e6b.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce"
+      },
+      {
+        "decoded": false,
+        "src": "/media/e94be2793462692ca8fea3a54dd90ff4b18735196a2bc426382c11959533c8ca.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce"
+      },
+      {
+        "decoded": true,
+        "src": "/media/5a6f0c747e5b9b22d6faec98ef1b0934e94a4e2e9384f21456280861a9b931fa.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce"
+      },
+      {
+        "decoded": true,
+        "src": "/media/d79da3538713568504c73726708a6ddfca5681bc111845dbae17265f455448ed.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce"
+      },
+      {
+        "decoded": true,
+        "src": "/media/516e62beeffb26fb37f8e95e809274e5bbde76eb75a28357f6bbcd4eedbfe8ca.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce"
+      }
+    ],
+    "overflow": false,
+    "selected": [
+      "png",
+      "html"
+    ],
+    "sourceUrls": [
+      "chrome-extension://nicpjdbehgcjbjfjkobcidnfmfpijohg/injected.js",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/style.css",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/app.js",
+      "chrome-extension://idnnbdplmphpflfnlkomgpfbpcgelopg/inpage.js",
+      "chrome-extension://kbdmnbffnhepgpkflnpngklmeebgeelj/injected.js",
+      "chrome-extension://ldinpeekobnhjjdofggfgjlcehhmanlj/inpage.js",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/logo.svg?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/7046278a4bda05c7dd3063dd10607800cbb92ba6f8c7c41f49bd985edee6bbed.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/preview-1505513.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/preview-1472320.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/176a5d0329a8b48d5f86bcaf0078ccc3a57d50013744f4af3ea0c827347520ce.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/92df895bbf715316fee36cb536453fcd509dc80569afee6dce9e8203ad51de15.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/preview-1465071.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/preview-1462443.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/e915fa8be0a5d25c4327d056a54bbed7051f6ecf850993994741645012bb0e6b.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/e94be2793462692ca8fea3a54dd90ff4b18735196a2bc426382c11959533c8ca.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/5a6f0c747e5b9b22d6faec98ef1b0934e94a4e2e9384f21456280861a9b931fa.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/d79da3538713568504c73726708a6ddfca5681bc111845dbae17265f455448ed.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/516e62beeffb26fb37f8e95e809274e5bbde76eb75a28357f6bbcd4eedbfe8ca.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce"
+    ],
+    "tables": [],
+    "title": "Explore Bitcoin Stamps · Stampchain",
+    "url": "https://boundary-nsw-cleaning-fruit.trycloudflare.com/explorer?type=all&format=png,html&sort=newest&page=1",
+    "width": 390,
+    "kind": "final-mobile-png-html",
+    "sourceRevision": "aa90ef1b9c258a5a33a23e1d2ad98b187288137f",
+    "capturedAtUtc": "2026-11-04T14:06:30.300Z",
+    "screenshot": "final-mobile-png-html.jpg",
+    "catalogChoices": []
+  },
+  {
+    "back": [],
+    "demo": "Demo data. Fixed samples of artwork, profiles, listings and activity.Preview scope ↗",
+    "frames": 0,
+    "headings": [
+      "stamper.btc",
+      "Demo holdings",
+      "Sample collections"
+    ],
+    "height": 844,
+    "images": [
+      {
+        "decoded": true,
+        "src": "/media/e94be2793462692ca8fea3a54dd90ff4b18735196a2bc426382c11959533c8ca.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce"
+      },
+      {
+        "decoded": true,
+        "src": "/media/5a6f0c747e5b9b22d6faec98ef1b0934e94a4e2e9384f21456280861a9b931fa.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce"
+      }
+    ],
+    "overflow": false,
+    "selected": [],
+    "sourceUrls": [
+      "chrome-extension://nicpjdbehgcjbjfjkobcidnfmfpijohg/injected.js",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/style.css",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/app.js",
+      "chrome-extension://idnnbdplmphpflfnlkomgpfbpcgelopg/inpage.js",
+      "chrome-extension://kbdmnbffnhepgpkflnpngklmeebgeelj/injected.js",
+      "chrome-extension://ldinpeekobnhjjdofggfgjlcehhmanlj/inpage.js",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/logo.svg?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/e94be2793462692ca8fea3a54dd90ff4b18735196a2bc426382c11959533c8ca.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/5a6f0c747e5b9b22d6faec98ef1b0934e94a4e2e9384f21456280861a9b931fa.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce",
+      "chrome-extension://bnmgkjlaommgappfckljlelgahnbngme/horizon-provider.js"
+    ],
+    "tables": [],
+    "title": "stamper.btc · Stampchain",
+    "url": "https://boundary-nsw-cleaning-fruit.trycloudflare.com/wallet/bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh?view=held&page=2",
+    "width": 390,
+    "kind": "final-mobile-profile-page-two",
+    "sourceRevision": "aa90ef1b9c258a5a33a23e1d2ad98b187288137f",
+    "capturedAtUtc": "2026-11-04T14:06:47.588Z",
+    "screenshot": "final-mobile-profile-page-two.jpg",
+    "catalogChoices": [
+      {
+        "current": null,
+        "href": "?view=created&page=1",
+        "label": "Created"
+      },
+      {
+        "current": "page",
+        "href": "?view=held&page=1",
+        "label": "Held"
+      }
+    ]
+  },
+  {
+    "back": [
+      {
+        "href": "/collections",
+        "text": "← Back to collections"
+      }
+    ],
+    "demo": "Demo data. Fixed samples of artwork, profiles, listings and activity.Preview scope ↗",
+    "frames": 0,
+    "headings": [
+      "Archive Sampler",
+      "Creators",
+      "16 sample stamps"
+    ],
+    "height": 844,
+    "images": [
+      {
+        "decoded": true,
+        "src": "/media/e94be2793462692ca8fea3a54dd90ff4b18735196a2bc426382c11959533c8ca.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce"
+      },
+      {
+        "decoded": true,
+        "src": "/media/5a6f0c747e5b9b22d6faec98ef1b0934e94a4e2e9384f21456280861a9b931fa.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce"
+      },
+      {
+        "decoded": true,
+        "src": "/media/d79da3538713568504c73726708a6ddfca5681bc111845dbae17265f455448ed.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce"
+      },
+      {
+        "decoded": true,
+        "src": "/media/516e62beeffb26fb37f8e95e809274e5bbde76eb75a28357f6bbcd4eedbfe8ca.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce"
+      }
+    ],
+    "overflow": false,
+    "selected": [],
+    "sourceUrls": [
+      "chrome-extension://nicpjdbehgcjbjfjkobcidnfmfpijohg/injected.js",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/style.css",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/app.js",
+      "chrome-extension://idnnbdplmphpflfnlkomgpfbpcgelopg/inpage.js",
+      "chrome-extension://kbdmnbffnhepgpkflnpngklmeebgeelj/injected.js",
+      "chrome-extension://ldinpeekobnhjjdofggfgjlcehhmanlj/inpage.js",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/logo.svg?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/e94be2793462692ca8fea3a54dd90ff4b18735196a2bc426382c11959533c8ca.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/5a6f0c747e5b9b22d6faec98ef1b0934e94a4e2e9384f21456280861a9b931fa.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/d79da3538713568504c73726708a6ddfca5681bc111845dbae17265f455448ed.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/516e62beeffb26fb37f8e95e809274e5bbde76eb75a28357f6bbcd4eedbfe8ca.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce",
+      "chrome-extension://bnmgkjlaommgappfckljlelgahnbngme/horizon-provider.js"
+    ],
+    "tables": [],
+    "title": "Archive Sampler · Stampchain",
+    "url": "https://boundary-nsw-cleaning-fruit.trycloudflare.com/collection/archive-sampler?page=2",
+    "width": 390,
+    "kind": "final-mobile-collection-page-two",
+    "sourceRevision": "aa90ef1b9c258a5a33a23e1d2ad98b187288137f",
+    "capturedAtUtc": "2026-11-04T14:06:49.031Z",
+    "screenshot": "final-mobile-collection-page-two.jpg",
+    "catalogChoices": []
+  },
+  {
+    "back": [
+      {
+        "href": "/collections",
+        "text": "← Back to collections"
+      }
+    ],
+    "demo": "Demo data. Fixed samples of artwork, profiles, listings and activity.Preview scope ↗",
+    "frames": 0,
+    "headings": [
+      "Archive Sampler",
+      "Creators",
+      "16 sample stamps"
+    ],
+    "height": 844,
+    "images": [
+      {
+        "decoded": true,
+        "src": "/media/e94be2793462692ca8fea3a54dd90ff4b18735196a2bc426382c11959533c8ca.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce"
+      },
+      {
+        "decoded": true,
+        "src": "/media/5a6f0c747e5b9b22d6faec98ef1b0934e94a4e2e9384f21456280861a9b931fa.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce"
+      },
+      {
+        "decoded": true,
+        "src": "/media/d79da3538713568504c73726708a6ddfca5681bc111845dbae17265f455448ed.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce"
+      },
+      {
+        "decoded": true,
+        "src": "/media/516e62beeffb26fb37f8e95e809274e5bbde76eb75a28357f6bbcd4eedbfe8ca.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce"
+      }
+    ],
+    "overflow": false,
+    "selected": [],
+    "sourceUrls": [
+      "chrome-extension://nicpjdbehgcjbjfjkobcidnfmfpijohg/injected.js",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/style.css",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/app.js",
+      "chrome-extension://idnnbdplmphpflfnlkomgpfbpcgelopg/inpage.js",
+      "chrome-extension://kbdmnbffnhepgpkflnpngklmeebgeelj/injected.js",
+      "chrome-extension://ldinpeekobnhjjdofggfgjlcehhmanlj/inpage.js",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/logo.svg?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/e94be2793462692ca8fea3a54dd90ff4b18735196a2bc426382c11959533c8ca.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/5a6f0c747e5b9b22d6faec98ef1b0934e94a4e2e9384f21456280861a9b931fa.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/d79da3538713568504c73726708a6ddfca5681bc111845dbae17265f455448ed.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/516e62beeffb26fb37f8e95e809274e5bbde76eb75a28357f6bbcd4eedbfe8ca.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce",
+      "chrome-extension://bnmgkjlaommgappfckljlelgahnbngme/horizon-provider.js"
+    ],
+    "tables": [],
+    "title": "Archive Sampler · Stampchain",
+    "url": "https://boundary-nsw-cleaning-fruit.trycloudflare.com/collection/archive-sampler?page=2",
+    "width": 390,
+    "kind": "final-mobile-collection-back-reload",
+    "sourceRevision": "aa90ef1b9c258a5a33a23e1d2ad98b187288137f",
+    "capturedAtUtc": "2026-11-04T14:07:29.051Z",
+    "catalogChoices": []
+  },
+  {
+    "back": [],
+    "demo": "Demo data. Fixed samples of artwork, profiles, listings and activity.Preview scope ↗",
+    "frames": 0,
+    "headings": [
+      "Stamp listings",
+      "Closed sample listings 4 records"
+    ],
+    "height": 741,
+    "images": [],
+    "overflow": false,
+    "selected": [],
+    "sourceUrls": [
+      "chrome-extension://nicpjdbehgcjbjfjkobcidnfmfpijohg/injected.js",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/style.css",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/app.js",
+      "chrome-extension://idnnbdplmphpflfnlkomgpfbpcgelopg/inpage.js",
+      "chrome-extension://kbdmnbffnhepgpkflnpngklmeebgeelj/injected.js",
+      "chrome-extension://ldinpeekobnhjjdofggfgjlcehhmanlj/inpage.js",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/logo.svg?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce",
+      "chrome-extension://bnmgkjlaommgappfckljlelgahnbngme/horizon-provider.js"
+    ],
+    "tables": [
+      {
+        "caption": "Example listings — prices are per stamp unit",
+        "rows": 4
+      }
+    ],
+    "title": "Stamp listings · Stampchain",
+    "url": "https://boundary-nsw-cleaning-fruit.trycloudflare.com/marketplace?status=closed&page=1",
+    "width": 1496,
+    "kind": "final-desktop-closed-listings",
+    "sourceRevision": "aa90ef1b9c258a5a33a23e1d2ad98b187288137f",
+    "capturedAtUtc": "2026-11-04T14:07:30.034Z",
+    "screenshot": "final-desktop-closed-listings.jpg",
+    "catalogChoices": [
+      {
+        "current": null,
+        "href": "?status=open&page=1",
+        "label": "Open"
+      },
+      {
+        "current": "page",
+        "href": "?status=closed&page=1",
+        "label": "Closed"
+      },
+      {
+        "current": null,
+        "href": "?status=all&page=1",
+        "label": "All listings"
+      }
+    ]
+  },
+  {
+    "back": [],
+    "demo": "Demo data. Fixed samples of artwork, profiles, listings and activity.Preview scope ↗",
+    "frames": 0,
+    "headings": [
+      "Explore Bitcoin Stamps",
+      "Explore the archive 16 stamps"
+    ],
+    "height": 741,
+    "images": [
+      {
+        "decoded": true,
+        "src": "/media/7046278a4bda05c7dd3063dd10607800cbb92ba6f8c7c41f49bd985edee6bbed.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce"
+      },
+      {
+        "decoded": true,
+        "src": "/media/preview-1505513.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce"
+      },
+      {
+        "decoded": true,
+        "src": "/media/preview-1472320.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce"
+      },
+      {
+        "decoded": true,
+        "src": "/media/176a5d0329a8b48d5f86bcaf0078ccc3a57d50013744f4af3ea0c827347520ce.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce"
+      },
+      {
+        "decoded": true,
+        "src": "/media/92df895bbf715316fee36cb536453fcd509dc80569afee6dce9e8203ad51de15.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce"
+      },
+      {
+        "decoded": true,
+        "src": "/media/preview-1465071.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce"
+      },
+      {
+        "decoded": true,
+        "src": "/media/preview-1462443.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce"
+      },
+      {
+        "decoded": true,
+        "src": "/media/e915fa8be0a5d25c4327d056a54bbed7051f6ecf850993994741645012bb0e6b.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce"
+      },
+      {
+        "decoded": true,
+        "src": "/media/e94be2793462692ca8fea3a54dd90ff4b18735196a2bc426382c11959533c8ca.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce"
+      },
+      {
+        "decoded": true,
+        "src": "/media/5a6f0c747e5b9b22d6faec98ef1b0934e94a4e2e9384f21456280861a9b931fa.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce"
+      },
+      {
+        "decoded": true,
+        "src": "/media/d79da3538713568504c73726708a6ddfca5681bc111845dbae17265f455448ed.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce"
+      },
+      {
+        "decoded": true,
+        "src": "/media/516e62beeffb26fb37f8e95e809274e5bbde76eb75a28357f6bbcd4eedbfe8ca.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce"
+      }
+    ],
+    "overflow": false,
+    "selected": [
+      "png",
+      "html"
+    ],
+    "sourceUrls": [
+      "chrome-extension://nicpjdbehgcjbjfjkobcidnfmfpijohg/injected.js",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/style.css",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/app.js",
+      "chrome-extension://idnnbdplmphpflfnlkomgpfbpcgelopg/inpage.js",
+      "chrome-extension://kbdmnbffnhepgpkflnpngklmeebgeelj/injected.js",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/logo.svg?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/7046278a4bda05c7dd3063dd10607800cbb92ba6f8c7c41f49bd985edee6bbed.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/preview-1505513.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/preview-1472320.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/176a5d0329a8b48d5f86bcaf0078ccc3a57d50013744f4af3ea0c827347520ce.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/92df895bbf715316fee36cb536453fcd509dc80569afee6dce9e8203ad51de15.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/preview-1465071.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/preview-1462443.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/e915fa8be0a5d25c4327d056a54bbed7051f6ecf850993994741645012bb0e6b.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/e94be2793462692ca8fea3a54dd90ff4b18735196a2bc426382c11959533c8ca.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/5a6f0c747e5b9b22d6faec98ef1b0934e94a4e2e9384f21456280861a9b931fa.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/d79da3538713568504c73726708a6ddfca5681bc111845dbae17265f455448ed.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/516e62beeffb26fb37f8e95e809274e5bbde76eb75a28357f6bbcd4eedbfe8ca.png?__frsh_c=b17593048313db5265a9b0fa34ae2140cbd977ce",
+      "chrome-extension://ldinpeekobnhjjdofggfgjlcehhmanlj/inpage.js",
+      "chrome-extension://bnmgkjlaommgappfckljlelgahnbngme/horizon-provider.js"
+    ],
+    "tables": [],
+    "title": "Explore Bitcoin Stamps · Stampchain",
+    "url": "https://boundary-nsw-cleaning-fruit.trycloudflare.com/explorer?type=all&format=png,html&sort=newest&page=1",
+    "width": 1496,
+    "kind": "final-desktop-expanded-explorer",
+    "sourceRevision": "aa90ef1b9c258a5a33a23e1d2ad98b187288137f",
+    "capturedAtUtc": "2026-11-04T14:07:31.588Z",
+    "screenshot": "final-desktop-expanded-explorer.jpg",
+    "catalogChoices": []
+  },
+  {
+    "back": [],
+    "demo": "Demo data. Fixed samples of artwork, profiles, listings and activity.Preview scope ↗",
+    "frames": 0,
+    "headings": [
+      "Mike in Space",
+      "Demo holdings",
+      "Sample collections"
+    ],
+    "height": 741,
+    "images": [],
+    "overflow": false,
+    "selected": [],
+    "sourceUrls": [
+      "chrome-extension://nicpjdbehgcjbjfjkobcidnfmfpijohg/injected.js",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/style.css",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/app.js",
+      "chrome-extension://idnnbdplmphpflfnlkomgpfbpcgelopg/inpage.js",
+      "chrome-extension://kbdmnbffnhepgpkflnpngklmeebgeelj/injected.js",
+      "chrome-extension://ldinpeekobnhjjdofggfgjlcehhmanlj/inpage.js",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/logo.svg?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8",
+      "chrome-extension://bnmgkjlaommgappfckljlelgahnbngme/horizon-provider.js"
+    ],
+    "tables": [],
+    "title": "Mike in Space · Stampchain",
+    "url": "https://boundary-nsw-cleaning-fruit.trycloudflare.com/wallet/1GotRejB6XsGgMsM79TvcypeanDJRJbMtg?view=held&page=2",
+    "width": 1496,
+    "kind": "final-release-encoded-username",
+    "sourceRevision": "c9eff0cdee5646dd3f63450034061be08679f283",
+    "capturedAtUtc": "2026-11-04T14:12:55.701Z",
+    "screenshot": "final-release-encoded-username.jpg",
+    "catalogChoices": [
+      {
+        "current": null,
+        "href": "?view=created&page=1",
+        "label": "Created"
+      },
+      {
+        "current": "page",
+        "href": "?view=held&page=1",
+        "label": "Held"
+      }
+    ]
+  },
+  {
+    "back": [],
+    "demo": "Demo data. Fixed samples of artwork, profiles, listings and activity.Preview scope ↗",
+    "frames": 0,
+    "headings": [
+      "Explore Bitcoin Stamps",
+      "Explore the archive 16 stamps"
+    ],
+    "height": 741,
+    "images": [
+      {
+        "decoded": true,
+        "src": "/media/7046278a4bda05c7dd3063dd10607800cbb92ba6f8c7c41f49bd985edee6bbed.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8"
+      },
+      {
+        "decoded": true,
+        "src": "/media/preview-1505513.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8"
+      },
+      {
+        "decoded": true,
+        "src": "/media/preview-1472320.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8"
+      },
+      {
+        "decoded": true,
+        "src": "/media/176a5d0329a8b48d5f86bcaf0078ccc3a57d50013744f4af3ea0c827347520ce.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8"
+      },
+      {
+        "decoded": true,
+        "src": "/media/92df895bbf715316fee36cb536453fcd509dc80569afee6dce9e8203ad51de15.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8"
+      },
+      {
+        "decoded": false,
+        "src": "/media/preview-1465071.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8"
+      },
+      {
+        "decoded": false,
+        "src": "/media/preview-1462443.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8"
+      },
+      {
+        "decoded": false,
+        "src": "/media/e915fa8be0a5d25c4327d056a54bbed7051f6ecf850993994741645012bb0e6b.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8"
+      },
+      {
+        "decoded": false,
+        "src": "/media/e94be2793462692ca8fea3a54dd90ff4b18735196a2bc426382c11959533c8ca.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8"
+      },
+      {
+        "decoded": false,
+        "src": "/media/5a6f0c747e5b9b22d6faec98ef1b0934e94a4e2e9384f21456280861a9b931fa.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8"
+      },
+      {
+        "decoded": false,
+        "src": "/media/d79da3538713568504c73726708a6ddfca5681bc111845dbae17265f455448ed.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8"
+      },
+      {
+        "decoded": false,
+        "src": "/media/516e62beeffb26fb37f8e95e809274e5bbde76eb75a28357f6bbcd4eedbfe8ca.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8"
+      }
+    ],
+    "overflow": false,
+    "selected": [
+      "png",
+      "html"
+    ],
+    "sourceUrls": [
+      "chrome-extension://nicpjdbehgcjbjfjkobcidnfmfpijohg/injected.js",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/style.css",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/app.js",
+      "chrome-extension://idnnbdplmphpflfnlkomgpfbpcgelopg/inpage.js",
+      "chrome-extension://kbdmnbffnhepgpkflnpngklmeebgeelj/injected.js",
+      "chrome-extension://ldinpeekobnhjjdofggfgjlcehhmanlj/inpage.js",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/logo.svg?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/7046278a4bda05c7dd3063dd10607800cbb92ba6f8c7c41f49bd985edee6bbed.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/preview-1505513.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/preview-1472320.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/176a5d0329a8b48d5f86bcaf0078ccc3a57d50013744f4af3ea0c827347520ce.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/92df895bbf715316fee36cb536453fcd509dc80569afee6dce9e8203ad51de15.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/preview-1465071.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/preview-1462443.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/e915fa8be0a5d25c4327d056a54bbed7051f6ecf850993994741645012bb0e6b.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/e94be2793462692ca8fea3a54dd90ff4b18735196a2bc426382c11959533c8ca.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/5a6f0c747e5b9b22d6faec98ef1b0934e94a4e2e9384f21456280861a9b931fa.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/d79da3538713568504c73726708a6ddfca5681bc111845dbae17265f455448ed.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/516e62beeffb26fb37f8e95e809274e5bbde76eb75a28357f6bbcd4eedbfe8ca.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8"
+    ],
+    "tables": [],
+    "title": "Explore Bitcoin Stamps · Stampchain",
+    "url": "https://boundary-nsw-cleaning-fruit.trycloudflare.com/explorer?type=all&format=png,html&sort=newest&page=1",
+    "width": 1496,
+    "kind": "final-release-expanded-explorer",
+    "sourceRevision": "c9eff0cdee5646dd3f63450034061be08679f283",
+    "capturedAtUtc": "2026-11-04T14:12:57.169Z",
+    "screenshot": "final-release-expanded-explorer.jpg",
+    "catalogChoices": []
+  },
+  {
+    "back": [],
+    "demo": "Demo data. Fixed samples of artwork, profiles, listings and activity.Preview scope ↗",
+    "frames": 0,
+    "headings": [
+      "Explore Bitcoin Stamps",
+      "Explore the archive 16 stamps"
+    ],
+    "height": 741,
+    "images": [
+      {
+        "decoded": true,
+        "src": "/media/7046278a4bda05c7dd3063dd10607800cbb92ba6f8c7c41f49bd985edee6bbed.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8"
+      },
+      {
+        "decoded": true,
+        "src": "/media/preview-1505513.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8"
+      },
+      {
+        "decoded": true,
+        "src": "/media/preview-1472320.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8"
+      },
+      {
+        "decoded": true,
+        "src": "/media/176a5d0329a8b48d5f86bcaf0078ccc3a57d50013744f4af3ea0c827347520ce.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8"
+      },
+      {
+        "decoded": true,
+        "src": "/media/92df895bbf715316fee36cb536453fcd509dc80569afee6dce9e8203ad51de15.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8"
+      },
+      {
+        "decoded": true,
+        "src": "/media/preview-1465071.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8"
+      },
+      {
+        "decoded": true,
+        "src": "/media/preview-1462443.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8"
+      },
+      {
+        "decoded": true,
+        "src": "/media/e915fa8be0a5d25c4327d056a54bbed7051f6ecf850993994741645012bb0e6b.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8"
+      },
+      {
+        "decoded": true,
+        "src": "/media/e94be2793462692ca8fea3a54dd90ff4b18735196a2bc426382c11959533c8ca.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8"
+      },
+      {
+        "decoded": true,
+        "src": "/media/5a6f0c747e5b9b22d6faec98ef1b0934e94a4e2e9384f21456280861a9b931fa.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8"
+      },
+      {
+        "decoded": true,
+        "src": "/media/d79da3538713568504c73726708a6ddfca5681bc111845dbae17265f455448ed.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8"
+      },
+      {
+        "decoded": true,
+        "src": "/media/516e62beeffb26fb37f8e95e809274e5bbde76eb75a28357f6bbcd4eedbfe8ca.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8"
+      }
+    ],
+    "overflow": false,
+    "selected": [
+      "png",
+      "html"
+    ],
+    "sourceUrls": [
+      "chrome-extension://nicpjdbehgcjbjfjkobcidnfmfpijohg/injected.js",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/style.css",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/app.js",
+      "chrome-extension://idnnbdplmphpflfnlkomgpfbpcgelopg/inpage.js",
+      "chrome-extension://kbdmnbffnhepgpkflnpngklmeebgeelj/injected.js",
+      "chrome-extension://ldinpeekobnhjjdofggfgjlcehhmanlj/inpage.js",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/logo.svg?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/7046278a4bda05c7dd3063dd10607800cbb92ba6f8c7c41f49bd985edee6bbed.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/preview-1505513.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/preview-1472320.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/176a5d0329a8b48d5f86bcaf0078ccc3a57d50013744f4af3ea0c827347520ce.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/92df895bbf715316fee36cb536453fcd509dc80569afee6dce9e8203ad51de15.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/preview-1465071.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/preview-1462443.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/e915fa8be0a5d25c4327d056a54bbed7051f6ecf850993994741645012bb0e6b.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/e94be2793462692ca8fea3a54dd90ff4b18735196a2bc426382c11959533c8ca.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/5a6f0c747e5b9b22d6faec98ef1b0934e94a4e2e9384f21456280861a9b931fa.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/d79da3538713568504c73726708a6ddfca5681bc111845dbae17265f455448ed.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8",
+      "https://boundary-nsw-cleaning-fruit.trycloudflare.com/media/516e62beeffb26fb37f8e95e809274e5bbde76eb75a28357f6bbcd4eedbfe8ca.png?__frsh_c=4f80a713e18f2ebffc35c28ec17b1313516d77e8",
+      "chrome-extension://bnmgkjlaommgappfckljlelgahnbngme/horizon-provider.js"
+    ],
+    "tables": [],
+    "title": "Explore Bitcoin Stamps · Stampchain",
+    "url": "https://boundary-nsw-cleaning-fruit.trycloudflare.com/explorer?type=all&format=png,html&sort=newest&page=1",
+    "width": 1496,
+    "kind": "final-release-expanded-explorer-settled",
+    "sourceRevision": "c9eff0cdee5646dd3f63450034061be08679f283",
+    "capturedAtUtc": "2026-11-04T14:13:43.580Z",
+    "screenshot": "final-release-expanded-explorer-settled.jpg",
+    "catalogChoices": []
+  }
+]
