@@ -1,5 +1,11 @@
 import type { MiddlewareHandlerContext } from "$fresh/server.ts";
 
+const sourceRevision = Deno.env.get("EXPLORER_REVISION") ?? "unknown";
+const revision = /^[a-f0-9]{40}$/.test(sourceRevision)
+  ? sourceRevision
+  : "unknown";
+const dataMode = Deno.env.get("EXPLORER_DATA_MODE") ?? "live";
+
 const routes = [
   /^\/explorer\/?$/,
   /^\/stamp\/[^/]+\/?$/,
@@ -36,5 +42,7 @@ export async function handler(req: Request, ctx: MiddlewareHandlerContext) {
   response.headers.set("X-Robots-Tag", "noindex, nofollow, noarchive");
   response.headers.set("Cross-Origin-Opener-Policy", "same-origin");
   response.headers.set("Cache-Control", "no-store");
+  response.headers.set("X-Explorer-Revision", revision);
+  response.headers.set("X-Explorer-Data-Mode", dataMode);
   return response;
 }

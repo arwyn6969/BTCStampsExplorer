@@ -1,0 +1,499 @@
+// Staging-only checks. This script never follows redirects or accepts a
+// production/custom-domain target. Keep check-capabilities.ts local-only.
+import { MEDIA_MAX_BYTES, serveMedia } from "../lib/media.ts";
+
+const EXPECTED_ROUTES = [
+  "./routes/_404.tsx",
+  "./routes/_500.tsx",
+  "./routes/_app.tsx",
+  "./routes/_middleware.ts",
+  "./routes/explorer.tsx",
+  "./routes/media/[asset].ts",
+  "./routes/stamp/[id].tsx",
+].sort();
+const REQUEST_TIMEOUT_MS = 15_000;
+const MAX_BODY_BYTES = 2 * 1024 * 1024;
+const MAX_RUN_MS = 120_000;
+const DEFAULT_VIEW = "/explorer?type=all&format=png&sort=newest&page=1";
+
+export function parseHostedArguments(args: string[]) {
+  if (args.length !== 2) {
+    throw new Error(
+      "Usage: check-hosted-capabilities.ts https://NAME.onrender.com FULL_COMMIT_SHA",
+    );
+  }
+  const [target, revision] = args;
+  let url: URL;
+  try {
+    url = new URL(target);
+  } catch {
+    throw new Error("Staging target must be an explicit HTTPS Render origin");
+  }
+  if (
+    target !== url.origin || url.protocol !== "https:" || url.username ||
+    url.password || url.port || url.search || url.hash ||
+    !/^[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.onrender\.com$/.test(url.hostname)
+  ) {
+    throw new Error(
+      "Only an exact https://NAME.onrender.com origin without credentials, port, path, query or fragment is allowed",
+    );
+  }
+  if (!/^[a-f0-9]{40}$/.test(revision)) {
+    throw new Error(
+      "Expected revision must be a complete lowercase commit SHA",
+    );
+  }
+  return { target, revision };
+}
+
+function securityHeaders(response: Response): Record<string, boolean> {
+  const csp = response.headers.get("Content-Security-Policy") ?? "";
+  const robots = response.headers.get("X-Robots-Tag") ?? "";
+  return {
+    csp: csp.includes("default-src 'none'") &&
+      csp.includes("frame-ancestors 'none'"),
+    noindex: robots.includes("noindex") && robots.includes("nofollow"),
+    nosniff: response.headers.get("X-Content-Type-Options") === "nosniff",
+    noCookies: response.headers.get("Set-Cookie") === null,
+  };
+}
+
+function htmlChecks(html: string): Record<string, boolean> {
+  const sources = [
+    ...html.matchAll(/\b(?:src|srcdoc)\s*=\s*["']([^"']*)["']/gi),
+  ];
+  const methods = [
+    ...html.matchAll(/<form\b[^>]*\bmethod\s*=\s*["']([^"']+)["']/gi),
+  ];
+  return {
+    htmlDocument: /<!doctype html>/i.test(html) && /<html\b/i.test(html),
+    noGeneratorReferences:
+      !/\/api\/v2\/stamp\/[^\s"'<>]*\/preview|[?&](?:amp;)?refresh=/i.test(
+        html,
+      ),
+    noActiveArtworkFrames: !/<(?:iframe|object|embed)\b/i.test(html),
+    noInlineHandlers: !/\s+on[a-z]+\s*=/i.test(html),
+    noJavascriptLinks: !/\bhref\s*=\s*["']\s*javascript:/i.test(html),
+    sameOriginSources: sources.every((match) =>
+      match[1].startsWith("/") && !match[1].startsWith("//")
+    ),
+    noWalletControls:
+      !/connect\s+wallet|sign\s+(?:transaction|psbt)|broadcast\s+(?:transaction|psbt)/i
+        .test(html),
+    getOnlyForms: methods.every((match) => match[1].toLowerCase() === "get"),
+  };
+}
+
+async function boundedBody(response: Response): Promise<Uint8Array> {
+  const length = response.headers.get("Content-Length");
+  if (
+    length !== null &&
+    (!/^\d+$/.test(length) || Number(length) > MAX_BODY_BYTES)
+  ) {
+    await response.body?.cancel();
+    throw new Error("Staging response exceeded the body-size bound");
+  }
+  if (!response.body) return new Uint8Array();
+  const reader = response.body.getReader();
+  const chunks: Uint8Array[] = [];
+  let size = 0;
+  try {
+    while (true) {
+      const { value, done } = await reader.read();
+      if (done) break;
+      size += value.byteLength;
+      if (size > MAX_BODY_BYTES) {
+        await reader.cancel();
+        throw new Error("Staging response exceeded the body-size bound");
+      }
+      chunks.push(value);
+    }
+  } finally {
+    reader.releaseLock();
+  }
+  const body = new Uint8Array(size);
+  let offset = 0;
+  for (const chunk of chunks) {
+    body.set(chunk, offset);
+    offset += chunk.byteLength;
+  }
+  return body;
+}
+
+interface Report {
+  capturedAtUtc: string;
+  scope: string;
+  target: string | null;
+  expectedRevision: string | null;
+  expectedSource: "live";
+  limits: Record<string, number>;
+  sourceManifest?: unknown;
+  cases: Record<string, unknown>[];
+  media?: Record<string, unknown>;
+  sourceParser?: Record<string, unknown>;
+  pass: boolean;
+  error?: string;
+}
+
+async function run(args: string[]): Promise<Report> {
+  const report: Report = {
+    capturedAtUtc: new Date().toISOString(),
+    scope:
+      "Render staging production-build HTTP evidence; local source manifest/parser checks are labelled separately",
+    target: null,
+    expectedRevision: null,
+    expectedSource: "live",
+    limits: {
+      requestTimeoutMs: REQUEST_TIMEOUT_MS,
+      runTimeoutMs: MAX_RUN_MS,
+      responseBytes: MAX_BODY_BYTES,
+    },
+    cases: [],
+    pass: true,
+  };
+  try {
+    const { target, revision } = parseHostedArguments(args);
+    report.target = target;
+    report.expectedRevision = revision;
+    const started = performance.now();
+    const manifest = await Deno.readTextFile(
+      new URL("../fresh.gen.ts", import.meta.url),
+    );
+    const routes = [...manifest.matchAll(/^\s*"(\.\/routes\/[^"\n]+)":/gm)]
+      .map((match) => match[1]).sort();
+    const noIslands = /islands:\s*\{\s*\}/.test(manifest);
+    const manifestPass =
+      JSON.stringify(routes) === JSON.stringify(EXPECTED_ROUTES) && noIslands;
+    report.sourceManifest = {
+      scope: "Local source inventory; not remote manifest introspection",
+      routes,
+      expectedRoutes: EXPECTED_ROUTES,
+      noIslands,
+      pass: manifestPass,
+    };
+    if (!manifestPass) {
+      throw new Error(
+        "Local source manifest does not match the reviewed route allowlist",
+      );
+    }
+
+    const request = async (
+      path: string,
+      method: "GET" | "POST",
+      expected: number,
+      inspectHtml = false,
+      expectedLocation?: string,
+    ) => {
+      const url = new URL(path, target);
+      if (url.origin !== target) {
+        throw new Error("Request escaped the exact staging origin");
+      }
+      const remaining = MAX_RUN_MS - (performance.now() - started);
+      if (remaining <= 0) {
+        throw new Error("Hosted capability check exceeded its run-time bound");
+      }
+      const at = performance.now();
+      const response = await fetch(url, {
+        method,
+        redirect: "manual",
+        credentials: "omit",
+        referrerPolicy: "no-referrer",
+        signal: AbortSignal.timeout(
+          Math.max(1, Math.floor(Math.min(REQUEST_TIMEOUT_MS, remaining))),
+        ),
+      });
+      const bytes = await boundedBody(response);
+      const actualRevision = response.headers.get("X-Explorer-Revision");
+      const actualSource = response.headers.get("X-Explorer-Data-Mode");
+      const text = inspectHtml
+        ? new TextDecoder("utf-8", { fatal: true }).decode(bytes)
+        : "";
+      const checks = {
+        status: response.status === expected,
+        revision: actualRevision === revision,
+        source: actualSource === "live",
+        ...securityHeaders(response),
+        ...(inspectHtml
+          ? {
+            htmlContentType:
+              response.headers.get("Content-Type")?.startsWith("text/html") ===
+                true,
+            ...htmlChecks(text),
+          }
+          : {}),
+        ...(expectedLocation
+          ? {
+            redirectLocation:
+              response.headers.get("Location") === expectedLocation,
+          }
+          : {}),
+        ...(method === "POST"
+          ? {
+            methodAllowlist: response.headers.get("Allow") === "GET, HEAD",
+          }
+          : {}),
+      };
+      const pass = Object.values(checks).every(Boolean);
+      report.pass &&= pass;
+      report.cases.push({
+        path,
+        method,
+        expectedStatus: expected,
+        actualStatus: response.status,
+        durationMs: Math.round(performance.now() - at),
+        bodyBytes: bytes.byteLength,
+        headers: {
+          contentType: response.headers.get("Content-Type"),
+          csp: response.headers.get("Content-Security-Policy"),
+          robots: response.headers.get("X-Robots-Tag"),
+          nosniff: response.headers.get("X-Content-Type-Options"),
+          allow: response.headers.get("Allow"),
+          location: response.headers.get("Location"),
+          revision: actualRevision,
+          source: actualSource,
+        },
+        checks,
+        pass,
+      });
+      // Verify identity before probing excluded routes; stop immediately if
+      // the target is a different artifact or unexpectedly exposes a route.
+      if (!pass) {
+        throw new Error(`Staging capability check failed: ${method} ${path}`);
+      }
+      return { response, bytes, text };
+    };
+
+    await request("/explorer", "GET", 302, false, DEFAULT_VIEW);
+    let asset: string | null = null;
+    for (
+      const path of [
+        DEFAULT_VIEW,
+        "/explorer?type=all&format=all&sort=newest&page=1",
+      ]
+    ) {
+      const list = await request(path, "GET", 200, true);
+      const detail = /href="(\/stamp\/-?\d+(?:\?[^"<>]*)?)"/.exec(list.text)
+        ?.[1];
+      if (!detail) {
+        throw new Error("Explorer has no canonical stamp detail link");
+      }
+      asset ??=
+        /\bsrc="\/media\/([a-f0-9]{64}\.(?:png|jpg|jpeg|gif|webp))"/.exec(
+          list.text,
+        )?.[1] ?? null;
+      await request(detail.replaceAll("&amp;", "&"), "GET", 200, true);
+    }
+    const forbidden = [
+      "/api/internal/fee-security",
+      "/api/internal/src20Background",
+      "/api/src20Background",
+      "/api/v2/stamp/0/preview",
+      "/api/v2/stamp/0/preview?refresh=true",
+      "/api/v2/ecx/broadcast",
+      "/api/v2/olga/mint",
+      "/api/v2/fairmint/compose",
+      "/wallet/proof-capability-check",
+      "/tool/stamp",
+      "/upload",
+      "/admin",
+      "/content/proof-capability-check",
+    ];
+    for (const path of forbidden) {
+      await request(path, "GET", 404);
+      await request(path, "POST", 405);
+    }
+    await request("/explorer", "POST", 405);
+
+    if (!asset) {
+      throw new Error(
+        "No bounded static raster is advertised by the live explorer",
+      );
+    }
+    const media = await request(`/media/${asset}`, "GET", 200);
+    const mime = media.response.headers.get("Content-Type")?.split(";")[0];
+    const parsed = await serveMedia(
+      asset,
+      "live",
+      (() =>
+        Promise.resolve(
+          new Response(new Uint8Array(media.bytes).buffer, {
+            headers: { "Content-Type": mime ?? "" },
+          }),
+        )) as typeof fetch,
+    );
+    const parserPass = parsed.status === 200;
+    await parsed.body?.cancel();
+    const mediaChecks = {
+      rasterMime: ["image/png", "image/jpeg", "image/gif", "image/webp"]
+        .includes(mime ?? ""),
+      bounded: media.bytes.byteLength > 0 &&
+        media.bytes.byteLength <= MEDIA_MAX_BYTES,
+      directNavigationSandbox:
+        media.response.headers.get("Content-Security-Policy")?.includes(
+          "sandbox",
+        ) === true,
+      sameOriginResource:
+        media.response.headers.get("Cross-Origin-Resource-Policy") ===
+          "same-origin",
+      sourceParserAcceptsServedBytes: parserPass,
+    };
+    report.media = {
+      asset,
+      bytes: media.bytes.byteLength,
+      checks: mediaChecks,
+      pass: Object.values(mediaChecks).every(Boolean),
+    };
+    report.pass &&= Object.values(mediaChecks).every(Boolean);
+    await request(`/media/${"0".repeat(64)}.svg`, "GET", 404);
+    await request(
+      "/media/https%3A%2F%2Fstampchain.io%2Fapi%2Fv2%2Fstamp%2F0%2Fpreview",
+      "GET",
+      404,
+    );
+
+    const parserCases: { name: string; pass: boolean }[] = [];
+    for (
+      const [name, response] of [
+        [
+          "HTML disguised as raster",
+          new Response("<html><script>alert(1)</script></html>", {
+            headers: { "Content-Type": mime ?? "image/png" },
+          }),
+        ],
+        [
+          "Mismatched content type",
+          new Response(new Uint8Array(media.bytes).buffer, {
+            headers: { "Content-Type": "text/html" },
+          }),
+        ],
+        [
+          "Upstream redirect",
+          new Response(null, {
+            status: 302,
+            headers: {
+              Location: "https://stampchain.io/api/v2/stamp/0/preview",
+            },
+          }),
+        ],
+        [
+          "Truncated raster",
+          new Response(media.bytes.slice(0, 12), {
+            headers: { "Content-Type": mime ?? "image/png" },
+          }),
+        ],
+        [
+          "Oversized declared body",
+          new Response(new Uint8Array([0]), {
+            headers: {
+              "Content-Type": mime ?? "image/png",
+              "Content-Length": String(MEDIA_MAX_BYTES + 1),
+            },
+          }),
+        ],
+      ] as const
+    ) {
+      const result = await serveMedia(
+        asset,
+        "live",
+        (() => Promise.resolve(response)) as typeof fetch,
+      );
+      parserCases.push({ name, pass: result.status === 502 });
+      await result.body?.cancel();
+    }
+    report.sourceParser = {
+      scope:
+        "Local reviewed parser with injected responses; no generator/redirect network requests were made",
+      cases: parserCases,
+      pass: parserCases.every((item) => item.pass),
+    };
+    report.pass &&= parserCases.every((item) => item.pass);
+  } catch (error) {
+    report.pass = false;
+    report.error = error instanceof Error ? error.message : String(error);
+  }
+  return report;
+}
+
+if (import.meta.main) {
+  const report = await run(Deno.args);
+  console.log(JSON.stringify(report, null, 2));
+  if (!report.pass) Deno.exit(1);
+} else {
+  Deno.test("hosted checker accepts only an exact explicit Render HTTPS origin", () => {
+    const sha = "a".repeat(40);
+    const good = "https://stampchain-proof-test.onrender.com";
+    if (parseHostedArguments([good, sha]).target !== good) {
+      throw new Error("Valid origin rejected");
+    }
+    for (
+      const target of [
+        "https://stampchain.io",
+        "https://dev.stampchain.io",
+        "http://proof.onrender.com",
+        "https://onrender.com",
+        "https://proof.onrender.com.evil.invalid",
+        "https://proof.extra.onrender.com",
+        "https://proof.onrender.com/",
+        "https://proof.onrender.com/path",
+        "https://proof.onrender.com?query=1",
+        "https://proof.onrender.com#fragment",
+        "https://user:password@proof.onrender.com",
+        "https://proof.onrender.com:443",
+        "https://proof.onrender.com:8443",
+        "https://PROOF.onrender.com",
+        "https://-proof.onrender.com",
+        "https://proof-.onrender.com",
+        "https://*.onrender.com",
+        "https://proof.onrender.com\n",
+        "//proof.onrender.com",
+      ]
+    ) {
+      let rejected = false;
+      try {
+        parseHostedArguments([target, sha]);
+      } catch {
+        rejected = true;
+      }
+      if (!rejected) throw new Error(`Unsafe target accepted: ${target}`);
+    }
+  });
+  Deno.test("hosted checker requires exactly two arguments and a full revision", () => {
+    const target = "https://proof.onrender.com";
+    for (
+      const args of [
+        [],
+        [target],
+        [target, "unknown"],
+        [target, "e013906"],
+        [target, "A".repeat(40)],
+        [target, "a".repeat(40), "extra"],
+      ]
+    ) {
+      let rejected = false;
+      try {
+        parseHostedArguments(args);
+      } catch {
+        rejected = true;
+      }
+      if (!rejected) throw new Error("Invalid checker arguments accepted");
+    }
+  });
+  Deno.test("hosted checker rejects advertised and streamed oversized bodies", async () => {
+    for (
+      const response of [
+        new Response("x", {
+          headers: { "Content-Length": String(MAX_BODY_BYTES + 1) },
+        }),
+        new Response(new Uint8Array(MAX_BODY_BYTES + 1)),
+      ]
+    ) {
+      let rejected = false;
+      try {
+        await boundedBody(response);
+      } catch {
+        rejected = true;
+      }
+      if (!rejected) throw new Error("Oversized response accepted");
+    }
+  });
+}

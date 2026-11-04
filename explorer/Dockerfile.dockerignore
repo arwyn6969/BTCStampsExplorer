@@ -1,0 +1,36 @@
+# This file takes precedence over the legacy root .dockerignore for this build.
+# Send only the proof package's build/runtime inputs and one reused constants leaf.
+**
+!explorer/
+!explorer/deno.json
+!explorer/deno.lock
+!explorer/main.ts
+!explorer/build.ts
+!explorer/fresh.gen.ts
+!explorer/fresh.config.ts
+!explorer/components/
+!explorer/components/**
+!explorer/lib/
+!explorer/lib/**
+!explorer/routes/
+!explorer/routes/**
+!explorer/static/
+!explorer/static/**
+!explorer/fixtures/
+!explorer/fixtures/**
+!lib/
+!lib/constants/
+!lib/constants/stampConstants.ts
+
+# Keep these exclusions last so they override directory inclusions.
+**/.env
+**/.env.*
+**/*.env
+**/*.env.*
+**/*.pem
+**/*.key
+**/.git
+**/node_modules
+**/_fresh
+**/.DS_Store
+**/*.log
