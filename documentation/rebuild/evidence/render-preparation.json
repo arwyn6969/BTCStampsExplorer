@@ -1,0 +1,39 @@
+{
+  "capturedOn": "2026-11-04",
+  "sourceRevision": "31d81df8de44a0357c6aba0f681b7434203fda16",
+  "sourceStateAtPackaging": "",
+  "freshBuildId": "9daedd9b1ee1b716192c035b1535db9499625722",
+  "artifact": {
+    "filename": "explorer-31d81df8de44-a02c5c33af3c.tar.gz",
+    "bytes": 85784,
+    "sha256": "a02c5c33af3c77010485b71b2e39e68ba54391a1b85890ac0f38baacd27c4a6b",
+    "verifiedInventoryFiles": 48,
+    "includesDockerContextAllowlist": true
+  },
+  "checks": {
+    "packageFormatLintType": true,
+    "unitTests": 25,
+    "hostedCheckerSafetyTests": 3,
+    "repositoryFormat": true,
+    "repositoryLint": true,
+    "blueprintSchemaValid": true,
+    "restoredFixtureCapabilityCases": 32,
+    "restoredRevisionHeaderCorrect": true,
+    "restoredDataModeHeader": "fixture",
+    "runtimeOutboundNetworkPermission": false
+  },
+  "scope": "Local production artifact restoration and deployment preparation; not hosted deployment evidence.",
+  "limits": {
+    "providerServiceCreated": false,
+    "providerDockerBuildVerified": false,
+    "stagingChecksPassed": false,
+    "stagingRollbackVerified": false,
+    "humanTaskAcceptanceRecorded": false
+  },
+  "notes": [
+    "A sandbox-only server start was denied by the host; the same restricted Deno command started under approved host execution.",
+    "Docker Linux build/start must still be verified by Render.",
+    "Correlate app-reported revision headers with the provider commit and build log; headers alone are not independent attestation.",
+    "The earlier artifact and live/browser evidence retain their own original source identities."
+  ]
+}

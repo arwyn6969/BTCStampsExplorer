@@ -39,6 +39,18 @@ repository format/lint checks pass. Linux Docker build/start remains unverified.
 The original archive and browser records below refer to the earlier application
 revision and do not establish evidence for a hosted version of this follow-up.
 
+The prepared source `31d81df8de44a0357c6aba0f681b7434203fda16` also has an
+updated local archive: 85,784 bytes, SHA-256
+`a02c5c33af3c77010485b71b2e39e68ba54391a1b85890ac0f38baacd27c4a6b`, Fresh build
+ID `9daedd9b1ee1b716192c035b1535db9499625722`. All 48 inventory files were
+verified after extraction; the Docker context allowlist is included. The
+extracted artifact cold-started with a cleared environment and outbound network
+permission denied. Its 32 fixture capability cases and source/data-mode headers
+pass. See [preparation record](evidence/render-preparation.json) and
+[restored check](evidence/capabilities-restored-fixture-31d81df.json). This is
+still local evidence; account verification, provider build, staged journey,
+rollback and human acceptance remain open.
+
 The new `explorer/` package contains one restricted Fresh manifest and entry
 point, two page types, one typed read adapter, query normalization, bounded
 static raster serving, explicit request allowlists, deterministic fixtures,
