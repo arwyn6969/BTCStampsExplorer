@@ -198,6 +198,16 @@ try {
   await request("/search?q=" + "a".repeat(101), "GET", 400, true);
   await request("/collection/missing-sample", "GET", 404, true);
   await request("/wallet/not-a-real-profile", "GET", 404, true);
+  const canonicalMikeProfile =
+    "/wallet/1GotRejB6XsGgMsM79TvcypeanDJRJbMtg?view=held&page=2";
+  await request(
+    "/wallet/Mike%20in%20Space?view=held&page=2",
+    "GET",
+    302,
+    false,
+    canonicalMikeProfile,
+  );
+  await request(canonicalMikeProfile, "GET", 200, true);
   await request("/explorer", "POST", 405);
 } catch (error) {
   report.pass = false;

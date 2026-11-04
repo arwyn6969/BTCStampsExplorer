@@ -24,14 +24,21 @@ export const handler: Handlers<ProfileData> = {
       ? "held" as const
       : "created" as const;
     const page = catalogPage(params.get("page"));
+    let identity: string;
+    try {
+      // Fresh 1 keeps percent escapes in route params. Decode exactly once.
+      identity = decodeURIComponent(context.params.address);
+    } catch {
+      return context.renderNotFound();
+    }
     if (dataMode === "live") {
       // Username aliases are supplied by the demo catalog only.
-      if (!/^[a-zA-Z0-9]{14,90}$/.test(context.params.address)) {
+      if (!/^[a-zA-Z0-9]{14,90}$/.test(identity)) {
         return context.renderNotFound();
       }
       return context.render({ profile: null, view, page }, { status: 503 });
     }
-    const profile = catalog.profile(context.params.address);
+    const profile = catalog.profile(identity);
     if (profile && context.params.address !== profile.address) {
       return new Response(null, {
         status: 302,
